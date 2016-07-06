@@ -1,0 +1,258 @@
+<Solution>
+  <PropertyGroup Name="overlap" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="Resource">
+          <Folder Name="atlas">
+            <PlistImageFolder Image="shape-border.png" PListFile="shape-border.plist" Name=".shape-border_PList.Dir">
+              <PlistImageFile Name="l-1.png" Key="l-1.png" />
+              <PlistImageFile Name="l-2.png" Key="l-2.png" />
+              <PlistImageFile Name="l-3.png" Key="l-3.png" />
+              <PlistImageFile Name="l-4.png" Key="l-4.png" />
+              <PlistImageFile Name="l-5.png" Key="l-5.png" />
+              <PlistImageFile Name="l-6.png" Key="l-6.png" />
+            </PlistImageFolder>
+            <PlistImageFolder Image="shape-entity.png" PListFile="shape-entity.plist" Name=".shape-entity_PList.Dir">
+              <PlistImageFile Name="s-1.png" Key="s-1.png" />
+              <PlistImageFile Name="s-2.png" Key="s-2.png" />
+              <PlistImageFile Name="s-3.png" Key="s-3.png" />
+              <PlistImageFile Name="s-4.png" Key="s-4.png" />
+              <PlistImageFile Name="s-5.png" Key="s-5.png" />
+              <PlistImageFile Name="s-6.png" Key="s-6.png" />
+            </PlistImageFolder>
+            <PlistImageFolder Image="ui-common.png" PListFile="ui-common.plist" Name=".ui-common_PList.Dir">
+              <PlistImageFile Name="btn-129-79-h.png" Key="btn-129-79-h.png" />
+              <PlistImageFile Name="btn-129-79-n.png" Key="btn-129-79-n.png" />
+              <PlistImageFile Name="btn-146-92-h.png" Key="btn-146-92-h.png" />
+              <PlistImageFile Name="btn-146-92-n.png" Key="btn-146-92-n.png" />
+              <PlistImageFile Name="btn-203-81-h.png" Key="btn-203-81-h.png" />
+              <PlistImageFile Name="btn-203-81-n.png" Key="btn-203-81-n.png" />
+              <PlistImageFile Name="btn-252-82-h.png" Key="btn-252-82-h.png" />
+              <PlistImageFile Name="btn-252-82-n.png" Key="btn-252-82-n.png" />
+              <PlistImageFile Name="btn-253-83-n.png" Key="btn-253-83-n.png" />
+              <PlistImageFile Name="btn-328-107-h.png" Key="btn-328-107-h.png" />
+              <PlistImageFile Name="btn-328-107-n.png" Key="btn-328-107-n.png" />
+              <PlistImageFile Name="common-dialog.png" Key="common-dialog.png" />
+              <PlistImageFile Name="common-dialog-bar.png" Key="common-dialog-bar.png" />
+              <PlistImageFile Name="icon-common-skill-1.png" Key="icon-common-skill-1.png" />
+              <PlistImageFile Name="icon-common-skill-10.png" Key="icon-common-skill-10.png" />
+              <PlistImageFile Name="icon-common-skill-2.png" Key="icon-common-skill-2.png" />
+              <PlistImageFile Name="icon-common-skill-3.png" Key="icon-common-skill-3.png" />
+              <PlistImageFile Name="icon-common-skill-4.png" Key="icon-common-skill-4.png" />
+              <PlistImageFile Name="icon-common-skill-5.png" Key="icon-common-skill-5.png" />
+              <PlistImageFile Name="icon-common-skill-6.png" Key="icon-common-skill-6.png" />
+              <PlistImageFile Name="icon-common-skill-7.png" Key="icon-common-skill-7.png" />
+              <PlistImageFile Name="icon-common-skill-8.png" Key="icon-common-skill-8.png" />
+              <PlistImageFile Name="icon-common-skill-9.png" Key="icon-common-skill-9.png" />
+              <PlistImageFile Name="label-btn-common-back.png" Key="label-btn-common-back.png" />
+            </PlistImageFolder>
+            <PlistImageFolder Image="ui-game.png" PListFile="ui-game.plist" Name=".ui-game_PList.Dir">
+              <PlistImageFile Name="btn-game-pause.png" Key="btn-game-pause.png" />
+              <PlistImageFile Name="collection-1.png" Key="collection-1.png" />
+              <PlistImageFile Name="opt-skill-back.png" Key="opt-skill-back.png" />
+              <PlistImageFile Name="sp-achieve-game-90.png" Key="sp-achieve-game-90.png" />
+              <PlistImageFile Name="sp-achieve-game-four-border.png" Key="sp-achieve-game-four-border.png" />
+              <PlistImageFile Name="sp-collection-back.png" Key="sp-collection-back.png" />
+              <PlistImageFile Name="sp-collection-back-h.png" Key="sp-collection-back-h.png" />
+              <PlistImageFile Name="sp-collection-lock.png" Key="sp-collection-lock.png" />
+              <PlistImageFile Name="sp-collection-what.png" Key="sp-collection-what.png" />
+              <PlistImageFile Name="sp-game-opt-back.png" Key="sp-game-opt-back.png" />
+              <PlistImageFile Name="sp-opt-game-double-lines.png" Key="sp-opt-game-double-lines.png" />
+              <PlistImageFile Name="sp-result-star.png" Key="sp-result-star.png" />
+              <PlistImageFile Name="sp-result-star-h.png" Key="sp-result-star-h.png" />
+              <PlistImageFile Name="star-color-1.png" Key="star-color-1.png" />
+              <PlistImageFile Name="star-color-2.png" Key="star-color-2.png" />
+              <PlistImageFile Name="star-color-3.png" Key="star-color-3.png" />
+              <PlistImageFile Name="star-color-4.png" Key="star-color-4.png" />
+              <PlistImageFile Name="star-color-5.png" Key="star-color-5.png" />
+              <PlistImageFile Name="star-color-6.png" Key="star-color-6.png" />
+              <PlistImageFile Name="star-color-7.png" Key="star-color-7.png" />
+              <PlistImageFile Name="star-color-8.png" Key="star-color-8.png" />
+              <PlistImageFile Name="word-cn-1.png" Key="word-cn-1.png" />
+              <PlistImageFile Name="word-cn-2.png" Key="word-cn-2.png" />
+              <PlistImageFile Name="word-cn-3.png" Key="word-cn-3.png" />
+              <PlistImageFile Name="word-cn-4.png" Key="word-cn-4.png" />
+              <PlistImageFile Name="word-cn-5.png" Key="word-cn-5.png" />
+              <PlistImageFile Name="word-cn-6.png" Key="word-cn-6.png" />
+              <PlistImageFile Name="word-cn-7.png" Key="word-cn-7.png" />
+              <PlistImageFile Name="word-cn-8.png" Key="word-cn-8.png" />
+              <PlistImageFile Name="word-en-1.png" Key="word-en-1.png" />
+              <PlistImageFile Name="word-en-2.png" Key="word-en-2.png" />
+              <PlistImageFile Name="word-en-3.png" Key="word-en-3.png" />
+              <PlistImageFile Name="word-en-4.png" Key="word-en-4.png" />
+              <PlistImageFile Name="word-en-5.png" Key="word-en-5.png" />
+              <PlistImageFile Name="word-en-6.png" Key="word-en-6.png" />
+              <PlistImageFile Name="word-en-7.png" Key="word-en-7.png" />
+              <PlistImageFile Name="word-en-8.png" Key="word-en-8.png" />
+              <PlistImageFile Name="word-fr-1.png" Key="word-fr-1.png" />
+              <PlistImageFile Name="word-fr-2.png" Key="word-fr-2.png" />
+              <PlistImageFile Name="word-fr-3.png" Key="word-fr-3.png" />
+              <PlistImageFile Name="word-fr-4.png" Key="word-fr-4.png" />
+              <PlistImageFile Name="word-fr-5.png" Key="word-fr-5.png" />
+              <PlistImageFile Name="word-fr-6.png" Key="word-fr-6.png" />
+              <PlistImageFile Name="word-fr-7.png" Key="word-fr-7.png" />
+              <PlistImageFile Name="word-fr-8.png" Key="word-fr-8.png" />
+              <PlistImageFile Name="word-gr-1.png" Key="word-gr-1.png" />
+              <PlistImageFile Name="word-gr-2.png" Key="word-gr-2.png" />
+              <PlistImageFile Name="word-gr-3.png" Key="word-gr-3.png" />
+              <PlistImageFile Name="word-gr-4.png" Key="word-gr-4.png" />
+              <PlistImageFile Name="word-gr-5.png" Key="word-gr-5.png" />
+              <PlistImageFile Name="word-gr-6.png" Key="word-gr-6.png" />
+              <PlistImageFile Name="word-gr-7.png" Key="word-gr-7.png" />
+              <PlistImageFile Name="word-gr-8.png" Key="word-gr-8.png" />
+              <PlistImageFile Name="word-jp-1.png" Key="word-jp-1.png" />
+              <PlistImageFile Name="word-jp-2.png" Key="word-jp-2.png" />
+              <PlistImageFile Name="word-jp-3.png" Key="word-jp-3.png" />
+              <PlistImageFile Name="word-jp-4.png" Key="word-jp-4.png" />
+              <PlistImageFile Name="word-jp-5.png" Key="word-jp-5.png" />
+              <PlistImageFile Name="word-jp-6.png" Key="word-jp-6.png" />
+              <PlistImageFile Name="word-jp-7.png" Key="word-jp-7.png" />
+              <PlistImageFile Name="word-jp-8.png" Key="word-jp-8.png" />
+              <PlistImageFile Name="word-pt-1.png" Key="word-pt-1.png" />
+              <PlistImageFile Name="word-pt-2.png" Key="word-pt-2.png" />
+              <PlistImageFile Name="word-pt-3.png" Key="word-pt-3.png" />
+              <PlistImageFile Name="word-pt-4.png" Key="word-pt-4.png" />
+              <PlistImageFile Name="word-pt-5.png" Key="word-pt-5.png" />
+              <PlistImageFile Name="word-pt-6.png" Key="word-pt-6.png" />
+              <PlistImageFile Name="word-pt-7.png" Key="word-pt-7.png" />
+              <PlistImageFile Name="word-pt-8.png" Key="word-pt-8.png" />
+              <PlistImageFile Name="word-sp-1.png" Key="word-sp-1.png" />
+              <PlistImageFile Name="word-sp-2.png" Key="word-sp-2.png" />
+              <PlistImageFile Name="word-sp-3.png" Key="word-sp-3.png" />
+              <PlistImageFile Name="word-sp-4.png" Key="word-sp-4.png" />
+              <PlistImageFile Name="word-sp-5.png" Key="word-sp-5.png" />
+              <PlistImageFile Name="word-sp-6.png" Key="word-sp-6.png" />
+              <PlistImageFile Name="word-sp-7.png" Key="word-sp-7.png" />
+              <PlistImageFile Name="word-sp-8.png" Key="word-sp-8.png" />
+            </PlistImageFolder>
+            <PlistImageFolder Image="ui-home.png" PListFile="ui-home.plist" Name=".ui-home_PList.Dir">
+              <PlistImageFile Name="btn-main-noads.png" Key="btn-main-noads.png" />
+              <PlistImageFile Name="btn-main-start-board-n.png" Key="btn-main-start-board-n.png" />
+              <PlistImageFile Name="dialog-slider.png" Key="dialog-slider.png" />
+              <PlistImageFile Name="icon-main-collects.png" Key="icon-main-collects.png" />
+              <PlistImageFile Name="icon-main-stars.png" Key="icon-main-stars.png" />
+              <PlistImageFile Name="label-btn-main-more.png" Key="label-btn-main-more.png" />
+              <PlistImageFile Name="label-btn-main-photo.png" Key="label-btn-main-photo.png" />
+              <PlistImageFile Name="language-cn.png" Key="language-cn.png" />
+              <PlistImageFile Name="language-en.png" Key="language-en.png" />
+              <PlistImageFile Name="language-fr.png" Key="language-fr.png" />
+              <PlistImageFile Name="language-gr.png" Key="language-gr.png" />
+              <PlistImageFile Name="language-it.png" Key="language-it.png" />
+              <PlistImageFile Name="language-jp.png" Key="language-jp.png" />
+              <PlistImageFile Name="language-pt.png" Key="language-pt.png" />
+              <PlistImageFile Name="language-sp.png" Key="language-sp.png" />
+              <PlistImageFile Name="language-suoml.png" Key="language-suoml.png" />
+              <PlistImageFile Name="logo-donopo.png" Key="logo-donopo.png" />
+              <PlistImageFile Name="main-icon-red.png" Key="main-icon-red.png" />
+              <PlistImageFile Name="noads-name-board.png" Key="noads-name-board.png" />
+              <PlistImageFile Name="sp-more-game-ice.png" Key="sp-more-game-ice.png" />
+              <PlistImageFile Name="sp-more-game-maryx.png" Key="sp-more-game-maryx.png" />
+              <PlistImageFile Name="sp-more-game-mask.png" Key="sp-more-game-mask.png" />
+              <PlistImageFile Name="sp-more-game-overlap2.png" Key="sp-more-game-overlap2.png" />
+              <PlistImageFile Name="title-overlap.png" Key="title-overlap.png" />
+              <PlistImageFile Name="title-overlap-2.png" Key="title-overlap-2.png" />
+              <PlistImageFile Name="typewriter_light.png" Key="typewriter_light.png" />
+              <PlistImageFile Name="collection-detail-1.png" Key="collection-detail-1.png" />
+              <PlistImageFile Name="split-collection-info.png" Key="split-collection-info.png" />
+            </PlistImageFolder>
+            <PlistImageFolder Image="ui-select.png" PListFile="ui-select.plist" Name=".ui-select_PList.Dir">
+              <PlistImageFile Name="btn-select-scene-left-n.png" Key="btn-select-scene-left-n.png" />
+              <PlistImageFile Name="btn-select-scene-right-n.png" Key="btn-select-scene-right-n.png" />
+              <PlistImageFile Name="icon-select-page-h.png" Key="icon-select-page-h.png" />
+              <PlistImageFile Name="icon-select-page-n.png" Key="icon-select-page-n.png" />
+              <PlistImageFile Name="icon-select-percent-arrow.png" Key="icon-select-percent-arrow.png" />
+              <PlistImageFile Name="icon-select-percent-green.png" Key="icon-select-percent-green.png" />
+              <PlistImageFile Name="icon-select-percent-red.png" Key="icon-select-percent-red.png" />
+              <PlistImageFile Name="icon-select-star.png" Key="icon-select-star.png" />
+              <PlistImageFile Name="icon-select-star-h.png" Key="icon-select-star-h.png" />
+              <PlistImageFile Name="icon-select-travel-h.png" Key="icon-select-travel-h.png" />
+              <PlistImageFile Name="icon-select-travel-n.png" Key="icon-select-travel-n.png" />
+              <PlistImageFile Name="label-btn-how-skill.png" Key="label-btn-how-skill.png" />
+              <PlistImageFile Name="scale9sp-green.png" Key="scale9sp-green.png" />
+              <PlistImageFile Name="slider-select-travel.png" Key="slider-select-travel.png" />
+              <PlistImageFile Name="sp-prepare-level-board.png" Key="sp-prepare-level-board.png" />
+              <PlistImageFile Name="sp-prepare-level-board-line.png" Key="sp-prepare-level-board-line.png" />
+              <PlistImageFile Name="sp-select-level-board.png" Key="sp-select-level-board.png" />
+            </PlistImageFolder>
+            <Image Name="background-2.png" />
+            <Image Name="background-3.png" />
+            <Image Name="background-4.png" />
+            <Image Name="background-5.png" />
+            <Image Name="background-6.png" />
+            <Image Name="game-background.png" />
+          </Folder>
+          <Folder Name="fonts">
+            <TTF Name="Overlap.ttf" />
+            <TTF Name="OverlapExt.ttf" />
+          </Folder>
+          <Folder Name="sounds">
+            <Audio Name="1.mp3" />
+            <Audio Name="2.mp3" />
+            <Audio Name="3.mp3" />
+            <Audio Name="4.mp3" />
+            <Audio Name="5.mp3" />
+            <Audio Name="6.mp3" />
+            <Audio Name="7.mp3" />
+            <Audio Name="8.mp3" />
+            <Audio Name="best.mp3" />
+            <Audio Name="bgm.mp3" />
+            <Audio Name="click.mp3" />
+            <Audio Name="correct.mp3" />
+            <Audio Name="end.mp3" />
+            <Audio Name="hit1.mp3" />
+            <Audio Name="hit2.mp3" />
+            <Audio Name="hit3.mp3" />
+            <Audio Name="hit4.mp3" />
+            <Audio Name="hit5.mp3" />
+            <Audio Name="new.mp3" />
+            <Audio Name="over.mp3" />
+            <Audio Name="slip.mp3" />
+            <Audio Name="startup.mp3" />
+            <Audio Name="ticktack.mp3" />
+            <Audio Name="unlock.mp3" />
+            <Audio Name="wrong.mp3" />
+          </Folder>
+        </Folder>
+        <Folder Name="Views">
+          <Folder Name="collection">
+            <Project Name="collection_cell.csd" Type="Node" />
+            <Project Name="collection_info.csd" Type="Layer" />
+            <Project Name="home_collection.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="common">
+            <Project Name="common_dialog.csd" Type="Layer" />
+            <Project Name="common_mask.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="game">
+            <Project Name="game_hud.csd" Type="Layer" />
+            <Project Name="game_pause.csd" Type="Layer" />
+            <Project Name="game_prepare.csd" Type="Layer" />
+            <Project Name="olap_game.csd" Type="Layer" />
+            <Project Name="olap_result.csd" Type="Layer" />
+            <Project Name="skill_icon.csd" Type="Node" />
+          </Folder>
+          <Folder Name="home">
+            <Project Name="home_config.csd" Type="Layer" />
+            <Project Name="home_credit.csd" Type="Layer" />
+            <Project Name="home_lang.csd" Type="Layer" />
+            <Project Name="home_more.csd" Type="Layer" />
+            <Project Name="home_noads.csd" Type="Layer" />
+            <Project Name="lang_cell.csd" Type="Node" />
+            <Project Name="olap_home.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="select">
+            <Project Name="olap_select.csd" Type="Layer" />
+            <Project Name="select_level.csd" Type="Node" />
+            <Project Name="select_page.csd" Type="Node" />
+          </Folder>
+          <Folder Name="travel">
+            <Project Name="olap_travel.csd" Type="Layer" />
+            <Project Name="travel_page.csd" Type="Node" />
+          </Folder>
+          <Project Name="olap_ground.csd" Type="Layer" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

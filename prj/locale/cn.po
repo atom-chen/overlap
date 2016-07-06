@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OverLap\n"
+"POT-Creation-Date: 2016-07-05 20:09+0800\n"
+"PO-Revision-Date: 2016-07-05 20:09+0800\n"
+"Last-Translator: \n"
+"Language-Team: DONOPO\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../../src\n"
+
+#: ../../src/app/data/Level.lua:8
+#: ../../src/app/views/game/GamePrepareView.lua:7
+#: ../../src/app/views/game/GamePrepareView.lua:8
+#: ../../src/app/views/game/GamePrepareView.lua:9
+msgid "NorScore"
+msgstr "得分 %d"
+
+#: ../../src/app/data/Level.lua:9
+msgid "UniScore"
+msgstr "完美得分 %d"
+
+#: ../../src/app/data/Level.lua:10
+msgid "TimeNorScore"
+msgstr "%d 内得分 %d"
+
+#: ../../src/app/data/Level.lua:11
+msgid "TimeUniScore"
+msgstr "%d 内完美得分 %d"
+
+#: ../../src/app/views/home/OverlapHomeView.lua:6
+msgid "Config"
+msgstr "配置"
+
+#: ../../src/app/views/home/OverlapHomeView.lua:7
+msgid "Conllection"
+msgstr "收集"
+
+#: ../../src/app/views/home/OverlapHomeView.lua:8
+msgid "Rank"
+msgstr "排行"
+
+#~ msgid "TimeScore"
+#~ msgstr "%d 内得分 %d"
+
+#~ msgid "Conllction"
+#~ msgstr "收集"
