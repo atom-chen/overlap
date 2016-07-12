@@ -33,19 +33,19 @@
             <ColorVector ScaleY="1.0000" />
             <InnerNodeSize Width="556" Height="450" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_ok" ActionTag="195922183" CallBackType="Click" CallBackName="onClick" Tag="35" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="304.1461" RightMargin="316.8539" TopMargin="897.1724" BottomMargin="357.8276" TouchEnable="True" FontSize="36" ButtonText="OK" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="99" Scale9Height="57" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="129.0000" Y="79.0000" />
+          <AbstractNodeData Name="btn_ok" ActionTag="195922183" CallBackType="Click" CallBackName="onClick" Tag="35" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="301.6461" RightMargin="314.3539" TopMargin="893.1724" BottomMargin="353.8276" TouchEnable="True" FontSize="36" ButtonText="OK" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="104" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="134.0000" Y="87.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="368.6461" Y="397.3276" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4915" Y="0.2978" />
-            <PreSize X="0.1720" Y="0.0592" />
+            <PreSize X="0.1787" Y="0.0652" />
             <FontResource Type="Normal" Path="Resource/fonts/OverlapExt.ttf" Plist="" />
             <TextColor A="255" R="242" G="251" B="254" />
             <DisabledFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
             <PressedFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-129-79-n.png" Plist="Resource/atlas/ui-common.plist" />
+            <NormalFileData Type="PlistSubImage" Path="btn-134-87-n.png" Plist="Resource/atlas/ui-common.plist" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

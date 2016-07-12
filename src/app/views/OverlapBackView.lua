@@ -3,12 +3,17 @@ local OverlapBackView = class("OverlapBackView", cc.load("mvc").ViewBase)
 
 OverlapBackView.RESOURCE_FILENAME = "olap_ground"
 OverlapBackView.SCENE_COLOR = {}
-OverlapBackView.SCENE_COLOR[1] = {r = 244, g = 175, b = 168}
-OverlapBackView.SCENE_COLOR[2] = {r = 90, g = 171, b = 196}
-OverlapBackView.SCENE_COLOR[3] = {r = 213, g = 116, b = 118}
-OverlapBackView.SCENE_COLOR[4] = {r = 44, g = 81, b = 115}
-OverlapBackView.SCENE_COLOR[5] = {r = 115, g = 171, b = 156}
-OverlapBackView.SCENE_COLOR[6] = {r = 229, g = 71, b = 132}
+OverlapBackView.SCENE_COLOR[1] = {r = 255, g = 216, b = 175}
+OverlapBackView.SCENE_COLOR[2] = {r = 115, g = 217, b = 199}
+OverlapBackView.SCENE_COLOR[3] = {r = 214, g = 197, b = 118}
+OverlapBackView.SCENE_COLOR[4] = {r = 149, g = 218, b = 226}
+OverlapBackView.SCENE_COLOR[5] = {r = 196, g = 183, b = 215}
+OverlapBackView.SCENE_COLOR[6] = {r = 181, g = 169, b = 161}
+
+
+OverlapBackView.SCENE_INDEX = {2,3,4,1,6,5}
+
+local OverlapLightView = import(".OverlapLightView")
 
 --$$$$$$$$$$$$$$$$ CONFIG $$$$$$$$$$$$$$$$$$$$$
 
@@ -17,14 +22,6 @@ OverlapBackView.SCENE_COLOR[6] = {r = 229, g = 71, b = 132}
 
 
 function OverlapBackView:onCreate()
-    --    local kitty = sp.SkeletonAnimation:create("planet2.json","planet2.atlas",1)
-    --    --    kitty:setSkin("01")
-    --    kitty:setSlotsToSetupPose()
-    --    kitty:setPosition(display.width/2+176,display.height/2-900)
-    ----    kitty:setPosition(display.width/2+10,display.height/2-900)
-    --    kitty:addAnimation(0,"animation", true)
-    --
-    --    self:addChild(kitty)
 
     self.seceneIndex = 0
     self.scene = self:createScene(0)
@@ -51,13 +48,11 @@ function OverlapBackView:setScene(seceneIndex)
     end
 end
 
-function OverlapBackView:createScene(seceneIndex)
+function OverlapBackView:createScene(index)
+    local  seceneIndex = OverlapBackView.SCENE_INDEX[index+1] - 1
 
-    local planetid = seceneIndex+2
-    if planetid > GAME_SCENE_COUNT then
-        planetid = 1
-    end
-
+    local planetid = seceneIndex+1
+    
     local panel = ccui.Layout:create()
     panel:ignoreContentAdaptWithSize(false)
     panel:setClippingEnabled(false)
@@ -83,24 +78,6 @@ function OverlapBackView:createScene(seceneIndex)
     layout:setRightMargin(-125.5000)
     self:addChild(panel)
 
-    local back  = display.newSprite(string.format("Resource/atlas/background-%d.png",seceneIndex+1))
-                  :move(500.5,667)
-                  :addTo(panel)
-
-    local small_planet_dir = math.random(1,3)
-    local small_planet_pos = nil
-    if small_planet_dir == 1 then
-        --上
-        small_planet_pos = cc.p(math.random(-200,200),display.height/2 - math.random(-10,10))
-    elseif small_planet_dir == 2 then
-        --左
-        small_planet_pos = cc.p(-50-display.width/2 + math.random(-10,10),display.height/2 -  math.random(200,500))
-    elseif small_planet_dir == 3 then
-        --右
-        small_planet_pos = cc.p(50+display.width/2 + math.random(-10,10),display.height/2 -  math.random(200,500))
-    end
-
-
     local planet = sp.SkeletonAnimation:create(string.format("Resource/spine/planet%d.json",(seceneIndex+1)),string.format("Resource/spine/planet%d.atlas",(seceneIndex+1)),1)
     planet:setSlotsToSetupPose()
     planet:setPosition(501+176,display.height/2-900)
@@ -108,11 +85,46 @@ function OverlapBackView:createScene(seceneIndex)
 
     panel:addChild(planet)
 
+    local small_planet_dir = math.random(1,3)
+    local small_planet_pos = nil
+    local lightrotaty = nil
+    if small_planet_dir == 1 then
+        --上
+        small_planet_pos = cc.p(math.random(-250,-50),display.height/2 - math.random(-10,10))
+        
+        lightrotaty = math.random(-10,-20)
+    elseif small_planet_dir == 2 then
+        --上
+        small_planet_pos = cc.p(math.random(50,250),display.height/2 - math.random(-10,10))
+        lightrotaty = math.random(10,20)
+    elseif small_planet_dir == 3 then
+        --左
+        small_planet_pos = cc.p(-10-display.width/2 + math.random(-10,10),display.height/2 -  math.random(110,260))
+         lightrotaty = math.random(-15,-33)
+    elseif small_planet_dir == 4 then
+        --右
+        small_planet_pos = cc.p(10+display.width/2 + math.random(-10,10),display.height/2 -  math.random(110,260))
+        lightrotaty = math.random(15,33)
+    end
+
     local node = display.newNode():move(500.5,667):addTo(panel)
+    OverlapLightView:create()
+        :move(small_planet_pos)
+        :rotate(lightrotaty)
+        :addTo(node)
+        
     display.newSprite(string.format("#fullplanet-%d.png",planetid))
         :move(small_planet_pos)
         :addTo(node)
         
+--    local emitter = cc.ParticleRain:create()
+--    -- emitter:retain()
+--    node:addChild(emitter, 10)
+--    local pos_x, pos_y = emitter:getPosition()
+--    emitter:setPosition(500,1000)
+--    emitter:setLife(4)
+--    emitter:setTexture(cc.Director:getInstance():getTextureCache():addImage("Resource/atlas/credits.png"))
+
     return panel
 end
 

@@ -1,5 +1,4 @@
 --#################### WORD ######################
---这些每次都要用。是为了读写方便，不会出错用的
 --游戏存储数据常量
 Sloters_ = {
     shapeInfo = "shapeInfo",
@@ -7,6 +6,12 @@ Sloters_ = {
     last_mode = "last_mode,",
     unlock_new = "unlock_new",
     new_record = "new_record",
+    
+    
+    sound_off     = "sound_off",
+    icloud_off    = "icloud_off", 
+    level_info    = "level_info",    --关卡信息  
+    collections   = "collections",   --收集  
 }
 
 Layers_ = {
@@ -21,13 +26,8 @@ Layers_ = {
     pause            = "pauseView",
     result           = "resultView",
     setting          = "settingView",
-    gameController   = "gameController"
-}
-
-ColorFont_ = {
-    lightBlue = cc.c3b(72,195,202),
-    green     = cc.c3b(42,178,75),
-
+    gameController   = "gameController",
+    collectionView   = "collectionView"
 }
 
 --#################### CONST ######################
@@ -51,8 +51,9 @@ GAME_SHAPE_COLOR_BLUE = cc.c3b(68,191,252)
 GAME_SHAPE_COLOR_RED  = cc.c3b(246,75,52)
 
 
+--游戏场景数
+GAME_SCENE_COUNT      = 6
 
-GAME_SCENE_COUNT = 6
 --游戏模式
 GAME_MODE = {
     mode_3 = 3,

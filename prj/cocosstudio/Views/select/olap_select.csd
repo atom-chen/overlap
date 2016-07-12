@@ -32,17 +32,17 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_back" ActionTag="-2140503661" CallBackType="Click" CallBackName="onClick" Tag="13" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="17.0000" RightMargin="604.0000" TopMargin="1205.0000" BottomMargin="50.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="99" Scale9Height="57" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="129.0000" Y="79.0000" />
+          <AbstractNodeData Name="btn_back" ActionTag="-2140503661" CallBackType="Click" CallBackName="onClick" Tag="13" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="14.5000" RightMargin="601.5000" TopMargin="1201.0000" BottomMargin="46.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="104" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="134.0000" Y="87.0000" />
             <Children>
-              <AbstractNodeData Name="Sprite_1" ActionTag="-1357221321" Tag="14" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="47.0000" RightMargin="47.0000" TopMargin="22.0000" BottomMargin="22.0000" ctype="SpriteObjectData">
+              <AbstractNodeData Name="Sprite_1" ActionTag="-1357221321" Tag="14" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="49.5000" RightMargin="49.5000" TopMargin="26.0000" BottomMargin="26.0000" ctype="SpriteObjectData">
                 <Size X="35.0000" Y="35.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="64.5000" Y="39.5000" />
+                <Position X="67.0000" Y="43.5000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="0.2713" Y="0.4430" />
+                <PreSize X="0.2612" Y="0.4023" />
                 <FileData Type="PlistSubImage" Path="label-btn-common-back.png" Plist="Resource/atlas/ui-common.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
@@ -52,11 +52,11 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1087" Y="0.0671" />
-            <PreSize X="0.1720" Y="0.0592" />
+            <PreSize X="0.1787" Y="0.0652" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
             <PressedFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-129-79-n.png" Plist="Resource/atlas/ui-common.plist" />
+            <NormalFileData Type="PlistSubImage" Path="btn-134-87-n.png" Plist="Resource/atlas/ui-common.plist" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -90,20 +90,47 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_travel" ActionTag="-1583040554" CallBackType="Click" CallBackName="onClick" Tag="64" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="211.0000" RightMargin="211.0000" TopMargin="1035.5000" BottomMargin="191.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="298" Scale9Height="85" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="328.0000" Y="107.0000" />
+          <AbstractNodeData Name="btn_travel" ActionTag="-1583040554" CallBackType="Click" CallBackName="onClick" Tag="64" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="208.0000" RightMargin="208.0000" TopMargin="1033.0000" BottomMargin="189.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="304" Scale9Height="90" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="334.0000" Y="112.0000" />
             <Children>
-              <AbstractNodeData Name="Text_1" ActionTag="1918581503" Tag="45" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="94.5000" RightMargin="94.5000" TopMargin="32.5000" BottomMargin="32.5000" FontSize="36" LabelText="3 TRAVEL" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="139.0000" Y="42.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="164.0000" Y="53.5000" />
+              <AbstractNodeData Name="Panel_2" ActionTag="-1533496569" Tag="223" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="167.0000" RightMargin="167.0000" TopMargin="56.0000" BottomMargin="56.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                <Size X="0.0000" Y="0.0000" />
+                <Children>
+                  <AbstractNodeData Name="LO_trval_2" ActionTag="1918581503" Tag="45" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-69.5000" RightMargin="-69.5000" TopMargin="-21.0000" BottomMargin="-21.0000" FontSize="36" LabelText="3 TRAVEL" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="139.0000" Y="42.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="242" G="251" B="254" />
+                    <PrePosition />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FontResource Type="Normal" Path="Resource/fonts/OverlapExt.ttf" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="LO_trval_1" ActionTag="-1100269539" Tag="224" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-72.0000" RightMargin="-72.0000" TopMargin="-21.0000" BottomMargin="-21.0000" FontSize="36" LabelText="无尽旅行" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="144.0000" Y="42.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="242" G="251" B="254" />
+                    <PrePosition />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FontResource Type="Default" Path="" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint />
+                <Position X="167.0000" Y="56.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="242" G="251" B="254" />
+                <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="0.4238" Y="0.3925" />
-                <FontResource Type="Normal" Path="Resource/fonts/OverlapExt.ttf" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
+                <PreSize X="0.0000" Y="0.0000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -111,11 +138,11 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.1837" />
-            <PreSize X="0.4373" Y="0.0802" />
+            <PreSize X="0.4453" Y="0.0840" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="PlistSubImage" Path="btn-328-107-h.png" Plist="Resource/atlas/ui-common.plist" />
             <PressedFileData Type="PlistSubImage" Path="btn-328-107-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-328-107-n.png" Plist="Resource/atlas/ui-common.plist" />
+            <NormalFileData Type="PlistSubImage" Path="btn-334-112-n.png" Plist="Resource/atlas/ui-common.plist" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -213,7 +240,7 @@
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="370.1300" Y="76.4151" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="26" G="26" B="26" />
+                <CColor A="255" R="242" G="251" B="254" />
                 <PrePosition X="0.4935" Y="0.3821" />
                 <PreSize X="0.1360" Y="0.2800" />
                 <FontResource Type="Normal" Path="Resource/fonts/OverlapExt.ttf" Plist="" />

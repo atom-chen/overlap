@@ -1,25 +1,30 @@
 --------------------------------
 -- 关卡选择界面
--- @module OverlapSelectView
+-- @module OverlapTrvalView
 -- @extend ViewBase
 -- @parent_module cc
--- OverlapSelectView is a combination of view and controller
-local OverlapSelectView = class("OverlapSelectView", cc.load("mvc").ViewBase)
-
+-- OverlapTrvalView is a combination of view and controller
+local OverlapTrvalView = class("OverlapTrvalView", cc.load("mvc").ViewBase)
+OverlapTrvalView.LOCALE_LANG_LABEL = {
+    Start          = _("Start"),
+    You            = _("You"),
+    Max            = _("Max"),
+}
 --$$$$$$$$$$$$$$$$ CONFIG $$$$$$$$$$$$$$$$$$$$$
-OverlapSelectView.RESOURCE_FILENAME = "travel.olap_travel.lua"
+OverlapTrvalView.RESOURCE_FILENAME = "travel.olap_travel.lua"
 
 local TravelPageView = import(".TravelPageView")
 
 --$$$$$$$$$$$$$$$$ ViewBase $$$$$$$$$$$$$$$$$$$$$
-function OverlapSelectView:onCreate()
+function OverlapTrvalView:onCreate()
+    self:localLanguage()
     self:createPages()
     self:setPage(0)
 end
 
 
 
-function OverlapSelectView:onClick( path,node,funcName)
+function OverlapTrvalView:onClick( path,node,funcName)
     if node:getName()=="btn_back" and funcName =="onClick" then
         local function btnCallback(node,eventType)
             gameUtils.transFadeOut(self,Layers_.select)
@@ -50,19 +55,25 @@ function OverlapSelectView:onClick( path,node,funcName)
             end
         end
         return btnCallback
+     elseif node:getName()=="btn_start" and funcName =="onClick" then
+        local function btnCallback(node,eventType)
+--            gameUtils.transRight(self,Layers_.select)
+        end
+        return btnCallback
     end
 
 end
 
---$$$$$$$$$$$$$$$$ OverlapSelectView $$$$$$$$$$$$$$$$$$$$$
+--$$$$$$$$$$$$$$$$ OverlapTrvalView $$$$$$$$$$$$$$$$$$$$$
 
-function OverlapSelectView:createPages()
+function OverlapTrvalView:createPages()
     self.pageLayer = {}
     for page=3, 8 do
         local layout = ccui.Layout:create()
         local size = layout:getContentSize()
         self.pageLayer[page] = TravelPageView:create(self:getApp(),"")
             :move(500.5,667)
+            :onPage(page-2)
             :addTo(layout)
         self.pageView:addPage(layout)
     end
@@ -72,9 +83,9 @@ end
 
 ----------------------------
 -- 设置当前页面为指定页面
---@function [parent=#src.app.views.play.select.OverlapSelectView] setDimension
+--@function [parent=#src.app.views.play.select.OverlapTrvalView] setDimension
 --
-function OverlapSelectView:setPage(page)
+function OverlapTrvalView:setPage(page)
     self.curPage = page
     if self.curPage == GAME_SCENE_COUNT-1 then
         self.btn_right:hide()
@@ -90,11 +101,11 @@ end
 
 ----------------------------
 --移动到指定页面，动画
---@function [parent=#src.app.views.play.select.OverlapSelectView] gotoPage
+--@function [parent=#src.app.views.play.select.OverlapTrvalView] gotoPage
 --
-function OverlapSelectView:gotoPage(page)
+function OverlapTrvalView:gotoPage(page)
     self.pageView:scrollToPage(page)
 end
 
 
-return OverlapSelectView
+return OverlapTrvalView

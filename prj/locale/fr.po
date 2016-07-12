@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
-"POT-Creation-Date: 2016-07-01 15:35+0800\n"
-"PO-Revision-Date: 2016-07-05 15:25+0800\n"
+"POT-Creation-Date: 2016-07-08 16:23+0800\n"
+"PO-Revision-Date: 2016-07-08 16:54+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: fr\n"
@@ -16,6 +16,159 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../src\n"
 
+#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:111
+#: ../../src/app/views/game/GamePrepareView.lua:7
+#: ../../src/app/views/game/GamePrepareView.lua:8
+#: ../../src/app/views/game/GamePrepareView.lua:9
+#: ../../src/app/views/game/GameResultView.lua:5
+#: ../../src/app/views/game/GameResultView.lua:6
+#: ../../src/app/views/game/GameResultView.lua:7
+msgid "NorScore"
+msgstr "Score ()"
+
+#: ../../src/app/data/Level.lua:9 ../../src/app/data/Level.lua:114
+msgid "UniScore"
+msgstr "Perfect Score ()"
+
+#: ../../src/app/data/Level.lua:10 ../../src/app/data/Level.lua:99
+msgid "TimeNorScore"
+msgstr "En () secondes, Score ()"
+
+#: ../../src/app/data/Level.lua:11 ../../src/app/data/Level.lua:102
+msgid "TimeUniScore"
+msgstr "En () secondes, Perfect Score ()"
+
+#: ../../src/app/views/common/CommonDialogView.lua:5
+#: ../../src/app/views/game/SkillInfoView.lua:5
+msgid "OK"
+msgstr "OK"
+
+#: ../../src/app/views/game/GamePauseView.lua:7
+#: ../../src/app/views/game/GameResultView.lua:8
+msgid "Retry"
+msgstr "Recommencez"
+
+#: ../../src/app/views/game/GamePauseView.lua:8
+#: ../../src/app/views/game/GameResultView.lua:9
+msgid "Home"
+msgstr "Accueil"
+
+#: ../../src/app/views/game/GamePauseView.lua:9
+#: ../../src/app/views/home/HomeConfigView.lua:6
+msgid "Sound"
+msgstr "Sonner"
+
+#: ../../src/app/views/game/GamePauseView.lua:10
+msgid "Continue"
+msgstr "Continuer"
+
+#: ../../src/app/views/game/GamePauseView.lua:11
+#: ../../src/app/views/game/GamePauseView.lua:54
+#: ../../src/app/views/game/GameResultView.lua:10
+#: ../../src/app/views/game/GameResultView.lua:50
+msgid "Result_time"
+msgstr "Temps"
+
+#: ../../src/app/views/game/GamePauseView.lua:12
+#: ../../src/app/views/game/GamePauseView.lua:55
+#: ../../src/app/views/game/GameResultView.lua:11
+#: ../../src/app/views/game/GameResultView.lua:51
+msgid "Result_combo"
+msgstr "Perfect Score"
+
+#: ../../src/app/views/game/GamePauseView.lua:13
+#: ../../src/app/views/game/GamePauseView.lua:53
+#: ../../src/app/views/game/GameResultView.lua:12
+#: ../../src/app/views/game/GameResultView.lua:49
+msgid "Result_score"
+msgstr "Score"
+
+#: ../../src/app/views/game/GamePrepareView.lua:10
+#: ../../src/app/views/travel/OverlapTravelView.lua:9
+msgid "Start"
+msgstr "Jouer"
+
+#: ../../src/app/views/game/SkillIcon.lua:15
+#: ../../src/app/views/game/SkillInfoView.lua:47
+msgid "SkInfo_"
+msgstr ""
+
+#: ../../src/app/views/game/SkillInfoView.lua:6
+#: ../../src/app/views/game/SkillInfoView.lua:11
+msgid "SkInfo_1"
+msgstr "Couleur Unique"
+
+#: ../../src/app/views/game/SkillInfoView.lua:7
+#: ../../src/app/views/game/SkillInfoView.lua:12
+msgid "SkInfo_2"
+msgstr "Forme Seulement"
+
+#: ../../src/app/views/game/SkillInfoView.lua:8
+#: ../../src/app/views/game/SkillInfoView.lua:13
+msgid "SkInfo_3"
+msgstr "Signification de la Parole"
+
+#: ../../src/app/views/game/SkillInfoView.lua:14
+msgid "SkInfo_4"
+msgstr "Couleur de la Parole"
+
+#: ../../src/app/views/game/SkillInfoView.lua:15
+msgid "SkInfo_5"
+msgstr "Vacillant"
+
+#: ../../src/app/views/game/SkillInfoView.lua:16
+msgid "SkInfo_6"
+msgstr "Couvrant"
+
+#: ../../src/app/views/game/SkillInfoView.lua:17
+msgid "SkInfo_7"
+msgstr "Invisible"
+
+#: ../../src/app/views/game/SkillInfoView.lua:18
+msgid "SkInfo_8"
+msgstr "Même couleur"
+
+#: ../../src/app/views/game/SkillInfoView.lua:19
+msgid "SkInfo_9"
+msgstr "Rotation à droite"
+
+#: ../../src/app/views/game/SkillInfoView.lua:20
+msgid "SkInfo_10"
+msgstr "Rotation à gauche"
+
+#: ../../src/app/views/home/HomeAdsView.lua:7
+msgid "AdsInfo"
+msgstr "Votre don va supprimer les annonces dans le jeu. Top 10 des donateurs peuvent nommer les personnages de notre prochain match."
+
+#: ../../src/app/views/home/HomeConfigView.lua:7
+msgid "Language"
+msgstr "La langue"
+
+#: ../../src/app/views/home/HomeConfigView.lua:8
+msgid "ICloud"
+msgstr "iCloud"
+
+#: ../../src/app/views/home/HomeConfigView.lua:9
+msgid "Rate"
+msgstr "Taux"
+
+#: ../../src/app/views/home/HomeConfigView.lua:10
+msgid "Credits"
+msgstr "Crédit"
+
+#: ../../src/app/views/home/HomeConfigView.lua:11
+#: ../../src/app/views/home/OverlapHomeView.lua:9
+msgid "Donation"
+msgstr "Don"
+
+#: ../../src/app/views/home/HomeMoreView.lua:6
+msgid "moreIce"
+msgstr "Tracez une courbe parfaite pour défendre la feuille de glace."
+
+#: ../../src/app/views/home/HomeMoreView.lua:7
+msgid "moreMary"
+msgstr "Un nombre jeu de puzzle original avec le thème royal."
+
 #: ../../src/app/views/home/OverlapHomeView.lua:6
 msgid "Config"
 msgstr "Paramètres"
@@ -27,6 +180,30 @@ msgstr "Collection"
 #: ../../src/app/views/home/OverlapHomeView.lua:8
 msgid "Rank"
 msgstr "Rang"
+
+#: ../../src/app/views/select/OverlapSelectView.lua:10
+msgid "trval"
+msgstr "sans fin de voyage"
+
+#: ../../src/app/views/travel/OverlapTravelView.lua:10
+msgid "You"
+msgstr "Toi"
+
+#: ../../src/app/views/travel/OverlapTravelView.lua:11
+msgid "Max"
+msgstr "Le plus élevé"
+
+#: ../../src/app/views/travel/TravelPageView.lua:6
+msgid "YourRank"
+msgstr "Ton rang"
+
+#: ../../src/app/views/travel/TravelPageView.lua:7
+msgid "HighScore"
+msgstr "Score élevé"
+
+#: ../../src/app/views/travel/TravelPageView.lua:8
+msgid "Random"
+msgstr "obstacles au hasard"
 
 #~ msgid "Conllction"
 #~ msgstr "收集"

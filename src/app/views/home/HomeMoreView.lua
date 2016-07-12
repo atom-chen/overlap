@@ -2,8 +2,13 @@
 local HomeMoreView = class("HomeMoreView", cc.load("mvc").ViewBase)
 
 HomeMoreView.RESOURCE_FILENAME = "home.home_more"
+HomeMoreView.LOCALE_LANG_LABEL = {
+    moreIce          = _("moreIce"),
+    moreMary         = _("moreMary"),
+}
 
 function HomeMoreView:onCreate()
+    self:localLanguage()
 end
 
 function HomeMoreView:touch(event)

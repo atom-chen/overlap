@@ -1,0 +1,27 @@
+
+prototype.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tars
+  rotate: false
+  xy: 2, 2
+  size: 531, 457
+  orig: 531, 457
+  offset: 0, 0
+  index: -1
+turbb
+  rotate: false
+  xy: 527, 642
+  size: 299, 316
+  orig: 299, 316
+  offset: 0, 0
+  index: -1
+turbg
+  rotate: false
+  xy: 2, 461
+  size: 523, 497
+  orig: 523, 497
+  offset: 0, 0
+  index: -1

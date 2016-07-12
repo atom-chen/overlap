@@ -9,12 +9,24 @@ CollectionCellView.CELL_WIDTH  = 203
 CollectionCellView.CELL_HEIGHT = 193
 
 function HomeCollectionView:onCreate()
-    local t = {}
-    for v=1, 100 do
-        t[v] = v
+    local t = CollectionManager:getCollection()
+    local data = {}
+    for v=1, #t do
+       local cInfo =  CollectionManager:getCollectionInfo(v)
+        data[v] = {id = v,has = t[v],info = cInfo}
     end
-    local  tv=   ccui.TebleView:create(t,cc.size(629,965),{height = 193,width = 203 ,cellView = CollectionCellView })
+    
+    
+    local  tv=   ccui.TebleView:create(data,cc.size(629,965),{height = 193,width = 203 ,cellView = CollectionCellView })
     self.tv:addChild(tv)
+
+    local function scrollViewDidScroll(view)
+        local allheight =  tv:getTableViw():getContentSize().height - 965
+        local height = -tv:getTableViw():getContentOffset().y
+        self:updateSlider(height/allheight)
+
+    end
+    tv:getTableViw():registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
 end
 
 function HomeCollectionView:touch(event)
@@ -32,5 +44,13 @@ function HomeCollectionView:onClick( path,node,funcName)
 end
 
 
+function HomeCollectionView:updateSlider(percent)
+    if percent<0 then
+        percent = 0
+    elseif percent>1 then
+        percent = 1
+    end
+    self.slider:setPositionY(percent*(HomeCollectionView.SCROLLVIEW_HEITH-436) + 436)
+end
 
 return HomeCollectionView

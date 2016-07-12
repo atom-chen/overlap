@@ -24,5 +24,6 @@ THE SOFTWARE.
 
 --
 require("app.data.GameConst")
-gameUtils = require("app.gameUtils")
-
+gameUtils     = require("app.gameUtils")
+LevelManager = require("app.data.LevelManager"):new()
+CollectionManager = require("app.data.CollectionManager"):new()

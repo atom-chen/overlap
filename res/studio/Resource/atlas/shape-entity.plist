@@ -7,15 +7,15 @@
             <key>s-1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{475,476}}</string>
+                <string>{{272,2},{474,474}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{475,476}}</string>
+                <string>{{0,0},{474,474}}</string>
                 <key>sourceSize</key>
-                <string>{475,476}</string>
+                <string>{474,474}</string>
             </dict>
             <key>s-2.png</key>
             <dict>
@@ -33,7 +33,7 @@
             <key>s-3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{479,2},{267,473}}</string>
+                <string>{{748,271},{267,473}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>s-4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{272,480},{474,474}}</string>
+                <string>{{2,479},{474,474}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>s-5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{748,271},{266,266}}</string>
+                <string>{{478,478},{266,266}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>s-6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,480},{268,475}}</string>
+                <string>{{2,2},{268,475}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -92,7 +92,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:129399d11a4032770855b94e11baf5fa:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:bdfb97cb30b5bbbfb29150fc39284b47:1/1$</string>
             <key>textureFileName</key>
             <string>shape-entity.png</string>
         </dict>

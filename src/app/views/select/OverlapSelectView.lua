@@ -6,6 +6,10 @@
 -- OverlapSelectView is a combination of view and controller
 local OverlapSelectView = class("OverlapSelectView", cc.load("mvc").ViewBase)
 
+OverlapSelectView.LOCALE_LANG_LABEL = {
+    trval          = _("trval"),
+}
+
 --$$$$$$$$$$$$$$$$ CONFIG $$$$$$$$$$$$$$$$$$$$$
 OverlapSelectView.RESOURCE_FILENAME = "select.olap_select.lua"
 
@@ -13,18 +17,29 @@ local SelectPageView = import(".SelectPageView")
 
 --$$$$$$$$$$$$$$$$ ViewBase $$$$$$$$$$$$$$$$$$$$$
 function OverlapSelectView:onCreate()
+    self:localLanguage()
     self:createPages()
+    
+    self:enTouch()
 end
 
 
 function OverlapSelectView:touch(event)
     if event.name == "began" then
+        self.touchMoved = false
+        self.touchBegin = cc.p(event.x,event.y)
         return true
     elseif event.name == "moved" then
-    
+        if not self.touchMoved and cc.pGetDistance(self.touchBegin,cc.p(event.x,event.y))>30 then
+            self.touchMoved = true
+        end
     elseif event.name == "ended" then
     
     end
+end
+
+function OverlapSelectView:isMoved()
+  return self.touchMoved
 end
 
 

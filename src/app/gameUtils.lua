@@ -85,7 +85,7 @@ end
 -----------------------
 --进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
 --
-function gameUtils.transFadeIn(curName,toName,dt)
+function gameUtils.transFadeIn(curName,toName,args)
     local curView
     if  type(curName) == "string"  then
         curView =  AppViews:getView(curName)
@@ -97,23 +97,31 @@ function gameUtils.transFadeIn(curName,toName,dt)
     if AppViews:getView(toName) then
         toView = AppViews:getView(toName)
     else
-        toView =   AppViews:addViewByName(toName)
+        local layName
+        if args and args.name then
+            layName = args.name
+        end
 
+        toView =   AppViews:addViewByName(toName,layName)
     end
 
-    local aniTime = dt or  0.4
+    local aniTime =  0.4
     local aniAgrs = 5
     gameUtils.mask(aniTime)
     toView:setPositionX(0)
     curView:setPositionX(0)
     toView:hide()
     local function onComplete()
-        if  type(curName) == "userdata" then
-            curView:removeSelf()
-        elseif  type(curName) == "string" then
+        local cname = curView:getName()
+        if  not cname or cname=="" then
+            curView:closeSelf()
+        else
             curView:hide()
         end
         toView:show()
+        if args and args.call then
+            args.call()
+        end
     end
     gameUtils.splashMask(aniTime)
     ac.ccDellayToCall(toView,aniTime/2,onComplete)
@@ -126,7 +134,7 @@ end
 -----------------------
 --退场动画，提前加载的界面传入名字，没有名字会在动画结束后删除
 --
-function gameUtils.transFadeOut(curName,toName,dt)
+function gameUtils.transFadeOut(curName,toName)
     local curView
     if type(curName) == "string" then
         curView = AppViews:getView(curName)
@@ -135,25 +143,25 @@ function gameUtils.transFadeOut(curName,toName,dt)
     end
     local toView = AppViews:getView(toName)
 
-    local aniTime = dt or  0.4
+    local aniTime = 0.4
     local aniAgrs = 6
     gameUtils.mask(aniTime)
     toView:setPositionX(0)
     curView:setPositionX(0)
     toView:hide()
     local function onComplete()
-       
+
         if type(curName) == "string" then
             curView:hide()
         else
-            curView:removeSelf()
+            curView:closeSelf()
         end
         toView:show()
     end
     gameUtils.splashMask(aniTime)
     ac.ccDellayToCall(toView,aniTime/2,onComplete)
---    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
---    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(1001,0)),{easing = aniAgrs})
+    --    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
+    --    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(1001,0)),{easing = aniAgrs})
 end
 
 
@@ -168,7 +176,7 @@ function gameUtils.loopTypeWriter(view,timerName,label,text,dt,light)
         label:setString(str)
         if light then
             local s = label:getContentSize()
-            light:setPositionX(s.width + 92)
+            light:setPositionX(s.width + 10)
         end
         if i == totalLen + 5 then
             i = 0

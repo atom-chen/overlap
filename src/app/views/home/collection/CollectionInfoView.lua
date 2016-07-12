@@ -9,6 +9,7 @@ end
 function CollectionInfoView:onClick( path,node,funcName)
     if  node:getName() =="btn_ok" then
         local function btnCallback(  node,eventType  )
+            AppViews:getView(Layers_.collectionView):show()
            self:closeSelf()
         end
         return btnCallback

@@ -1,6 +1,10 @@
 
 local CommonDialogView = class("CommonDialogView", cc.load("mvc").ViewBase)
 
+CommonDialogView.LOCALE_LANG_LABEL = {
+    OK             = _("OK"),
+}
+
 CommonDialogView.RESOURCE_FILENAME = "common.common_dialog"
 CommonDialogView.RESOURCE_BINDING = {
     actions = {enterAni = "enter",enterEvent = nil,exitAni = "exit",exitEvent = "exitEnd"}
@@ -13,6 +17,7 @@ CommonDialogView.RESOURCE_BINDING = {
 
 
 function CommonDialogView:onCreate()
+    self:localLanguage()
 end
 
 

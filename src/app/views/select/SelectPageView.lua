@@ -16,17 +16,16 @@ end
 function SelectPageView:createPage(page)
     for x=1, 3 do
         for y=1, 3 do
-            SelectPattern:create(self:getApp(),"")
+           local pattern =  SelectPattern:create(self:getApp(),"")
                 :move(SelectPageView.OffSetX + (x-1)*SelectPattern.PATERN_WIDTH,SelectPageView.OffSetY - (y-1)*SelectPattern.PATERN_HEIGHT)
                 :initLevel(page,(y-1)*3+x)
                 :addTo(self.panel)
+            LevelManager.patterns[(page-1)*9 + (y-1)*3+x] = pattern
         end
     end
     
     return self
 end
-
-
 
 
 return SelectPageView

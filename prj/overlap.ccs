@@ -5,6 +5,23 @@
       <RootFolder Name=".">
         <Folder Name="Resource">
           <Folder Name="atlas">
+            <PlistImageFolder Image="flashlight.png" PListFile="flashlight.plist" Name=".flashlight_PList.Dir">
+              <PlistImageFile Name="light-1.png" Key="light-1.png" />
+              <PlistImageFile Name="light-10.png" Key="light-10.png" />
+              <PlistImageFile Name="light-11.png" Key="light-11.png" />
+              <PlistImageFile Name="light-12.png" Key="light-12.png" />
+              <PlistImageFile Name="light-13.png" Key="light-13.png" />
+              <PlistImageFile Name="light-14.png" Key="light-14.png" />
+              <PlistImageFile Name="light-15.png" Key="light-15.png" />
+              <PlistImageFile Name="light-2.png" Key="light-2.png" />
+              <PlistImageFile Name="light-3.png" Key="light-3.png" />
+              <PlistImageFile Name="light-4.png" Key="light-4.png" />
+              <PlistImageFile Name="light-5.png" Key="light-5.png" />
+              <PlistImageFile Name="light-6.png" Key="light-6.png" />
+              <PlistImageFile Name="light-7.png" Key="light-7.png" />
+              <PlistImageFile Name="light-8.png" Key="light-8.png" />
+              <PlistImageFile Name="light-9.png" Key="light-9.png" />
+            </PlistImageFolder>
             <PlistImageFolder Image="shape-border.png" PListFile="shape-border.plist" Name=".shape-border_PList.Dir">
               <PlistImageFile Name="l-1.png" Key="l-1.png" />
               <PlistImageFile Name="l-2.png" Key="l-2.png" />
@@ -21,18 +38,30 @@
               <PlistImageFile Name="s-5.png" Key="s-5.png" />
               <PlistImageFile Name="s-6.png" Key="s-6.png" />
             </PlistImageFolder>
+            <PlistImageFolder Image="shape-shadow.png" PListFile="shape-shadow.plist" Name=".shape-shadow_PList.Dir">
+              <PlistImageFile Name="d-1.png" Key="d-1.png" />
+              <PlistImageFile Name="d-2.png" Key="d-2.png" />
+              <PlistImageFile Name="d-3.png" Key="d-3.png" />
+              <PlistImageFile Name="d-4.png" Key="d-4.png" />
+              <PlistImageFile Name="d-5.png" Key="d-5.png" />
+              <PlistImageFile Name="d-6.png" Key="d-6.png" />
+            </PlistImageFolder>
             <PlistImageFolder Image="ui-common.png" PListFile="ui-common.plist" Name=".ui-common_PList.Dir">
               <PlistImageFile Name="btn-129-79-h.png" Key="btn-129-79-h.png" />
               <PlistImageFile Name="btn-129-79-n.png" Key="btn-129-79-n.png" />
+              <PlistImageFile Name="btn-134-87-n.png" Key="btn-134-87-n.png" />
               <PlistImageFile Name="btn-146-92-h.png" Key="btn-146-92-h.png" />
               <PlistImageFile Name="btn-146-92-n.png" Key="btn-146-92-n.png" />
+              <PlistImageFile Name="btn-175-85-n.png" Key="btn-175-85-n.png" />
               <PlistImageFile Name="btn-203-81-h.png" Key="btn-203-81-h.png" />
               <PlistImageFile Name="btn-203-81-n.png" Key="btn-203-81-n.png" />
               <PlistImageFile Name="btn-252-82-h.png" Key="btn-252-82-h.png" />
               <PlistImageFile Name="btn-252-82-n.png" Key="btn-252-82-n.png" />
               <PlistImageFile Name="btn-253-83-n.png" Key="btn-253-83-n.png" />
+              <PlistImageFile Name="btn-258-88-n.png" Key="btn-258-88-n.png" />
               <PlistImageFile Name="btn-328-107-h.png" Key="btn-328-107-h.png" />
               <PlistImageFile Name="btn-328-107-n.png" Key="btn-328-107-n.png" />
+              <PlistImageFile Name="btn-334-112-n.png" Key="btn-334-112-n.png" />
               <PlistImageFile Name="common-dialog.png" Key="common-dialog.png" />
               <PlistImageFile Name="common-dialog-bar.png" Key="common-dialog-bar.png" />
               <PlistImageFile Name="icon-common-skill-1.png" Key="icon-common-skill-1.png" />
@@ -50,7 +79,9 @@
             <PlistImageFolder Image="ui-game.png" PListFile="ui-game.plist" Name=".ui-game_PList.Dir">
               <PlistImageFile Name="btn-game-pause.png" Key="btn-game-pause.png" />
               <PlistImageFile Name="collection-1.png" Key="collection-1.png" />
+              <PlistImageFile Name="game-bottom.png" Key="game-bottom.png" />
               <PlistImageFile Name="opt-skill-back.png" Key="opt-skill-back.png" />
+              <PlistImageFile Name="opt-skill-back-white.png" Key="opt-skill-back-white.png" />
               <PlistImageFile Name="sp-achieve-game-90.png" Key="sp-achieve-game-90.png" />
               <PlistImageFile Name="sp-achieve-game-four-border.png" Key="sp-achieve-game-four-border.png" />
               <PlistImageFile Name="sp-collection-back.png" Key="sp-collection-back.png" />
@@ -59,6 +90,8 @@
               <PlistImageFile Name="sp-collection-what.png" Key="sp-collection-what.png" />
               <PlistImageFile Name="sp-game-opt-back.png" Key="sp-game-opt-back.png" />
               <PlistImageFile Name="sp-opt-game-double-lines.png" Key="sp-opt-game-double-lines.png" />
+              <PlistImageFile Name="sp-result-collection.png" Key="sp-result-collection.png" />
+              <PlistImageFile Name="sp-result-collection-h.png" Key="sp-result-collection-h.png" />
               <PlistImageFile Name="sp-result-star.png" Key="sp-result-star.png" />
               <PlistImageFile Name="sp-result-star-h.png" Key="sp-result-star-h.png" />
               <PlistImageFile Name="star-color-1.png" Key="star-color-1.png" />
@@ -127,9 +160,13 @@
               <PlistImageFile Name="word-sp-8.png" Key="word-sp-8.png" />
             </PlistImageFolder>
             <PlistImageFolder Image="ui-home.png" PListFile="ui-home.plist" Name=".ui-home_PList.Dir">
+              <PlistImageFile Name="btn-main-eye.png" Key="btn-main-eye.png" />
               <PlistImageFile Name="btn-main-noads.png" Key="btn-main-noads.png" />
               <PlistImageFile Name="btn-main-start-board-n.png" Key="btn-main-start-board-n.png" />
+              <PlistImageFile Name="collection-detail-1.png" Key="collection-detail-1.png" />
               <PlistImageFile Name="dialog-slider.png" Key="dialog-slider.png" />
+              <PlistImageFile Name="donopo.png" Key="donopo.png" />
+              <PlistImageFile Name="icon-collection-collects.png" Key="icon-collection-collects.png" />
               <PlistImageFile Name="icon-main-collects.png" Key="icon-main-collects.png" />
               <PlistImageFile Name="icon-main-stars.png" Key="icon-main-stars.png" />
               <PlistImageFile Name="label-btn-main-more.png" Key="label-btn-main-more.png" />
@@ -146,6 +183,11 @@
               <PlistImageFile Name="logo-donopo.png" Key="logo-donopo.png" />
               <PlistImageFile Name="main-icon-red.png" Key="main-icon-red.png" />
               <PlistImageFile Name="noads-name-board.png" Key="noads-name-board.png" />
+              <PlistImageFile Name="overlap-game-logo.png" Key="overlap-game-logo.png" />
+              <PlistImageFile Name="overlap-game-title.png" Key="overlap-game-title.png" />
+              <PlistImageFile Name="slider-collection.png" Key="slider-collection.png" />
+              <PlistImageFile Name="sp-donation-mini.png" Key="sp-donation-mini.png" />
+              <PlistImageFile Name="split-collection-info.png" Key="split-collection-info.png" />
               <PlistImageFile Name="sp-more-game-ice.png" Key="sp-more-game-ice.png" />
               <PlistImageFile Name="sp-more-game-maryx.png" Key="sp-more-game-maryx.png" />
               <PlistImageFile Name="sp-more-game-mask.png" Key="sp-more-game-mask.png" />
@@ -153,10 +195,20 @@
               <PlistImageFile Name="title-overlap.png" Key="title-overlap.png" />
               <PlistImageFile Name="title-overlap-2.png" Key="title-overlap-2.png" />
               <PlistImageFile Name="typewriter_light.png" Key="typewriter_light.png" />
-              <PlistImageFile Name="collection-detail-1.png" Key="collection-detail-1.png" />
-              <PlistImageFile Name="split-collection-info.png" Key="split-collection-info.png" />
             </PlistImageFolder>
             <PlistImageFolder Image="ui-select.png" PListFile="ui-select.plist" Name=".ui-select_PList.Dir">
+              <PlistImageFile Name="avatar-3.png" Key="avatar-3.png" />
+              <PlistImageFile Name="avatar-3-on.png" Key="avatar-3-on.png" />
+              <PlistImageFile Name="avatar-4.png" Key="avatar-4.png" />
+              <PlistImageFile Name="avatar-4-on.png" Key="avatar-4-on.png" />
+              <PlistImageFile Name="avatar-5.png" Key="avatar-5.png" />
+              <PlistImageFile Name="avatar-5-on.png" Key="avatar-5-on.png" />
+              <PlistImageFile Name="avatar-6.png" Key="avatar-6.png" />
+              <PlistImageFile Name="avatar-6-on.png" Key="avatar-6-on.png" />
+              <PlistImageFile Name="avatar-7.png" Key="avatar-7.png" />
+              <PlistImageFile Name="avatar-7-on.png" Key="avatar-7-on.png" />
+              <PlistImageFile Name="avatar-8.png" Key="avatar-8.png" />
+              <PlistImageFile Name="avatar-8-on.png" Key="avatar-8-on.png" />
               <PlistImageFile Name="btn-select-scene-left-n.png" Key="btn-select-scene-left-n.png" />
               <PlistImageFile Name="btn-select-scene-right-n.png" Key="btn-select-scene-right-n.png" />
               <PlistImageFile Name="icon-select-page-h.png" Key="icon-select-page-h.png" />
@@ -170,17 +222,13 @@
               <PlistImageFile Name="icon-select-travel-n.png" Key="icon-select-travel-n.png" />
               <PlistImageFile Name="label-btn-how-skill.png" Key="label-btn-how-skill.png" />
               <PlistImageFile Name="scale9sp-green.png" Key="scale9sp-green.png" />
+              <PlistImageFile Name="select-top-star.png" Key="select-top-star.png" />
               <PlistImageFile Name="slider-select-travel.png" Key="slider-select-travel.png" />
-              <PlistImageFile Name="sp-prepare-level-board.png" Key="sp-prepare-level-board.png" />
               <PlistImageFile Name="sp-prepare-level-board-line.png" Key="sp-prepare-level-board-line.png" />
-              <PlistImageFile Name="sp-select-level-board.png" Key="sp-select-level-board.png" />
+              <PlistImageFile Name="sp-select-level-board-1.png" Key="sp-select-level-board-1.png" />
+              <PlistImageFile Name="sp-select-level-lock.png" Key="sp-select-level-lock.png" />
             </PlistImageFolder>
-            <Image Name="background-2.png" />
-            <Image Name="background-3.png" />
-            <Image Name="background-4.png" />
-            <Image Name="background-5.png" />
-            <Image Name="background-6.png" />
-            <Image Name="game-background.png" />
+            <Image Name="alpha.png" />
           </Folder>
           <Folder Name="fonts">
             <TTF Name="Overlap.ttf" />
@@ -245,12 +293,15 @@
             <Project Name="olap_select.csd" Type="Layer" />
             <Project Name="select_level.csd" Type="Node" />
             <Project Name="select_page.csd" Type="Node" />
+            <Project Name="skill_info.csd" Type="Layer" />
           </Folder>
           <Folder Name="travel">
             <Project Name="olap_travel.csd" Type="Layer" />
             <Project Name="travel_page.csd" Type="Node" />
           </Folder>
+          <Project Name="flashlight.csd" Type="Node" />
           <Project Name="olap_ground.csd" Type="Layer" />
+          <Project Name="olap_splash.csd" Type="Layer" />
         </Folder>
       </RootFolder>
     </Group>

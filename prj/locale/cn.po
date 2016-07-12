@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
-"POT-Creation-Date: 2016-07-05 20:09+0800\n"
-"PO-Revision-Date: 2016-07-05 20:09+0800\n"
+"POT-Creation-Date: 2016-07-11 14:14+0800\n"
+"PO-Revision-Date: 2016-07-11 14:14+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: zh\n"
@@ -16,28 +16,180 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../src\n"
 
-#: ../../src/app/data/Level.lua:8
+#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:112
 #: ../../src/app/views/game/GamePrepareView.lua:7
 #: ../../src/app/views/game/GamePrepareView.lua:8
 #: ../../src/app/views/game/GamePrepareView.lua:9
+#: ../../src/app/views/game/GameResultView.lua:5
+#: ../../src/app/views/game/GameResultView.lua:6
+#: ../../src/app/views/game/GameResultView.lua:7
 msgid "NorScore"
-msgstr "得分 %d"
+msgstr "得分 ()"
 
-#: ../../src/app/data/Level.lua:9
+#: ../../src/app/data/Level.lua:9 ../../src/app/data/Level.lua:115
 msgid "UniScore"
-msgstr "完美得分 %d"
+msgstr "完美得分 ()"
 
 #: ../../src/app/data/Level.lua:10
+#: ../../src/app/data/Level.lua:100
 msgid "TimeNorScore"
-msgstr "%d 内得分 %d"
+msgstr "()秒内得分 ()"
 
 #: ../../src/app/data/Level.lua:11
+#: ../../src/app/data/Level.lua:103
 msgid "TimeUniScore"
-msgstr "%d 内完美得分 %d"
+msgstr "()秒内完美得分 ()"
+
+#: ../../src/app/views/common/CommonDialogView.lua:5
+#: ../../src/app/views/game/SkillInfoView.lua:5
+msgid "OK"
+msgstr "确定"
+
+#: ../../src/app/views/game/GamePauseView.lua:7
+#: ../../src/app/views/game/GameResultView.lua:8
+msgid "Retry"
+msgstr "重玩"
+
+#: ../../src/app/views/game/GamePauseView.lua:8
+#: ../../src/app/views/game/GameResultView.lua:9
+msgid "Home"
+msgstr "主页"
+
+#: ../../src/app/views/game/GamePauseView.lua:9
+#: ../../src/app/views/home/HomeConfigView.lua:6
+#: ../../src/app/views/home/HomeConfigView.lua:18
+#: ../../src/app/views/home/HomeConfigView.lua:20
+msgid "Sound"
+msgstr "声音"
+
+#: ../../src/app/views/game/GamePauseView.lua:10
+msgid "Continue"
+msgstr "继续游戏"
+
+#: ../../src/app/views/game/GamePauseView.lua:11
+#: ../../src/app/views/game/GamePauseView.lua:54
+#: ../../src/app/views/game/GameResultView.lua:10
+#: ../../src/app/views/game/GameResultView.lua:50
+msgid "Result_time"
+msgstr "时间"
+
+#: ../../src/app/views/game/GamePauseView.lua:12
+#: ../../src/app/views/game/GamePauseView.lua:55
+#: ../../src/app/views/game/GameResultView.lua:11
+#: ../../src/app/views/game/GameResultView.lua:51
+msgid "Result_combo"
+msgstr "完美得分"
+
+#: ../../src/app/views/game/GamePauseView.lua:13
+#: ../../src/app/views/game/GamePauseView.lua:53
+#: ../../src/app/views/game/GameResultView.lua:12
+#: ../../src/app/views/game/GameResultView.lua:49
+msgid "Result_score"
+msgstr "得分"
+
+#: ../../src/app/views/game/GamePrepareView.lua:10
+#: ../../src/app/views/travel/OverlapTravelView.lua:9
+msgid "Start"
+msgstr "开始游戏"
+
+#: ../../src/app/views/game/SkillIcon.lua:15
+#: ../../src/app/views/game/SkillInfoView.lua:47
+msgid "SkInfo_"
+msgstr ""
+
+#: ../../src/app/views/game/SkillInfoView.lua:6
+#: ../../src/app/views/game/SkillInfoView.lua:11
+msgid "SkInfo_1"
+msgstr "只显示颜色"
+
+#: ../../src/app/views/game/SkillInfoView.lua:7
+#: ../../src/app/views/game/SkillInfoView.lua:12
+msgid "SkInfo_2"
+msgstr "只显示形状"
+
+#: ../../src/app/views/game/SkillInfoView.lua:8
+#: ../../src/app/views/game/SkillInfoView.lua:13
+msgid "SkInfo_3"
+msgstr "选择文字的意思"
+
+#: ../../src/app/views/game/SkillInfoView.lua:14
+msgid "SkInfo_4"
+msgstr "选择文字的颜色"
+
+#: ../../src/app/views/game/SkillInfoView.lua:15
+msgid "SkInfo_5"
+msgstr "闪现"
+
+#: ../../src/app/views/game/SkillInfoView.lua:16
+msgid "SkInfo_6"
+msgstr "遮挡"
+
+#: ../../src/app/views/game/SkillInfoView.lua:17
+msgid "SkInfo_7"
+msgstr "不可见的"
+
+#: ../../src/app/views/game/SkillInfoView.lua:18
+msgid "SkInfo_8"
+msgstr "同颜色的"
+
+#: ../../src/app/views/game/SkillInfoView.lua:19
+msgid "SkInfo_9"
+msgstr "右旋转"
+
+#: ../../src/app/views/game/SkillInfoView.lua:20
+msgid "SkInfo_10"
+msgstr "左旋转"
+
+#: ../../src/app/views/home/HomeAdsView.lua:7
+msgid "AdsInfo"
+msgstr ""
+"你的捐助将去除所有广告。捐助最多的前十名玩家可以为我们的下一个游"
+"戏中的角色命名。"
+
+#: ../../src/app/views/home/HomeConfigView.lua:7
+msgid "Language"
+msgstr "语言"
+
+#: ../../src/app/views/home/HomeConfigView.lua:8
+#: ../../src/app/views/home/HomeConfigView.lua:24
+#: ../../src/app/views/home/HomeConfigView.lua:26
+msgid "ICloud"
+msgstr "iCloud"
+
+#: ../../src/app/views/home/HomeConfigView.lua:9
+msgid "Rate"
+msgstr "点赞"
+
+#: ../../src/app/views/home/HomeConfigView.lua:10
+msgid "Credits"
+msgstr "制作人员"
+
+#: ../../src/app/views/home/HomeConfigView.lua:11
+#: ../../src/app/views/home/OverlapHomeView.lua:9
+msgid "Donation"
+msgstr "捐助"
+
+#: ../../src/app/views/home/HomeConfigView.lua:18
+#: ../../src/app/views/home/HomeConfigView.lua:24
+msgid "Off"
+msgstr "关"
+
+#: ../../src/app/views/home/HomeConfigView.lua:20
+#: ../../src/app/views/home/HomeConfigView.lua:26
+msgid "On"
+msgstr "开"
+
+#: ../../src/app/views/home/HomeMoreView.lua:6
+msgid "moreIce"
+msgstr "划出完美曲线保护冰原"
+
+#: ../../src/app/views/home/HomeMoreView.lua:7
+msgid "moreMary"
+msgstr "独创玩法的数字融合游戏"
 
 #: ../../src/app/views/home/OverlapHomeView.lua:6
 msgid "Config"
-msgstr "配置"
+msgstr "设置"
 
 #: ../../src/app/views/home/OverlapHomeView.lua:7
 msgid "Conllection"
@@ -46,6 +198,35 @@ msgstr "收集"
 #: ../../src/app/views/home/OverlapHomeView.lua:8
 msgid "Rank"
 msgstr "排行"
+
+#: ../../src/app/views/select/OverlapSelectView.lua:10
+msgid "trval"
+msgstr "无尽旅行"
+
+#: ../../src/app/views/travel/OverlapTravelView.lua:10
+msgid "You"
+msgstr "你"
+
+#: ../../src/app/views/travel/OverlapTravelView.lua:11
+msgid "Max"
+msgstr "最高"
+
+#: ../../src/app/views/travel/TravelPageView.lua:6
+#: ../../src/app/views/travel/TravelPageView.lua:14
+msgid "YourRank"
+msgstr "你的排名"
+
+#: ../../src/app/views/travel/TravelPageView.lua:7
+#: ../../src/app/views/travel/TravelPageView.lua:15
+msgid "HighScore"
+msgstr "最高分"
+
+#: ../../src/app/views/travel/TravelPageView.lua:8
+msgid "Random"
+msgstr "随机障碍"
+
+#~ msgid "Shound"
+#~ msgstr "声音"
 
 #~ msgid "TimeScore"
 #~ msgstr "%d 内得分 %d"

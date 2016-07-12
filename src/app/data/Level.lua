@@ -27,11 +27,11 @@ Level.timeFunction =  function(score,t0,x,min)
 end
 
 --场景 ，块数，障碍，星级1，星级2，星级3，初始时间,时间函数参数
-Level.data [1] = {1,3,{{0}},{3,0,0},{10,0,0},{20,0,0},10,{4,4,1.1}}
-Level.data [2] = {1,3,{{0}},{0,5,0},{0,9,0}, {0,15,0},10,{4,4,1.1}}
-Level.data [3] = {1,3,{{0}},{5,0,15},{5,0,11},{5,0,8},0,{0,0,0}}
-Level.data [4] = {1,3,{{0}},{0,5,15},{0,5,11},{0,5,8},0,{0,0,0}}
-Level.data [5] = {1,3,{{1}},{5,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
+Level.data [1] = {1,3,{{0}},{1,0,0},{4,0,0,4},{5,0,0},10,{4,4,1.1}}
+Level.data [2] = {1,3,{{0}},{0,1,0},{0,9,0}, {0,15,0},10,{4,4,1.1}}
+Level.data [3] = {1,3,{{0}},{1,0,21,1},{5,0,11,2},{5,0,8},0,{0,0,0}}
+Level.data [4] = {1,3,{{0}},{0,1,15,3},{0,5,11},{0,5,8},0,{0,0,0}}
+Level.data [5] = {1,3,{{1}},{1,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
 Level.data [6] = {1,3,{{2}},{7,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
 Level.data [7] = {1,3,{{4}},{7,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
 Level.data [8] = {1,3,{{3}},{7,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
@@ -93,25 +93,19 @@ function Level.getStarInfo(level)
     local star2 =Level.data[level][5]
     local star3 =Level.data[level][6]
 
-
     local function getNoTimeStarInfo(star)
         if star[1] and star[1]~=0 then
-            return string.format(_("TimeNorScore"),star[3],star[1])
---            return string.format("%d秒内得分%d",star[3],star[1])
+            return string.format(helper.fromatLO(_("TimeNorScore")),star[3],star[1])
         elseif star[2]  and star[2]~=0  then
-            return  string.format(_("TimeUniScore"),star[3],star[2])
---            return  string.format("%d秒内完美得分%d",star[3],star[2])
+            return  string.format(helper.fromatLO(_("TimeUniScore")),star[3],star[2])
         end
     end
 
-
     local function getTimeStarInfo(star)
         if star[1] and star[1]~=0 then
---            return string.format("得分%d",star[1])
-            return string.format(_("NorScore"),star[1])
+            return string.format(helper.fromatLO(_("NorScore")),star[1])
         elseif star[2] and star[2]~=0 then
---            return  string.format("完美得分%d",star[2])
-            return string.format(_("UniScore"),star[2])
+            return string.format(helper.fromatLO(_("UniScore")),star[2])
         end
     end
 
@@ -128,5 +122,6 @@ function Level.getStarInfo(level)
     end
     return llbinfos
 end
+
 
 return Level

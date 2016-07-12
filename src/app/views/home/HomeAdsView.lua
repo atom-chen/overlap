@@ -3,7 +3,11 @@ local HomeAdsView = class("HomeAdsView", cc.load("mvc").ViewBase)
 
 HomeAdsView.RESOURCE_FILENAME = "home.home_noads"
 
+HomeAdsView.LOCALE_LANG_LABEL = {
+    adsinfo        = _("AdsInfo"),
+}
 function HomeAdsView:onCreate()
+    self:localLanguage()
     self.edit_name:setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER)
 end
 

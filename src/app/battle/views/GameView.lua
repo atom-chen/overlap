@@ -16,15 +16,16 @@ ShapeSprite.START_ANI = {
 }
 
 ShapeSprite.WRONG_STOP_TIME = 2
-
 ShapeSprite.SHAPE_MOVE_TO_TIME = 0.2
 ShapeSprite.SHAPE_FADE_OUT_TIME = 0.15
 ShapeSprite.LAST_AUTO_RESTOR_DELAYTIEM = 0.6
+ShapeSprite.TIME_TO_NEXT_STAGE = 0.4
 
 
-ShapeSprite.TAG_LIGHT_LAYER = 121
-ShapeSprite.TAG_SHAPE_LAYER = 123
+ShapeSprite.TAG_LIGHT_LAYER  = 121
+ShapeSprite.TAG_SHAPE_LAYER  = 123
 ShapeSprite.TAG_EFFECT_LAYER = 124
+ShapeSprite.TAG_OPT_LAYER    = 125
 
 GameView.OPT_ITEM = {}
 GameView.OPT_ITEM[3] = {3}
@@ -43,10 +44,14 @@ function GameView:onCreate()
     self.zOrder = 10
     self.oPos = cc.p(gridPos.x+GRID_BORDER,gridPos.y+GRID_BORDER)
     
-    local text =" ...connection 123/56 overlap star ....       "
-    gameUtils.loopTypeWriter(self,"GAME_TIMER_SHOW", self.lbl_text,text,0.2)
+    self.optbackgrid:setContentSize(display.size)
+    self.optgrid:setContentSize(display.size)
 
-    ac.execute(self.icon_red,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.8,0),ac.ccFadeTo(0.8,255))))
+    --    local text ="connection 123/56 overlap star "
+    --    gameUtils.loopTypeWriter(self,"GAME_TIMER_SHOW", self.lbl_title2,text,0.12,self.wright_light)
+    --
+    --    ac.execute(self.icon_red,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.8,0),ac.ccFadeTo(0.8,255))))
+    --    ac.execute(self.wright_light,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.15,0),ac.ccFadeTo(0.15,255))))
 end
 
 
@@ -82,16 +87,14 @@ function GameView:setOption()
             local x = offX + (v-0.5)*optwidth
             local y
             if #opts == 1 then
-            	y  = 219+25
+                y  = 219+25
             else
                 y = 178 + (k-1)*155
             end
 
-
             local opt = display.newSprite("#sp-game-opt-back.png")
                 :move(x,y)
-                :addTo(self)
---            opt:setOpacity(30)
+                :addTo(self.optbackgrid)
 
             self.optback[#self.optback+1] = opt
             self.position[#self.position+1] = cc.p(x,y)
@@ -176,7 +179,7 @@ function GameView:createAchieve(models,ani,skill)
     elseif skill[SKILL_TYPE.ROTATY_LEFT] then
         self.grid:rotate(-90)
     end
-    
+
 
     local lyLight = display.newNode()
     self.grid:addChild(lyLight)
@@ -185,7 +188,7 @@ function GameView:createAchieve(models,ani,skill)
     local lyShape = display.newNode()
     self.grid:addChild(lyShape)
     lyShape:setTag(ShapeSprite.TAG_SHAPE_LAYER)
-    
+
     local skShape = display.newNode()
     self.grid:addChild(skShape)
     skShape:setTag(ShapeSprite.TAG_EFFECT_LAYER )
@@ -225,9 +228,15 @@ function GameView:createAchieve(models,ani,skill)
         end
 
         if skill[SKILL_TYPE.HALF] then
-            display.newSprite("#sp-prepare-level-board.png")
-                :align(cc.p(0,0),300,300)
-                :addTo(skShape)
+            self.cloud = nil
+            self.cloud = sp.SkeletonAnimation:create("Resource/spine/prototype.json","Resource/spine/prototype.atlas",1)
+            self.cloud:setSlotsToSetupPose()
+            self.cloud:setPosition(GRID_BORDER*(0.5+math.random(1,2)-1),GRID_BORDER*(0.5+math.random(1,2)-1))
+            self.cloud:addAnimation(0,"animation", true)
+
+            skShape:addChild(self.cloud)
+            self.cloud:setOpacity(0)
+            ac.execute(self.cloud,ac.ccFadeTo(0.5,255))
         end
 
     elseif ani == ShapeSprite.START_ANI.ORDER then
@@ -260,7 +269,7 @@ end
 function GameView:createOptions(models,orders,skill)
     --选项
     self.opts = {}
-    
+
     local colorSeq   --颜色序列
     if   skill[SKILL_TYPE.SELECT_WORD] or  skill[SKILL_TYPE.SELECT_COLOR] then
         colorSeq = math.randsub(#models,#models)
@@ -268,7 +277,7 @@ function GameView:createOptions(models,orders,skill)
     for v=1, #models do
         local opt =  ShapeSprite:create(models[orders[v]],ShapeSprite.SHAPE_MODE.SHAPE,skill)
             :move(self.position[v])
-            :addTo(self)
+            :addTo(self.optgrid)
         opt:setTag(123+v)
 
         opt:setScale(OPT_GRID_SCALE)
@@ -276,7 +285,7 @@ function GameView:createOptions(models,orders,skill)
         self.opts[v] = opt
 
         self.optback[v]:show()
-        
+
         if   skill[SKILL_TYPE.SELECT_WORD] then
             opt:setTextColor(models[colorSeq[v]].color)
         end
@@ -303,12 +312,12 @@ function GameView:onOption(index)
                 local function call()
                     AppViews:getView(Layers_.gameController):lastStageEnd()
                 end
-                ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+0.5,call)
+                ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE,call)
             else
                 local function call()
                     AppViews:getView(Layers_.gameController):stageClear()
                 end
-                ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+0.5,call)
+                ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE,call)
             end
         end
     end
@@ -333,33 +342,17 @@ function GameView:stageCleanUp()
     self.grid:stopAllActions()
     local result = self.model:gameClear()
     --清除
-    local last = self.grid:getChildByTag(ShapeSprite.TAG_SHAPE_LAYER)
-    if last then
-        last:removeSelf()
-    end
 
-    local lightLayer = self.grid:getChildByTag(ShapeSprite.TAG_LIGHT_LAYER)
-    if lightLayer then
-        lightLayer:removeSelf()
+    for _, child in pairs(self.grid:getChildren()) do
+        child:removeSelf()
     end
-    
-    local skLayer = self.grid:getChildByTag(ShapeSprite.TAG_EFFECT_LAYER )
-    if skLayer then
-        skLayer:removeSelf()
+    for _, child in pairs(self.optgrid:getChildren()) do
+        child:removeSelf()
     end
-
-    if self.opts then
-        for key, opt in pairs(self.opts) do
-            if opt then
-            	opt:removeSelf()
-                opt = nil
-            end
---            if opt and self:getChildByTag(123+key)  then
---                self:removeChildByTag(123+key)
---            end
-        end
+    self.opts = nil
+    if self.cloud then
+        self.cloud = nil
     end
-
 end
 
 -----------
@@ -368,11 +361,8 @@ end
 --@function [parent=#GameView] checkEnd
 function GameView:gameCleanUp()
     self:stageCleanUp()
-    for key, opt in pairs(self.optback) do
-        if opt then
-            opt:removeSelf()
-            opt = nil
-        end
+    for _, child in pairs(self.optbackgrid:getChildren()) do
+        child:removeSelf()
     end
 end
 
@@ -384,16 +374,19 @@ end
 function GameView:stageClear()
     audio.playSound(GAME_EFFECT[9])
     for key, shape in pairs(self.shapes) do
-        shape:fadeWhite()
+        shape:fadeLight()
     end
     --加地光
     local models = self.model:getShapes()
     local layer = self.grid:getChildByTag(ShapeSprite.TAG_LIGHT_LAYER)
 
-    for _, model in pairs(models) do
-        ShapeSprite:create(model,ShapeSprite.SHAPE_MODE.BODER)
-            :move(GRID_BORDER,GRID_BORDER)
-            :addTo(layer)
+    --    for _, model in pairs(models) do
+    --        ShapeSprite:create(model,ShapeSprite.SHAPE_MODE.BODER)
+    --            :move(GRID_BORDER,GRID_BORDER)
+    --            :addTo(layer)
+    --    end
+    if self.cloud then
+        ac.execute(self.cloud,ac.ccFadeTo(0.2,0))
     end
 end
 
@@ -414,7 +407,7 @@ function GameView:stageRestore(win)
         ViewManager:getView(GAME_VIEW.gamePlay):stageClear()
     end
 
-    ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+0.5,call)
+    ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE,call)
 end
 
 
@@ -427,7 +420,7 @@ function GameView:goShapeGo(index,wrongSelect)
     self.opts[index]:setLocalZOrder(self.zOrder)
     self.optback[index]:setScale(0.95)
     ac.execute(self.optback[index],ac.ccScaleTo(0.15,1),{easing = 1})
---    self.optback[index]:hide()
+    --    self.optback[index]:hide()
     if  wrongSelect then
         --错误的选择
         self:playTouchEffect()
@@ -435,7 +428,6 @@ function GameView:goShapeGo(index,wrongSelect)
             self.opts[index]:lightOver(ShapeSprite.WRONG_STOP_TIME)
         end
         local function call2()
---            self.optback[index]:setVisible(true)
             --停止点击事件响应
             AppViews:getView(Layers_.gameController):enTouch()
             self.opts[index]:restore()
@@ -466,15 +458,16 @@ function GameView:goShapeGo(index,wrongSelect)
         --正确的选择
 
         self:playTouchEffect()
+        local shape = self.grid:getChildByTag(ShapeSprite.TAG_SHAPE_LAYER):getChildByTag(self.opts[index]:getModel():getColor())
         local function call()
             --            audio.playSound(GAME_EFFECT[9])
-            local shape = self.grid:getChildByTag(ShapeSprite.TAG_SHAPE_LAYER):getChildByTag(self.opts[index]:getModel():getColor())
             shape:setCompleted()
             self.opts[index]:shapeFadeOut(ShapeSprite.SHAPE_FADE_OUT_TIME)
         end
 
         --根据技能不同做校验
         self.opts[index]:valid()
+        shape:valid()
         local easein = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,self.oPos), 1)
         self.opts[index]:runAction(cc.Sequence:create(
             cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
@@ -488,6 +481,16 @@ end
 function GameView:playTouchEffect()
     audio.playSound(GAME_EFFECT[self.effect])
     self.effect = self.effect+1
+end
+
+function GameView:startREC()
+    local action = cc.RepeatForever:create(ac.ccSeq(ac.ccFadeTo(0.5,0),ac.ccFadeTo(0.5,255)))
+    action:setTag(111)
+    ac.execute(self.icon_red,action)
+end
+function GameView:stopREC()
+    self.icon_red:stopActionByTag(111)
+    self.icon_red:setOpacity(255)
 end
 
 

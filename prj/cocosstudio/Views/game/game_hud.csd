@@ -6,37 +6,38 @@
       <ObjectData Name="Layer" Tag="279" ctype="GameLayerObjectData">
         <Size X="750.0000" Y="1334.0000" />
         <Children>
-          <AbstractNodeData Name="countdown" ActionTag="-1845376170" Tag="280" IconVisible="False" LeftMargin="60.6599" RightMargin="655.3401" TopMargin="27.6608" BottomMargin="1222.3392" FontSize="72" LabelText="0" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="36.0000" Y="88.0000" />
+          <AbstractNodeData Name="countdown" ActionTag="-1845376170" Tag="280" IconVisible="False" LeftMargin="70.5111" RightMargin="648.4889" TopMargin="16.7483" BottomMargin="1243.2517" FontSize="60" LabelText="0" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="31.0000" Y="74.0000" />
             <AnchorPoint ScaleY="0.5000" />
-            <Position X="60.6599" Y="1264.3392" />
+            <Position X="70.5111" Y="1280.2517" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="26" G="26" B="26" />
-            <PrePosition X="0.0809" Y="0.9478" />
-            <PreSize X="0.0453" Y="0.0630" />
+            <CColor A="255" R="118" G="115" B="113" />
+            <PrePosition X="0.0940" Y="0.9597" />
+            <PreSize X="0.0413" Y="0.0555" />
             <FontResource Type="Normal" Path="Resource/fonts/OverlapExt.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="255" B="255" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="score" ActionTag="1173795748" Tag="39" IconVisible="False" LeftMargin="551.9724" RightMargin="157.0276" TopMargin="52.9221" BottomMargin="1200.0779" FontSize="72" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="41.0000" Y="81.0000" />
+          <AbstractNodeData Name="score" ActionTag="1173795748" Tag="39" IconVisible="False" LeftMargin="602.7344" RightMargin="124.2656" TopMargin="17.5045" BottomMargin="1246.4955" FontSize="60" LabelText="0" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="23.0000" Y="70.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="572.4724" Y="1240.5779" />
+            <Position X="614.2344" Y="1281.4955" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7633" Y="0.9300" />
-            <PreSize X="0.0547" Y="0.0607" />
+            <PrePosition X="0.8190" Y="0.9606" />
+            <PreSize X="0.0307" Y="0.0525" />
+            <FontResource Type="Normal" Path="Resource/fonts/Overlap.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_pause" ActionTag="-55324204" CallBackType="Click" CallBackName="onClick" Tag="43" IconVisible="False" LeftMargin="607.9457" RightMargin="67.0543" TopMargin="25.2834" BottomMargin="1225.7166" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="45" Scale9Height="61" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="75.0000" Y="83.0000" />
+          <AbstractNodeData Name="btn_pause" ActionTag="-55324204" CallBackType="Click" CallBackName="onClick" Tag="43" IconVisible="False" LeftMargin="684.6788" RightMargin="23.3212" TopMargin="23.3759" BottomMargin="1263.6241" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="12" Scale9Height="25" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="42.0000" Y="47.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="645.4457" Y="1267.2166" />
+            <Position X="705.6788" Y="1287.1241" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8606" Y="0.9499" />
-            <PreSize X="0.1000" Y="0.0622" />
+            <PrePosition X="0.9409" Y="0.9649" />
+            <PreSize X="0.0560" Y="0.0352" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="PlistSubImage" Path="btn-game-pause.png" Plist="Resource/atlas/ui-game.plist" />
             <PressedFileData Type="PlistSubImage" Path="btn-game-pause.png" Plist="Resource/atlas/ui-game.plist" />
@@ -57,49 +58,88 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_2" ActionTag="-4933285" Tag="110" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="164.1500" RightMargin="205.8500" BottomMargin="1234.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_2" ActionTag="-4933285" Tag="110" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="185.0000" RightMargin="185.0000" BottomMargin="1234.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="380.0000" Y="100.0000" />
             <Children>
-              <AbstractNodeData Name="star1" ActionTag="-1171862579" Tag="111" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="69.0000" RightMargin="259.0000" TopMargin="24.0000" BottomMargin="24.0000" ctype="SpriteObjectData">
-                <Size X="52.0000" Y="52.0000" />
+              <AbstractNodeData Name="star1" ActionTag="-1171862579" Tag="111" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="73.0000" RightMargin="263.0000" TopMargin="24.0000" BottomMargin="32.0000" ctype="SpriteObjectData">
+                <Size X="44.0000" Y="44.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="95.0000" Y="50.0000" />
+                <Position X="95.0000" Y="54.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2500" Y="0.5000" />
-                <PreSize X="0.1368" Y="0.5200" />
-                <FileData Type="PlistSubImage" Path="sp-result-star.png" Plist="Resource/atlas/ui-game.plist" />
+                <PrePosition X="0.2500" Y="0.5400" />
+                <PreSize X="0.1158" Y="0.4400" />
+                <FileData Type="PlistSubImage" Path="icon-main-stars.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="star2" ActionTag="737617715" Tag="112" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="164.0000" RightMargin="164.0000" TopMargin="24.0000" BottomMargin="24.0000" ctype="SpriteObjectData">
-                <Size X="52.0000" Y="52.0000" />
+              <AbstractNodeData Name="star2" ActionTag="737617715" Tag="112" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="168.0000" RightMargin="168.0000" TopMargin="24.0000" BottomMargin="32.0000" ctype="SpriteObjectData">
+                <Size X="44.0000" Y="44.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="190.0000" Y="50.0000" />
+                <Position X="190.0000" Y="54.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="0.1368" Y="0.5200" />
-                <FileData Type="PlistSubImage" Path="sp-result-star.png" Plist="Resource/atlas/ui-game.plist" />
+                <PrePosition X="0.5000" Y="0.5400" />
+                <PreSize X="0.1158" Y="0.4400" />
+                <FileData Type="PlistSubImage" Path="icon-main-stars.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="star3" ActionTag="720021549" Tag="113" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="259.0000" RightMargin="69.0000" TopMargin="24.0000" BottomMargin="24.0000" ctype="SpriteObjectData">
-                <Size X="52.0000" Y="52.0000" />
+              <AbstractNodeData Name="star3" ActionTag="720021549" Tag="113" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="263.0000" RightMargin="73.0000" TopMargin="24.0000" BottomMargin="32.0000" ctype="SpriteObjectData">
+                <Size X="44.0000" Y="44.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="285.0000" Y="50.0000" />
+                <Position X="285.0000" Y="54.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7500" Y="0.5000" />
-                <PreSize X="0.1368" Y="0.5200" />
-                <FileData Type="PlistSubImage" Path="sp-result-star.png" Plist="Resource/atlas/ui-game.plist" />
+                <PrePosition X="0.7500" Y="0.5400" />
+                <PreSize X="0.1158" Y="0.4400" />
+                <FileData Type="PlistSubImage" Path="icon-main-stars.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" />
-            <Position X="354.1500" Y="1234.0000" />
+            <Position X="375.0000" Y="1234.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4722" Y="0.9250" />
+            <PrePosition X="0.5000" Y="0.9250" />
             <PreSize X="0.5067" Y="0.0750" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Panel_1" ActionTag="1379170462" Tag="162" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="275.0000" RightMargin="275.0000" TopMargin="1132.2019" BottomMargin="1.7981" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
+            <Children>
+              <AbstractNodeData Name="LO_TIP_2" ActionTag="-1746445820" Tag="161" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-193.5000" RightMargin="-193.5000" TopMargin="121.3760" BottomMargin="36.6240" FontSize="36" LabelText="TAP THE SHAPES IN SEQUENCE, FROM BOTTOM TO TOP" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="587.0000" Y="42.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="100.0000" Y="57.6240" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="118" G="115" B="113" />
+                <PrePosition X="0.5000" Y="0.2881" />
+                <PreSize X="2.9350" Y="0.2100" />
+                <FontResource Type="Normal" Path="Resource/fonts/Overlap.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="LO_TIP_1" ActionTag="1170170044" VisibleForFrame="False" Tag="163" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-220.0689" RightMargin="-241.9311" TopMargin="128.1503" BottomMargin="43.8497" FontSize="24" LabelText="TAP THE SHAPES IN SEQUENCE, FROM BOTTOM TO TOP" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="662.0000" Y="28.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="110.9311" Y="57.8497" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="118" G="115" B="113" />
+                <PrePosition X="0.5547" Y="0.2892" />
+                <PreSize X="3.3100" Y="0.1400" />
+                <FontResource Type="Default" Path="" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint ScaleX="0.5000" />
+            <Position X="375.0000" Y="1.7981" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5000" Y="0.0013" />
+            <PreSize X="0.2667" Y="0.1499" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />

@@ -32,9 +32,9 @@ end
 
 function ShapeController:isNoTimeModeEnd()
     if self.levelStar1[1]~=0 then
-        return self:getScore() >= self.levelStar1[1]
+        return self:getScore() >= self.levelStar1[1] or self.gameTime >= self.levelStar1[3]
     else
-        return self.maxPerfect >= self.levelStar1[2]
+        return self.maxPerfect >= self.levelStar1[2] or self.gameTime >= self.levelStar1[3]
     end
 end
 
@@ -55,11 +55,11 @@ function ShapeController:completeStar(star)
         end
     else
         if star[1] ~= 0 then
-            if math.round(self.gameTime) <= star[3] then
+            if self.gameTime <= star[3] and self.maxPerfect >= star[1] then
                 return true
             end
         elseif star[2] ~= 0 then
-            if math.round(self.gameTime) <= star[3] then
+            if self.gameTime <= star[3]  and self.maxPerfect >= star[2] then
                 return true
             end
         end
@@ -202,12 +202,14 @@ function ShapeController:update(dt)
 
             if self.gameTime <= ShapeController.TIME_TO_WARING and  not self.tickTime then
                 --时间警告
-                self.tickTime = audio.playSound(GAME_EFFECT[10])
+--                self.tickTime = audio.playSound(GAME_EFFECT[10])
                 local function playcall()
-                    self.tickTime = audio.playSound(GAME_EFFECT[10])
+--                    self.tickTime = audio.playSound(GAME_EFFECT[10])
                 end
 
                 self:addTimer("PLAY_TICK_EFFFECT",10,10000,playcall)
+                
+                self.gameView:startREC()
             end
 
             if self.gameTime <= 0 then
@@ -216,9 +218,10 @@ function ShapeController:update(dt)
                 self:disCountdown()
                 self.timeout = true
                 if self.tickTime  then
-                    audio.stopSound(self.tickTime)
+--                    audio.stopSound(self.tickTime)
                     self.tickTime = nil
                     self:removeTimer("PLAY_TICK_EFFFECT")
+                    self.gameView:stopREC()
                 end
             end
         end
@@ -249,8 +252,11 @@ function ShapeController:initLevelData(level)
     self.levelCount = lvdata[2]
     self.levelSkill = formatSkill(lvdata[3])
     self.levelStar1 = lvdata[4]
+    self.levelStar1.hasGet = false
     self.levelStar2 = lvdata[5]
+    self.levelStar2.hasGet = false
     self.levelStar3 = lvdata[6]
+    self.levelStar3.hasGet = false
     self.levelTime  = lvdata[7]
 
     self.funParam   = lvdata[8]
@@ -285,7 +291,7 @@ function ShapeController:gameStart(level)
     local function startCall()
         self:createStage()
     end
-    ac.ccDellayToCall(self,0.5,startCall)
+    ac.ccDellayToCall(self,0.1,startCall)
 end
 
 
@@ -386,7 +392,7 @@ function ShapeController:stageClear()
     self.gameView:stageClear()
     self.gameHUD:hideSkill()
     local star = self:leveStars()
-    if star and #star~=0  then
+    if star and next(star)  then
         self.gameHUD:getStar(star)
     end
     
@@ -395,9 +401,10 @@ function ShapeController:stageClear()
     self.gameHUD:updateScore(self:getScore())
     --如果进入时间警告时候，停止警告
     if self.tickTime and self.gameTime > ShapeController.TIME_TO_WARING  then
-        audio.stopSound(self.tickTime)
+--        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
+        self.gameView:stopREC()
     end
     --过关清理场景
     local function cleanCallback()
@@ -501,9 +508,10 @@ function ShapeController:gameOver()
     AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.round(self.gameTime),self.maxPerfect)
 
     if self.tickTime  then
-        audio.stopSound(self.tickTime)
+--        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
+        self.gameView:stopREC()
     end
 
     self:disCountdown()
@@ -519,6 +527,19 @@ end
 --@function [parent=ShapeController] gameClean
 function ShapeController:gameClean()
     self.gameView:gameCleanUp()
+    
+    if self.tickTime  then
+--        audio.stopSound(self.tickTime)
+        self.tickTime = nil
+        self:removeTimer("PLAY_TICK_EFFFECT")
+        self.gameView:stopREC()
+    end
+
+    self:disCountdown()
+    self:disTouch()
+
+    ac.stopTarget(self)
+    ac.stopTarget(self.gameView)
 end
 
 

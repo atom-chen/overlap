@@ -10,12 +10,17 @@ local GamePrepareView = import(".game.GamePrepareView")
 local GameResultView = import(".game.GameResultView")
 local GamePauseView = import(".game.GamePauseView")
 local HomeConfigView = import(".home.HomeConfigView")
+local OverlapSplashView = import(".OverlapSplashView")
 
 function MainScene:onCreate()
     display.loadSpriteFrames("Resource/atlas/shape-entity.plist","Resource/atlas/shape-entity.png")
     display.loadSpriteFrames("Resource/atlas/shape-border.plist","Resource/atlas/shape-border.png")
+    display.loadSpriteFrames("Resource/atlas/shape-shadow.plist","Resource/atlas/shape-shadow.png")
     display.loadSpriteFrames("Resource/atlas/planet.plist","Resource/atlas/planet.png")
-    self:onGame()
+    
+    audio.playMusic(GAME_BGM)
+    
+    self:onSplash()
 end
 
 function MainScene:onClick( path,node,funcName)
@@ -27,9 +32,12 @@ function MainScene:onClick( path,node,funcName)
         --        end
 end
 
+function MainScene:onSplash()
+    self.splash = OverlapSplashView:create()
+        :addTo(self)
 
-function MainScene:onGame()
-    OverlapBackView:create(self:getApp(),Layers_.ground)
+    self.ground = OverlapBackView:create(self:getApp(),Layers_.ground)
+        :hide()
         :addTo(self)
     self.gameController =  ShapeController:create(self:getApp(),Layers_.gameController)
         :hide()
@@ -37,25 +45,33 @@ function MainScene:onGame()
     self.selectView = OverlapSelectView:create(self:getApp(),Layers_.select)
         :hide()
         :addTo(self)
-        
+
     self.prepareView = GamePrepareView:create(self:getApp(),Layers_.prepare)
         :hide()
         :addTo(self)
-        
+
     self.mainView = OverlapHomeView:create(self:getApp(),Layers_.home)
+        :hide()
         :addTo(self)
 
-    
+
     self.resultView =  GameResultView:create(self:getApp(),Layers_.result)
         :hide()
         :addTo(self)
     self.pauseView =  GamePauseView:create(self:getApp(),Layers_.pause)
         :hide()
         :addTo(self)
-        
+
     self.configView =  HomeConfigView:create(self:getApp(),Layers_.config)
         :hide()
         :addTo(self)
+end
+
+function MainScene:onGame()
+    self.ground:show()
+    self.mainView:show()
+    self.splash:removeSelf()
+    self.splash = nil
 end
 
 

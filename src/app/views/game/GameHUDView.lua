@@ -31,6 +31,7 @@ end
 
 
 function GameHUDView:getStar(star)
+dump(star)
     for v=1, 3 do
         if star[v] then
             self["star"..v]:show()
@@ -77,43 +78,43 @@ function GameHUDView:getTime(time,delayTime)
         delayt = "+"..delayTime
         tcolor = {r = 161, g = 68, b = 68}
     else
-        delayt = "-"..delayTime
+        delayt = delayTime
         tcolor = {r = 65, g = 135, b = 110}
     end
 
 
     local score = ccui.Text:create()
-    score:setFontName("Resource/fonts/MGS2.ttf")
+    score:setFontName("Resource/fonts/Overlap.ttf")
     score:setFontSize(72)
     score:setString(delayt)
     score:setTextColor(tcolor)
     score:setPosition(display.width/2, display.height-509)
     self:addChild(score)
-
-    ac.execute(score,ac.ccSeq(ac.ccDelay(0.5),ac.ccEasing(ac.ccMoveTo(0.5,cc.p(66,1247)),21),ac.ccRemoveSelf()))
+    
+    ac.execute(score,ac.ccSeq(ac.ccDelay(0.5),ac.ccEasing(ac.ccMoveTo(0.5,cc.p(self.countdown:getPosition())),21),ac.ccRemoveSelf()))
 
     self.countdown:setString(time)
 end
 
 
 function GameHUDView:updateScore(score)
-    self.score:setString(score)
+--    self.score:setString(score)
+    helper.seqAniGet(self.score,score,1)
 end
 
 
 function GameHUDView:showPerfect(serial)
     local ttfConfig = {}
-    ttfConfig.fontFilePath="Resource/fonts/MGS2.ttf"
-    ttfConfig.fontSize =  72
+    ttfConfig.fontFilePath="Resource/fonts/Overlap.ttf"
+    ttfConfig.fontSize =  62
 
-    local label1 = cc.Label:createWithTTF(ttfConfig,"PERFECT "..serial, cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
-    label1:setTextColor(cc.c3b(238,205,107))
+    local label1 = cc.Label:createWithTTF(ttfConfig,"PERFECT * "..serial, cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
+    label1:setTextColor(cc.c3b(241,81,81))
     self:addChild(label1)
-    label1:setPosition( cc.p(display.width/2, display.height-509) )
+    label1:setPosition( cc.p(display.width/2, 425) )
+--    label1:setPosition( cc.p(display.width/2, display.height-509) )
     label1:setAnchorPoint( cc.p(0.5, 0.5))
-
-    ac.execute(label1,ac.ccSeq(ac.ccScaleTo(0.8,2),ac.ccRemoveSelf()))
---    ac.execute(label1,ac.ccSeq(ac.ccDelay(1),ac.ccRemoveSelf()))
+    ac.execute(label1,ac.ccSeq(ac.ccFadeTo(0.2,255),ac.ccDelay(1),ac.ccFadeTo(0.3,0),ac.ccRemoveSelf()))
 end
 
 

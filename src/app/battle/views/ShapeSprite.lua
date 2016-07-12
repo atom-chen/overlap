@@ -130,6 +130,15 @@ function ShapeSprite:ctor(model_,type,skill)
     self.skill = skill or {}
 
     if type == ShapeSprite.SHAPE_MODE.SHAPE_BORDER or type == ShapeSprite.SHAPE_MODE.BODER then
+        local filename = string.format("#d-%d.png",spId)
+        self.shadow = display.newSprite(filename)
+        self.shadow:move(x,y)
+        self.shadow:rotate(rotation)
+        if flip then
+            self.shadow:setFlippedX(true)
+        end
+        self:addChild(self.shadow)
+
         local filename = string.format("#l-%d.png",spId)
         self.light = display.newSprite(filename)
         self.light:move(x,y)
@@ -152,7 +161,7 @@ function ShapeSprite:ctor(model_,type,skill)
 
         if self.skill[SKILL_TYPE.ONLEY_COLOR] then
             --只有颜色的选项
-            self.maskback = display.newSprite("#opt-skill-back.png")
+            self.maskback = display.newSprite("#opt-skill-back-white.png")
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
             self.maskback:setScale(1/OPT_GRID_SCALE)
@@ -185,7 +194,17 @@ function ShapeSprite:ctor(model_,type,skill)
                 :addTo(self.maskback)
             self.text:setColor(ShapeSprite.SHAPE_COLOR[color])
         end
-
+        if type == ShapeSprite.SHAPE_MODE.SHAPE then
+            local filename = string.format("#d-%d.png",spId)
+            self.shadow = display.newSprite(filename)
+            self.shadow:move(x,y)
+            self.shadow:rotate(rotation)
+            self.shadow:setColor(cc.c3b(93,93,93))
+            if flip then
+                self.shadow:setFlippedX(true)
+            end
+            self:addChild(self.shadow)
+        end
 
         local filename = string.format("#s-%d.png",spId)
         self.shape = display.newSprite(filename)
@@ -193,7 +212,7 @@ function ShapeSprite:ctor(model_,type,skill)
             :rotate(rotation)
             :addTo(self)
         if self.skill[SKILL_TYPE.ONLEY_SHAPE] then
-            self.shape:setColor(cc.c3b(255,255,255))
+            self.shape:setColor(cc.c3b(93,93,93))
         else
             self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
         end
@@ -205,6 +224,7 @@ function ShapeSprite:ctor(model_,type,skill)
 
         if self.skill[SKILL_TYPE.ONLEY_COLOR] or self.skill[SKILL_TYPE.SELECT_WORD] or  self.skill[SKILL_TYPE.SELECT_COLOR]  then
             self.shape:hide()
+            self.shadow:hide()
         end
 
     end
@@ -221,11 +241,7 @@ end
 function ShapeSprite:setCompleted()
     if self.light then
         self.light:hide()
-    end
-    --    self.shape:setColor(ShapeSprite.SHAPE_COLOR_BLUE_SLOW)
-    self.shape:setColor(ShapeSprite.SHAPE_COLOR_WHITE)
-    if self.skill[SKILL_TYPE.HIDEN] then
-        self.shape:show()
+        self.shape:hide()
     end
 end
 
@@ -239,6 +255,8 @@ end
 
 function ShapeSprite:shapeFadeOut(t)
     ac.execute(self.shape,ac.ccFadeTo(t,0))
+
+    self.shadow:hide()
 end
 
 function ShapeSprite:shapeFadeIn(t)
@@ -247,12 +265,15 @@ function ShapeSprite:shapeFadeIn(t)
 end
 
 
-function ShapeSprite:fadeWhite(t)
-    t = t or 0.2
-    if self.light then
-        self.light:hide()
-    end
-    ac.execute(self.shape,ac.ccFadeIn(0.3))
+function ShapeSprite:fadeLight(t)
+    self.shape:setColor(ShapeSprite.SHAPE_COLOR_WHITE)
+    self.shape:show()
+    self.shape:setOpacity(0)
+    ac.execute(self.shape,ac.ccFadeTo(0.5,255))
+    ac.execute(self.shadow,ac.ccFadeTo(0.5,0))
+    self.light:show()
+    self.light:setOpacity(0)
+    ac.execute(self.light,ac.ccFadeTo(0.5,255))
 end
 
 
@@ -277,9 +298,11 @@ end
 function ShapeSprite:valid()
     if self.skill[SKILL_TYPE.SELECT_WORD] or  self.skill[SKILL_TYPE.SELECT_COLOR]  then
         self.shape:show()
+        self.shadow:show()
         self.maskback:hide()
     elseif self.skill[SKILL_TYPE.ONLEY_COLOR] then
         self.shape:show()
+        self.shadow:show()
         self.maskback:hide()
     elseif self.skill[SKILL_TYPE.ONLEY_SHAPE] then
         local color = self.model:getColor()
@@ -293,6 +316,10 @@ function ShapeSprite:valid()
         ac.execute(self,cc.RotateTo:create(0.06,-90))
     elseif self.skill[SKILL_TYPE.HIDEN] then
         self.shape:show()
+        self.shadow:show()
+    elseif self.skill[SKILL_TYPE.SAME] then
+        local color = self.model:getColor()
+        self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
     end
 end
 
@@ -302,9 +329,10 @@ end
 function ShapeSprite:restore()
     if self.skill[SKILL_TYPE.ONLEY_COLOR] or self.skill[SKILL_TYPE.SELECT_WORD] or  self.skill[SKILL_TYPE.SELECT_COLOR]  then
         self.shape:hide()
+        self.shadow:hide()
         self.maskback:show()
     elseif self.skill[SKILL_TYPE.ONLEY_SHAPE] then
-        self.shape:setColor(cc.c3b(255,255,255))
+        self.shape:setColor(cc.c3b(93,93,93))
     elseif self.skill[SKILL_TYPE.ROTATY_LEFT] then
         ac.execute(self,cc.RotateTo:create(0.06,0))
         --    elseif self.skill[SKILL_TYPE.HIDEN] then
@@ -345,6 +373,7 @@ end
 --
 function ShapeSprite:setOutColor(color)
     self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
+    self.skill[SKILL_TYPE.SAME] = SKILL_TYPE.SAME
 end
 
 
