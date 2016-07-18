@@ -11,14 +11,6 @@ Level.LOCALE_LANG_LABEL = {
     Star4             = _("TimeUniScore"),
 }
 
-Level.data = {}
---Level.data [3] = {3,10,function(x) local dt = 4 -  math.floor(x/4)  if dt <=1  then  dt = 1.3 end  return dt  end}
---Level.data [4] = {4,14,function(x) local dt = 6 - math.floor(x/3)  if dt <2  then  dt = 1.1 end  return dt  end}
---Level.data [5] = {5,20,function(x) local dt = 9 - math.floor(x/2)  if dt <3 then  dt = 2.2 end  return dt  end}
---Level.data [6] = {6,28,function(x) local dt = 11 - math.floor(x/1.5)  if dt <4 then  dt = 4 end  return dt  end}
---Level.data [7] = {7,38,function(x) local dt = 15 - math.floor(x/1)  if dt <6 then  dt = 6 end  return dt  end}
---Level.data [8] = {8,50,function(x) local dt = 20 - math.floor(x/0.5)  if dt <8 then  dt = 8 end  return dt end}
-
 Level.timeFunction =  function(score,t0,x,min)
     local dt = t0 -  math.floor(score/x)
     if dt < min  then
@@ -26,11 +18,13 @@ Level.timeFunction =  function(score,t0,x,min)
     return dt
 end
 
+
+Level.data = {}
 --场景 ，块数，障碍，星级1，星级2，星级3，初始时间,时间函数参数
-Level.data [1] = {1,3,{{0}},{1,0,0},{4,0,0,4},{5,0,0},10,{4,4,1.1}}
-Level.data [2] = {1,3,{{0}},{0,1,0},{0,9,0}, {0,15,0},10,{4,4,1.1}}
-Level.data [3] = {1,3,{{0}},{1,0,21,1},{5,0,11,2},{5,0,8},0,{0,0,0}}
-Level.data [4] = {1,3,{{0}},{0,1,15,3},{0,5,11},{0,5,8},0,{0,0,0}}
+Level.data [1] = {1,8,{{0}},{1,0,0},{2,0,0,1},{4,0,0},10,{4,4,1.1}}
+Level.data [2] = {1,3,{{0}},{0,1,0},{0,2,0,3}, {0,4,0},10,{4,4,1.1}}
+Level.data [3] = {1,3,{{0}},{2,0,21},{2,0,18,2},{2,0,12},0,{0,0,0}}
+Level.data [4] = {1,3,{{0}},{0,2,15,3},{0,2,18},{0,2,20},0,{0,0,0}}
 Level.data [5] = {1,3,{{1}},{1,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
 Level.data [6] = {1,3,{{2}},{7,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
 Level.data [7] = {1,3,{{4}},{7,0,0},{0,10,0},{20,0,0},10,{4,4,1.1}}
@@ -86,6 +80,9 @@ Level.data [51] = {6,8,{{5,6}},{3,0,0},{4,0,0},{5,0,0},50,{20,0.5,8}}
 Level.data [52] = {6,8,{{0}},{0,3,0},{0,5,0},{0,7,0},50,{20,0.5,8}}
 Level.data [53] = {6,8,{{0}},{3,0,80},{3,0,55},{3,0,40},0,{0,0,0}}
 Level.data [54] = {6,8,{{0}},{0,3,80},{0,3,60},{0,3,50},0,{0,0,0}}
+
+Level.data [1011] = {1,3,{{0}},{99999,0,0},{99999,0,0,4},{99999,0,0},20,{4,4,1.1}}
+Level.data [1012] = {1,3,{{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}},{99999,0,0},{99999,0,0,4},{99999,0,0},20,{4,4,1.1}}
 
 
 function Level.getStarInfo(level)

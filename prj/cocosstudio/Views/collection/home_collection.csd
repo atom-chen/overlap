@@ -59,7 +59,7 @@
                 <FileData Type="PlistSubImage" Path="icon-collection-collects.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Text_1" ActionTag="1359856703" Tag="44" IconVisible="False" LeftMargin="358.6288" RightMargin="258.3712" TopMargin="63.8289" BottomMargin="1228.1711" FontSize="36" LabelText="100/100" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="gotcolts" ActionTag="1359856703" Tag="44" IconVisible="False" LeftMargin="358.6288" RightMargin="258.3712" TopMargin="63.8289" BottomMargin="1228.1711" FontSize="36" LabelText="100/100" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="133.0000" Y="42.0000" />
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="358.6288" Y="1249.1711" />

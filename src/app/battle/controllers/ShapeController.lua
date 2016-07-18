@@ -80,8 +80,8 @@ function ShapeController:leveStars()
         st[1] = 1
         self.levelStar1.hasGet = true
     end
-     return st
-end 
+    return st
+end
 
 
 --------------------------
@@ -95,7 +95,7 @@ function ShapeController:updateTime(dt,ani)
     else
         self.gameHUD:updateTime(math.round(self.gameTime))
     end
-   
+
 end
 
 function ShapeController:setGameTime(dt)
@@ -202,13 +202,13 @@ function ShapeController:update(dt)
 
             if self.gameTime <= ShapeController.TIME_TO_WARING and  not self.tickTime then
                 --时间警告
---                self.tickTime = audio.playSound(GAME_EFFECT[10])
+                --                self.tickTime = audio.playSound(GAME_EFFECT[10])
                 local function playcall()
---                    self.tickTime = audio.playSound(GAME_EFFECT[10])
+                --                    self.tickTime = audio.playSound(GAME_EFFECT[10])
                 end
 
                 self:addTimer("PLAY_TICK_EFFFECT",10,10000,playcall)
-                
+
                 self.gameView:startREC()
             end
 
@@ -218,7 +218,7 @@ function ShapeController:update(dt)
                 self:disCountdown()
                 self.timeout = true
                 if self.tickTime  then
---                    audio.stopSound(self.tickTime)
+                    --                    audio.stopSound(self.tickTime)
                     self.tickTime = nil
                     self:removeTimer("PLAY_TICK_EFFFECT")
                     self.gameView:stopREC()
@@ -268,6 +268,8 @@ end
 --
 --@function [parent=#ShapeController] gameStart
 function ShapeController:gameStart(level)
+    LevelManager:setLevel(level)
+
     self:initLevelData(level)
 
     --游戏难度
@@ -291,7 +293,10 @@ function ShapeController:gameStart(level)
     local function startCall()
         self:createStage()
     end
-    ac.ccDellayToCall(self,0.1,startCall)
+    ac.ccDellayToCall(self,0.5,startCall)
+
+    self.gameHUD:runAnimation("show")
+    self.gameView:runAnimation("show")
 end
 
 
@@ -308,11 +313,13 @@ function ShapeController:createStage()
 
     local sIndex = math.random(1,#self.levelSkill)
     self.gameView:creatStage(self.levelSkill[sIndex])
-    
-    self.gameHUD:updateSkill(self.levelSkill[sIndex])
 
-    self:enTouch()
-    self:enCountdown()
+    local function call()
+        self.gameHUD:updateSkill(self.levelSkill[sIndex])
+        self:enTouch()
+        self:enCountdown()
+    end
+    ac.ccDellayToCall(self,0.5,call)
 end
 
 
@@ -395,13 +402,13 @@ function ShapeController:stageClear()
     if star and next(star)  then
         self.gameHUD:getStar(star)
     end
-    
+
     --更新游戏时间分数
     self:updateTime(self:getIncreaseTime(),true)
     self.gameHUD:updateScore(self:getScore())
     --如果进入时间警告时候，停止警告
     if self.tickTime and self.gameTime > ShapeController.TIME_TO_WARING  then
---        audio.stopSound(self.tickTime)
+        --        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
         self.gameView:stopREC()
@@ -424,7 +431,7 @@ function ShapeController:stageClear()
             end
         end
     end
-    ac.ccDellayToCall(self,2,cleanCallback)
+    ac.ccDellayToCall(self,1.0,cleanCallback)
 end
 
 ----------------
@@ -444,6 +451,14 @@ function ShapeController:disCountdown()
 end
 
 
+function ShapeController:updateRecord()
+    local record =  helper.getSloterData("record"..self.gamemode) or 0
+    local score = self:getScore()
+    if score >record then
+        helper.saveSloterData("record"..self.gamemode,score)
+    end
+end
+
 ----------------
 --
 --
@@ -453,6 +468,7 @@ function ShapeController:stageFinish()
     self:disCountdown()
     if not self.timeout then
         self.score_ = crypto.confusePlus(self.score_, 1)
+        self:updateRecord()
     end
     --    --如果当前分数大于记录，保存一下
     --    local data = helper.getSloterData(Sloters_.shapeInfo)
@@ -501,14 +517,22 @@ end
 --@function [parent=ShapeController] gameOver
 function ShapeController:gameOver()
     self:hide()
-    local stars = {}
-    stars[1] = self.levelStar1.hasGet
-    stars[2] = self.levelStar2.hasGet
-    stars[3] = self.levelStar3.hasGet
-    AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.round(self.gameTime),self.maxPerfect)
+
+    if LevelManager:isLevelMode() then
+        local stars = {}
+        stars[1] = self.levelStar1.hasGet
+        stars[2] = self.levelStar2.hasGet
+        stars[3] = self.levelStar3.hasGet
+        AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.round(self.gameTime),self.maxPerfect)
+    else
+        --        local record =  helper.getSloterData("record"..self.gamemode) or 0
+        AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.round(self.gameTime),self.maxPerfect,self.gamemode)
+    end
+
+
 
     if self.tickTime  then
---        audio.stopSound(self.tickTime)
+        --        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
         self.gameView:stopREC()
@@ -527,9 +551,9 @@ end
 --@function [parent=ShapeController] gameClean
 function ShapeController:gameClean()
     self.gameView:gameCleanUp()
-    
+
     if self.tickTime  then
---        audio.stopSound(self.tickTime)
+        --        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
         self.gameView:stopREC()
@@ -581,7 +605,7 @@ function ShapeController:gamePause()
     pauseView:show()
     pauseView:move(0,0)
     pauseView:showInfo(self:getScore(),math.round(self.gameTime),self.maxPerfect)
-    
+
     self:hide()
     self:disCountdown()
     actionTargets = actionManager:pauseAllRunningActions()

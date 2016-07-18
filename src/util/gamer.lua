@@ -8,6 +8,12 @@ end
 function gamer:init()
     if device.platform == device.PLATFORM.ANDROID then
     elseif device.platform == device.PLATFORM.IOS then
+        print("gamer.init")
+        local function call()
+            print("store init")
+        end
+        store.init(call)
+
         luaoc.callStaticMethod("WXShare","regist",{id = DNP_SHARE.wxAppId})
         luaoc.callStaticMethod("GameCenter","init",DNP_GAME.ios)
         if DNP_AD.target.gdt then
@@ -138,7 +144,7 @@ function gamer:submitScore(score,leaderboardId,callback)
     --    dnp.DNPGameCenter:SubmitScore(score,leaderboardId)
     if type(score) == "number" and type(leaderboardId) == "number" then
         if device.platform == device.PLATFORM.ANDROID then
-        
+
         elseif device.platform == device.PLATFORM.IOS then
             luaoc.callStaticMethod("GameCenter","submitScoreToLeaderboard",{lId=leaderboardId,score=score,callback=callback})
         end

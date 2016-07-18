@@ -85,7 +85,7 @@ function OverlapBackView:createScene(index)
 
     panel:addChild(planet)
 
-    local small_planet_dir = math.random(1,3)
+    local small_planet_dir = math.random(1,6)
     local small_planet_pos = nil
     local lightrotaty = nil
     if small_planet_dir == 1 then
@@ -97,11 +97,11 @@ function OverlapBackView:createScene(index)
         --上
         small_planet_pos = cc.p(math.random(50,250),display.height/2 - math.random(-10,10))
         lightrotaty = math.random(10,20)
-    elseif small_planet_dir == 3 then
+    elseif small_planet_dir == 3 or small_planet_dir == 5 then
         --左
         small_planet_pos = cc.p(-10-display.width/2 + math.random(-10,10),display.height/2 -  math.random(110,260))
          lightrotaty = math.random(-15,-33)
-    elseif small_planet_dir == 4 then
+    elseif small_planet_dir == 4  or small_planet_dir == 6 then
         --右
         small_planet_pos = cc.p(10+display.width/2 + math.random(-10,10),display.height/2 -  math.random(110,260))
         lightrotaty = math.random(15,33)
@@ -116,14 +116,6 @@ function OverlapBackView:createScene(index)
     display.newSprite(string.format("#fullplanet-%d.png",planetid))
         :move(small_planet_pos)
         :addTo(node)
-        
---    local emitter = cc.ParticleRain:create()
---    -- emitter:retain()
---    node:addChild(emitter, 10)
---    local pos_x, pos_y = emitter:getPosition()
---    emitter:setPosition(500,1000)
---    emitter:setLife(4)
---    emitter:setTexture(cc.Director:getInstance():getTextureCache():addImage("Resource/atlas/credits.png"))
 
     return panel
 end

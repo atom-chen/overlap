@@ -21,148 +21,148 @@ function gameUtils.showCommonDialog(content)
     dialog:addContent(content)
 end
 
------------------------
---进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
+-------------------------
+----进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
+----
+--function gameUtils.transLeft(curName,toName,dt)
+--    local curView
+--    if  type(curName) == "string"  then
+--        curView =  AppViews:getView(curName)
+--    elseif  type(curName) == "userdata"  then
+--        curView =  curName
+--    end
 --
-function gameUtils.transLeft(curName,toName,dt)
-    local curView
-    if  type(curName) == "string"  then
-        curView =  AppViews:getView(curName)
-    elseif  type(curName) == "userdata"  then
-        curView =  curName
-    end
-
-
-    local toView
-    if AppViews:getView(toName) then
-        toView = AppViews:getView(toName)
-    else
-        toView =   AppViews:addViewByName(toName)
-    end
-
-    local aniTime = dt or  0.2
-    local aniAgrs = 5
-    gameUtils.mask(aniTime)
-    toView:setPositionX(1001)
-    toView:show()
-    local function onComplete()
-        curView:hide()
-    end
-    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(-1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
-    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(-1001,0)),{easing = aniAgrs})
-end
-
-
------------------------
---退场动画，提前加载的界面传入名字，没有名字会在动画结束后删除
 --
-function gameUtils.transRight(curName,toName,dt)
-    local curView
-    if type(curName) == "string" then
-        curView = AppViews:getView(curName)
-    else
-        curView = curName
-    end
-    local toView = AppViews:getView(toName)
-
-    local aniTime = dt or  0.2
-    local aniAgrs = 6
-    gameUtils.mask(aniTime)
-    toView:setPositionX(-1001)
-    toView:show()
-    local function onComplete()
-        if type(curName) == "string" then
-            curView:hide()
-        else
-            curView:removeSelf()
-        end
-    end
-    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
-    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(1001,0)),{easing = aniAgrs})
-end
-
-
------------------------
---进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
+--    local toView
+--    if AppViews:getView(toName) then
+--        toView = AppViews:getView(toName)
+--    else
+--        toView =   AppViews:addViewByName(toName)
+--    end
 --
-function gameUtils.transFadeIn(curName,toName,args)
-    local curView
-    if  type(curName) == "string"  then
-        curView =  AppViews:getView(curName)
-    elseif  type(curName) == "userdata"  then
-        curView =  curName
-    end
-
-    local toView
-    if AppViews:getView(toName) then
-        toView = AppViews:getView(toName)
-    else
-        local layName
-        if args and args.name then
-            layName = args.name
-        end
-
-        toView =   AppViews:addViewByName(toName,layName)
-    end
-
-    local aniTime =  0.4
-    local aniAgrs = 5
-    gameUtils.mask(aniTime)
-    toView:setPositionX(0)
-    curView:setPositionX(0)
-    toView:hide()
-    local function onComplete()
-        local cname = curView:getName()
-        if  not cname or cname=="" then
-            curView:closeSelf()
-        else
-            curView:hide()
-        end
-        toView:show()
-        if args and args.call then
-            args.call()
-        end
-    end
-    gameUtils.splashMask(aniTime)
-    ac.ccDellayToCall(toView,aniTime/2,onComplete)
-
-    --    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(-1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
-    --    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(-1001,0)),{easing = aniAgrs})
-end
-
-
------------------------
---退场动画，提前加载的界面传入名字，没有名字会在动画结束后删除
+--    local aniTime = dt or  0.2
+--    local aniAgrs = 5
+--    gameUtils.mask(aniTime)
+--    toView:setPositionX(1001)
+--    toView:show()
+--    local function onComplete()
+--        curView:hide()
+--    end
+--    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(-1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
+--    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(-1001,0)),{easing = aniAgrs})
+--end
 --
-function gameUtils.transFadeOut(curName,toName)
-    local curView
-    if type(curName) == "string" then
-        curView = AppViews:getView(curName)
-    else
-        curView = curName
-    end
-    local toView = AppViews:getView(toName)
-
-    local aniTime = 0.4
-    local aniAgrs = 6
-    gameUtils.mask(aniTime)
-    toView:setPositionX(0)
-    curView:setPositionX(0)
-    toView:hide()
-    local function onComplete()
-
-        if type(curName) == "string" then
-            curView:hide()
-        else
-            curView:closeSelf()
-        end
-        toView:show()
-    end
-    gameUtils.splashMask(aniTime)
-    ac.ccDellayToCall(toView,aniTime/2,onComplete)
-    --    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
-    --    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(1001,0)),{easing = aniAgrs})
-end
+--
+-------------------------
+----退场动画，提前加载的界面传入名字，没有名字会在动画结束后删除
+----
+--function gameUtils.transRight(curName,toName,dt)
+--    local curView
+--    if type(curName) == "string" then
+--        curView = AppViews:getView(curName)
+--    else
+--        curView = curName
+--    end
+--    local toView = AppViews:getView(toName)
+--
+--    local aniTime = dt or  0.2
+--    local aniAgrs = 6
+--    gameUtils.mask(aniTime)
+--    toView:setPositionX(-1001)
+--    toView:show()
+--    local function onComplete()
+--        if type(curName) == "string" then
+--            curView:hide()
+--        else
+--            curView:removeSelf()
+--        end
+--    end
+--    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
+--    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(1001,0)),{easing = aniAgrs})
+--end
+--
+--
+-------------------------
+----进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
+----
+--function gameUtils.transFadeIn(curName,toName,args)
+--    local curView
+--    if  type(curName) == "string"  then
+--        curView =  AppViews:getView(curName)
+--    elseif  type(curName) == "userdata"  then
+--        curView =  curName
+--    end
+--
+--    local toView
+--    if AppViews:getView(toName) then
+--        toView = AppViews:getView(toName)
+--    else
+--        local layName
+--        if args and args.name then
+--            layName = args.name
+--        end
+--
+--        toView =   AppViews:addViewByName(toName,layName)
+--    end
+--
+--    local aniTime =  0.4
+--    local aniAgrs = 5
+--    gameUtils.mask(aniTime)
+--    toView:setPositionX(0)
+--    curView:setPositionX(0)
+--    toView:hide()
+--    local function onComplete()
+--        local cname = curView:getName()
+--        if  not cname or cname=="" then
+--            curView:closeSelf()
+--        else
+--            curView:hide()
+--        end
+--        toView:show()
+--        if args and args.call then
+--            args.call()
+--        end
+--    end
+--    gameUtils.splashMask(aniTime)
+--    ac.ccDellayToCall(toView,aniTime/2,onComplete)
+--
+--    --    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(-1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
+--    --    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(-1001,0)),{easing = aniAgrs})
+--end
+--
+--
+-------------------------
+----退场动画，提前加载的界面传入名字，没有名字会在动画结束后删除
+----
+--function gameUtils.transFadeOut(curName,toName)
+--    local curView
+--    if type(curName) == "string" then
+--        curView = AppViews:getView(curName)
+--    else
+--        curView = curName
+--    end
+--    local toView = AppViews:getView(toName)
+--
+--    local aniTime = 0.4
+--    local aniAgrs = 6
+--    gameUtils.mask(aniTime)
+--    toView:setPositionX(0)
+--    curView:setPositionX(0)
+--    toView:hide()
+--    local function onComplete()
+--
+--        if type(curName) == "string" then
+--            curView:hide()
+--        else
+--            curView:closeSelf()
+--        end
+--        toView:show()
+--    end
+--    gameUtils.splashMask(aniTime)
+--    ac.ccDellayToCall(toView,aniTime/2,onComplete)
+--    --    ac.execute(curView,ac.ccSeq(ac.ccMoveBy(aniTime,cc.p(1001,0)),ac.ccCall(onComplete)),{easing = aniAgrs})
+--    --    ac.execute(toView,ac.ccMoveBy(aniTime,cc.p(1001,0)),{easing = aniAgrs})
+--end
 
 
 
@@ -184,6 +184,96 @@ function gameUtils.loopTypeWriter(view,timerName,label,text,dt,light)
     end
     view:addTimer(timerName,dt,9999999,showFont)
 end
+
+
+-----------------------
+--进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
+--
+function gameUtils.fadeTo(curName,toName,args)
+    local curView
+    if  type(curName) == "string"  then
+        curView =  AppViews:getView(curName)
+    elseif  type(curName) == "userdata"  then
+        curView =  curName
+    end
+
+    local toView
+    if AppViews:getView(toName) then
+        toView = AppViews:getView(toName)
+    else
+        local layName
+        if args and args.name then
+            layName = args.name
+        end
+
+        toView =   AppViews:addViewByName(toName,layName)
+    end
+
+    local aniTime =  0.4
+    if args and args.time then
+        aniTime = args.time
+    end
+    toView:setPositionX(0)
+    curView:setPositionX(0)
+    toView:hide()
+    toView["formView"] = curView
+    local function onComplete()
+        curView:hide()
+        toView:show()
+       
+        if args and args.call then
+            args.call()
+        end
+    end
+    gameUtils.splashMask(aniTime)
+    ac.ccDellayToCall(toView,aniTime/2,onComplete)
+end
+
+local function backView(fadeType,curName,args)
+    local curView
+    if  type(curName) == "string"  then
+        curView =  AppViews:getView(curName)
+    elseif  type(curName) == "userdata"  then
+        curView =  curName
+    end
+    
+    if not curView.formView then
+        return
+    end
+
+    local toView = curView["formView"]
+    local aniTime =  0.4
+    if args and args.time then
+        aniTime = args.time
+    end
+    toView:setPositionX(0)
+    curView:setPositionX(0)
+    toView:hide()
+    local function onComplete()
+        if "close" == fadeType then
+            curView:closeSelf()
+        else
+            curView:hide()
+        end
+        toView:show()
+        if args and args.call then
+            args.call()
+        end
+    end
+    gameUtils.splashMask(aniTime)
+    ac.ccDellayToCall(toView,aniTime/2,onComplete)
+end
+
+
+
+function gameUtils.fadeBack(curName,args)
+    backView("hide",curName,args)
+end
+
+function gameUtils.fadeBackAndClose(curName,args)
+    backView("close",curName,args)
+end
+
 
 
 return gameUtils

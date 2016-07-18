@@ -73,6 +73,7 @@ donopo_1:setTag(59)
 donopo_1:setCascadeColorEnabled(true)
 donopo_1:setCascadeOpacityEnabled(true)
 donopo_1:setPosition(500.5000, 742.5000)
+donopo_1:setOpacity(0)
 layout = ccui.LayoutComponent:bindLayoutComponent(donopo_1)
 layout:setPositionPercentXEnabled(true)
 layout:setPositionPercentX(0.5000)
@@ -100,7 +101,6 @@ Panel_2:setName("Panel_2")
 Panel_2:setTag(60)
 Panel_2:setCascadeColorEnabled(true)
 Panel_2:setCascadeOpacityEnabled(true)
-Panel_2:setOpacity(0)
 layout = ccui.LayoutComponent:bindLayoutComponent(Panel_2)
 layout:setPositionPercentXEnabled(true)
 layout:setPercentWidthEnabled(true)
@@ -307,6 +307,92 @@ AlphaTimeline:addFrame(localFrame)
 
 result['animation']:addTimeline(AlphaTimeline)
 AlphaTimeline:setNode(donopo_1)
+
+--Create PositionTimeline
+local PositionTimeline = ccs.Timeline:create()
+
+localFrame = ccs.PositionFrame:create()
+localFrame:setFrameIndex(95)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setX(491.8107)
+localFrame:setY(425.5000)
+PositionTimeline:addFrame(localFrame)
+
+localFrame = ccs.PositionFrame:create()
+localFrame:setFrameIndex(120)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setX(491.8107)
+localFrame:setY(425.5000)
+PositionTimeline:addFrame(localFrame)
+
+result['animation']:addTimeline(PositionTimeline)
+PositionTimeline:setNode(Sprite_3)
+
+--Create ScaleTimeline
+local ScaleTimeline = ccs.Timeline:create()
+
+localFrame = ccs.ScaleFrame:create()
+localFrame:setFrameIndex(95)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setScaleX(1.0000)
+localFrame:setScaleY(1.0000)
+ScaleTimeline:addFrame(localFrame)
+
+localFrame = ccs.ScaleFrame:create()
+localFrame:setFrameIndex(120)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setScaleX(1.0000)
+localFrame:setScaleY(1.0000)
+ScaleTimeline:addFrame(localFrame)
+
+result['animation']:addTimeline(ScaleTimeline)
+ScaleTimeline:setNode(Sprite_3)
+
+--Create RotationSkewTimeline
+local RotationSkewTimeline = ccs.Timeline:create()
+
+localFrame = ccs.RotationSkewFrame:create()
+localFrame:setFrameIndex(95)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setSkewX(0.0000)
+localFrame:setSkewY(0.0000)
+RotationSkewTimeline:addFrame(localFrame)
+
+localFrame = ccs.RotationSkewFrame:create()
+localFrame:setFrameIndex(120)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setSkewX(0.0000)
+localFrame:setSkewY(0.0000)
+RotationSkewTimeline:addFrame(localFrame)
+
+result['animation']:addTimeline(RotationSkewTimeline)
+RotationSkewTimeline:setNode(Sprite_3)
+
+--Create AlphaTimeline
+local AlphaTimeline = ccs.Timeline:create()
+
+localFrame = ccs.AlphaFrame:create()
+localFrame:setFrameIndex(95)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setAlpha(0)
+AlphaTimeline:addFrame(localFrame)
+
+localFrame = ccs.AlphaFrame:create()
+localFrame:setFrameIndex(120)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setAlpha(255)
+AlphaTimeline:addFrame(localFrame)
+
+result['animation']:addTimeline(AlphaTimeline)
+AlphaTimeline:setNode(Sprite_3)
 
 --Create PositionTimeline
 local PositionTimeline = ccs.Timeline:create()

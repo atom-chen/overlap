@@ -14,8 +14,8 @@ end
 
 function CollectionCellView:updateCell(data)
     self:show()
-    self.id  = data[1]
-    self.has = data[2]
+    self.id  = data.id
+    self.has = (data.has ~= 0)
     if self.has then
         self.collect:setSpriteFrame("collection-1.png")
     else
@@ -29,17 +29,17 @@ function CollectionCellView:clearCell(event)
 end
 
 function CollectionCellView:setCellHighlight(event)
-    
+    self.panel:setScale(0.96)
 end
 
 function CollectionCellView:setCellUnHighlight(event)
-    
+    self.panel:setScale(1)
 end
 
 function CollectionCellView:onCellTouched(event)
-    AppViews:addViewByName("app.views.home.collection.CollectionInfoView")
-    AppViews:getView(Layers_.collectionView):hide()
-    
+    if self.has then
+        AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
+    end
 end
 
 return CollectionCellView

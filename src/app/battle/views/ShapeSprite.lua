@@ -260,8 +260,12 @@ function ShapeSprite:shapeFadeOut(t)
 end
 
 function ShapeSprite:shapeFadeIn(t)
+    local t1 = math.random(1,10)*0.05
+    local t2 = math.random(1,10)*0.05
     self.shape:setOpacity(0)
-    ac.execute(self.shape,ac.ccFadeTo(t,255))
+    self.shadow:setOpacity(0)
+    ac.execute(self.shape,ac.ccSeq(ac.ccDelay(t1),ac.ccFadeTo(t2,255)))
+    ac.execute(self.shadow,ac.ccSeq(ac.ccDelay(t1),ac.ccFadeTo(t2,255)))
 end
 
 

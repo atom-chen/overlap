@@ -46,7 +46,8 @@ end
 function OverlapSelectView:onClick( path,node,funcName)
     if node:getName()=="btn_back" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeOut(Layers_.select,Layers_.home)
+           AppViews:fadeBack(Layers_.select,Layers_.home)
+--            gameUtils.transFadeOut(Layers_.select,Layers_.home)
         end
 
         return btnCallback
@@ -80,7 +81,7 @@ function OverlapSelectView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_travel" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.select,"app.views.travel.OverlapTravelView")
+            AppViews:fadeTo(Layers_.select,"app.views.travel.OverlapTravelView",{name = Layers_.travel})
         end
         return btnCallback
     elseif node:getName()=="pageView" and funcName =="onEvent" then
@@ -125,6 +126,9 @@ function OverlapSelectView:setPage(page)
     self.curPage = page
     ac.execute(self.pc,ac.ccMoveTo(0.05,cc.p(self['p'..(page+1)]:getPosition())))
     AppViews:getView(Layers_.ground):setScene(page)
+    
+    local stars =  LevelManager:getSceneStar(page)
+    self.starcount:setString(stars.." / 24")
     
     if self.curPage == GAME_SCENE_COUNT-1 then
     	self.btn_right:hide()

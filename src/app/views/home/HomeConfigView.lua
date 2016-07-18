@@ -16,12 +16,8 @@ function HomeConfigView:onCreate()
     
     if helper.getSloterData(Sloters_.sound_off) then
         self.Sound:setString(_("Sound")..":".._("Off"))
-        audio.setSoundsVolume(0)
-        audio.setMusicVolume(0)
     else
         self.Sound:setString(_("Sound")..":".._("On"))
-        audio.setSoundsVolume(1)
-        audio.setMusicVolume(1)
     end
     
     if helper.getSloterData(Sloters_.icloud_off) then
@@ -40,19 +36,45 @@ end
 function HomeConfigView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeOut(Layers_.config,Layers_.home)
+            gameUtils.fadeBack(self)
         end
 
         return btnCallback
     elseif node:getName()=="btn_lang"  then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(self,"app.views.home.ConfigLangView")
+            gameUtils.fadeTo(self,"app.views.home.ConfigLangView")
+--            print(store.canMakePurchases())
+--           
+--            local function call(result)
+--            print("load")
+--                dump(result)
+--                store.purchase("overlap.noads")
+--            end
+--            
+--            store.loadProducts({"overlap.noads"}, call)
+            
         end
-
+       
         return btnCallback
     elseif node:getName()=="btn_credit"  then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.config,"app.views.home.ConfigCreditView")
+            gameUtils.fadeTo(Layers_.config,"app.views.home.ConfigCreditView")
+        end
+
+        return btnCallback
+    elseif node:getName()=="btn_rate"  then
+        local function btnCallback(node,eventType)
+            if device.platform == device.PLATFORM.IOS then
+                device.openURL(string.format(DNP_APP.storeUrl.ios, DNP_APP.id.ios))
+            else
+                gamer:openStore()
+            end
+        end
+
+        return btnCallback
+    elseif node:getName()=="btn_donation"  then
+        local function btnCallback(node,eventType)
+            gameUtils.transFadeIn(Layers_.config,"app.views.home.HomeAdsView")
         end
 
         return btnCallback
@@ -60,12 +82,14 @@ function HomeConfigView:onClick( path,node,funcName)
         local function btnCallback(node,eventType)
             if helper.getSloterData(Sloters_.sound_off) then
             	audio.setSoundsVolume(1)
-            	audio.setMusicVolume(1)
+            	audio.playMusic(GAME_BGM)
                 self.Sound:setString(_("Sound")..":".._("On"))
+                helper.saveSloterData(Sloters_.sound_off,false)
             else
                 audio.setSoundsVolume(0)
-                audio.setMusicVolume(0)
+                audio.stopMusic()
                 self.Sound:setString(_("Sound")..":".._("Off"))
+                helper.saveSloterData(Sloters_.sound_off,true)
             end
         end
 

@@ -18,7 +18,12 @@ function MainScene:onCreate()
     display.loadSpriteFrames("Resource/atlas/shape-shadow.plist","Resource/atlas/shape-shadow.png")
     display.loadSpriteFrames("Resource/atlas/planet.plist","Resource/atlas/planet.png")
     
-    audio.playMusic(GAME_BGM)
+    if helper.getSloterData(Sloters_.sound_off) then
+        audio.setSoundsVolume(0)
+    else
+        audio.setSoundsVolume(1)
+        audio.playMusic(GAME_BGM)
+    end
     
     self:onSplash()
 end

@@ -104,7 +104,7 @@
                     <FileData Type="PlistSubImage" Path="icon-main-stars.png" Plist="Resource/atlas/ui-home.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Text_1" ActionTag="-1846842481" Tag="60" IconVisible="False" LeftMargin="42.4721" RightMargin="23.5279" TopMargin="25.6910" BottomMargin="137.3090" FontSize="32" LabelText="0/200" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="gotstars" ActionTag="-1846842481" Tag="60" IconVisible="False" LeftMargin="42.4721" RightMargin="23.5279" TopMargin="25.6910" BottomMargin="137.3090" FontSize="32" LabelText="0/200" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="84.0000" Y="37.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="42.4721" Y="155.8090" />
@@ -142,7 +142,7 @@
                     <FileData Type="PlistSubImage" Path="icon-main-collects.png" Plist="Resource/atlas/ui-home.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Text_1" ActionTag="610861357" Tag="63" IconVisible="False" LeftMargin="54.4318" RightMargin="11.5682" TopMargin="22.7355" BottomMargin="140.2645" FontSize="32" LabelText="0/200" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="gotcolts" ActionTag="610861357" Tag="63" IconVisible="False" LeftMargin="54.4318" RightMargin="11.5682" TopMargin="22.7355" BottomMargin="140.2645" FontSize="32" LabelText="0/200" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="84.0000" Y="37.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="54.4318" Y="158.7645" />
@@ -430,13 +430,13 @@
           <AbstractNodeData Name="Panel_1" ActionTag="-1218633723" Tag="99" IconVisible="False" LeftMargin="617.1826" RightMargin="32.8174" TopMargin="100.9125" BottomMargin="1133.0875" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="100.0000" Y="100.0000" />
             <Children>
-              <AbstractNodeData Name="icon_red" ActionTag="2095154156" Tag="21" IconVisible="False" LeftMargin="78.4211" RightMargin="-3.4211" TopMargin="41.6706" BottomMargin="33.3294" ctype="SpriteObjectData">
+              <AbstractNodeData Name="icon_red" ActionTag="2095154156" Tag="21" IconVisible="False" LeftMargin="69.6178" RightMargin="5.3822" TopMargin="36.8691" BottomMargin="38.1309" ctype="SpriteObjectData">
                 <Size X="25.0000" Y="25.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="90.9211" Y="45.8294" />
+                <Position X="82.1178" Y="50.6309" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9092" Y="0.4583" />
+                <PrePosition X="0.8212" Y="0.5063" />
                 <PreSize X="0.2500" Y="0.2500" />
                 <FileData Type="PlistSubImage" Path="main-icon-red.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />

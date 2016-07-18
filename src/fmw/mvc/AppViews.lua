@@ -141,6 +141,105 @@ function AppViews:clearAll()
     return self
 end
 
+function AppViews:splashMask(time)
+   local mask = display.newLayer(cc.c3b(255,255,255))
+                :addTo(self.scene,10000,10000)
+    mask:setOpacity(0)
+    local function onComplete()
+        mask:removeSelf()
+    end
+    ac.execute(mask,ac.ccSeq(ac.ccFadeTo(time/2,255),ac.ccDelay(0.0),ac.ccFadeTo(time/2,0),ac.ccCall(onComplete)))
+end
+
+
+-----------------------
+--进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
+--
+function AppViews:fadeTo(curName,toName,args)
+    local curView
+    if  type(curName) == "string"  then
+        curView =  self:getView(curName)
+    elseif  type(curName) == "userdata"  then
+        curView =  curName
+    end
+
+    local toView
+    if self:getView(toName) then
+        toView = self:getView(toName)
+    else
+        local layName
+        if args and args.name then
+            layName = args.name
+        end
+
+        toView =   self:addViewByName(toName,layName)
+    end
+
+    local aniTime =  0.4
+    if args and args.time then
+        aniTime = args.time
+    end
+    toView:setPositionX(0)
+    curView:setPositionX(0)
+    toView:hide()
+    toView["fromView"] = curView
+    local function onComplete()
+        curView:hide()
+        toView:show()
+
+        if args and args.call then
+            args.call()
+        end
+    end
+    self:splashMask(aniTime)
+    ac.ccDellayToCall(toView,aniTime/2,onComplete)
+end
+
+
+function AppViews:backView(fadeType,curName,args)
+    local curView
+    if  type(curName) == "string"  then
+        curView =  self:getView(curName)
+    elseif  type(curName) == "userdata"  then
+        curView =  curName
+    end
+
+    if not curView.fromView then
+        return
+    end
+
+    local toView = curView["fromView"]
+    local aniTime =  0.4
+    if args and args.time then
+        aniTime = args.time
+    end
+    toView:setPositionX(0)
+    curView:setPositionX(0)
+    toView:hide()
+    local function onComplete()
+        if "close" == fadeType then
+            curView:closeSelf()
+        else
+            curView:hide()
+        end
+        toView:show()
+        if args and args.call then
+            args.call()
+        end
+    end
+    self:splashMask(aniTime)
+    ac.ccDellayToCall(toView,aniTime/2,onComplete)
+end
+
+
+
+function AppViews:fadeBack(curName,args)
+    self:backView("hide",curName,args)
+end
+
+function AppViews:fadeBackAndClose(curName,args)
+   self:backView("close",curName,args)
+end
 
 
 return AppViews

@@ -59,6 +59,38 @@
             <EasingData Type="0" />
           </IntFrame>
         </Timeline>
+        <Timeline ActionTag="569392369" Property="Position">
+          <PointFrame FrameIndex="95" X="491.8107" Y="425.5000">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="120" X="491.8107" Y="425.5000">
+            <EasingData Type="0" />
+          </PointFrame>
+        </Timeline>
+        <Timeline ActionTag="569392369" Property="Scale">
+          <ScaleFrame FrameIndex="95" X="1.0000" Y="1.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="120" X="1.0000" Y="1.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="569392369" Property="RotationSkew">
+          <ScaleFrame FrameIndex="95" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="120" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="569392369" Property="Alpha">
+          <IntFrame FrameIndex="95" Value="0">
+            <EasingData Type="0" />
+          </IntFrame>
+          <IntFrame FrameIndex="120" Value="255">
+            <EasingData Type="0" />
+          </IntFrame>
+        </Timeline>
         <Timeline ActionTag="-1550544103" Property="Position">
           <PointFrame FrameIndex="65" X="0.0000" Y="0.0000">
             <EasingData Type="0" />
@@ -136,7 +168,7 @@
           <AbstractNodeData Name="Panel_1" ActionTag="1326085322" Tag="58" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.5000" RightMargin="-125.5000" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1001.0000" Y="1334.0000" />
             <Children>
-              <AbstractNodeData Name="donopo_1" ActionTag="1520825784" Tag="59" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="150.0000" RightMargin="150.0000" TopMargin="515.0000" BottomMargin="666.0000" ctype="SpriteObjectData">
+              <AbstractNodeData Name="donopo_1" ActionTag="1520825784" Alpha="0" Tag="59" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="150.0000" RightMargin="150.0000" TopMargin="515.0000" BottomMargin="666.0000" ctype="SpriteObjectData">
                 <Size X="701.0000" Y="153.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="500.5000" Y="742.5000" />
@@ -147,7 +179,7 @@
                 <FileData Type="PlistSubImage" Path="donopo.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_2" ActionTag="-1550544103" Alpha="0" Tag="60" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_2" ActionTag="-1550544103" Tag="60" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1001.0000" Y="1334.0000" />
                 <Children>
                   <AbstractNodeData Name="Sprite_2" ActionTag="1050737896" Tag="61" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="155.5000" RightMargin="155.5000" TopMargin="413.4043" BottomMargin="624.5957" ctype="SpriteObjectData">

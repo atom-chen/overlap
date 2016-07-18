@@ -37,23 +37,25 @@ setmetatable(result, luaExtend)
 local Node=cc.Node:create()
 Node:setName("Node")
 
---Create Panel_2
-local Panel_2 = ccui.Layout:create()
-Panel_2:ignoreContentAdaptWithSize(false)
-Panel_2:setClippingEnabled(false)
-Panel_2:setBackGroundColorType(1)
-Panel_2:setBackGroundColor({r = 150, g = 200, b = 255})
-Panel_2:setBackGroundColorOpacity(0)
-Panel_2:setLayoutComponentEnabled(true)
-Panel_2:setName("Panel_2")
-Panel_2:setTag(102)
-Panel_2:setCascadeColorEnabled(true)
-Panel_2:setCascadeOpacityEnabled(true)
-layout = ccui.LayoutComponent:bindLayoutComponent(Panel_2)
+--Create panel
+local panel = ccui.Layout:create()
+panel:ignoreContentAdaptWithSize(false)
+panel:setClippingEnabled(false)
+panel:setBackGroundColorType(1)
+panel:setBackGroundColor({r = 150, g = 200, b = 255})
+panel:setBackGroundColorOpacity(0)
+panel:setLayoutComponentEnabled(true)
+panel:setName("panel")
+panel:setTag(102)
+panel:setCascadeColorEnabled(true)
+panel:setCascadeOpacityEnabled(true)
+panel:setAnchorPoint(0.5000, 0.5000)
+panel:setPosition(101.5000, 96.5000)
+layout = ccui.LayoutComponent:bindLayoutComponent(panel)
 layout:setSize({width = 203.0000, height = 193.0000})
 layout:setRightMargin(-203.0000)
 layout:setTopMargin(-193.0000)
-Node:addChild(Panel_2)
+Node:addChild(panel)
 
 --Create Sprite_1
 cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
@@ -74,7 +76,7 @@ layout:setRightMargin(29.2759)
 layout:setTopMargin(2.6322)
 layout:setBottomMargin(79.3678)
 Sprite_1:setBlendFunc({src = 1, dst = 771})
-Panel_2:addChild(Sprite_1)
+panel:addChild(Sprite_1)
 
 --Create collect
 cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
@@ -95,7 +97,7 @@ layout:setRightMargin(88.2739)
 layout:setTopMargin(19.6323)
 layout:setBottomMargin(100.3677)
 collect:setBlendFunc({src = 1, dst = 771})
-Panel_2:addChild(collect)
+panel:addChild(collect)
 
 --Create Animation
 result['animation'] = ccs.ActionTimeline:create()
@@ -114,7 +116,7 @@ localFrame:setColor({r = 255, g = 255, b = 255})
 CColorTimeline:addFrame(localFrame)
 
 result['animation']:addTimeline(CColorTimeline)
-CColorTimeline:setNode(Panel_2)
+CColorTimeline:setNode(panel)
 --Create Animation List
 
 result['root'] = Node

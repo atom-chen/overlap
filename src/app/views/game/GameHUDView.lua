@@ -31,7 +31,6 @@ end
 
 
 function GameHUDView:getStar(star)
-dump(star)
     for v=1, 3 do
         if star[v] then
             self["star"..v]:show()
@@ -91,7 +90,7 @@ function GameHUDView:getTime(time,delayTime)
     score:setPosition(display.width/2, display.height-509)
     self:addChild(score)
     
-    ac.execute(score,ac.ccSeq(ac.ccDelay(0.5),ac.ccEasing(ac.ccMoveTo(0.5,cc.p(self.countdown:getPosition())),21),ac.ccRemoveSelf()))
+    ac.execute(score,ac.ccSeq(ac.ccDelay(0.5),ac.ccEasing(ac.ccMoveTo(0.5,cc.p(display.width/2-295,display.height-40)),21),ac.ccRemoveSelf()))
 
     self.countdown:setString(time)
 end

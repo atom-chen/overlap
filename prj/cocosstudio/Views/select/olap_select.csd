@@ -235,7 +235,7 @@
           <AbstractNodeData Name="Panel_top" ActionTag="-1031941845" Tag="45" IconVisible="False" PositionPercentXEnabled="True" BottomMargin="1134.0000" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="750.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="Text_14" ActionTag="-1923450671" Tag="59" IconVisible="False" LeftMargin="370.1300" RightMargin="277.8700" TopMargin="95.5849" BottomMargin="48.4151" FontSize="48" LabelText="6/24" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="starcount" ActionTag="-1923450671" Tag="59" IconVisible="False" LeftMargin="370.1300" RightMargin="277.8700" TopMargin="95.5849" BottomMargin="48.4151" FontSize="48" LabelText="6/24" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="102.0000" Y="56.0000" />
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="370.1300" Y="76.4151" />

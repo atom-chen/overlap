@@ -9,7 +9,7 @@ CollectionCellView.CELL_WIDTH  = 203
 CollectionCellView.CELL_HEIGHT = 193
 
 function HomeCollectionView:onCreate()
-    local t = CollectionManager:getCollection()
+    local t = CollectionManager:getAllCollection()
     local data = {}
     for v=1, #t do
        local cInfo =  CollectionManager:getCollectionInfo(v)
@@ -27,6 +27,10 @@ function HomeCollectionView:onCreate()
 
     end
     tv:getTableViw():registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
+    
+    local collect,allcolt =  CollectionManager:getCollectionCount()
+
+    self.gotcolts:setString(collect .. " / ".. allcolt)
 end
 
 function HomeCollectionView:touch(event)
@@ -36,9 +40,8 @@ end
 function HomeCollectionView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeOut(self,Layers_.home)
+            AppViews:fadeBackAndClose(Layers_.collectionView)
         end
-
         return btnCallback
     end
 end

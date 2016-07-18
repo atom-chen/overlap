@@ -10,24 +10,27 @@ OverlapHomeView.LOCALE_LANG_LABEL = {
 }
 function OverlapHomeView:onCreate()
     self:localLanguage()
-    --    self.Text_2:setAdditionalKerning(10)
-
-    --    local text ="connection 123/56 overlap star "
-    --    gameUtils.loopTypeWriter(self,"HOME_TIMER_SHOW", self.text,text,0.12,self.wright_light)
     ac.execute(self.icon_red,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.8,0),ac.ccFadeTo(0.8,255))))
-    
     ac.execute(self.lbl_touch,ac.ccForever(ac.ccSeq(ac.ccFadeTo(2,0),ac.ccFadeTo(2,255),ac.ccDelay(0.3))))
---    ac.execute(self.lbl_touch,ac.ccForever(ac.ccSeq(ac.ccScaleTo(0.8,1.05),ac.ccScaleTo(0.8,1.0))))
-    
-    --    ac.execute(self.wright_light,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.15,0),ac.ccFadeTo(0.15,255))))
-
-    --    self.btn_overlap:setPressedActionEnabled(true)
 
     self.showtext = {}
     self.count = 0
     self:createOverText()
 
+    self:updateStars()
+    self:updateCollects()
 end
+
+function OverlapHomeView:updateStars()
+    local stars =  LevelManager:getSceneStar()
+    self.gotstars:setString(stars .. "/".. 9*GAME_SCENE_COUNT*3)
+end
+
+function OverlapHomeView:updateCollects()
+    local collect,allcolt =  CollectionManager:getCollectionCount()
+    self.gotcolts:setString(collect .. "/".. allcolt)
+end
+
 
 function OverlapHomeView:touch(event)
 end
@@ -127,31 +130,31 @@ end
 function OverlapHomeView:onClick( path,node,funcName)
     if node:getName()=="btn_overlap" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.home,Layers_.select)
+            AppViews:fadeTo(Layers_.home,Layers_.select)
         end
 
         return btnCallback
     elseif node:getName()=="btn_more" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.home,"app.views.home.HomeMoreView")
+            AppViews:fadeTo(Layers_.home,"app.views.home.HomeMoreView")
         end
 
         return btnCallback
     elseif node:getName()=="btn_noads" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.home,"app.views.home.HomeAdsView")
+            AppViews:fadeTo(Layers_.home,"app.views.home.HomeAdsView")
         end
 
         return btnCallback
     elseif node:getName()=="btn_collection" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.home,"app.views.home.collection.HomeCollectionView",{name = Layers_.collectionView})
+            AppViews:fadeTo(Layers_.home,"app.views.home.collection.HomeCollectionView",{name = Layers_.collectionView})
         end
 
         return btnCallback
     elseif node:getName()=="btn_config" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.home,Layers_.config)
+            AppViews:fadeTo(Layers_.home,Layers_.config)
         end
 
         return btnCallback

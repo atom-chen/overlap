@@ -46,12 +46,6 @@ function GameView:onCreate()
     
     self.optbackgrid:setContentSize(display.size)
     self.optgrid:setContentSize(display.size)
-
-    --    local text ="connection 123/56 overlap star "
-    --    gameUtils.loopTypeWriter(self,"GAME_TIMER_SHOW", self.lbl_title2,text,0.12,self.wright_light)
-    --
-    --    ac.execute(self.icon_red,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.8,0),ac.ccFadeTo(0.8,255))))
-    --    ac.execute(self.wright_light,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.15,0),ac.ccFadeTo(0.15,255))))
 end
 
 
@@ -81,6 +75,7 @@ function GameView:setOption()
     if opts[1] == 3 then
         optwidth = 178
     end
+    local oc = 1
     for k, line in pairs(opts) do
         local offX =  (display.width - optwidth*line )/2
         for v=1, line  do
@@ -98,7 +93,10 @@ function GameView:setOption()
 
             self.optback[#self.optback+1] = opt
             self.position[#self.position+1] = cc.p(x,y)
-            opt:hide()
+            opt:setOpacity(0)
+            
+            ac.execute(opt,ac.ccSeq(cc.DelayTime:create(oc*0.1),ac.ccFadeTo(0.15,200)))
+            oc = oc+1
         end
     end
 end
@@ -180,14 +178,12 @@ function GameView:createAchieve(models,ani,skill)
         self.grid:rotate(-90)
     end
 
-
-    local lyLight = display.newNode()
-    self.grid:addChild(lyLight)
-    lyLight:setTag(ShapeSprite.TAG_LIGHT_LAYER)
-
     local lyShape = display.newNode()
     self.grid:addChild(lyShape)
     lyShape:setTag(ShapeSprite.TAG_SHAPE_LAYER)
+    
+    lyShape:setPositionX(600)
+    ac.execute(lyShape,ac.ccMoveTo(0.18,cc.p(0,0)),{easing = 5})
 
     local skShape = display.newNode()
     self.grid:addChild(skShape)
@@ -376,9 +372,15 @@ function GameView:stageClear()
     for key, shape in pairs(self.shapes) do
         shape:fadeLight()
     end
+    
+   local lyShape = self.grid:getChildByTag(ShapeSprite.TAG_SHAPE_LAYER)
+    ac.execute(lyShape,ac.ccSeq(ac.ccDelay(0.7),
+        ac.ccEasing(ac.ccMoveTo(0.25,cc.p(-900,0)),7),ac.ccRemoveSelf()
+    ))   
+    
     --加地光
     local models = self.model:getShapes()
-    local layer = self.grid:getChildByTag(ShapeSprite.TAG_LIGHT_LAYER)
+--    local layer = self.grid:getChildByTag(ShapeSprite.TAG_LIGHT_LAYER)
 
     --    for _, model in pairs(models) do
     --        ShapeSprite:create(model,ShapeSprite.SHAPE_MODE.BODER)
@@ -456,7 +458,6 @@ function GameView:goShapeGo(index,wrongSelect)
         ))
     else
         --正确的选择
-
         self:playTouchEffect()
         local shape = self.grid:getChildByTag(ShapeSprite.TAG_SHAPE_LAYER):getChildByTag(self.opts[index]:getModel():getColor())
         local function call()
@@ -484,6 +485,7 @@ function GameView:playTouchEffect()
 end
 
 function GameView:startREC()
+    self.icon_red:stopActionByTag(111)
     local action = cc.RepeatForever:create(ac.ccSeq(ac.ccFadeTo(0.5,0),ac.ccFadeTo(0.5,255)))
     action:setTag(111)
     ac.execute(self.icon_red,action)

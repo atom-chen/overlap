@@ -422,6 +422,7 @@ function ViewBase:localLanguage()
         for name, langs in pairs(res) do
             for t=1, 2 do
                 local lblName = "LO_"..name.."_"..t
+                print(lblName)
                 if lblType == t then
                     self[lblName]:setVisible(true)
                     self[name] = self[lblName]

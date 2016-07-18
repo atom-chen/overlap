@@ -71,7 +71,7 @@ end
 
 
 function SelectPattern:showPrepare()
-    gameUtils.transFadeIn(Layers_.select,Layers_.prepare)
+   AppViews:fadeTo(Layers_.select,Layers_.prepare)
     local prepareView = AppViews:getView(Layers_.prepare)
     prepareView:prepare(self.page , self.curlevel)
 end

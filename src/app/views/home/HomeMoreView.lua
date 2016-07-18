@@ -19,17 +19,27 @@ end
 function HomeMoreView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeOut(self,Layers_.home)
+            AppViews:fadeBackAndClose(self)
         end
 
         return btnCallback
     elseif node:getName()=="btn_maryx"  then
         local function btnCallback(node,eventType)
+            if device.platform == device.PLATFORM.IOS then
+                device.openURL("itms-apps://itunes.com/apps/donopo")
+            elseif device.platform == device.PLATFORM.ANDROID then
+--                device.openURL(DNP_APP.url.allGames)
+            end
         end
 
         return btnCallback
     elseif node:getName()=="btn_ice"  then
         local function btnCallback(node,eventType)
+            if device.platform == device.PLATFORM.IOS then
+                device.openURL("itms-apps://itunes.com/apps/donopo")
+            elseif device.platform == device.PLATFORM.ANDROID then
+            --                device.openURL(DNP_APP.url.allGames)
+            end
         end
 
         return btnCallback

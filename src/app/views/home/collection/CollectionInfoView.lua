@@ -1,20 +1,19 @@
-local CollectionInfoView = class("CollectionInfoView", cc.load("mvc").ViewBase)
+local CollectionDialog = class("CollectionDialog", cc.load("mvc").ViewBase)
 
-CollectionInfoView.RESOURCE_FILENAME = "collection.collection_info"
+CollectionDialog.RESOURCE_FILENAME = "collection.collection_info"
 
-function CollectionInfoView:onCreate()
+function CollectionDialog:onCreate()
 end
 
 
-function CollectionInfoView:onClick( path,node,funcName)
+function CollectionDialog:onClick(path,node,funcName)
     if  node:getName() =="btn_ok" then
         local function btnCallback(  node,eventType  )
-            AppViews:getView(Layers_.collectionView):show()
-           self:closeSelf()
+            AppViews:fadeBackAndClose(self)
         end
         return btnCallback
 
     end
 end
 
-return CollectionInfoView
+return CollectionDialog

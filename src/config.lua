@@ -6,6 +6,18 @@ DEBUG = 2
 DNP_APP = {
     appName = "OverLap", 
     version = 1.1,
+    
+    id = {
+        dnp = 10000004,                 -- DONOPO应用内部编号
+        ios = "1087226557",              -- AppStore编码
+        android = "com.donopo.helloKitty",   -- GooglePlay编码
+    },
+
+    storeUrl = {
+        ios     = "itms-apps://itunes.apple.com/app/id%s",                -- iOS 商店地址
+        android = "https://play.google.com/store/apps/details?id=%s",     -- Android商店地址
+    },
+    
     slotKey = "D*N@P#L0NGL1FE",         -- 存档加密
     confuseKey = 10240806,              -- 内存混淆
     gcInterval = 10,                    -- 垃圾回收频度(秒)

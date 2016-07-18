@@ -13,7 +13,7 @@
       <ObjectData Name="Node" Tag="98" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_2" ActionTag="441780773" Tag="102" IconVisible="False" RightMargin="-203.0000" TopMargin="-193.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="panel" ActionTag="441780773" Tag="102" IconVisible="False" RightMargin="-203.0000" TopMargin="-193.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="203.0000" Y="193.0000" />
             <Children>
               <AbstractNodeData Name="Sprite_1" ActionTag="-1610728334" Tag="3" IconVisible="False" LeftMargin="1.7241" RightMargin="29.2759" TopMargin="2.6322" BottomMargin="79.3678" ctype="SpriteObjectData">
@@ -39,8 +39,8 @@
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
             </Children>
-            <AnchorPoint />
-            <Position />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="101.5000" Y="96.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />

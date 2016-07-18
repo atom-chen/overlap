@@ -55,16 +55,14 @@ end
 
 
 function GamePrepareView:startGame()
-    gameUtils.splashMask(0.5)
     local function startCall()
-        self:hide()
         AppViews:getView(Layers_.mainScene):gameStart(self.gameLevel)
     end
-    ac.ccDellayToCall(self,0.25,startCall)
+    AppViews:fadeTo(self,Layers_.gameController,{call = startCall})
 end
 
 function GamePrepareView:backToSelect()
-    gameUtils.transFadeOut(Layers_.prepare,Layers_.select)
+    AppViews:fadeBack(Layers_.prepare)
 end
 
 function GamePrepareView:nextLevel()
@@ -96,6 +94,9 @@ function GamePrepareView:initLevelData(level)
     self.levelStar1 = lvdata[4]
     self.levelStar2 = lvdata[5]
     self.levelStar3 = lvdata[6]
+
+    local collection = LevelManager:getLevelClot(level)
+    self.collection = collection
 end
 
 
@@ -141,7 +142,11 @@ function GamePrepareView:prepare(_page,_level)
     --每个星级的物品
     for v=1, 3 do
         if self["levelStar"..v][4] then
-            self["iconcolt"..v]:show()
+            if CollectionManager:isCollectioned(self.collection) then
+                self["iconcolt"..v]:hide()
+            else
+                self["iconcolt"..v]:show()
+            end
         else
             self["iconcolt"..v]:hide()
         end
@@ -156,8 +161,18 @@ function GamePrepareView:prepare(_page,_level)
         end
     end
 
+    if self.collection then
+        self.gotcolt:show()
+        if CollectionManager:isCollectioned(self.collection) then
+            self.gotcolt:setSpriteFrame("sp-result-collection.png")
+        else
+            self.gotcolt:setSpriteFrame("sp-result-collection-h.png")
+        end
+    else
+        self.gotcolt:hide()
+    end
 
-    AppViews:getView(Layers_.result):setStarInfo(_page,_level,infos)
+    AppViews:getView(Layers_.result):prepare(_page,_level,infos)
 end
 
 

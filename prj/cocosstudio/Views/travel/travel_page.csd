@@ -139,10 +139,10 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Button_11" ActionTag="-371079025" Tag="90" IconVisible="False" LeftMargin="410.1632" RightMargin="415.8368" TopMargin="694.5000" BottomMargin="552.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="11" BottomEage="11" Scale9OriginX="30" Scale9OriginY="11" Scale9Width="74" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btn_trans" ActionTag="-371079025" CallBackType="Click" CallBackName="onClick" Tag="90" IconVisible="False" LeftMargin="410.1632" RightMargin="415.8368" TopMargin="694.5000" BottomMargin="552.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="11" BottomEage="11" Scale9OriginX="30" Scale9OriginY="11" Scale9Width="74" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="175.0000" Y="87.0000" />
                 <Children>
-                  <AbstractNodeData Name="Sprite_10" ActionTag="-1896140142" Tag="92" IconVisible="False" LeftMargin="20.5874" RightMargin="93.4126" TopMargin="13.5450" BottomMargin="11.4550" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="switch1" ActionTag="-1896140142" Tag="92" IconVisible="False" LeftMargin="20.5874" RightMargin="93.4126" TopMargin="13.5450" BottomMargin="11.4550" ctype="SpriteObjectData">
                     <Size X="61.0000" Y="62.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="51.0874" Y="42.4550" />
@@ -153,7 +153,7 @@
                     <FileData Type="PlistSubImage" Path="icon-select-travel-n.png" Plist="Resource/atlas/ui-select.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Sprite_12" ActionTag="-289826193" Tag="93" IconVisible="False" LeftMargin="90.9015" RightMargin="24.0985" TopMargin="11.9615" BottomMargin="13.0385" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="switch2" ActionTag="-289826193" Tag="93" IconVisible="False" LeftMargin="90.9015" RightMargin="24.0985" TopMargin="11.9615" BottomMargin="13.0385" ctype="SpriteObjectData">
                     <Size X="60.0000" Y="62.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="120.9015" Y="44.0385" />
@@ -281,7 +281,7 @@
                     <FileData Type="PlistSubImage" Path="avatar-5.png" Plist="Resource/atlas/ui-select.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="avatar_7" ActionTag="708205013" Tag="56" IconVisible="False" LeftMargin="482.2342" RightMargin="207.7658" TopMargin="11.9941" BottomMargin="8.0059" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="avatar_7" ActionTag="708205013" Tag="56" IconVisible="False" LeftMargin="482.2314" RightMargin="207.7686" TopMargin="11.9948" BottomMargin="8.0052" ctype="SpriteObjectData">
                     <Size X="60.0000" Y="60.0000" />
                     <AnchorPoint ScaleX="0.3987" ScaleY="0.4688" />
                     <Position X="506.1534" Y="36.1332" />

@@ -403,6 +403,9 @@ btn_rate:setTag(69)
 btn_rate:setCascadeColorEnabled(true)
 btn_rate:setCascadeOpacityEnabled(true)
 btn_rate:setPosition(375.0000, 633.1000)
+if callBackProvider~=nil then
+      btn_rate:addClickEventListener(callBackProvider("home_config.lua", btn_rate, "onClick"))
+end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_rate)
 layout:setPositionPercentX(0.5000)
 layout:setPositionPercentY(0.4746)
@@ -596,6 +599,9 @@ btn_donation:setTag(71)
 btn_donation:setCascadeColorEnabled(true)
 btn_donation:setCascadeOpacityEnabled(true)
 btn_donation:setPosition(375.0000, 313.5000)
+if callBackProvider~=nil then
+      btn_donation:addClickEventListener(callBackProvider("home_config.lua", btn_donation, "onClick"))
+end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_donation)
 layout:setPositionPercentXEnabled(true)
 layout:setPositionPercentX(0.5000)

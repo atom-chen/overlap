@@ -35,6 +35,7 @@ helper = require("util.helper"):new()
 app = require("util.app").new()
 filter = require("util.filter")
 shader = require("util.shader")
+store = require("util.Store")
 
 locale = require("util.locale")
 _ = assert(require("util.locale").loadDefault())

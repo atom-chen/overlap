@@ -187,7 +187,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_rate" ActionTag="2063975046" Tag="69" IconVisible="False" LeftMargin="208.0000" RightMargin="208.0000" TopMargin="644.9000" BottomMargin="577.1000" TouchEnable="True" FontSize="48" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="304" Scale9Height="90" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btn_rate" ActionTag="2063975046" CallBackType="Click" CallBackName="onClick" Tag="69" IconVisible="False" LeftMargin="208.0000" RightMargin="208.0000" TopMargin="644.9000" BottomMargin="577.1000" TouchEnable="True" FontSize="48" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="304" Scale9Height="90" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="334.0000" Y="112.0000" />
                 <Children>
                   <AbstractNodeData Name="Panel_2_0_0_0" ActionTag="-1978219988" Tag="339" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="167.0000" RightMargin="167.0000" TopMargin="56.0000" BottomMargin="56.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -297,7 +297,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_donation" ActionTag="1590316570" Tag="71" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="BottomEdge" LeftMargin="208.0000" RightMargin="208.0000" TopMargin="964.5000" BottomMargin="257.5000" TouchEnable="True" FontSize="48" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="304" Scale9Height="90" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btn_donation" ActionTag="1590316570" CallBackType="Click" CallBackName="onClick" Tag="71" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="BottomEdge" LeftMargin="208.0000" RightMargin="208.0000" TopMargin="964.5000" BottomMargin="257.5000" TouchEnable="True" FontSize="48" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="304" Scale9Height="90" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="334.0000" Y="112.0000" />
                 <Children>
                   <AbstractNodeData Name="Panel_2_0_0_0_0_0" ActionTag="1711607779" Tag="345" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="167.0000" RightMargin="167.0000" TopMargin="56.0000" BottomMargin="56.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">

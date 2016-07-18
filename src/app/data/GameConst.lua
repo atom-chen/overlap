@@ -6,12 +6,12 @@ Sloters_ = {
     last_mode = "last_mode,",
     unlock_new = "unlock_new",
     new_record = "new_record",
-    
-    
+
+
     sound_off     = "sound_off",
-    icloud_off    = "icloud_off", 
-    level_info    = "level_info",    --关卡信息  
-    collections   = "collections",   --收集  
+    icloud_off    = "icloud_off",
+    level_info    = "level_info",    --关卡信息
+    collections   = "collections",   --收集
 }
 
 Layers_ = {
@@ -19,6 +19,7 @@ Layers_ = {
     hud              = "hudView",
     home             = "homeView",
     select           = "selectView",
+    travel           = "travelView",
     config           = "configView",
     prepare          = "prepareView",
     game             = "gameView",
@@ -64,9 +65,14 @@ GAME_MODE = {
     mode_8 = 8,
 }
 
+GAME_ENDLESS_MODE = {
+    endless = 1,
+    random = 2,
+}
+
 --选项技能
 SKILL_TYPE = {
-    ONLEY_COLOR  = 1, 
+    ONLEY_COLOR  = 1,
     ONLEY_SHAPE  = 2,
     SELECT_WORD  = 3,
     SELECT_COLOR = 4,
@@ -88,14 +94,14 @@ EFFECT_TYPE  = {
     tone_6 = 6,
     tone_7 = 7,
     tone_8 = 8,
-    
+
     correct = 9,
     ticktack = 10,
     wrong = 11,
     endtone = 12,
     click = 13,
     slip = 14,
-    
+
     hit_1 = 15,
     hit_2 = 16,
     hit_3 = 17,
@@ -104,7 +110,7 @@ EFFECT_TYPE  = {
     start = 20,
     over = 21,
     best = 22,
-    
+
     unlock = 23,
     showmain = 24,
 }

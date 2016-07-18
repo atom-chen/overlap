@@ -27,7 +27,7 @@ end
 function OverlapTrvalView:onClick( path,node,funcName)
     if node:getName()=="btn_back" and funcName =="onClick" then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeOut(self,Layers_.select)
+            AppViews:fadeBackAndClose(self)
         end
         return btnCallback
     elseif node:getName()=="btn_right" and funcName =="onClick" then
@@ -58,6 +58,10 @@ function OverlapTrvalView:onClick( path,node,funcName)
      elseif node:getName()=="btn_start" and funcName =="onClick" then
         local function btnCallback(node,eventType)
 --            gameUtils.transRight(self,Layers_.select)
+            local page = self.curPage+1
+            local mode = self.pageLayer[page]:getMode()
+            local level = 1000+page*10+mode
+            self:startGame(level)
         end
         return btnCallback
     end
@@ -66,12 +70,25 @@ end
 
 --$$$$$$$$$$$$$$$$ OverlapTrvalView $$$$$$$$$$$$$$$$$$$$$
 
+function OverlapTrvalView:startGame(gameLevel)
+    gameLevel = self.gameLevel or gameLevel
+    self.gameLevel = gameLevel
+    local function startCall()
+        self:hide()
+        AppViews:getView(Layers_.mainScene):gameStart(self.gameLevel)
+        AppViews:getView(Layers_.result):prepareTravel(self.gameLevel)
+        
+    end
+    AppViews:fadeTo(self,Layers_.gameController,{call = startCall})
+end
+
+
 function OverlapTrvalView:createPages()
     self.pageLayer = {}
     for page=3, 8 do
         local layout = ccui.Layout:create()
         local size = layout:getContentSize()
-        self.pageLayer[page] = TravelPageView:create(self:getApp(),"")
+        self.pageLayer[page-2] = TravelPageView:create(self:getApp(),"")
             :move(500.5,667)
             :onPage(page-2)
             :addTo(layout)
