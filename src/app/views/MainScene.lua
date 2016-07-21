@@ -75,8 +75,28 @@ end
 function MainScene:onGame()
     self.ground:show()
     self.mainView:show()
+    self.mainView:createOverText()
     self.splash:removeSelf()
     self.splash = nil
+    
+--    gamer:inserICloud("overlapId4","overlap4","name;addredd","yuhang;beijing")
+--    gamer:updateICloud("overlapId4","overlap4","name;addredd","yuhang1;beijing1")
+    
+--    local function callback(values)
+--    print(values)
+--    end
+--    gamer:selectICloud("overlapId4","overlap4","name;addredd",callback)
+--    
+--   local icloud =  dnp.ICloud:sharedICloud()
+--    
+--    icloud:insertRecord("overlapId2","overlap2",{"name","addredd"},{"yuhang","beijing"})
+--    local function after(result,values)
+--        dump(values)
+--    end
+--    
+--    icloud:addEventListener(after)
+    
+--    icloud:selectRecord("overlapId1","overlap1",{"name","addredd"})
 end
 
 

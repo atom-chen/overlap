@@ -2,7 +2,37 @@
   <PropertyGroup Name="collection_info" Type="Layer" ID="e976a202-176b-42f0-9646-0f63705fe5e9" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="0" Speed="1.0000" />
+      <Animation Duration="15" Speed="1.0000" ActivedAnimationName="enter">
+        <Timeline ActionTag="823573896" Property="Position">
+          <PointFrame FrameIndex="0" X="384.9750" Y="656.9950">
+            <EasingData Type="27" />
+          </PointFrame>
+          <PointFrame FrameIndex="15" X="384.9750" Y="656.9950">
+            <EasingData Type="0" />
+          </PointFrame>
+        </Timeline>
+        <Timeline ActionTag="823573896" Property="Scale">
+          <ScaleFrame FrameIndex="0" X="0.2000" Y="0.2000">
+            <EasingData Type="27" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="15" X="1.0000" Y="1.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="823573896" Property="RotationSkew">
+          <ScaleFrame FrameIndex="0" X="0.0000" Y="0.0000">
+            <EasingData Type="27" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="15" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+      </Animation>
+      <AnimationList>
+        <AnimationInfo Name="enter" StartIndex="0" EndIndex="20">
+          <RenderColor A="255" R="107" G="142" B="35" />
+        </AnimationInfo>
+      </AnimationList>
       <ObjectData Name="Layer" Tag="245" ctype="GameLayerObjectData">
         <Size X="750.0000" Y="1334.0000" />
         <Children>

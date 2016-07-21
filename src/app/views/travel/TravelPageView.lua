@@ -26,7 +26,7 @@ end
 
 function TravelPageView:onPage(page)
     self.page = page+2
-    self["avatar_"..self.page]:setSpriteFrame(string.format("avatar-%d-on.png",self.page))
+--    self["avatar_"..self.page]:setSpriteFrame(string.format("avatar-%d-on.png",self.page))
    
    return self
 end

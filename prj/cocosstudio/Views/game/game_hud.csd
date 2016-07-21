@@ -2,13 +2,13 @@
   <PropertyGroup Name="game_hud" Type="Layer" ID="9280ef3a-adb7-4d95-b715-77aa88ba5ff5" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="40" Speed="1.0000">
+      <Animation Duration="40" Speed="1.0000" ActivedAnimationName="show">
         <Timeline ActionTag="-4933285" Property="Position">
-          <PointFrame FrameIndex="0" X="375.0000" Y="1334.0000">
+          <PointFrame FrameIndex="0" X="375.0000" Y="1234.0000">
             <EasingData Type="0" />
           </PointFrame>
           <PointFrame FrameIndex="20" X="375.0000" Y="1234.0000">
-            <EasingData Type="27" />
+            <EasingData Type="0" />
           </PointFrame>
         </Timeline>
         <Timeline ActionTag="-4933285" Property="Scale">
@@ -16,7 +16,7 @@
             <EasingData Type="0" />
           </ScaleFrame>
           <ScaleFrame FrameIndex="20" X="1.0000" Y="1.0000">
-            <EasingData Type="27" />
+            <EasingData Type="0" />
           </ScaleFrame>
         </Timeline>
         <Timeline ActionTag="-4933285" Property="RotationSkew">
@@ -24,8 +24,16 @@
             <EasingData Type="0" />
           </ScaleFrame>
           <ScaleFrame FrameIndex="20" X="0.0000" Y="0.0000">
-            <EasingData Type="27" />
+            <EasingData Type="0" />
           </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="-4933285" Property="Alpha">
+          <IntFrame FrameIndex="0" Value="0">
+            <EasingData Type="0" />
+          </IntFrame>
+          <IntFrame FrameIndex="20" Value="255">
+            <EasingData Type="0" />
+          </IntFrame>
         </Timeline>
         <Timeline ActionTag="1379170462" Property="Position">
           <PointFrame FrameIndex="15" X="375.0000" Y="1.7981">
@@ -62,7 +70,7 @@
       </Animation>
       <AnimationList>
         <AnimationInfo Name="show" StartIndex="0" EndIndex="40">
-          <RenderColor A="150" R="244" G="164" B="96" />
+          <RenderColor A="255" R="255" G="250" B="205" />
         </AnimationInfo>
       </AnimationList>
       <ObjectData Name="Layer" Tag="279" ctype="GameLayerObjectData">

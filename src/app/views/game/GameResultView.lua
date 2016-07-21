@@ -92,11 +92,12 @@ end
 function GameResultView:showResult(stars,score,time,combo)
     self:move(0,0)
     self:show()
+
     --结果
     self.Result_score:setString(_("Result_score").."  "..score)
     self.Result_time:setString(_("Result_time").."  "..time)
     self.Result_combo:setString(_("Result_combo").."  "..combo)
-    
+
     --条件结果
     local collection,star = LevelManager:getLevelClot(self.curlevel)
     for v=1, 3 do
@@ -107,13 +108,13 @@ function GameResultView:showResult(stars,score,time,combo)
             self["getstar"..v]:setSpriteFrame("sp-result-star-h.png")
             self["Star"..v]:setTextColor(cc.c3b(255,255,255))
         end
-        
+
         if star == v then
             self["getcol"..v]:show()
             if stars[v] then
-                self["getcol"..v]:setSpriteFrame("sp-result-star.png")
+                self["getcol"..v]:setSpriteFrame("sp-result-collection.png")
             else
-                self["getcol"..v]:setSpriteFrame("sp-result-star-h.png")
+                self["getcol"..v]:setSpriteFrame("sp-result-collection-h.png")
             end
         else
             self["getcol"..v]:hide()
@@ -135,19 +136,18 @@ function GameResultView:showResult(stars,score,time,combo)
     if newclot then
         local function onComplete()
             self["gotcolt"]:setSpriteFrame("sp-result-collection.png")
+            AppViews:addViewByName("app.views.game.CollectionDialog")
         end
         ac.execute(self["gotcolt"],ac.ccSeq(
-            ac.ccDelay(1),ac.ccScaleTo(0.1,2),ac.ccCall(onComplete),ac.ccScaleTo(0.1,1)
+            ac.ccDelay(#newstar*0.3+1),ac.ccScaleTo(0.1,2),ac.ccCall(onComplete),ac.ccScaleTo(0.1,1)
         ))
-        
-        AppViews:addViewByName("app.views.game.CollectionDialog")
     end
-    
-    local nextlv 
+
+    local nextlv
     if self.curlevel + 1<=9*GAME_SCENE_COUNT then
       nextlv =   LevelManager:getStageInfo(self.curlevel + 1)
     end
-   
+
 
     if self.curlevel%9~=0 and nextlv and nextlv[4]  then
         self.btn_next:show()
@@ -183,11 +183,11 @@ function GameResultView:onClick( path,node,funcName)
                 prepareView:nextLevel()
                 prepareView:show()
                 self:hide()
-                
+
             end
             ac.ccDellayToCall(self,0.2,callback)
-            
---            AppViews:fadeTo(Layers_.result,Layers_.prepare,{call = callback})
+
+            --            AppViews:fadeTo(Layers_.result,Layers_.prepare,{call = callback})
         end
         return btnCallback
     elseif node:getName()=="btn_retry"  then

@@ -15,7 +15,7 @@ function OverlapHomeView:onCreate()
 
     self.showtext = {}
     self.count = 0
-    self:createOverText()
+--    self:createOverText()
 
     self:updateStars()
     self:updateCollects()
@@ -71,6 +71,7 @@ function OverlapHomeView:createOverText()
     Panel_5:addChild(Text_3)
 
     --Create typewriter_light_6
+    cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-home.plist")
     local typewriter_light_6 = cc.Sprite:createWithSpriteFrameName("typewriter_light.png")
     typewriter_light_6:setName("typewriter_light_6")
     typewriter_light_6:setTag(110)

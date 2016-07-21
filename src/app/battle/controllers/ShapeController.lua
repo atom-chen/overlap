@@ -468,7 +468,9 @@ function ShapeController:stageFinish()
     self:disCountdown()
     if not self.timeout then
         self.score_ = crypto.confusePlus(self.score_, 1)
-        self:updateRecord()
+        if not LevelManager:isLevelMode() then
+            self:updateRecord()
+        end
     end
     --    --如果当前分数大于记录，保存一下
     --    local data = helper.getSloterData(Sloters_.shapeInfo)
@@ -516,20 +518,24 @@ end
 --
 --@function [parent=ShapeController] gameOver
 function ShapeController:gameOver()
-    self:hide()
+    AppViews:splashMask(0.4)
 
-    if LevelManager:isLevelMode() then
-        local stars = {}
-        stars[1] = self.levelStar1.hasGet
-        stars[2] = self.levelStar2.hasGet
-        stars[3] = self.levelStar3.hasGet
-        AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.round(self.gameTime),self.maxPerfect)
-    else
-        --        local record =  helper.getSloterData("record"..self.gamemode) or 0
-        AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.round(self.gameTime),self.maxPerfect,self.gamemode)
+    local function call()
+        self:hide()
+        ac.stopTarget(self)
+        ac.stopTarget(self.gameView)
+
+        if LevelManager:isLevelMode() then
+            local stars = {}
+            stars[1] = self.levelStar1.hasGet
+            stars[2] = self.levelStar2.hasGet
+            stars[3] = self.levelStar3.hasGet
+            AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.round(self.gameTime),self.maxPerfect)
+        else
+            AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.round(self.gameTime),self.maxPerfect,self.gamemode)
+        end
     end
-
-
+    ac.ccDellayToCall(self,0.2,call)
 
     if self.tickTime  then
         --        audio.stopSound(self.tickTime)
@@ -540,9 +546,6 @@ function ShapeController:gameOver()
 
     self:disCountdown()
     self:disTouch()
-
-    ac.stopTarget(self)
-    ac.stopTarget(self.gameView)
 end
 
 ----------------

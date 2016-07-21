@@ -26,7 +26,6 @@ THE SOFTWARE.
 --require("util.Set")
 tagen = require("util.tagen").new()
 
-timer = require("util.timer")
 crypto = require("util.crypto")
 timer = require("util.timer")
 sloter = require("util.sloter"):new()

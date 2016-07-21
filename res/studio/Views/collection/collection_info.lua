@@ -261,9 +261,77 @@ Panel_1_0:addChild(Text_2)
 --Create Animation
 result['animation'] = ccs.ActionTimeline:create()
   
-result['animation']:setDuration(0)
+result['animation']:setDuration(15)
 result['animation']:setTimeSpeed(1.0000)
+
+--Create PositionTimeline
+local PositionTimeline = ccs.Timeline:create()
+
+localFrame = ccs.PositionFrame:create()
+localFrame:setFrameIndex(0)
+localFrame:setTween(true)
+localFrame:setTweenType(27)
+localFrame:setX(384.9750)
+localFrame:setY(656.9950)
+PositionTimeline:addFrame(localFrame)
+
+localFrame = ccs.PositionFrame:create()
+localFrame:setFrameIndex(15)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setX(384.9750)
+localFrame:setY(656.9950)
+PositionTimeline:addFrame(localFrame)
+
+result['animation']:addTimeline(PositionTimeline)
+PositionTimeline:setNode(Panel_1_0)
+
+--Create ScaleTimeline
+local ScaleTimeline = ccs.Timeline:create()
+
+localFrame = ccs.ScaleFrame:create()
+localFrame:setFrameIndex(0)
+localFrame:setTween(true)
+localFrame:setTweenType(27)
+localFrame:setScaleX(0.2000)
+localFrame:setScaleY(0.2000)
+ScaleTimeline:addFrame(localFrame)
+
+localFrame = ccs.ScaleFrame:create()
+localFrame:setFrameIndex(15)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setScaleX(1.0000)
+localFrame:setScaleY(1.0000)
+ScaleTimeline:addFrame(localFrame)
+
+result['animation']:addTimeline(ScaleTimeline)
+ScaleTimeline:setNode(Panel_1_0)
+
+--Create RotationSkewTimeline
+local RotationSkewTimeline = ccs.Timeline:create()
+
+localFrame = ccs.RotationSkewFrame:create()
+localFrame:setFrameIndex(0)
+localFrame:setTween(true)
+localFrame:setTweenType(27)
+localFrame:setSkewX(0.0000)
+localFrame:setSkewY(0.0000)
+RotationSkewTimeline:addFrame(localFrame)
+
+localFrame = ccs.RotationSkewFrame:create()
+localFrame:setFrameIndex(15)
+localFrame:setTween(true)
+localFrame:setTweenType(0)
+localFrame:setSkewX(0.0000)
+localFrame:setSkewY(0.0000)
+RotationSkewTimeline:addFrame(localFrame)
+
+result['animation']:addTimeline(RotationSkewTimeline)
+RotationSkewTimeline:setNode(Panel_1_0)
 --Create Animation List
+local enter = {name="enter", startIndex=0, endIndex=20}
+result['animation']:addAnimationInfo(enter)
 
 result['root'] = Layer
 return result;

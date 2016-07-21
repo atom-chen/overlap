@@ -1,6 +1,9 @@
 local CollectionDialog = class("CollectionDialog", cc.load("mvc").ViewBase)
 
 CollectionDialog.RESOURCE_FILENAME = "collection.collection_info"
+CollectionDialog.RESOURCE_BINDING = {
+    actions = {enterAni = "enter",enterEvent = nil,exitAni = nil ,exitEvent = nil}
+}
 
 function CollectionDialog:onCreate()
 end

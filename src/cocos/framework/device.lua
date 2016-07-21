@@ -131,12 +131,12 @@ printInfo("#")
 -- 获得手机唯一编码
 function device:getDeviceUid()
     if device.platform == device.PLATFORM.ANDROID then
-        local a, b = LuaJavaBridge.callStaticMethod("org/cocos2dx/util/Gamer","getUUID",{},"()Ljava/lang/String;")
-        if a == true and b ~= nil then
-            return b
-        else
-            return "999999999999"
-        end
+--        local a, b = LuaJavaBridge.callStaticMethod("org/cocos2dx/util/Gamer","getUUID",{},"()Ljava/lang/String;")
+--        if a == true and b ~= nil then
+--            return b
+--        else
+--            return "999999999999"
+--        end
     elseif device.platform == device.PLATFORM.IOS then
         return dnp.DNPDeviceUtils:uuid()
     else
@@ -156,7 +156,7 @@ function device.showActivityIndicator()
         printInfo("device.showActivityIndicator()")
     end
     if device.platform == "android" then
-        luaj.callStaticMethod("org/cocos2dx/util/PSNative", "showActivityIndicator", {}, "()V");
+--        luaj.callStaticMethod("org/cocos2dx/util/PSNative", "showActivityIndicator", {}, "()V");
     elseif device.platform == "ios" then
         cc.Native:showActivityIndicator()
     end
@@ -170,7 +170,7 @@ function device.hideActivityIndicator()
         printInfo("device.hideActivityIndicator()")
     end
     if device.platform == "android" then
-        luaj.callStaticMethod("org/cocos2dx/util/PSNative", "hideActivityIndicator", {}, "()V");
+--        luaj.callStaticMethod("org/cocos2dx/util/PSNative", "hideActivityIndicator", {}, "()V");
     elseif device.platform == "ios" then
         cc.Native:hideActivityIndicator()
     end
@@ -329,11 +329,11 @@ function device.vibrate(millisecond)
     end
 
     if device.platform == "android" then
-        if millisecond then
-            luaj.callStaticMethod("org/cocos2dx/util/PSNative", "vibrate", {millisecond}, "(I)V");
-        else
-            cc.Native:vibrate()
-        end
+--        if millisecond then
+--            luaj.callStaticMethod("org/cocos2dx/util/PSNative", "vibrate", {millisecond}, "(I)V");
+--        else
+--            cc.Native:vibrate()
+--        end
     elseif device.platform == "ios" then
         cc.Native:vibrate()
     else

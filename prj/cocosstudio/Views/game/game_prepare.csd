@@ -19,7 +19,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_7" ActionTag="-827938018" Tag="78" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="228.4765" RightMargin="221.5236" TopMargin="564.0682" BottomMargin="719.9318" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_7" ActionTag="-827938018" Tag="78" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="228.4765" RightMargin="221.5235" TopMargin="564.0682" BottomMargin="719.9318" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="300.0000" Y="50.0000" />
             <Children>
               <AbstractNodeData Name="iconstar1" ActionTag="1676668988" Tag="79" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="6.5000" BottomMargin="8.5000" ctype="SpriteObjectData">
@@ -95,7 +95,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_7_0" ActionTag="-925880398" Tag="81" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="228.4765" RightMargin="221.5236" TopMargin="636.7345" BottomMargin="647.2655" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_7_0" ActionTag="-925880398" Tag="81" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="228.4765" RightMargin="221.5235" TopMargin="636.7345" BottomMargin="647.2655" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="300.0000" Y="50.0000" />
             <Children>
               <AbstractNodeData Name="iconstar2" ActionTag="1304640907" Tag="82" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="8.2463" BottomMargin="6.7537" ctype="SpriteObjectData">
@@ -171,7 +171,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_7_1" ActionTag="-790433668" Tag="84" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="228.9762" RightMargin="221.0239" TopMargin="706.2109" BottomMargin="577.7891" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_7_1" ActionTag="-790433668" Tag="84" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="228.9762" RightMargin="221.0238" TopMargin="706.2109" BottomMargin="577.7891" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="300.0000" Y="50.0000" />
             <Children>
               <AbstractNodeData Name="iconstar3" ActionTag="202673927" Tag="85" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="6.5000" BottomMargin="8.5000" ctype="SpriteObjectData">
@@ -259,13 +259,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="panel_skill" ActionTag="-1542892192" Tag="87" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="225.0000" RightMargin="225.0000" TopMargin="726.8434" BottomMargin="527.1566" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="panel_skill" ActionTag="-1542892192" Tag="87" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="228.9043" RightMargin="221.0957" TopMargin="799.0668" BottomMargin="454.9332" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="300.0000" Y="80.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="375.0000" Y="567.1566" />
+            <Position X="378.9043" Y="494.9332" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.4252" />
+            <PrePosition X="0.5052" Y="0.3710" />
             <PreSize X="0.4000" Y="0.0600" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />

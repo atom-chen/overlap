@@ -43,7 +43,7 @@ function GameView:onCreate()
 
     self.zOrder = 10
     self.oPos = cc.p(gridPos.x+GRID_BORDER,gridPos.y+GRID_BORDER)
-    
+
     self.optbackgrid:setContentSize(display.size)
     self.optgrid:setContentSize(display.size)
 end
@@ -94,7 +94,7 @@ function GameView:setOption()
             self.optback[#self.optback+1] = opt
             self.position[#self.position+1] = cc.p(x,y)
             opt:setOpacity(0)
-            
+
             ac.execute(opt,ac.ccSeq(cc.DelayTime:create(oc*0.1),ac.ccFadeTo(0.15,200)))
             oc = oc+1
         end
@@ -181,7 +181,7 @@ function GameView:createAchieve(models,ani,skill)
     local lyShape = display.newNode()
     self.grid:addChild(lyShape)
     lyShape:setTag(ShapeSprite.TAG_SHAPE_LAYER)
-    
+
     lyShape:setPositionX(600)
     ac.execute(lyShape,ac.ccMoveTo(0.18,cc.p(0,0)),{easing = 5})
 
@@ -256,6 +256,8 @@ function GameView:createAchieve(models,ani,skill)
         return n * 0.6
     end
 
+
+    self:show3DModel()
 end
 
 -----------
@@ -372,15 +374,15 @@ function GameView:stageClear()
     for key, shape in pairs(self.shapes) do
         shape:fadeLight()
     end
-    
-   local lyShape = self.grid:getChildByTag(ShapeSprite.TAG_SHAPE_LAYER)
+
+    local lyShape = self.grid:getChildByTag(ShapeSprite.TAG_SHAPE_LAYER)
     ac.execute(lyShape,ac.ccSeq(ac.ccDelay(0.7),
         ac.ccEasing(ac.ccMoveTo(0.25,cc.p(-900,0)),7),ac.ccRemoveSelf()
-    ))   
-    
+    ))
+
     --加地光
     local models = self.model:getShapes()
---    local layer = self.grid:getChildByTag(ShapeSprite.TAG_LIGHT_LAYER)
+    --    local layer = self.grid:getChildByTag(ShapeSprite.TAG_LIGHT_LAYER)
 
     --    for _, model in pairs(models) do
     --        ShapeSprite:create(model,ShapeSprite.SHAPE_MODE.BODER)
@@ -493,6 +495,58 @@ end
 function GameView:stopREC()
     self.icon_red:stopActionByTag(111)
     self.icon_red:setOpacity(255)
+end
+
+
+
+function GameView:show3DModel()
+    
+
+    for key, shape in pairs(self.shapes) do
+        local skewTo = cc.SkewTo:create(2, 30, 0)
+        local scaleTo = cc.ScaleTo:create(2,0.5,0.5)
+        local moveTo = cc.MoveBy:create(2,cc.p(0,50*(key-1)))
+        local scaleTo1 = cc.ScaleTo:create(2,0.5,0.3)
+--        ac.execute(shape,skewTo)
+--        ac.execute(shape,scaleTo)
+--        ac.execute(shape,ac.ccSeq(scaleTo1,moveTo))
+        
+        local moveTo = cc.MoveBy:create(0.5,cc.p(-50*(key-1)+200,0))
+        local cam = cc.OrbitCamera:create(1, 1, 0,30,0, 0, 0)
+        
+        ac.execute(shape,scaleTo)
+        ac.execute(shape,moveTo)
+        ac.execute(shape,ac.ccSeq(cam))
+    end
+
+
+    self.angel = 30
+
+end
+
+
+function GameView:onClick( path,node,funcName)
+    if node:getName()=="btn_b" and funcName =="onClick" then
+        local function btnCallback(node,eventType)
+            self.angel = self.angel -5
+            
+            for key, shape in pairs(self.shapes) do
+                local cam = cc.OrbitCamera:create(1, 1, 0, self.angel,0, 0, 0)
+                ac.execute(shape,ac.ccSeq(cam))
+            end
+        end
+        return btnCallback
+    elseif node:getName()=="btn_c" and funcName =="onClick" then
+        local function btnCallback(node,eventType)
+            self.angel = self.angel + 5
+
+            for key, shape in pairs(self.shapes) do
+                local cam = cc.OrbitCamera:create(1, 1, 0, self.angel,0, 0, 0)
+                ac.execute(shape,ac.ccSeq(cam))
+            end
+        end
+        return btnCallback
+    end     
 end
 
 

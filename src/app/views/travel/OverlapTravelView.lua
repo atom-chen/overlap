@@ -19,7 +19,9 @@ local TravelPageView = import(".TravelPageView")
 function OverlapTrvalView:onCreate()
     self:localLanguage()
     self:createPages()
+    self.curPage = 0
     self:setPage(0)
+    
 end
 
 
@@ -103,7 +105,10 @@ end
 --@function [parent=#src.app.views.play.select.OverlapTrvalView] setDimension
 --
 function OverlapTrvalView:setPage(page)
+    self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d.png",self.curPage+3))
     self.curPage = page
+    self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d-on.png",page+3))
+    
     if self.curPage == GAME_SCENE_COUNT-1 then
         self.btn_right:hide()
     else
@@ -114,6 +119,13 @@ function OverlapTrvalView:setPage(page)
     else
         self.btn_left:show()
     end
+    
+    local record =  helper.getSloterData("record"..(page+3)) or 0
+    self.You:setString( _("You").." : "..record)
+    
+    local x = (90+455)*0.2 -90
+    self.youpanel:setPositionX(x)
+    
 end
 
 ----------------------------
