@@ -38,7 +38,8 @@ end
 
 function CollectionCellView:onCellTouched(event)
     if self.has then
-        AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
+      local colect =   AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
+        colect:showInfo(self.id)
     end
 end
 

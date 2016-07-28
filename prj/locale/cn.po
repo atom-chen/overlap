@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
-"POT-Creation-Date: 2016-07-11 14:14+0800\n"
-"PO-Revision-Date: 2016-07-11 14:14+0800\n"
+"POT-Creation-Date: 2016-07-28 17:41+0800\n"
+"PO-Revision-Date: 2016-07-28 17:41+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: zh\n"
@@ -16,7 +16,8 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../src\n"
 
-#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:112
+#: ../../src/app/data/Level.lua:8
+#: ../../src/app/data/Level.lua:103
 #: ../../src/app/views/game/GamePrepareView.lua:7
 #: ../../src/app/views/game/GamePrepareView.lua:8
 #: ../../src/app/views/game/GamePrepareView.lua:9
@@ -26,24 +27,435 @@ msgstr ""
 msgid "NorScore"
 msgstr "得分 ()"
 
-#: ../../src/app/data/Level.lua:9 ../../src/app/data/Level.lua:115
+#: ../../src/app/data/Level.lua:9
+#: ../../src/app/data/Level.lua:105
 msgid "UniScore"
 msgstr "完美得分 ()"
 
 #: ../../src/app/data/Level.lua:10
-#: ../../src/app/data/Level.lua:100
+#: ../../src/app/data/Level.lua:95
 msgid "TimeNorScore"
 msgstr "()秒内得分 ()"
 
 #: ../../src/app/data/Level.lua:11
-#: ../../src/app/data/Level.lua:103
+#: ../../src/app/data/Level.lua:97
 msgid "TimeUniScore"
 msgstr "()秒内完美得分 ()"
 
 #: ../../src/app/views/common/CommonDialogView.lua:5
-#: ../../src/app/views/game/SkillInfoView.lua:5
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:9
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:10
 msgid "OK"
 msgstr "确定"
+
+#: ../../src/app/views/game/CollectionDialog.lua:9
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:19
+msgid "Collect_1"
+msgstr "微型种植仓;2015年8月，宇航员首次品尝了在太空种植的生菜"
+
+#: ../../src/app/views/game/CollectionDialog.lua:10
+msgid "Collect_2"
+msgstr "悬浮滑板;适合搭配Nike牌自动系带鞋使用"
+
+#: ../../src/app/views/game/CollectionDialog.lua:11
+msgid "Collect_3"
+msgstr "宇宙翻译器;对不起，我没有听清你在说什么"
+
+#: ../../src/app/views/game/CollectionDialog.lua:12
+msgid "Collect_4"
+msgstr "爆能枪Blaster;我有种不祥的预感"
+
+#: ../../src/app/views/game/CollectionDialog.lua:13
+msgid "Collect_5"
+msgstr "R2-B2;哔、哔哔、哔"
+
+#: ../../src/app/views/game/CollectionDialog.lua:14
+msgid "Collect_6"
+msgstr ""
+"三录仪;根据对您健康状况的评估，您的寿命还有30...29..28.27.."
+
+#: ../../src/app/views/game/CollectionDialog.lua:15
+msgid "Collect_7"
+msgstr "奇点追踪器;追踪特定的平行宇宙"
+
+#: ../../src/app/views/game/CollectionDialog.lua:16
+msgid "Collect_8"
+msgstr "量子传送器;使用前请务必确保没有苍蝇飞进来"
+
+#: ../../src/app/views/game/CollectionDialog.lua:17
+msgid "Collect_9"
+msgstr "冷冻休眠仓;下个世纪见！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:18
+msgid "Collect_10"
+msgstr "光剑;愿原力与你同在"
+
+#: ../../src/app/views/game/CollectionDialog.lua:20
+msgid "Collect_11"
+msgstr "氪石;如果靠近后感觉不适，请及时联系Detective Comics"
+
+#: ../../src/app/views/game/CollectionDialog.lua:21
+msgid "Collect_12"
+msgstr "发条橙;"
+
+#: ../../src/app/views/game/CollectionDialog.lua:22
+msgid "Collect_13"
+msgstr "第五元素;爱是唯一可以超越时间与空间的事物"
+
+#: ../../src/app/views/game/CollectionDialog.lua:23
+msgid "Collect_14"
+msgstr "奇点推进器;穿越到另一个平行宇宙"
+
+#: ../../src/app/views/game/CollectionDialog.lua:24
+msgid "Collect_15"
+msgstr "银河漫游指南;不要慌"
+
+#: ../../src/app/views/game/CollectionDialog.lua:25
+msgid "Collect_16"
+msgstr "土豆;没洗干净的话闻起来怪怪的"
+
+#: ../../src/app/views/game/CollectionDialog.lua:26
+msgid "Collect_17"
+msgstr "方舟反应堆;托尼史塔克有颗温暖的心"
+
+#: ../../src/app/views/game/CollectionDialog.lua:27
+msgid "Collect_18"
+msgstr "黑手套;戴上手套的手会偶尔失控"
+
+#: ../../src/app/views/game/CollectionDialog.lua:28
+msgid "Collect_19"
+msgstr "激光武器;天敌是雾霾"
+
+#: ../../src/app/views/game/CollectionDialog.lua:29
+msgid "Collect_20"
+msgstr "加特林机枪塔;从1860年代以来一直很拉风"
+
+#: ../../src/app/views/game/CollectionDialog.lua:31
+msgid "Collect_21"
+msgstr "宇航服;抽烟者后果自负！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:32
+msgid "Collect_22"
+msgstr "42;生命、宇宙和一切的答案"
+
+#: ../../src/app/views/game/CollectionDialog.lua:33
+msgid "Collect_23"
+msgstr "导弹塔;坦克驾驶员最讨厌的东西"
+
+#: ../../src/app/views/game/CollectionDialog.lua:34
+msgid "Collect_24"
+msgstr "隐形装置;请记住：隐形不等于无敌"
+
+#: ../../src/app/views/game/CollectionDialog.lua:35
+msgid "Collect_25"
+msgstr "二向箔;请预先阅读《平面国》"
+
+#: ../../src/app/views/game/CollectionDialog.lua:36
+msgid "Collect_26"
+msgstr "暴风兵头盔;“只有帝国的突击队能够这么精确”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:37
+msgid "Collect_27"
+msgstr "喷射背包;飞行是人类最古老的梦想"
+
+#: ../../src/app/views/game/CollectionDialog.lua:38
+msgid "Collect_28"
+msgstr "月球车;限速20迈，否则容易飞走"
+
+#: ../../src/app/views/game/CollectionDialog.lua:39
+msgid "Collect_29"
+msgstr "失忆棒;“咦？我手里是什么，按一下试试”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:40
+msgid "Collect_30"
+msgstr "智能机器人Gerty;一个喜欢使用颜文字的机器人"
+
+#: ../../src/app/views/game/CollectionDialog.lua:42
+msgid "Collect_31"
+msgstr "红色药丸;一日一片，不可过量服用"
+
+#: ../../src/app/views/game/CollectionDialog.lua:43
+msgid "Collect_32"
+msgstr "骨头;一根结实的骨头，可以用来敲打东西"
+
+#: ../../src/app/views/game/CollectionDialog.lua:44
+msgid "Collect_33"
+msgstr "HAL9000;“我很抱歉，大卫。我恐怕不能这么做。”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:45
+msgid "Collect_34"
+msgstr "外骨骼动力机甲;“说起来你可能不信…是机甲先动的手...”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:46
+msgid "Collect_35"
+msgstr "U盘;一个U盘，存储了丰富的知识"
+
+#: ../../src/app/views/game/CollectionDialog.lua:47
+msgid "Collect_36"
+msgstr "黑石碑;..."
+
+#: ../../src/app/views/game/CollectionDialog.lua:48
+msgid "Collect_37"
+msgstr "SNOY Walkman TPS-L2;全宇宙仅剩三台"
+
+#: ../../src/app/views/game/CollectionDialog.lua:49
+msgid "Collect_38"
+msgstr "马文;“我算得出你的生还几率, 你不会喜欢这个数字的 ”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:50
+msgid "Collect_39"
+msgstr "电子羊;外星人失眠的时候会数外星羊么？"
+
+#: ../../src/app/views/game/CollectionDialog.lua:51
+msgid "Collect_40"
+msgstr "太空工程机器人SCV;有东西挡住我了！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:53
+msgid "Collect_41"
+msgstr "居住舱;禁止悬浮状态下睡觉！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:54
+msgid "Collect_42"
+msgstr "磁带;Awesome Mix vol.1"
+
+#: ../../src/app/views/game/CollectionDialog.lua:55
+msgid "Collect_43"
+msgstr "水滴;绝对零度，绝对光滑(tt5774642)"
+
+#: ../../src/app/views/game/CollectionDialog.lua:56
+msgid "Collect_44"
+msgstr "VR游戏机;你可以在飞船里玩“地球生活模拟”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:57
+msgid "Collect_45"
+msgstr ""
+"互动小说;“坠毁点好像比山峰离我更近些。你觉得我应该怎么做？”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:58
+msgid "Collect_46"
+msgstr "全天候作战机器人;小心误伤友军"
+
+#: ../../src/app/views/game/CollectionDialog.lua:59
+msgid "Collect_47"
+msgstr "万能胶;"
+
+#: ../../src/app/views/game/CollectionDialog.lua:60
+msgid "Collect_48"
+msgstr "反物质发动机;E=mc^2"
+
+#: ../../src/app/views/game/CollectionDialog.lua:61
+msgid "Collect_49"
+msgstr "天线;"
+
+#: ../../src/app/views/game/CollectionDialog.lua:62
+msgid "Collect_50"
+msgstr "陀螺;一个能转很久的陀螺"
+
+#: ../../src/app/views/game/CollectionDialog.lua:64
+msgid "Collect_51"
+msgstr "兴奋剂;“啊！就是这个感觉！”"
+
+#: ../../src/app/views/game/CollectionDialog.lua:65
+msgid "Collect_52"
+msgstr "医疗仓;请勿放入死人"
+
+#: ../../src/app/views/game/CollectionDialog.lua:66
+msgid "Collect_53"
+msgstr ""
+"太空扳手;2014年11月，国际空间站的宇航员们利用3D打印技术，制造出"
+"第一把“太空工具”——扳手"
+
+#: ../../src/app/views/game/CollectionDialog.lua:67
+msgid "Collect_54"
+msgstr "电磁炮;一种动能武器，不需要安装爆炸物"
+
+#: ../../src/app/views/game/CollectionDialog.lua:68
+msgid "Collect_55"
+msgstr "纳米材料装甲;当纳米矛碰到纳米盾，谁能赢"
+
+#: ../../src/app/views/game/CollectionDialog.lua:69
+msgid "Collect_56"
+msgstr "太空鱼雷;只是一种更大更慢的导弹"
+
+#: ../../src/app/views/game/CollectionDialog.lua:70
+msgid "Collect_57"
+msgstr ""
+"机械姬;如果你创造了一个有意识的机器，那将不再是人类的历史，而是"
+"上帝的历史"
+
+#: ../../src/app/views/game/CollectionDialog.lua:71
+msgid "Collect_58"
+msgstr "曲速引擎;频繁使用可能会造成子空间裂缝"
+
+#: ../../src/app/views/game/CollectionDialog.lua:72
+msgid "Collect_59"
+msgstr "核动力发动机;小心使用，谨防核爆"
+
+#: ../../src/app/views/game/CollectionDialog.lua:73
+msgid "Collect_60"
+msgstr "聚变反应堆;一个迷你太阳"
+
+#: ../../src/app/views/game/CollectionDialog.lua:75
+msgid "Collect_61"
+msgstr "撬棍;物理学圣剑！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:76
+msgid "Collect_62"
+msgstr "核电池;没有辐射！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:77
+msgid "Collect_63"
+msgstr "恐龙蛋;真的是恐龙蛋不是石头"
+
+#: ../../src/app/views/game/CollectionDialog.lua:78
+msgid "Collect_64"
+msgstr "无人攻击机;也可以帮你取快递"
+
+#: ../../src/app/views/game/CollectionDialog.lua:79
+msgid "Collect_65"
+msgstr "树人种子;i am root"
+
+#: ../../src/app/views/game/CollectionDialog.lua:80
+msgid "Collect_66"
+msgstr "手电筒;"
+
+#: ../../src/app/views/game/CollectionDialog.lua:81
+msgid "Collect_67"
+msgstr "电弧发射器;不要在水中使用"
+
+#: ../../src/app/views/game/CollectionDialog.lua:82
+msgid "Collect_68"
+msgstr "太阳能电池板;向日葵在很久之前就发明了这项技术"
+
+#: ../../src/app/views/game/CollectionDialog.lua:83
+msgid "Collect_69"
+msgstr "电焊枪;紧急情况下可当做武器"
+
+#: ../../src/app/views/game/CollectionDialog.lua:84
+msgid "Collect_70"
+msgstr "虫洞发生器;缺点是你看不到旅途中的风景了"
+
+#: ../../src/app/views/game/CollectionDialog.lua:86
+msgid "Collect_71"
+msgstr "生命探测器;找到的生物可能和你做朋友也可能吃掉你"
+
+#: ../../src/app/views/game/CollectionDialog.lua:87
+msgid "Collect_72"
+msgstr "氢氦收集器;给聚变反应提供能源"
+
+#: ../../src/app/views/game/CollectionDialog.lua:88
+msgid "Collect_73"
+msgstr "物质分析仪;放弃吧，再分析100种外星植物也找不出1种能吃的！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:89
+msgid "Collect_74"
+msgstr ""
+"自动导航系统;在你进入冷冻睡眠仓之前最好祈祷一下这个系统不会出错"
+
+#: ../../src/app/views/game/CollectionDialog.lua:90
+msgid "Collect_75"
+msgstr "灭火器;"
+
+#: ../../src/app/views/game/CollectionDialog.lua:91
+msgid "Collect_76"
+msgstr "重力枪;可以把非生命物体拉过来或者弹飞"
+
+#: ../../src/app/views/game/CollectionDialog.lua:92
+msgid "Collect_77"
+msgstr "能量护盾;缺点是停电的时候毫无用处"
+
+#: ../../src/app/views/game/CollectionDialog.lua:93
+msgid "Collect_78"
+msgstr "液体火箭发动机;它帮助人类登上了月球"
+
+#: ../../src/app/views/game/CollectionDialog.lua:94
+msgid "Collect_79"
+msgstr "纳米自动修复材料;总有一天它们将征服世界"
+
+#: ../../src/app/views/game/CollectionDialog.lua:95
+msgid "Collect_80"
+msgstr "离子推进器;实际上其推力只相当于一张纸对于你的手的压力"
+
+#: ../../src/app/views/game/CollectionDialog.lua:97
+msgid "Collect_81"
+msgstr "水循环系统;喝水前没必要想太多"
+
+#: ../../src/app/views/game/CollectionDialog.lua:98
+msgid "Collect_82"
+msgstr "耐性钢装甲;比钢装甲更硬"
+
+#: ../../src/app/views/game/CollectionDialog.lua:99
+msgid "Collect_83"
+msgstr ""
+"粒子光矛; 这种重型能量武器发射聚焦粒子束，造成巨大的伤害。 "
+
+#: ../../src/app/views/game/CollectionDialog.lua:100
+msgid "Collect_84"
+msgstr "智慧转移器;我思故我在"
+
+#: ../../src/app/views/game/CollectionDialog.lua:101
+msgid "Collect_85"
+msgstr "反向力场发生器;上下颠倒"
+
+#: ../../src/app/views/game/CollectionDialog.lua:102
+msgid "Collect_86"
+msgstr "质量发生器;超光速旅行必须组件"
+
+#: ../../src/app/views/game/CollectionDialog.lua:103
+msgid "Collect_87"
+msgstr "五维推进器;穿越虫洞亚空间的动力设备"
+
+#: ../../src/app/views/game/CollectionDialog.lua:104
+msgid "Collect_88"
+msgstr "大气层发生器;让这个世界变得更好一些"
+
+#: ../../src/app/views/game/CollectionDialog.lua:105
+msgid "Collect_89"
+msgstr "金刚经;凡所有相，皆是虚妄。若见诸相非相，则见如来"
+
+#: ../../src/app/views/game/CollectionDialog.lua:106
+msgid "Collect_90"
+msgstr "微型氧气罐;只有手掌大，可使用一整天"
+
+#: ../../src/app/views/game/CollectionDialog.lua:108
+msgid "Collect_91"
+msgstr "仿生合金战术机甲;更快、更高、更强！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:109
+msgid "Collect_92"
+msgstr "银河数据库;数据库中关于地球的描述为：基本无害"
+
+#: ../../src/app/views/game/CollectionDialog.lua:110
+msgid "Collect_93"
+msgstr "反黑洞胶体;黑洞武器？没门！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:111
+msgid "Collect_94"
+msgstr "DNA重组机;注意事项与量子传送器相同"
+
+#: ../../src/app/views/game/CollectionDialog.lua:112
+msgid "Collect_95"
+msgstr "金属提取装置;从太空垃圾和星球采集金属资源"
+
+#: ../../src/app/views/game/CollectionDialog.lua:113
+msgid "Collect_96"
+msgstr "快速回复胶;不能去除皱纹"
+
+#: ../../src/app/views/game/CollectionDialog.lua:114
+msgid "Collect_97"
+msgstr "行星定位器;定位合适的行星，以便登录补充资源"
+
+#: ../../src/app/views/game/CollectionDialog.lua:115
+msgid "Collect_98"
+msgstr "迷你健身仓;预防太空中的骨质疏松"
+
+#: ../../src/app/views/game/CollectionDialog.lua:116
+msgid "Collect_99"
+msgstr "重力发生器;在减肥期你不会喜欢它的"
+
+#: ../../src/app/views/game/CollectionDialog.lua:117
+msgid "Collect_100"
+msgstr "飞船操作台;请啥东西也不要碰"
 
 #: ../../src/app/views/game/GamePauseView.lua:7
 #: ../../src/app/views/game/GameResultView.lua:8
@@ -52,13 +464,19 @@ msgstr "重玩"
 
 #: ../../src/app/views/game/GamePauseView.lua:8
 #: ../../src/app/views/game/GameResultView.lua:9
-msgid "Home"
-msgstr "主页"
+msgid "List"
+msgstr ""
 
 #: ../../src/app/views/game/GamePauseView.lua:9
+#: ../../src/app/views/game/GamePauseView.lua:21
+#: ../../src/app/views/game/GamePauseView.lua:23
+#: ../../src/app/views/game/GamePauseView.lua:66
+#: ../../src/app/views/game/GamePauseView.lua:71
 #: ../../src/app/views/home/HomeConfigView.lua:6
 #: ../../src/app/views/home/HomeConfigView.lua:18
 #: ../../src/app/views/home/HomeConfigView.lua:20
+#: ../../src/app/views/home/HomeConfigView.lua:86
+#: ../../src/app/views/home/HomeConfigView.lua:91
 msgid "Sound"
 msgstr "声音"
 
@@ -67,76 +485,105 @@ msgid "Continue"
 msgstr "继续游戏"
 
 #: ../../src/app/views/game/GamePauseView.lua:11
-#: ../../src/app/views/game/GamePauseView.lua:54
-#: ../../src/app/views/game/GameResultView.lua:10
-#: ../../src/app/views/game/GameResultView.lua:50
+#: ../../src/app/views/game/GamePauseView.lua:82
+#: ../../src/app/views/game/GameResultView.lua:11
+#: ../../src/app/views/game/GameResultView.lua:15
+#: ../../src/app/views/game/GameResultView.lua:84
+#: ../../src/app/views/game/GameResultView.lua:98
 msgid "Result_time"
 msgstr "时间"
 
 #: ../../src/app/views/game/GamePauseView.lua:12
-#: ../../src/app/views/game/GamePauseView.lua:55
-#: ../../src/app/views/game/GameResultView.lua:11
-#: ../../src/app/views/game/GameResultView.lua:51
+#: ../../src/app/views/game/GamePauseView.lua:83
+#: ../../src/app/views/game/GameResultView.lua:12
+#: ../../src/app/views/game/GameResultView.lua:16
+#: ../../src/app/views/game/GameResultView.lua:85
+#: ../../src/app/views/game/GameResultView.lua:88
+#: ../../src/app/views/game/GameResultView.lua:99
 msgid "Result_combo"
 msgstr "完美得分"
 
 #: ../../src/app/views/game/GamePauseView.lua:13
-#: ../../src/app/views/game/GamePauseView.lua:53
-#: ../../src/app/views/game/GameResultView.lua:12
-#: ../../src/app/views/game/GameResultView.lua:49
+#: ../../src/app/views/game/GamePauseView.lua:81
+#: ../../src/app/views/game/GameResultView.lua:13
+#: ../../src/app/views/game/GameResultView.lua:17
+#: ../../src/app/views/game/GameResultView.lua:83
+#: ../../src/app/views/game/GameResultView.lua:97
 msgid "Result_score"
 msgstr "得分"
+
+#: ../../src/app/views/game/GamePauseView.lua:21
+#: ../../src/app/views/game/GamePauseView.lua:71
+#: ../../src/app/views/home/HomeConfigView.lua:18
+#: ../../src/app/views/home/HomeConfigView.lua:24
+#: ../../src/app/views/home/HomeConfigView.lua:91
+msgid "Off"
+msgstr "关"
+
+#: ../../src/app/views/game/GamePauseView.lua:23
+#: ../../src/app/views/game/GamePauseView.lua:66
+#: ../../src/app/views/home/HomeConfigView.lua:20
+#: ../../src/app/views/home/HomeConfigView.lua:26
+#: ../../src/app/views/home/HomeConfigView.lua:86
+msgid "On"
+msgstr "开"
 
 #: ../../src/app/views/game/GamePrepareView.lua:10
 #: ../../src/app/views/travel/OverlapTravelView.lua:9
 msgid "Start"
 msgstr "开始游戏"
 
+#: ../../src/app/views/game/GameResultView.lua:10
+msgid "Next"
+msgstr ""
+
+#: ../../src/app/views/game/GameResultView.lua:18
+msgid "Result_high"
+msgstr ""
+
 #: ../../src/app/views/game/SkillIcon.lua:15
-#: ../../src/app/views/game/SkillInfoView.lua:47
+#: ../../src/app/views/game/SkillInfoView.lua:37
 msgid "SkInfo_"
 msgstr ""
 
-#: ../../src/app/views/game/SkillInfoView.lua:6
-#: ../../src/app/views/game/SkillInfoView.lua:11
+#: ../../src/app/views/game/SkillInfoView.lua:5
+#: ../../src/app/views/game/SkillInfoView.lua:9
 msgid "SkInfo_1"
 msgstr "只显示颜色"
 
-#: ../../src/app/views/game/SkillInfoView.lua:7
-#: ../../src/app/views/game/SkillInfoView.lua:12
+#: ../../src/app/views/game/SkillInfoView.lua:10
 msgid "SkInfo_2"
 msgstr "只显示形状"
 
-#: ../../src/app/views/game/SkillInfoView.lua:8
-#: ../../src/app/views/game/SkillInfoView.lua:13
+#: ../../src/app/views/game/SkillInfoView.lua:11
 msgid "SkInfo_3"
 msgstr "选择文字的意思"
 
-#: ../../src/app/views/game/SkillInfoView.lua:14
+#: ../../src/app/views/game/SkillInfoView.lua:12
 msgid "SkInfo_4"
 msgstr "选择文字的颜色"
 
-#: ../../src/app/views/game/SkillInfoView.lua:15
+#: ../../src/app/views/game/SkillInfoView.lua:13
 msgid "SkInfo_5"
 msgstr "闪现"
 
-#: ../../src/app/views/game/SkillInfoView.lua:16
+#: ../../src/app/views/game/SkillInfoView.lua:14
 msgid "SkInfo_6"
 msgstr "遮挡"
 
-#: ../../src/app/views/game/SkillInfoView.lua:17
+#: ../../src/app/views/game/SkillInfoView.lua:15
 msgid "SkInfo_7"
 msgstr "不可见的"
 
-#: ../../src/app/views/game/SkillInfoView.lua:18
+#: ../../src/app/views/game/SkillInfoView.lua:16
 msgid "SkInfo_8"
 msgstr "同颜色的"
 
-#: ../../src/app/views/game/SkillInfoView.lua:19
+#: ../../src/app/views/game/SkillInfoView.lua:17
 msgid "SkInfo_9"
 msgstr "右旋转"
 
-#: ../../src/app/views/game/SkillInfoView.lua:20
+#: ../../src/app/views/game/SkillInfoView.lua:18
 msgid "SkInfo_10"
 msgstr "左旋转"
 
@@ -169,16 +616,6 @@ msgstr "制作人员"
 msgid "Donation"
 msgstr "捐助"
 
-#: ../../src/app/views/home/HomeConfigView.lua:18
-#: ../../src/app/views/home/HomeConfigView.lua:24
-msgid "Off"
-msgstr "关"
-
-#: ../../src/app/views/home/HomeConfigView.lua:20
-#: ../../src/app/views/home/HomeConfigView.lua:26
-msgid "On"
-msgstr "开"
-
 #: ../../src/app/views/home/HomeMoreView.lua:6
 msgid "moreIce"
 msgstr "划出完美曲线保护冰原"
@@ -204,6 +641,7 @@ msgid "trval"
 msgstr "无尽旅行"
 
 #: ../../src/app/views/travel/OverlapTravelView.lua:10
+#: ../../src/app/views/travel/OverlapTravelView.lua:124
 msgid "You"
 msgstr "你"
 
@@ -212,18 +650,26 @@ msgid "Max"
 msgstr "最高"
 
 #: ../../src/app/views/travel/TravelPageView.lua:6
-#: ../../src/app/views/travel/TravelPageView.lua:14
+#: ../../src/app/views/travel/TravelPageView.lua:16
 msgid "YourRank"
 msgstr "你的排名"
 
 #: ../../src/app/views/travel/TravelPageView.lua:7
-#: ../../src/app/views/travel/TravelPageView.lua:15
+#: ../../src/app/views/travel/TravelPageView.lua:17
 msgid "HighScore"
 msgstr "最高分"
 
 #: ../../src/app/views/travel/TravelPageView.lua:8
+#: ../../src/app/views/travel/TravelPageView.lua:61
 msgid "Random"
 msgstr "随机障碍"
+
+#: ../../src/app/views/travel/TravelPageView.lua:55
+msgid "Endless"
+msgstr ""
+
+#~ msgid "Home"
+#~ msgstr "主页"
 
 #~ msgid "Shound"
 #~ msgstr "声音"

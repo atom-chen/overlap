@@ -48,7 +48,7 @@ CollectionInfoView.OTHER = {
     Collect_37             = _("Collect_37"),
     Collect_38             = _("Collect_38"),
     Collect_39             = _("Collect_39"),
-    Collect_40             = _("Collect_30"),
+    Collect_40             = _("Collect_40"),
     
     Collect_41             = _("Collect_41"),
     Collect_42             = _("Collect_42"),

@@ -5,7 +5,20 @@ CollectionDialog.RESOURCE_BINDING = {
     actions = {enterAni = "enter",enterEvent = nil,exitAni = nil ,exitEvent = nil}
 }
 
+CollectionDialog.LOCALE_LANG_LABEL = {
+    Name        = _("OK"),
+    info        = _("OK"),
+}
+
 function CollectionDialog:onCreate()
+    self:localLanguage()
+end
+
+
+function CollectionDialog:showInfo(id)
+   local infos =   helper.split(_("Collect_"..id),";")
+    self.Name:setString(infos[1])
+    self.info:setString(infos[2])
 end
 
 
