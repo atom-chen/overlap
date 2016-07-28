@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
 "POT-Creation-Date: 2016-07-28 16:30+0800\n"
-"PO-Revision-Date: 2016-07-28 16:30+0800\n"
+"PO-Revision-Date: 2016-07-28 17:54+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: pt\n"
@@ -16,13 +16,8 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../src\n"
 
-#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:103
-#: ../../src/app/views/game/GamePrepareView.lua:7
-#: ../../src/app/views/game/GamePrepareView.lua:8
-#: ../../src/app/views/game/GamePrepareView.lua:9
-#: ../../src/app/views/game/GameResultView.lua:5
-#: ../../src/app/views/game/GameResultView.lua:6
-#: ../../src/app/views/game/GameResultView.lua:7
+#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:103 ../../src/app/views/game/GamePrepareView.lua:7 ../../src/app/views/game/GamePrepareView.lua:8
+#: ../../src/app/views/game/GamePrepareView.lua:9 ../../src/app/views/game/GameResultView.lua:5 ../../src/app/views/game/GameResultView.lua:6 ../../src/app/views/game/GameResultView.lua:7
 msgid "NorScore"
 msgstr "Pontuação ()"
 
@@ -52,7 +47,7 @@ msgstr "hoverboard;Use em conjunto com as sapatas auto-laço da Nike"
 
 #: ../../src/app/views/game/CollectionDialog.lua:11
 msgid "Collect_3"
-msgstr "tradutor universal;"Desculpe, eu não ouvi isso muito claramente""
+msgstr "tradutor universal;[Desculpe, eu não ouvi isso muito claramente]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:12
 msgid "Collect_4"
@@ -60,11 +55,11 @@ msgstr "Blaster;Eu tenho um mau pressentimento sobre isso."
 
 #: ../../src/app/views/game/CollectionDialog.lua:13
 msgid "Collect_5"
-msgstr "R2-B2;"Beep, beep, beep""
+msgstr "R2-B2;[Beep, beep, beep]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:14
 msgid "Collect_6"
-msgstr "tricorder; "De acordo com a avaliação de sua saúde, sua expectativa de vida é de 30 ... 29..28.27.""
+msgstr "tricorder; [De acordo com a avaliação de sua saúde, sua expectativa de vida é de 30 ... 29..28.27.]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:15
 msgid "Collect_7"
@@ -144,7 +139,7 @@ msgstr "folha bidimensional;Leia Flatland com antecedência"
 
 #: ../../src/app/views/game/CollectionDialog.lua:36
 msgid "Collect_26"
-msgstr "capacete Stormtrooper;"Somente Stormtroopers Imperiais poderia ser tão preciso!""
+msgstr "capacete Stormtrooper;[Somente Stormtroopers Imperiais poderia ser tão preciso!]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:37
 msgid "Collect_27"
@@ -156,7 +151,7 @@ msgstr "rover lunar;O limite de velocidade 20 mph, ou fácil de voar para longe"
 
 #: ../../src/app/views/game/CollectionDialog.lua:39
 msgid "Collect_29"
-msgstr "Neuralyzer;"Huh? Qual é o meu lado, deixe-me tentar este botão""
+msgstr "Neuralyzer;[Huh? Qual é o meu lado, deixe-me tentar este botão]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:40
 msgid "Collect_30"
@@ -176,7 +171,7 @@ msgstr "HAL9000;Sinto muito, Dave. Temo que não pode fazer isso"
 
 #: ../../src/app/views/game/CollectionDialog.lua:45
 msgid "Collect_34"
-msgstr "exoesqueleto energizado;"" Para ser honesto você não pode acreditar ... a máquina de bater em você, não eu ""
+msgstr "exoesqueleto energizado;[Para ser honesto você não pode acreditar ... a máquina de bater em você, não eu]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:46
 msgid "Collect_35"
@@ -192,7 +187,7 @@ msgstr "SNOY Walkman TPS-L2;Apenas três deixado em todo o universo"
 
 #: ../../src/app/views/game/CollectionDialog.lua:49
 msgid "Collect_38"
-msgstr "Marvin;"Eu já calculou a sua chance de sobrevivência, mas eu não acho que você vai gostar.""
+msgstr "Marvin;[Eu já calculou a sua chance de sobrevivência, mas eu não acho que você vai gostar.]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:50
 msgid "Collect_39"
@@ -216,11 +211,11 @@ msgstr "Pingo D'água;do zero absoluto, absolutamente lisa (tt5774642)"
 
 #: ../../src/app/views/game/CollectionDialog.lua:56
 msgid "Collect_44"
-msgstr "VR Playstation;Você pode jogar "a vida na Terra" na nave espacial"
+msgstr "VR Playstation;Você pode jogar 'a vida na Terra' na nave espacial"
 
 #: ../../src/app/views/game/CollectionDialog.lua:57
 msgid "Collect_45"
-msgstr "ficção interativa;"Parece que o local do acidente é mais perto de mim do que a montanha. O que você acha que devo fazer?""
+msgstr "ficção interativa;[Parece que o local do acidente é mais perto de mim do que a montanha. O que você acha que devo fazer?]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:58
 msgid "Collect_46"
@@ -244,7 +239,7 @@ msgstr "Piorra; Uma parte superior que pode girar por um longo período de temp
 
 #: ../../src/app/views/game/CollectionDialog.lua:64
 msgid "Collect_51"
-msgstr "estimulante;"Ahh ... Esse é o material!""
+msgstr "estimulante;[Ahh ... Esse é o material!]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:65
 msgid "Collect_52"
@@ -252,7 +247,7 @@ msgstr "câmara de Medicina;Por favor, não coloque na calada"
 
 #: ../../src/app/views/game/CollectionDialog.lua:66
 msgid "Collect_53"
-msgstr "Chave espaço;Em novembro de 2014, os astronautas a bordo da estação espacial internacional usou a tecnologia de impressão 3D para criar a primeira "ferramenta de espaço" - uma chave."
+msgstr "Chave espaço;Em novembro de 2014, os astronautas a bordo da estação espacial internacional usou a tecnologia de impressão 3D para criar a primeira 'ferramenta de espaço' - uma chave."
 
 #: ../../src/app/views/game/CollectionDialog.lua:67
 msgid "Collect_54"
@@ -300,7 +295,7 @@ msgstr "UCAV; também pode ajudá-lo a tomar a entrega"
 
 #: ../../src/app/views/game/CollectionDialog.lua:79
 msgid "Collect_65"
-msgstr "sementes bebê Groot;"Eu sou raiz""
+msgstr "sementes bebê Groot;[Eu sou raiz\""
 
 #: ../../src/app/views/game/CollectionDialog.lua:80
 msgid "Collect_66"
@@ -442,26 +437,17 @@ msgstr "gerador de gravidade;Você não vai gostar quando emagrecimento"
 msgid "Collect_100"
 msgstr "consola Spaceship;Por favor, não toque em nada"
 
-#: ../../src/app/views/game/GamePauseView.lua:7
-#: ../../src/app/views/game/GameResultView.lua:8
+#: ../../src/app/views/game/GamePauseView.lua:7 ../../src/app/views/game/GameResultView.lua:8
 msgid "Retry"
 msgstr "tentar novamente"
 
-#: ../../src/app/views/game/GamePauseView.lua:8
-#: ../../src/app/views/game/GameResultView.lua:9
+#: ../../src/app/views/game/GamePauseView.lua:8 ../../src/app/views/game/GameResultView.lua:9
 msgid "List"
 msgstr ""
 
-#: ../../src/app/views/game/GamePauseView.lua:9
-#: ../../src/app/views/game/GamePauseView.lua:21
-#: ../../src/app/views/game/GamePauseView.lua:23
-#: ../../src/app/views/game/GamePauseView.lua:66
-#: ../../src/app/views/game/GamePauseView.lua:71
-#: ../../src/app/views/home/HomeConfigView.lua:6
-#: ../../src/app/views/home/HomeConfigView.lua:18
-#: ../../src/app/views/home/HomeConfigView.lua:20
-#: ../../src/app/views/home/HomeConfigView.lua:86
-#: ../../src/app/views/home/HomeConfigView.lua:91
+#: ../../src/app/views/game/GamePauseView.lua:9 ../../src/app/views/game/GamePauseView.lua:21 ../../src/app/views/game/GamePauseView.lua:23 ../../src/app/views/game/GamePauseView.lua:66
+#: ../../src/app/views/game/GamePauseView.lua:71 ../../src/app/views/home/HomeConfigView.lua:6 ../../src/app/views/home/HomeConfigView.lua:18 ../../src/app/views/home/HomeConfigView.lua:20
+#: ../../src/app/views/home/HomeConfigView.lua:86 ../../src/app/views/home/HomeConfigView.lua:91
 msgid "Sound"
 msgstr "Som"
 
@@ -469,52 +455,32 @@ msgstr "Som"
 msgid "Continue"
 msgstr "Continuar"
 
-#: ../../src/app/views/game/GamePauseView.lua:11
-#: ../../src/app/views/game/GamePauseView.lua:82
-#: ../../src/app/views/game/GameResultView.lua:11
-#: ../../src/app/views/game/GameResultView.lua:15
-#: ../../src/app/views/game/GameResultView.lua:84
-#: ../../src/app/views/game/GameResultView.lua:98
+#: ../../src/app/views/game/GamePauseView.lua:11 ../../src/app/views/game/GamePauseView.lua:82 ../../src/app/views/game/GameResultView.lua:11 ../../src/app/views/game/GameResultView.lua:15
+#: ../../src/app/views/game/GameResultView.lua:84 ../../src/app/views/game/GameResultView.lua:98
 msgid "Result_time"
 msgstr "Tempo"
 
-#: ../../src/app/views/game/GamePauseView.lua:12
-#: ../../src/app/views/game/GamePauseView.lua:83
-#: ../../src/app/views/game/GameResultView.lua:12
-#: ../../src/app/views/game/GameResultView.lua:16
-#: ../../src/app/views/game/GameResultView.lua:85
-#: ../../src/app/views/game/GameResultView.lua:88
-#: ../../src/app/views/game/GameResultView.lua:99
+#: ../../src/app/views/game/GamePauseView.lua:12 ../../src/app/views/game/GamePauseView.lua:83 ../../src/app/views/game/GameResultView.lua:12 ../../src/app/views/game/GameResultView.lua:16
+#: ../../src/app/views/game/GameResultView.lua:85 ../../src/app/views/game/GameResultView.lua:88 ../../src/app/views/game/GameResultView.lua:99
 msgid "Result_combo"
 msgstr "Contagem perfeita"
 
-#: ../../src/app/views/game/GamePauseView.lua:13
-#: ../../src/app/views/game/GamePauseView.lua:81
-#: ../../src/app/views/game/GameResultView.lua:13
-#: ../../src/app/views/game/GameResultView.lua:17
-#: ../../src/app/views/game/GameResultView.lua:83
-#: ../../src/app/views/game/GameResultView.lua:97
+#: ../../src/app/views/game/GamePauseView.lua:13 ../../src/app/views/game/GamePauseView.lua:81 ../../src/app/views/game/GameResultView.lua:13 ../../src/app/views/game/GameResultView.lua:17
+#: ../../src/app/views/game/GameResultView.lua:83 ../../src/app/views/game/GameResultView.lua:97
 msgid "Result_score"
 msgstr "Pontuação"
 
-#: ../../src/app/views/game/GamePauseView.lua:21
-#: ../../src/app/views/game/GamePauseView.lua:71
-#: ../../src/app/views/home/HomeConfigView.lua:18
-#: ../../src/app/views/home/HomeConfigView.lua:24
+#: ../../src/app/views/game/GamePauseView.lua:21 ../../src/app/views/game/GamePauseView.lua:71 ../../src/app/views/home/HomeConfigView.lua:18 ../../src/app/views/home/HomeConfigView.lua:24
 #: ../../src/app/views/home/HomeConfigView.lua:91
 msgid "Off"
 msgstr ""
 
-#: ../../src/app/views/game/GamePauseView.lua:23
-#: ../../src/app/views/game/GamePauseView.lua:66
-#: ../../src/app/views/home/HomeConfigView.lua:20
-#: ../../src/app/views/home/HomeConfigView.lua:26
+#: ../../src/app/views/game/GamePauseView.lua:23 ../../src/app/views/game/GamePauseView.lua:66 ../../src/app/views/home/HomeConfigView.lua:20 ../../src/app/views/home/HomeConfigView.lua:26
 #: ../../src/app/views/home/HomeConfigView.lua:86
 msgid "On"
 msgstr ""
 
-#: ../../src/app/views/game/GamePrepareView.lua:10
-#: ../../src/app/views/travel/OverlapTravelView.lua:9
+#: ../../src/app/views/game/GamePrepareView.lua:10 ../../src/app/views/travel/OverlapTravelView.lua:9
 msgid "Start"
 msgstr "Toque"
 
@@ -526,13 +492,11 @@ msgstr ""
 msgid "Result_high"
 msgstr ""
 
-#: ../../src/app/views/game/SkillIcon.lua:15
-#: ../../src/app/views/game/SkillInfoView.lua:37
+#: ../../src/app/views/game/SkillIcon.lua:15 ../../src/app/views/game/SkillInfoView.lua:37
 msgid "SkInfo_"
 msgstr ""
 
-#: ../../src/app/views/game/SkillInfoView.lua:5
-#: ../../src/app/views/game/SkillInfoView.lua:9
+#: ../../src/app/views/game/SkillInfoView.lua:5 ../../src/app/views/game/SkillInfoView.lua:9
 msgid "SkInfo_1"
 msgstr "Só cor"
 
@@ -574,17 +538,13 @@ msgstr "rotação esquerda"
 
 #: ../../src/app/views/home/HomeAdsView.lua:7
 msgid "AdsInfo"
-msgstr ""
-"Sua doação irá remover os anúncios em jogo. Os 10 doadores pode nomear os "
-"personagens em nosso próximo jogo."
+msgstr "Sua doação irá remover os anúncios em jogo. Os 10 doadores pode nomear os personagens em nosso próximo jogo."
 
 #: ../../src/app/views/home/HomeConfigView.lua:7
 msgid "Language"
 msgstr "Língua"
 
-#: ../../src/app/views/home/HomeConfigView.lua:8
-#: ../../src/app/views/home/HomeConfigView.lua:24
-#: ../../src/app/views/home/HomeConfigView.lua:26
+#: ../../src/app/views/home/HomeConfigView.lua:8 ../../src/app/views/home/HomeConfigView.lua:24 ../../src/app/views/home/HomeConfigView.lua:26
 msgid "ICloud"
 msgstr "iCloud"
 
@@ -596,8 +556,7 @@ msgstr "Taxa"
 msgid "Credits"
 msgstr "Crédito"
 
-#: ../../src/app/views/home/HomeConfigView.lua:11
-#: ../../src/app/views/home/OverlapHomeView.lua:9
+#: ../../src/app/views/home/HomeConfigView.lua:11 ../../src/app/views/home/OverlapHomeView.lua:9
 msgid "Donation"
 msgstr "Doação"
 
@@ -625,8 +584,7 @@ msgstr "Classificação"
 msgid "trval"
 msgstr "viagem sem fim"
 
-#: ../../src/app/views/travel/OverlapTravelView.lua:10
-#: ../../src/app/views/travel/OverlapTravelView.lua:124
+#: ../../src/app/views/travel/OverlapTravelView.lua:10 ../../src/app/views/travel/OverlapTravelView.lua:124
 msgid "You"
 msgstr "Você"
 
@@ -634,18 +592,15 @@ msgstr "Você"
 msgid "Max"
 msgstr "maior"
 
-#: ../../src/app/views/travel/TravelPageView.lua:6
-#: ../../src/app/views/travel/TravelPageView.lua:16
+#: ../../src/app/views/travel/TravelPageView.lua:6 ../../src/app/views/travel/TravelPageView.lua:16
 msgid "YourRank"
 msgstr "A sua classificação"
 
-#: ../../src/app/views/travel/TravelPageView.lua:7
-#: ../../src/app/views/travel/TravelPageView.lua:17
+#: ../../src/app/views/travel/TravelPageView.lua:7 ../../src/app/views/travel/TravelPageView.lua:17
 msgid "HighScore"
 msgstr "Pontuação máxima"
 
-#: ../../src/app/views/travel/TravelPageView.lua:8
-#: ../../src/app/views/travel/TravelPageView.lua:61
+#: ../../src/app/views/travel/TravelPageView.lua:8 ../../src/app/views/travel/TravelPageView.lua:61
 msgid "Random"
 msgstr "Os obstáculos aleatórios"
 

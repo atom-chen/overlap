@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
 "POT-Creation-Date: 2016-07-28 16:30+0800\n"
-"PO-Revision-Date: 2016-07-28 16:30+0800\n"
+"PO-Revision-Date: 2016-07-28 17:50+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: fr\n"
@@ -52,7 +52,7 @@ msgstr "Hoverboard;Utilisez-le avec des chaussures auto-laçage Nike"
 
 #: ../../src/app/views/game/CollectionDialog.lua:11
 msgid "Collect_3"
-msgstr "Traducteur Universal;"Désolé, je ne l'ai pas entendu dire très clairement""
+msgstr "Traducteur Universal;[Désolé, je ne l'ai pas entendu dire très clairement]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:12
 msgid "Collect_4"
@@ -60,11 +60,11 @@ msgstr "Blaster;J'ai un mauvais pressentiment à propos de ceci."
 
 #: ../../src/app/views/game/CollectionDialog.lua:13
 msgid "Collect_5"
-msgstr "R2-B2;"Bip, bip, bip""
+msgstr "R2-B2;[Bip, bip, bip]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:14
 msgid "Collect_6"
-msgstr "Tricorder; "Selon l'évaluation de votre santé, votre espérance de vie est de 30 ... 29..28.27.""
+msgstr "Tricorder; [Selon l'évaluation de votre santé, votre espérance de vie est de 30 ... 29..28.27.]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:15
 msgid "Collect_7"
@@ -144,7 +144,7 @@ msgstr "feuille à deux dimensions;Lire Flatland à l'avance"
 
 #: ../../src/app/views/game/CollectionDialog.lua:36
 msgid "Collect_26"
-msgstr "Stormtrooper casque;"Seuls les Stormtroopers impériaux pouvaient être si précis!""
+msgstr "Stormtrooper casque;[Seuls les Stormtroopers impériaux pouvaient être si précis!]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:37
 msgid "Collect_27"
@@ -156,7 +156,7 @@ msgstr "rover lunaire;La limite de vitesse de 20 mph, ou facile à s'envoler"
 
 #: ../../src/app/views/game/CollectionDialog.lua:39
 msgid "Collect_29"
-msgstr "neuralyzer;"Hein? Quelle est ma part, je vais essayer ce bouton""
+msgstr "neuralyzer;[Hein? Quelle est ma part, je vais essayer ce bouton]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:40
 msgid "Collect_30"
@@ -176,7 +176,7 @@ msgstr "HAL9000;Je suis désolé, Dave. Je crains que je ne peux pas le faire"
 
 #: ../../src/app/views/game/CollectionDialog.lua:45
 msgid "Collect_34"
-msgstr "exosquelette motorisé;»« Pour être honnête, vous ne pouvez pas croire ... la machine vous a frappé, pas moi ""
+msgstr "exosquelette motorisé;[Pour être honnête, vous ne pouvez pas croire ... la machine vous a frappé, pas moi]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:46
 msgid "Collect_35"
@@ -192,7 +192,7 @@ msgstr "SNOY Walkman TPS-L2;Seulement trois ont quitté dans l'univers entier"
 
 #: ../../src/app/views/game/CollectionDialog.lua:49
 msgid "Collect_38"
-msgstr "Marvin;«Je l'ai calculé vos chances de survie, mais je ne pense pas que ça vous plaira.""
+msgstr "Marvin;[Je l'ai calculé vos chances de survie, mais je ne pense pas que ça vous plaira.]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:50
 msgid "Collect_39"
@@ -216,11 +216,11 @@ msgstr "Goutte d'eau;Le zéro absolu, absolument lisse (tt5774642)"
 
 #: ../../src/app/views/game/CollectionDialog.lua:56
 msgid "Collect_44"
-msgstr "VR Playstation;Vous pouvez jouer "la vie sur terre" dans le vaisseau spatial"
+msgstr "VR Playstation;Vous pouvez jouer 'la vie sur terre' dans le vaisseau spatial"
 
 #: ../../src/app/views/game/CollectionDialog.lua:57
 msgid "Collect_45"
-msgstr "fiction interactive;"Il semble que le site de l'accident est plus proche de moi que la montagne. Que pensez-vous que je devrais faire?""
+msgstr "fiction interactive;[Il semble que le site de l'accident est plus proche de moi que la montagne. Que pensez-vous que je devrais faire?]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:58
 msgid "Collect_46"
@@ -244,7 +244,7 @@ msgstr "Teetotum; Un haut qui peut tourner depuis longtemps"
 
 #: ../../src/app/views/game/CollectionDialog.lua:64
 msgid "Collect_51"
-msgstr "stimulant;"Ahh ... Voilà le truc!""
+msgstr "stimulant;[Ahh ... Voilà le truc!]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:65
 msgid "Collect_52"
@@ -252,7 +252,7 @@ msgstr "chambre médicale;S'il vous plaît ne pas mettre dans la mort"
 
 #: ../../src/app/views/game/CollectionDialog.lua:66
 msgid "Collect_53"
-msgstr "espace Wrench;En Novembre 2014, les astronautes à bord de la station spatiale internationale ont utilisé la technologie d'impression 3D pour créer le premier "outil spatial" - une clé."
+msgstr "espace Wrench;En Novembre 2014, les astronautes à bord de la station spatiale internationale ont utilisé la technologie d'impression 3D pour créer le premier 'outil spatial' - une clé."
 
 #: ../../src/app/views/game/CollectionDialog.lua:67
 msgid "Collect_54"
@@ -300,7 +300,7 @@ msgstr "UCAV; Peut également vous aider à prendre livraison"
 
 #: ../../src/app/views/game/CollectionDialog.lua:79
 msgid "Collect_65"
-msgstr "graines bébé Groot;«Je suis root""
+msgstr "graines bébé Groot;[Je suis root]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:80
 msgid "Collect_66"
@@ -574,9 +574,7 @@ msgstr "Rotation à gauche"
 
 #: ../../src/app/views/home/HomeAdsView.lua:7
 msgid "AdsInfo"
-msgstr ""
-"Votre don va supprimer les annonces dans le jeu. Top 10 des donateurs "
-"peuvent nommer les personnages de notre prochain match."
+msgstr "Votre don va supprimer les annonces dans le jeu. Top 10 des donateurs peuvent nommer les personnages de notre prochain match."
 
 #: ../../src/app/views/home/HomeConfigView.lua:7
 msgid "Language"

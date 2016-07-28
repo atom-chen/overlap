@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
 "POT-Creation-Date: 2016-07-28 16:30+0800\n"
-"PO-Revision-Date: 2016-07-28 16:30+0800\n"
+"PO-Revision-Date: 2016-07-28 17:52+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: ja\n"
@@ -48,7 +48,9 @@ msgstr "OK"
 
 #: ../../src/app/views/game/CollectionDialog.lua:9
 msgid "Collect_1"
-msgstr "ミニチュア倉庫を植えます;2015年8月、スペース植えレタスで宇宙飛行士の最初の味"
+msgstr ""
+"ミニチュア倉庫を植えます;2015年8月、スペース植えレタスで宇宙飛行"
+"士の最初の味"
 
 #: ../../src/app/views/game/CollectionDialog.lua:10
 msgid "Collect_2"
@@ -56,7 +58,9 @@ msgstr "ホバーボード;自動レーシングナイキブランドの靴の�
 
 #: ../../src/app/views/game/CollectionDialog.lua:11
 msgid "Collect_3"
-msgstr "宇宙トランスレータ;「ごめんなさい、私はあなたが言っていることを聞いていませんでした。」"
+msgstr ""
+"宇宙トランスレータ;「ごめんなさい、私はあなたが言っていることを"
+"聞いていませんでした。」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:12
 msgid "Collect_4"
@@ -64,11 +68,13 @@ msgstr "ブラスターブラスター;私は一種の予感します"
 
 #: ../../src/app/views/game/CollectionDialog.lua:13
 msgid "Collect_5"
-msgstr "R2-B2;「ビープ音、ビープ音、ビープ音 ""
+msgstr "R2-B2;[ビープ音、ビープ音、ビープ音 ]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:14
 msgid "Collect_6"
-msgstr "三ロガー;「あなたの健康状態の評価、あなたの人生だけでなく、30 ... 29..28.27によると.. ""
+msgstr ""
+"三ロガー;[あなたの健康状態の評価、あなたの人生だけでなく、"
+"30 ... 29..28.27によると.. ]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:15
 msgid "Collect_7"
@@ -76,7 +82,9 @@ msgstr "特異トラッカー;特定のパラレルワールドを追跡"
 
 #: ../../src/app/views/game/CollectionDialog.lua:16
 msgid "Collect_8"
-msgstr "量子コンベア;必ず何ハエが入って来ていないことを確認するために使用する前に"
+msgstr ""
+"量子コンベア;必ず何ハエが入って来ていないことを確認するために使"
+"用する前に"
 
 #: ../../src/app/views/game/CollectionDialog.lua:17
 msgid "Collect_9"
@@ -88,7 +96,9 @@ msgstr "ライトセーバー;フォースがあなたと一緒にすること�
 
 #: ../../src/app/views/game/CollectionDialog.lua:20
 msgid "Collect_11"
-msgstr "クリプトナイト;あなたが終了後に体調不良を感じた場合、探偵コミックまでご連絡ください"
+msgstr ""
+"クリプトナイト;あなたが終了後に体調不良を感じた場合、探偵コミッ"
+"クまでご連絡ください"
 
 #: ../../src/app/views/game/CollectionDialog.lua:21
 msgid "Collect_12"
@@ -124,7 +134,9 @@ msgstr "レーザー兵器;天敵は曇り"
 
 #: ../../src/app/views/game/CollectionDialog.lua:29
 msgid "Collect_20"
-msgstr "ガトリングガンタレット;1860年代以来、それは非常に風を引っ張ってきました"
+msgstr ""
+"ガトリングガンタレット;1860年代以来、それは非常に風を引っ張って"
+"きました"
 
 #: ../../src/app/views/game/CollectionDialog.lua:31
 msgid "Collect_21"
@@ -140,7 +152,8 @@ msgstr "ミサイルタレット;最も厄介なタンクドライバ"
 
 #: ../../src/app/views/game/CollectionDialog.lua:34
 msgid "Collect_24"
-msgstr "遮蔽装置;注意：無敵の目に見えないを意味するものではありません。"
+msgstr ""
+"遮蔽装置;注意：無敵の目に見えないを意味するものではありません。"
 
 #: ../../src/app/views/game/CollectionDialog.lua:35
 msgid "Collect_25"
@@ -148,7 +161,9 @@ msgstr "ダイクロイック箔;事前に「平地」をお読みください"
 
 #: ../../src/app/views/game/CollectionDialog.lua:36
 msgid "Collect_26"
-msgstr "ストームトルーパーのヘルメット;「オンリーインペリアルコマンドーはとても正確である可能性があります。」"
+msgstr ""
+"ストームトルーパーのヘルメット;「オンリーインペリアルコマンドー"
+"はとても正確である可能性があります。」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:37
 msgid "Collect_27"
@@ -160,11 +175,13 @@ msgstr "ローバー;律速段階20、または飛んやすいです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:39
 msgid "Collect_29"
-msgstr "健忘スティック;「え？何を私の手で、トライをクリックして ""
+msgstr "健忘スティック;[え？何を私の手で、トライをクリックして ]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:40
 msgid "Collect_30"
-msgstr "知能ロボットガーティー;ロボットは、カラーテキストを使用したいです"
+msgstr ""
+"知能ロボットガーティー;ロボットは、カラーテキストを使用したいで"
+"す"
 
 #: ../../src/app/views/game/CollectionDialog.lua:42
 msgid "Collect_31"
@@ -176,11 +193,15 @@ msgstr "骨;スタウト骨、物事をノックするのに使用すること�
 
 #: ../../src/app/views/game/CollectionDialog.lua:44
 msgid "Collect_33"
-msgstr "HAL9000;「私はそれを行うことはできませんが怖い。、デビッドごめんなさい。」"
+msgstr ""
+"HAL9000;「私はそれを行うことはできませんが怖い。、デビッドごめん"
+"なさい。」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:45
 msgid "Collect_34"
-msgstr "パワードスーツの鎧;「...あなたは...先発のメカ手であると信じていないかもしれない正直に言うと ""
+msgstr ""
+"パワードスーツの鎧;[...あなたは...先発のメカ手であると信じていな"
+"いかもしれない正直に言うと ]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:46
 msgid "Collect_35"
@@ -196,11 +217,14 @@ msgstr "SNOY Walkman TPS-L2;3残りの宇宙全体"
 
 #: ../../src/app/views/game/CollectionDialog.lua:49
 msgid "Collect_38"
-msgstr "Marvin;「私はあなたがこの数字を好きではないであろう、生存のあなたのチャンスを数えるようになってきています。」"
+msgstr ""
+"Marvin;「私はあなたがこの数字を好きではないであろう、生存のあな"
+"たのチャンスを数えるようになってきています。」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:50
 msgid "Collect_39"
-msgstr "電気羊;ときは、外国人の不眠症エイリアン羊の数はそれだろうか？"
+msgstr ""
+"電気羊;ときは、外国人の不眠症エイリアン羊の数はそれだろうか？"
 
 #: ../../src/app/views/game/CollectionDialog.lua:51
 msgid "Collect_40"
@@ -220,11 +244,15 @@ msgstr "ドロップ;絶対零度、絶対にスムーズ（tt5774642）"
 
 #: ../../src/app/views/game/CollectionDialog.lua:56
 msgid "Collect_44"
-msgstr "VRゲーム;あなたは宇宙船の「地球シミュレーションでの生活」をプレイすることができます"
+msgstr ""
+"VRゲーム;あなたは宇宙船の「地球シミュレーションでの生活」をプレ"
+"イすることができます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:57
 msgid "Collect_45"
-msgstr "インタラクティブフィクション;「クラッシュサイトのピークがいくつかより私に近いようです。どうやって私がすべきだと思いますか？」"
+msgstr ""
+"インタラクティブフィクション;「クラッシュサイトのピークがいくつ"
+"かより私に近いようです。どうやって私がすべきだと思いますか？」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:58
 msgid "Collect_46"
@@ -256,11 +284,15 @@ msgstr "医療倉庫;死者を入れないでください"
 
 #: ../../src/app/views/game/CollectionDialog.lua:66
 msgid "Collect_53"
-msgstr "宇宙レンチ;2014年11月、国際宇宙ステーションの宇宙飛行士は、最初の「スペースツール」を作成するために、3D印刷技術を使用 - レンチ"
+msgstr ""
+"宇宙レンチ;2014年11月、国際宇宙ステーションの宇宙飛行士は、最初"
+"の「スペースツール」を作成するために、3D印刷技術を使用 - レンチ"
 
 #: ../../src/app/views/game/CollectionDialog.lua:67
 msgid "Collect_54"
-msgstr "ガンズ;運動エネルギー兵器の一種、爆発物をインストールする必要はありません"
+msgstr ""
+"ガンズ;運動エネルギー兵器の一種、爆発物をインストールする必要は"
+"ありません"
 
 #: ../../src/app/views/game/CollectionDialog.lua:68
 msgid "Collect_55"
@@ -272,11 +304,14 @@ msgstr "宇宙魚雷;ただ、大きな遅いミサイル"
 
 #: ../../src/app/views/game/CollectionDialog.lua:70
 msgid "Collect_57"
-msgstr "智機械;あなたは意識的なマシンを作成する場合、それはもはや人間の歴史が、神の歴史ないであろう"
+msgstr ""
+"智機械;あなたは意識的なマシンを作成する場合、それはもはや人間の"
+"歴史が、神の歴史ないであろう"
 
 #: ../../src/app/views/game/CollectionDialog.lua:71
 msgid "Collect_58"
-msgstr "ワープエンジン;部分空間に亀裂が発生することがあり頻繁に使用"
+msgstr ""
+"ワープエンジン;部分空間に亀裂が発生することがあり頻繁に使用"
 
 #: ../../src/app/views/game/CollectionDialog.lua:72
 msgid "Collect_59"
@@ -324,11 +359,15 @@ msgstr "懐中電灯;武器として緊急の場合"
 
 #: ../../src/app/views/game/CollectionDialog.lua:84
 msgid "Collect_70"
-msgstr "ワームホールジェネレータ;欠点は、あなたが旅の風景を見ることができないということです"
+msgstr ""
+"ワームホールジェネレータ;欠点は、あなたが旅の風景を見ることがで"
+"きないということです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:86
 msgid "Collect_71"
-msgstr "ライフ検出器;生物学的およびあなたが見つけることができる友達があなたを食べるかもしれません"
+msgstr ""
+"ライフ検出器;生物学的およびあなたが見つけることができる友達があ"
+"なたを食べるかもしれません"
 
 #: ../../src/app/views/game/CollectionDialog.lua:87
 msgid "Collect_72"
@@ -336,11 +375,15 @@ msgstr "水素ヘリウムコレクタ;エネルギー融合反応を提供す�
 
 #: ../../src/app/views/game/CollectionDialog.lua:88
 msgid "Collect_73"
-msgstr "物質・アナライザ;それを放棄し、その後食べるの種類を見つけることができませんでした外来植物の100種類を分析！"
+msgstr ""
+"物質・アナライザ;それを放棄し、その後食べるの種類を見つけること"
+"ができませんでした外来植物の100種類を分析！"
 
 #: ../../src/app/views/game/CollectionDialog.lua:89
 msgid "Collect_74"
-msgstr "自動ナビゲーションシステム;あなたはこのシステムについてより良い祈りをスリープ状態に冷凍室​​に入る前に間違って行くことができません"
+msgstr ""
+"自動ナビゲーションシステム;あなたはこのシステムについてより良い"
+"祈りをスリープ状態に冷凍室​​に入る前に間違って行くことができません"
 
 #: ../../src/app/views/game/CollectionDialog.lua:90
 msgid "Collect_75"
@@ -352,7 +395,8 @@ msgstr "重力銃;無生物のプルアップまたは跳ね返っすること�
 
 #: ../../src/app/views/game/CollectionDialog.lua:92
 msgid "Collect_77"
-msgstr "エネルギーシールド;欠点は、電源が役に立たないときということです"
+msgstr ""
+"エネルギーシールド;欠点は、電源が役に立たないときということです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:93
 msgid "Collect_78"
@@ -364,11 +408,14 @@ msgstr "ナノ自動車補修材;ある日、彼らは世界を征服します"
 
 #: ../../src/app/views/game/CollectionDialog.lua:95
 msgid "Collect_80"
-msgstr "イオンスラスター;実際にはそれはあなたの手の圧力のための紙のスラストピースのみに相当します"
+msgstr ""
+"イオンスラスター;実際にはそれはあなたの手の圧力のための紙のスラ"
+"ストピースのみに相当します"
 
 #: ../../src/app/views/game/CollectionDialog.lua:97
 msgid "Collect_81"
-msgstr "水系;前に飲むことをあまりにも多くを考える必要はありませんいいえ"
+msgstr ""
+"水系;前に飲むことをあまりにも多くを考える必要はありませんいいえ"
 
 #: ../../src/app/views/game/CollectionDialog.lua:98
 msgid "Collect_82"
@@ -376,7 +423,9 @@ msgstr "性鋼の鎧;鋼の鎧よりも硬いです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:99
 msgid "Collect_83"
-msgstr "光の粒子の槍; エネルギーを発射するような重い武器は大きな害を引き起こし、集束イオンビーム。"
+msgstr ""
+"光の粒子の槍; エネルギーを発射するような重い武器は大きな害を引き"
+"起こし、集束イオンビーム。"
 
 #: ../../src/app/views/game/CollectionDialog.lua:100
 msgid "Collect_84"
@@ -388,7 +437,9 @@ msgstr "フィールドジェネレータを逆に;逆さまに"
 
 #: ../../src/app/views/game/CollectionDialog.lua:102
 msgid "Collect_86"
-msgstr "品質ジェネレータ;旅行は、超光速のコンポーネントでなければなりません"
+msgstr ""
+"品質ジェネレータ;旅行は、超光速のコンポーネントでなければなりま"
+"せん"
 
 #: ../../src/app/views/game/CollectionDialog.lua:103
 msgid "Collect_87"
@@ -400,19 +451,27 @@ msgstr "雰囲気ジェネレータ;世界はより良くするために、"
 
 #: ../../src/app/views/game/CollectionDialog.lua:105
 msgid "Collect_89"
-msgstr "金剛般若経;すべてのフェーズはすべて偽である場合。非相対で見られる場合は、如来を見ます"
+msgstr ""
+"金剛般若経;すべてのフェーズはすべて偽である場合。非相対で見られ"
+"る場合は、如来を見ます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:106
 msgid "Collect_90"
-msgstr "ミニチュア酸素タンク;パーム大、あなたが一日中使用することができます"
+msgstr ""
+"ミニチュア酸素タンク;パーム大、あなたが一日中使用することができ"
+"ます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:108
 msgid "Collect_91"
-msgstr "バイオニック合金タクティカルアーマー;より速く、より高い、より強いです！"
+msgstr ""
+"バイオニック合金タクティカルアーマー;より速く、より高い、より強"
+"いです！"
 
 #: ../../src/app/views/game/CollectionDialog.lua:109
 msgid "Collect_92"
-msgstr "ギャラクシーデータベース;基本的な音：地球上のデータベースは、以下のように記述されています"
+msgstr ""
+"ギャラクシーデータベース;基本的な音：地球上のデータベースは、以"
+"下のように記述されています"
 
 #: ../../src/app/views/game/CollectionDialog.lua:110
 msgid "Collect_93"
@@ -432,7 +491,9 @@ msgstr "クイック返信ガム;あなたはしわを削除することはで�
 
 #: ../../src/app/views/game/CollectionDialog.lua:114
 msgid "Collect_97"
-msgstr "惑星ロケータ;追加のリソースをログに記録するために適した惑星を見つけます"
+msgstr ""
+"惑星ロケータ;追加のリソースをログに記録するために適した惑星を見"
+"つけます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:115
 msgid "Collect_98"
@@ -440,7 +501,8 @@ msgstr "ミニフィットネス倉庫;空間における骨粗しょう症の�
 
 #: ../../src/app/views/game/CollectionDialog.lua:116
 msgid "Collect_99"
-msgstr "重力発電機;減量の期間では、あなたはそれを好きではありません"
+msgstr ""
+"重力発電機;減量の期間では、あなたはそれを好きではありません"
 
 #: ../../src/app/views/game/CollectionDialog.lua:117
 msgid "Collect_100"
