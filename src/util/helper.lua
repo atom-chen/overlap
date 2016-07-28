@@ -325,42 +325,4 @@ function helper.typewriterLabel(label,text,dt)
     timer:start("DEFALUT_TIMER"..tagen:get(),showFont,dt,totalLen)
 end
 
-function helper.fromatLO(lostr)
-    local temstr = string.split(lostr, "()")
-    local forstr = ""
-    for v=1, #temstr do
-        if #temstr == v then
-            forstr = forstr .. temstr[v]
-        else
-            forstr =forstr .. temstr[v] .. "%d"
-        end
-        
-    end
-    return forstr
-end
-
------
---持续增加数字动画效果
---
---@function [parent=#app.QueenUtil] updateMainColt
-function helper.seqAniGet(label,toNum,added)
-    local t = 10
-    if added<10 then
-        t = added
-    end
-    local coin = toNum - added
-    if coin<0 then
-        coin = 0
-    end
-
-    local function addcoin()
-        coin = coin + math.ceil(added/t)
-        label:setString(coin)
-    end
-    local function compolet()
-        label:setString(toNum)
-    end
-    label:runAction(cc.Sequence:create(cc.Repeat:create(cc.Sequence:create(cc.ScaleBy:create(0.05,1.2),cc.CallFunc:create(addcoin),cc.ScaleBy:create(0.05,1/1.2)),t),cc.CallFunc:create(compolet)))
-end
-
 return helper

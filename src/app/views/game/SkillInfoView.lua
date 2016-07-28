@@ -4,6 +4,7 @@ local SkillInfoView = class("SkillInfoView", cc.load("mvc").ViewBase)
 SkillInfoView.LOCALE_LANG_LABEL = {
     SkInfo             = _("SkInfo_1"),
 }
+
 SkillInfoView.OTHER = {
     SkInfo_1             = _("SkInfo_1"),
     SkInfo_2             = _("SkInfo_2"),

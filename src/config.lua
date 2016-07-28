@@ -25,7 +25,7 @@ DNP_APP = {
 }
 
 DNP_GAME = {
---    default_scene = "ShaderScene"
+--    default_scene = "PlaneScene",
     ios = {
         leaderboards="Classic;Challenge",
         achievements= "White Queen;Mary X;Merida;Merida;Sophie;Elsa;Athena;Black Queen;Kamilah;Amphitrite;Nefertiti;Cinderella;Aphrodite;Rapunzel;Kareena;Pocahontas;Belle;Snow;Anna;Grimhilde;Ygritte;Cersei;Bulma;Sansa;Audrey;Marilyn;Scarlett;Wu Zetian;Liv;Halle;Nicole;Zooey;elizabeth I;Mary I;Sonja (Norway);Anne-Marie (Greece);Mary (Denmark);Rania (Jordan);Galadriel;Cleopatra VII;Sirikit (Thailand);Silvia (Sweden);Marie (France);Caroline (Naples);Amalia  (Greece);Isabella I;Catherine (Russia);Louise (Belgium);Eugenie  (French);Joséphine (French);Anna (Russia);Augusta (German);Esther (Persia);Farah (Iran);Louise (Prussia);Frederica (Greece);Paola (Belgium);Victoria;Elizabeth II;Maxima (Netherland);Cixi",

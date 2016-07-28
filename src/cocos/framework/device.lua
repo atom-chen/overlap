@@ -135,7 +135,7 @@ function device:getDeviceUid()
 --        if a == true and b ~= nil then
 --            return b
 --        else
---            return "999999999999"
+            return "999999999999"
 --        end
     elseif device.platform == device.PLATFORM.IOS then
         return dnp.DNPDeviceUtils:uuid()
@@ -170,7 +170,7 @@ function device.hideActivityIndicator()
         printInfo("device.hideActivityIndicator()")
     end
     if device.platform == "android" then
---        luaj.callStaticMethod("org/cocos2dx/util/PSNative", "hideActivityIndicator", {}, "()V");
+        luaj.callStaticMethod("org/cocos2dx/util/PSNative", "hideActivityIndicator", {}, "()V");
     elseif device.platform == "ios" then
         cc.Native:hideActivityIndicator()
     end
@@ -216,15 +216,15 @@ function device.showAlert(title, message, buttonLabels, listener)
     end
 
     if device.platform == "android" then
-        local tempListner = function(event)
-            if type(event) == "string" then
-                event = require("framework.json").decode(event)
-                event.buttonIndex = tonumber(event.buttonIndex)
-            end
-            if listener then listener(event) end
-        end
-        require("luaj").callStaticMethod("org/cocos2dx/util/PSNative", "createAlert", {title, message, buttonLabels[1],buttonLabels[2],buttonLabels[3], tempListner},
-            "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V");
+--        local tempListner = function(event)
+--            if type(event) == "string" then
+--                event = require("framework.json").decode(event)
+--                event.buttonIndex = tonumber(event.buttonIndex)
+--            end
+--            if listener then listener(event) end
+--        end
+--        require("luaj").callStaticMethod("org/cocos2dx/util/PSNative", "createAlert", {title, message, buttonLabels[1],buttonLabels[2],buttonLabels[3], tempListner},
+--            "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V");
     else
         local defaultLabel = ""
         if #buttonLabels > 0 then

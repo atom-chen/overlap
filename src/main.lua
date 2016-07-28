@@ -36,6 +36,14 @@ require "app.init"
 
 local function main()
     require("app.MyApp"):create():run()
+
+--    local scene = display.newScene()
+--    
+--    display.newSprite("f1.png")
+--    :move(400,400)
+--    :addTo(scene)
+--    
+--    display.runScene(scene)
 end
 
 local status, msg = xpcall(main, __G__TRACKBACK__)
