@@ -17,6 +17,7 @@ end
 
 function CollectionDialog:showInfo(id)
    local infos =   helper.split(_("Collect_"..id),";")
+    print(_("Collect_"..id))
     self.Name:setString(infos[1])
     self.info:setString(infos[2])
 end
@@ -24,7 +25,7 @@ end
 
 function CollectionDialog:onClick(path,node,funcName)
     if  node:getName() =="btn_ok" then
-        local function btnCallback(  node,eventType  )
+        local function btnCallback(node,eventType)
             AppViews:fadeBackAndClose(self)
         end
         return btnCallback

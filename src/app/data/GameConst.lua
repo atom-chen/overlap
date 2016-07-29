@@ -12,6 +12,7 @@ Sloters_ = {
     icloud_off    = "icloud_off",
     level_info    = "level_info",    --关卡信息
     collections   = "collections",   --收集
+    collections_show   = "collections_show",   --收集
 }
 
 Layers_ = {

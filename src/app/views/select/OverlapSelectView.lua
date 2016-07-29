@@ -142,6 +142,11 @@ function OverlapSelectView:setPage(page)
     end
 end
 
+function OverlapSelectView:updateStars()
+    local stars =  LevelManager:getSceneStar(self.curPage)
+    self.starcount:setString(stars.." / 24")
+end
+
 ----------------------------
 --移动到指定页面，动画
 --@function [parent=#src.app.views.play.select.OverlapSelectView] gotoPage

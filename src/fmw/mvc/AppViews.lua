@@ -145,6 +145,17 @@ function AppViews:splashMask(time)
    local mask = display.newLayer(cc.c3b(255,255,255))
                 :addTo(self.scene,10000,10000)
     mask:setOpacity(0)
+    
+   local ontouch =  function(event)
+        if event.name == "began" then
+        --需要返回true
+        return true
+        elseif event.name == "moved" then
+        elseif event.name == "ended" then
+        end
+    end
+    mask:onTouch(ontouch, false, true)
+    
     local function onComplete()
         mask:removeSelf()
     end

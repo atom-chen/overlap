@@ -5,6 +5,11 @@ CollectionInfoView.RESOURCE_BINDING = {
     actions = {enterAni = "enter",enterEvent = nil,exitAni = nil ,exitEvent = nil}
 }
 
+CollectionInfoView.LOCALE_LANG_LABEL = {
+    Name        = _("OK"),
+    info        = _("OK"),
+}
+
 CollectionInfoView.OTHER = {
     Collect_1             = _("Collect_1"),
     Collect_2             = _("Collect_2"),
@@ -119,6 +124,14 @@ CollectionInfoView.OTHER = {
 }
 
 function CollectionInfoView:onCreate()
+    self:localLanguage()
+end
+
+
+function CollectionInfoView:showInfo(id)
+    local infos =   helper.split(_("Collect_"..id),";")
+    self.Name:setString(infos[1])
+    self.info:setString(infos[2])
 end
 
 

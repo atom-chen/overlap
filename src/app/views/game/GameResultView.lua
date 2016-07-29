@@ -76,7 +76,7 @@ function GameResultView:prepare(page,level,infos)
 end
 
 
-function GameResultView:showTravelResult(score,time,combo,mode)
+function GameResultView:showTravelResult(score,time,combo,mode,endless)
     self:move(0,0)
     self:show()
     --结果
@@ -86,6 +86,18 @@ function GameResultView:showTravelResult(score,time,combo,mode)
 
     local record =  helper.getSloterData("record"..mode) or 0
     self.Result_high1:setString(_("Result_combo").."  "..record)
+
+    --解锁收集
+    local newclt =   CollectionManager:starEndlessCollect(mode-2,score)
+    if newclt then
+        CollectionManager:showCollection(newclt)
+    else
+        --随机掉落
+        local rclt =  CollectionManager:starRandEndlessCollect(mode-2,score)
+        if newclt then
+            CollectionManager:showCollection(newclt)
+        end
+    end
 end
 
 
@@ -136,7 +148,7 @@ function GameResultView:showResult(stars,score,time,combo)
     if newclot then
         local function onComplete()
             self["gotcolt"]:setSpriteFrame("sp-result-collection.png")
-            AppViews:addViewByName("app.views.game.CollectionDialog")
+            CollectionManager:showCollection(newclot)
         end
         ac.execute(self["gotcolt"],ac.ccSeq(
             ac.ccDelay(#newstar*0.3+1),ac.ccScaleTo(0.1,2),ac.ccCall(onComplete),ac.ccScaleTo(0.1,1)
@@ -145,7 +157,7 @@ function GameResultView:showResult(stars,score,time,combo)
 
     local nextlv
     if self.curlevel + 1<=9*GAME_SCENE_COUNT then
-      nextlv =   LevelManager:getStageInfo(self.curlevel + 1)
+        nextlv =   LevelManager:getStageInfo(self.curlevel + 1)
     end
 
 

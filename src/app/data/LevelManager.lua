@@ -115,7 +115,12 @@ function LevelManager:updateStage(level,stars)
     self.patterns[level]:updatePattern(level)
     
     if newstar then
+        --更新界面的星星数量
         AppViews:getView(Layers_.home):updateStars()
+        AppViews:getView(Layers_.select):updateStars()
+        --是否解锁收藏
+        local scene = math.ceil(level/9)
+        CollectionManager:starCollect(scene)
     end
 
     return newstar,newclot,newopen

@@ -233,7 +233,39 @@ end
 
 
 
+
+
 --$$$$$$$$$$$$$$$$$ LOGIC  SHAPECONTROLLER $$$$$$$$$$$$$$$
+
+function ShapeController:initRandSkill()
+    local function opened(level)
+        local infos =  LevelManager:getStageInfo(level)
+        local hasstar
+        for s=1, 3 do
+            if infos[s]~= 0 then
+                hasstar = true
+            end
+        end
+        return hasstar
+    end
+
+    local skills = {{0}}
+    local skArray = Level.randSkills
+
+    for _, _skary in pairs(skArray) do
+        local open = false
+        for key, sk in pairs(_skary) do
+            if key == 1 then
+                open = opened(sk)
+            elseif open then
+                table.insert(skills,sk)
+            end
+        end
+    end
+
+    return skills
+end
+
 function ShapeController:initLevelData(level)
     local function formatSkill(skill)
         local _skArray = {}
@@ -250,7 +282,18 @@ function ShapeController:initLevelData(level)
     local lvdata = Level.data[level]
     self.levelScene = lvdata[1]
     self.levelCount = lvdata[2]
-    self.levelSkill = formatSkill(lvdata[3])
+    if lvdata[3] then
+        self.levelSkill = formatSkill(lvdata[3])
+        if level>1000 then
+        	self.endmode = GAME_ENDLESS_MODE.endless
+        else
+            self.endmode = nil
+        end
+    else
+        local sks = self:initRandSkill()
+        self.levelSkill = formatSkill(sks)
+        self.endmode = GAME_ENDLESS_MODE.random
+    end
     self.levelStar1 = lvdata[4]
     self.levelStar1.hasGet = false
     self.levelStar2 = lvdata[5]
@@ -311,7 +354,21 @@ function ShapeController:createStage()
     self.wrongSelect  = 0         --选择错误选项次数
     self.combo        = 0         --连续对的块数，音乐
 
-    local sIndex = math.random(1,#self.levelSkill)
+    local sIndex
+    if  self.endmode == GAME_ENDLESS_MODE.random and self:getScore()<=4 then
+        dump(self.levelSkill)
+        local isKill= true
+        while isKill do
+            sIndex = math.random(1,#self.levelSkill)
+            local stageSk  = self.levelSkill[sIndex]
+            if not next(stageSk,2) then
+                isKill= false
+            end
+        end
+     else
+        dump(self.levelSkill)
+        sIndex = math.random(1,#self.levelSkill)
+    end
     self.gameView:creatStage(self.levelSkill[sIndex])
 
     local function call()
@@ -452,10 +509,10 @@ end
 
 
 function ShapeController:updateRecord()
-    local record =  helper.getSloterData("record"..self.gamemode) or 0
+    local record =  helper.getSloterData("record"..self.endemode..self.gamemode) or 0
     local score = self:getScore()
     if score >record then
-        helper.saveSloterData("record"..self.gamemode,score)
+        helper.saveSloterData("record"..self.endemode..self.gamemode,score)
     end
 end
 
@@ -532,7 +589,7 @@ function ShapeController:gameOver()
             stars[3] = self.levelStar3.hasGet
             AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.round(self.gameTime),self.maxPerfect)
         else
-            AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.round(self.gameTime),self.maxPerfect,self.gamemode)
+            AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.round(self.gameTime),self.maxPerfect,self.gamemode,self.endemode)
         end
     end
     ac.ccDellayToCall(self,0.2,call)
