@@ -21,6 +21,16 @@ function gameUtils.showCommonDialog(content)
     dialog:addContent(content)
 end
 
+function gameUtils.scaleShow(target,dt)
+    target:hide()
+    local function onComplete1()
+        target:show()
+    end
+    ac.execute(target,ac.ccSeq(
+        ac.ccDelay(dt),ac.ccCall(onComplete1),ac.ccScaleTo(0.1,2),ac.ccScaleTo(0.1,1)
+    ))
+end
+
 -------------------------
 ----进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
 ----
@@ -220,7 +230,7 @@ function gameUtils.fadeTo(curName,toName,args)
     local function onComplete()
         curView:hide()
         toView:show()
-       
+
         if args and args.call then
             args.call()
         end
@@ -236,7 +246,7 @@ local function backView(fadeType,curName,args)
     elseif  type(curName) == "userdata"  then
         curView =  curName
     end
-    
+
     if not curView.formView then
         return
     end

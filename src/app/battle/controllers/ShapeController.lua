@@ -55,7 +55,7 @@ function ShapeController:completeStar(star)
         end
     else
         if star[1] ~= 0 then
-            if self.gameTime <= star[3] and self.maxPerfect >= star[1] then
+            if self.gameTime <= star[3] and  self:getScore() >= star[1] then
                 return true
             end
         elseif star[2] ~= 0 then
@@ -237,7 +237,7 @@ end
 
 --$$$$$$$$$$$$$$$$$ LOGIC  SHAPECONTROLLER $$$$$$$$$$$$$$$
 
-function ShapeController:initRandSkill()
+function ShapeController:initRandSkill(mode)
     local function opened(level)
         local infos =  LevelManager:getStageInfo(level)
         local hasstar
@@ -250,7 +250,7 @@ function ShapeController:initRandSkill()
     end
 
     local skills = {{0}}
-    local skArray = Level.randSkills
+    local skArray = Level.randSkills[mode]
 
     for _, _skary in pairs(skArray) do
         local open = false
@@ -285,14 +285,14 @@ function ShapeController:initLevelData(level)
     if lvdata[3] then
         self.levelSkill = formatSkill(lvdata[3])
         if level>1000 then
-        	self.endmode = GAME_ENDLESS_MODE.endless
+            self.endemode = GAME_ENDLESS_MODE.endless
         else
-            self.endmode = nil
+            self.endemode = nil
         end
     else
-        local sks = self:initRandSkill()
+        local sks = self:initRandSkill(self.levelCount-2)
         self.levelSkill = formatSkill(sks)
-        self.endmode = GAME_ENDLESS_MODE.random
+        self.endemode = GAME_ENDLESS_MODE.random
     end
     self.levelStar1 = lvdata[4]
     self.levelStar1.hasGet = false
@@ -355,18 +355,17 @@ function ShapeController:createStage()
     self.combo        = 0         --连续对的块数，音乐
 
     local sIndex
-    if  self.endmode == GAME_ENDLESS_MODE.random and self:getScore()<=4 then
-        dump(self.levelSkill)
+    print( self.endemode )
+    if  self.endemode == GAME_ENDLESS_MODE.random and self:getScore()<=4 then
         local isKill= true
         while isKill do
             sIndex = math.random(1,#self.levelSkill)
             local stageSk  = self.levelSkill[sIndex]
-            if not next(stageSk,2) then
+            if table.nums(stageSk) ==1 then
                 isKill= false
             end
         end
      else
-        dump(self.levelSkill)
         sIndex = math.random(1,#self.levelSkill)
     end
     self.gameView:creatStage(self.levelSkill[sIndex])

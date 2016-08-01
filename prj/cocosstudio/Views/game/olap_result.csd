@@ -34,6 +34,44 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
+          <AbstractNodeData Name="Panel_3" ActionTag="-3152045" Tag="414" IconVisible="False" LeftMargin="373.4224" RightMargin="356.5776" TopMargin="1216.3571" BottomMargin="97.6429" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="20.0000" Y="20.0000" />
+            <Children>
+              <AbstractNodeData Name="LO_Donation_2" ActionTag="-822043162" Tag="415" IconVisible="False" LeftMargin="-53.0000" RightMargin="-33.0000" TopMargin="-1.0000" BottomMargin="-21.0000" FontSize="36" LabelText="donation" TouchScaleChangeAble="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="106.0000" Y="42.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position />
+                <Scale ScaleX="0.6947" ScaleY="0.5986" />
+                <CColor A="255" R="242" G="251" B="254" />
+                <PrePosition />
+                <PreSize X="5.3000" Y="2.1000" />
+                <FontResource Type="Normal" Path="Resource/fonts/Overlap.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="LO_Donation_1" Visible="False" ActionTag="316676938" VisibleForFrame="False" Tag="416" IconVisible="False" LeftMargin="-36.0000" RightMargin="-16.0000" TopMargin="6.0000" BottomMargin="-14.0000" FontSize="24" LabelText="去广告" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="72.0000" Y="28.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="242" G="251" B="254" />
+                <PrePosition />
+                <PreSize X="3.6000" Y="1.4000" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint />
+            <Position X="373.4224" Y="97.6429" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4979" Y="0.0732" />
+            <PreSize X="0.0267" Y="0.0150" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
           <AbstractNodeData Name="btn_retry" ActionTag="1451030323" CallBackType="Click" CallBackName="onClick" Tag="418" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="73.2455" RightMargin="542.7545" TopMargin="996.7281" BottomMargin="250.2719" TouchEnable="True" FontSize="48" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="104" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="134.0000" Y="87.0000" />
             <Children>
@@ -146,51 +184,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_3" ActionTag="-3152045" Tag="414" IconVisible="False" LeftMargin="373.4224" RightMargin="356.5776" TopMargin="1216.3571" BottomMargin="97.6429" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-            <Size X="20.0000" Y="20.0000" />
-            <Children>
-              <AbstractNodeData Name="LO_Donation_2" ActionTag="-822043162" Tag="415" IconVisible="False" LeftMargin="-53.0000" RightMargin="-33.0000" TopMargin="-1.0000" BottomMargin="-21.0000" FontSize="36" LabelText="donation" TouchScaleChangeAble="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="106.0000" Y="42.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position />
-                <Scale ScaleX="0.6947" ScaleY="0.5986" />
-                <CColor A="255" R="242" G="251" B="254" />
-                <PrePosition />
-                <PreSize X="5.3000" Y="2.1000" />
-                <FontResource Type="Normal" Path="Resource/fonts/Overlap.ttf" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="LO_Donation_1" Visible="False" ActionTag="316676938" VisibleForFrame="False" Tag="416" IconVisible="False" LeftMargin="-36.0000" RightMargin="-16.0000" TopMargin="6.0000" BottomMargin="-14.0000" FontSize="24" LabelText="去广告" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="72.0000" Y="28.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="242" G="251" B="254" />
-                <PrePosition />
-                <PreSize X="3.6000" Y="1.4000" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-            </Children>
-            <AnchorPoint />
-            <Position X="373.4224" Y="97.6429" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4979" Y="0.0732" />
-            <PreSize X="0.0267" Y="0.0150" />
-            <SingleColor A="255" R="150" G="200" B="255" />
-            <FirstColor A="255" R="150" G="200" B="255" />
-            <EndColor A="255" R="255" G="255" B="255" />
-            <ColorVector ScaleY="1.0000" />
-          </AbstractNodeData>
           <AbstractNodeData Name="levelPanel" ActionTag="104443384" Tag="205" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="750.0000" Y="1334.0000" />
             <Children>
-              <AbstractNodeData Name="Panel_5" ActionTag="-2125157104" Tag="58" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="137.7500" RightMargin="112.2500" TopMargin="387.4316" BottomMargin="716.5684" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-                <Size X="500.0000" Y="230.0000" />
+              <AbstractNodeData Name="Panel_5" ActionTag="-2125157104" Tag="58" IconVisible="False" PositionPercentXEnabled="True" TopMargin="387.4316" BottomMargin="716.5684" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                <Size X="750.0000" Y="230.0000" />
                 <Children>
-                  <AbstractNodeData Name="Panel_23" ActionTag="-222110006" Tag="370" IconVisible="False" LeftMargin="88.6437" RightMargin="411.3563" TopMargin="78.4422" BottomMargin="151.5578" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_23" ActionTag="-222110006" Tag="370" IconVisible="False" LeftMargin="257.2214" RightMargin="492.7786" TopMargin="92.7554" BottomMargin="137.2446" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <Children>
                       <AbstractNodeData Name="LO_Result_score_1" ActionTag="773335272" VisibleForFrame="False" Tag="59" IconVisible="False" RightMargin="-190.0000" TopMargin="-32.0000" BottomMargin="-32.0000" FontSize="56" LabelText="得分 10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -218,17 +218,17 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint />
-                    <Position X="88.6437" Y="151.5578" />
+                    <Position X="257.2214" Y="137.2446" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1773" Y="0.6589" />
+                    <PrePosition X="0.3430" Y="0.5967" />
                     <PreSize X="0.0000" Y="0.0000" />
                     <SingleColor A="255" R="150" G="200" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Panel_23_0" ActionTag="-525404018" Tag="372" IconVisible="False" LeftMargin="88.6437" RightMargin="411.3563" TopMargin="163.7222" BottomMargin="66.2778" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_23_0" ActionTag="-525404018" Tag="372" IconVisible="False" LeftMargin="257.2214" RightMargin="492.7786" TopMargin="178.0353" BottomMargin="51.9647" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <Children>
                       <AbstractNodeData Name="LO_Result_combo_1" ActionTag="1395622577" VisibleForFrame="False" Tag="373" IconVisible="False" RightMargin="-143.0000" TopMargin="-24.0000" BottomMargin="-24.0000" FontSize="42" LabelText="得分 10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -256,17 +256,17 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint />
-                    <Position X="88.6437" Y="66.2778" />
+                    <Position X="257.2214" Y="51.9647" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1773" Y="0.2882" />
+                    <PrePosition X="0.3430" Y="0.2259" />
                     <PreSize X="0.0000" Y="0.0000" />
                     <SingleColor A="255" R="150" G="200" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Panel_23_1" ActionTag="188912481" Tag="375" IconVisible="False" LeftMargin="88.6437" RightMargin="411.3563" TopMargin="243.2660" BottomMargin="-13.2660" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panel_23_1" ActionTag="188912481" Tag="375" IconVisible="False" LeftMargin="257.2214" RightMargin="492.7786" TopMargin="257.5790" BottomMargin="-27.5790" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <Children>
                       <AbstractNodeData Name="LO_Result_time_1" ActionTag="-1018033476" VisibleForFrame="False" Tag="376" IconVisible="False" RightMargin="-143.0000" TopMargin="-24.0000" BottomMargin="-24.0000" FontSize="42" LabelText="得分 10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -294,10 +294,10 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint />
-                    <Position X="88.6437" Y="-13.2660" />
+                    <Position X="257.2214" Y="-27.5790" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1773" Y="-0.0577" />
+                    <PrePosition X="0.3430" Y="-0.1199" />
                     <PreSize X="0.0000" Y="0.0000" />
                     <SingleColor A="255" R="150" G="200" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
@@ -306,11 +306,11 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" />
-                <Position X="387.7500" Y="716.5684" />
+                <Position X="375.0000" Y="716.5684" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5170" Y="0.5372" />
-                <PreSize X="0.6667" Y="0.1724" />
+                <PrePosition X="0.5000" Y="0.5372" />
+                <PreSize X="1.0000" Y="0.1724" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
@@ -397,7 +397,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_7_1" ActionTag="-1854566864" Tag="120" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="238.0000" RightMargin="212.0000" TopMargin="846.5583" BottomMargin="437.4417" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_9" ActionTag="-1854566864" Tag="120" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="238.0000" RightMargin="212.0000" TopMargin="846.5583" BottomMargin="437.4417" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="300.0000" Y="50.0000" />
                 <Children>
                   <AbstractNodeData Name="getstar3" ActionTag="-527592179" Tag="121" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="6.5000" BottomMargin="8.5000" ctype="SpriteObjectData">
@@ -462,18 +462,18 @@
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint />
-                <Position X="238.0000" Y="437.4417" />
+                <AnchorPoint ScaleY="0.5000" />
+                <Position X="238.0000" Y="462.4417" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3173" Y="0.3279" />
+                <PrePosition X="0.3173" Y="0.3467" />
                 <PreSize X="0.4000" Y="0.0375" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_7_0" ActionTag="1301793071" Tag="126" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="238.0000" RightMargin="212.0000" TopMargin="777.0819" BottomMargin="506.9181" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_8" ActionTag="1301793071" Tag="126" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="238.0000" RightMargin="212.0000" TopMargin="777.0819" BottomMargin="506.9181" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="300.0000" Y="50.0000" />
                 <Children>
                   <AbstractNodeData Name="getstar2" ActionTag="903041762" Tag="127" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="8.2463" BottomMargin="6.7537" ctype="SpriteObjectData">
@@ -538,11 +538,11 @@
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint />
-                <Position X="238.0000" Y="506.9181" />
+                <AnchorPoint ScaleY="0.5000" />
+                <Position X="238.0000" Y="531.9181" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3173" Y="0.3800" />
+                <PrePosition X="0.3173" Y="0.3987" />
                 <PreSize X="0.4000" Y="0.0375" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
@@ -577,10 +577,10 @@
                   <AbstractNodeData Name="Panel_star1" ActionTag="941202466" Tag="135" IconVisible="False" LeftMargin="67.5000" RightMargin="232.5000" TopMargin="25.3000" BottomMargin="24.7000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <Children>
-                      <AbstractNodeData Name="LO_Star1_2" ActionTag="1092446036" Tag="136" IconVisible="False" HorizontalEdge="LeftEdge" RightMargin="-84.0000" TopMargin="-17.5000" BottomMargin="-17.5000" FontSize="30" LabelText="score 10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="LO_Star1_2" ActionTag="1092446036" Tag="136" IconVisible="False" HorizontalEdge="LeftEdge" RightMargin="-84.0000" TopMargin="-19.0905" BottomMargin="-15.9095" FontSize="30" LabelText="score 10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="84.0000" Y="35.0000" />
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position />
+                        <Position Y="1.5905" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="118" G="115" B="113" />
                         <PrePosition />
@@ -614,18 +614,18 @@
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint />
-                <Position X="238.0000" Y="576.9965" />
+                <AnchorPoint ScaleY="0.5000" />
+                <Position X="238.0000" Y="601.9965" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3173" Y="0.4325" />
+                <PrePosition X="0.3173" Y="0.4513" />
                 <PreSize X="0.4000" Y="0.0375" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_3_0" ActionTag="1819576460" Tag="178" IconVisible="False" LeftMargin="221.3711" RightMargin="228.6289" TopMargin="238.2031" BottomMargin="895.7969" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="panel_star" ActionTag="1819576460" Tag="178" IconVisible="False" LeftMargin="221.3711" RightMargin="228.6289" TopMargin="238.2031" BottomMargin="895.7969" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="300.0000" Y="200.0000" />
                 <Children>
                   <AbstractNodeData Name="gotstar1" ActionTag="-2098788517" Tag="179" IconVisible="False" LeftMargin="73.5000" RightMargin="191.5000" TopMargin="145.5000" BottomMargin="19.5000" ctype="SpriteObjectData">

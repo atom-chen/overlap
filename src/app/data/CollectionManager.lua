@@ -11,16 +11,15 @@ function CollectionManager:ctor()
     for v=1, 100 do
         Collection.data[v] = {"apple",""}
     end
-
     self:initCollection()
 end
 
 function CollectionManager:initCollection()
     local collections =  helper.getSloterData(Sloters_.collections)
     local collections_show =  helper.getSloterData(Sloters_.collections_show)
-
     if not collections then
         collections = {}
+        collections_show = {}
         for v=1, #Collection.data do
             collections[v] = 0
             collections_show[v] = 0

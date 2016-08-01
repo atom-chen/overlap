@@ -39,8 +39,7 @@ end
 function ConfigLangView:onClick( path,node,funcName)
     if node:getName()=="btn_ok"  then
         local function btnCallback(node,eventType)
---            gameUtils.transFadeOut(self,Layers_.config)
-            gameUtils.fadeBackAndClose(self)
+            AppViews:fadeBackAndClose(self)
         end
 
         return btnCallback

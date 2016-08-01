@@ -133,6 +133,35 @@ function GameResultView:showResult(stars,score,time,combo)
         end
     end
 
+    
+    --动画
+    local aniTarget = {}
+    aniTarget[1] = self.lbl_level
+    aniTarget[2] = self.Result_score
+    aniTarget[3] = self.Result_combo
+    aniTarget[4] = self.Result_time
+    aniTarget[5] = self.Panel_7
+    aniTarget[6] = self.Panel_8
+    aniTarget[7] = self.Panel_9
+    
+    local movedt = 0.1
+    for key, target in pairs(aniTarget) do
+        target:hide()
+        local tx,ty = target:getPosition()
+        target:setPositionX(-300)
+        local function call()
+            target:show()
+        end
+        ac.execute(target,ac.ccSeq(
+            ac.ccDelay((key-1)*movedt),ac.ccCall(call),ac.ccEasing(ac.ccMoveTo(0.1,cc.p(tx,ty),5))
+        ))
+    end
+    
+    --收集星级面板
+    local showdt = #aniTarget*movedt
+    self.panel_star:setOpacity(0)
+    ac.execute(self.panel_star,ac.ccSeq(ac.ccDelay(showdt),ac.ccFadeTo(0.12,255)))
+    
     --更新星数量
     local newstar,newclot,newopen =  LevelManager:updateStage(self.curlevel,stars)
     if newstar then
@@ -141,17 +170,19 @@ function GameResultView:showResult(stars,score,time,combo)
                 self["gotstar"..v]:setSpriteFrame("sp-result-star.png")
             end
             ac.execute(self["gotstar"..v],ac.ccSeq(
-                ac.ccDelay((k-1)*0.3+1),ac.ccScaleTo(0.1,2),ac.ccCall(onComplete),ac.ccScaleTo(0.1,1)
+                ac.ccDelay((k-1)*0.3+showdt),ac.ccScaleTo(0.1,2),ac.ccCall(onComplete),ac.ccScaleTo(0.1,1)
             ))
         end
     end
     if newclot then
         local function onComplete()
             self["gotcolt"]:setSpriteFrame("sp-result-collection.png")
+        end
+        local function onComplete1()
             CollectionManager:showCollection(newclot)
         end
         ac.execute(self["gotcolt"],ac.ccSeq(
-            ac.ccDelay(#newstar*0.3+1),ac.ccScaleTo(0.1,2),ac.ccCall(onComplete),ac.ccScaleTo(0.1,1)
+            ac.ccDelay(#newstar*0.3+showdt),ac.ccScaleTo(0.1,2),ac.ccCall(onComplete),ac.ccScaleTo(0.1,1),ac.ccCall(onComplete1)
         ))
     end
 
@@ -160,9 +191,11 @@ function GameResultView:showResult(stars,score,time,combo)
         nextlv =   LevelManager:getStageInfo(self.curlevel + 1)
     end
 
-
+    --按钮的显示动画
+    gameUtils.scaleShow(self.btn_retry,1+showdt)
+    gameUtils.scaleShow(self.btn_list,1+showdt)
     if self.curlevel%9~=0 and nextlv and nextlv[4]  then
-        self.btn_next:show()
+        gameUtils.scaleShow(self.btn_next,1+showdt)
     else
         self.btn_next:hide()
     end

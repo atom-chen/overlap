@@ -35,16 +35,16 @@ function OverlapTrvalView:onClick( path,node,funcName)
     elseif node:getName()=="btn_right" and funcName =="onClick" then
         local function btnCallback(node,eventType)
             if self.curPage + 1<= GAME_SCENE_COUNT - 1 then
-                self.curPage = self.curPage + 1
-                self:gotoPage(self.curPage)
+--                self.curPage = self.curPage + 1
+                self:gotoPage(self.curPage+1)
             end
         end
         return btnCallback
     elseif node:getName()=="btn_left" and funcName =="onClick" then
         local function btnCallback(node,eventType)
             if self.curPage - 1>=0 then
-                self.curPage = self.curPage - 1
-                self:gotoPage(self.curPage)
+--                self.curPage = self.curPage - 1
+                self:gotoPage(self.curPage-1)
             end
         end
         return btnCallback
@@ -73,7 +73,7 @@ end
 --$$$$$$$$$$$$$$$$ OverlapTrvalView $$$$$$$$$$$$$$$$$$$$$
 
 function OverlapTrvalView:startGame(gameLevel)
-    gameLevel = self.gameLevel or gameLevel
+    gameLevel =  gameLevel or self.gameLevel
     self.gameLevel = gameLevel
     local function startCall()
         self:hide()
@@ -105,8 +105,10 @@ end
 --@function [parent=#src.app.views.play.select.OverlapTrvalView] setDimension
 --
 function OverlapTrvalView:setPage(page)
+    print(self.curPage+3)
     self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d.png",self.curPage+3))
     self.curPage = page
+    print(self.curPage+3)
     self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d-on.png",page+3))
     
     if self.curPage == GAME_SCENE_COUNT-1 then

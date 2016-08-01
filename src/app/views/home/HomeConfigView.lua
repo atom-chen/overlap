@@ -36,13 +36,13 @@ end
 function HomeConfigView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
-            gameUtils.fadeBack(self)
+            AppViews:fadeBack(self)
         end
 
         return btnCallback
     elseif node:getName()=="btn_lang"  then
         local function btnCallback(node,eventType)
-            gameUtils.fadeTo(self,"app.views.home.ConfigLangView")
+            AppViews:fadeTo(self,"app.views.home.ConfigLangView")
 --            print(store.canMakePurchases())
 --           
 --            local function call(result)
@@ -58,7 +58,7 @@ function HomeConfigView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_credit"  then
         local function btnCallback(node,eventType)
-            gameUtils.fadeTo(Layers_.config,"app.views.home.ConfigCreditView")
+            AppViews:fadeTo(Layers_.config,"app.views.home.ConfigCreditView")
         end
 
         return btnCallback
@@ -74,7 +74,7 @@ function HomeConfigView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_donation"  then
         local function btnCallback(node,eventType)
-            gameUtils.transFadeIn(Layers_.config,"app.views.home.HomeAdsView")
+            AppViews:fadeTo(Layers_.config,"app.views.home.HomeAdsView")
         end
 
         return btnCallback

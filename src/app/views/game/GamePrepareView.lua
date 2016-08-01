@@ -13,7 +13,8 @@ GamePrepareView.LOCALE_LANG_LABEL = {
 --$$$$$$$$$$$$$$$$ CONFIG $$$$$$$$$$$$$$$$$$$$$
 local Level          = import("app.data.Level")
 local SkillIcon          = import(".SkillIcon")
---local SkillInfoView          = import(".SkillInfoView")
+
+--local SkillExplain1View          = import("..skills.SkillExplain1View")
 
 --$$$$$$$$$$$$$$$$ ViewBase $$$$$$$$$$$$$$$$$$$$$
 
@@ -99,6 +100,11 @@ function GamePrepareView:initLevelData(level)
     self.collection = collection
 end
 
+function GamePrepareView:showSkillExplain(type)
+    AppViews:addViewByName(string.format("app.views.skills.SkillExplain%dView",type))
+end
+
+
 
 function GamePrepareView:prepare(_page,_level)
     self.page   = _page
@@ -114,10 +120,13 @@ function GamePrepareView:prepare(_page,_level)
     --初始化技能
     local sc = 0
     for v=1, 3 do
-        if self.levelSkill[v] then
+        local skType = self.levelSkill[v]
+        if skType then
             self["icon_skill_"..v]:show()
-            self["icon_skill_"..v]:setSkill(self.levelSkill[v])
+            self["icon_skill_"..v]:setSkill(skType)
             sc = sc + 1
+            --显示技能简结
+            self:showSkillExplain(skType)
         else
             self["icon_skill_"..v]:hide()
         end

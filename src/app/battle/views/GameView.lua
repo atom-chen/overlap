@@ -257,7 +257,7 @@ function GameView:createAchieve(models,ani,skill)
     end
 
 
-    self:show3DModel()
+--    self:show3DModel()
 end
 
 -----------
