@@ -8,9 +8,9 @@ GamePauseView.LOCALE_LANG_LABEL = {
     List                     = _("List"),
     Sound                    = _("Sound"),
     Continue                 = _("Continue"),
-    Result_time              = _("Result_time"),
-    Result_combo              = _("Result_combo"),
-    Result_score              = _("Result_score"),
+--    Result_time              = _("Result_time"),
+--    Result_combo              = _("Result_combo"),
+--    Result_score              = _("Result_score"),
 }
 
 function GamePauseView:onCreate()
@@ -78,9 +78,9 @@ end
 
 
 function GamePauseView:showInfo(score,time,combo)
-    self.Result_score:setString(_("Result_score").."  "..score)
-    self.Result_time:setString(_("Result_time").."  "..time)
-    self.Result_combo:setString(_("Result_combo").."  "..combo)
+--    self.Result_score:setString(_("Result_score").."  "..score)
+--    self.Result_time:setString(_("Result_time").."  "..time)
+--    self.Result_combo:setString(_("Result_combo").."  "..combo)
 end
 
 

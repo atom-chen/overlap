@@ -17,9 +17,12 @@ function CollectionCellView:updateCell(data)
     self.id  = data.id
     self.has = (data.has ~= 0)
     if self.has then
-        self.collect:setSpriteFrame("collection-1.png")
+        self.collect:setSpriteFrame(string.format("collection-%d.png",self.id))
+        self.lock:hide()
+        self.collect:show()
     else
-        self.collect:setSpriteFrame("sp-collection-lock.png")
+        self.lock:show()
+        self.collect:hide()
     end
     
 end
@@ -40,6 +43,9 @@ function CollectionCellView:onCellTouched(event)
     if self.has then
       local colect =   AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
         colect:showInfo(self.id)
+    else
+        local colect =   AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
+        colect:showLock(self.id)
     end
 end
 

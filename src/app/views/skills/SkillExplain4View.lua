@@ -2,8 +2,12 @@
 local SkillExplain4View = class("SkillExplain4View", cc.load("mvc").ViewBase)
 
 SkillExplain4View.RESOURCE_FILENAME = "select.skills.skill_type_4.lua"
+SkillExplain4View.LOCALE_LANG_LABEL = {
+    SkInfo             = _("SkInfo_1"),
+}
 
 function SkillExplain4View:onCreate()
+    self:localLanguage()
     local lang = locale.defaultLang()
     self.word1:setSpriteFrame(string.format("word-%s-1.png",lang))
     self.word2:setSpriteFrame(string.format("word-%s-2.png",lang))

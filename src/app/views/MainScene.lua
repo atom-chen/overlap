@@ -17,6 +17,7 @@ function MainScene:onCreate()
     display.loadSpriteFrames("Resource/atlas/shape-border.plist","Resource/atlas/shape-border.png")
     display.loadSpriteFrames("Resource/atlas/shape-shadow.plist","Resource/atlas/shape-shadow.png")
     display.loadSpriteFrames("Resource/atlas/planet.plist","Resource/atlas/planet.png")
+    display.loadSpriteFrames("Resource/atlas/collct.plist","Resource/atlas/collct.png")
     
     if helper.getSloterData(Sloters_.sound_off) then
         audio.setSoundsVolume(0)
@@ -38,11 +39,8 @@ function MainScene:onClick( path,node,funcName)
 end
 
 function MainScene:onSplash()
-    self.splash = OverlapSplashView:create()
-        :addTo(self)
-
     self.ground = OverlapBackView:create(self:getApp(),Layers_.ground)
-        :hide()
+--        :hide()
         :addTo(self)
     self.gameController =  ShapeController:create(self:getApp(),Layers_.gameController)
         :hide()
@@ -70,10 +68,13 @@ function MainScene:onSplash()
     self.configView =  HomeConfigView:create(self:getApp(),Layers_.config)
         :hide()
         :addTo(self)
+        
+    self.splash = OverlapSplashView:create()
+        :addTo(self)
 end
 
 function MainScene:onGame()
-    self.ground:show()
+--    self.ground:show()
     self.mainView:show()
     self.mainView:createOverText()
     self.splash:removeSelf()

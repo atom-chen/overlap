@@ -4,6 +4,10 @@ Sloters_ = {
     shapeInfo = "shapeInfo",
     localScore = "localScore",
     last_mode = "last_mode,",
+    last_page = "last_page,",
+    last_page_travel = "last_page_travel,",
+    last_travel = "last_travel,",
+    
     unlock_new = "unlock_new",
     new_record = "new_record",
 
@@ -67,8 +71,8 @@ GAME_MODE = {
 }
 
 GAME_ENDLESS_MODE = {
-    endless = 1,
-    random = 2,
+    endless = 1,  --无障碍
+    random = 2,  --有障碍
 }
 
 --选项技能

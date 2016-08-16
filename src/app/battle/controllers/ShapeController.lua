@@ -171,7 +171,8 @@ function ShapeController:touch(event)
                     self.combo = 0
                     --减时间
                     if  self.wrongSelect ~= 0 then
-                        self:updateTime(-self.wrongSelect,true)
+                        self:updateTime(-1,true)
+--                        self:updateTime(-self.wrongSelect,true)
                         --                        self.gameHUD:reduceTime( self.wrongSelect)
                     end
                     self.wrongSelect  = self.wrongSelect +1
@@ -202,14 +203,16 @@ function ShapeController:update(dt)
 
             if self.gameTime <= ShapeController.TIME_TO_WARING and  not self.tickTime then
                 --时间警告
-                --                self.tickTime = audio.playSound(GAME_EFFECT[10])
+                self.tickTime = 1
+--                self.tickTime = audio.playSound(GAME_EFFECT[10])
                 local function playcall()
-                --                    self.tickTime = audio.playSound(GAME_EFFECT[10])
+                    self.tickTime = 1
+--                    self.tickTime = audio.playSound(GAME_EFFECT[10])
                 end
 
                 self:addTimer("PLAY_TICK_EFFFECT",10,10000,playcall)
 
-                self.gameView:startREC()
+                self.gameHUD:startREC()
             end
 
             if self.gameTime <= 0 then
@@ -221,7 +224,7 @@ function ShapeController:update(dt)
                     --                    audio.stopSound(self.tickTime)
                     self.tickTime = nil
                     self:removeTimer("PLAY_TICK_EFFFECT")
-                    self.gameView:stopREC()
+                    self.gameHUD:stopREC()
                 end
             end
         end
@@ -371,11 +374,12 @@ function ShapeController:createStage()
     self.gameView:creatStage(self.levelSkill[sIndex])
 
     local function call()
-        self.gameHUD:updateSkill(self.levelSkill[sIndex])
         self:enTouch()
         self:enCountdown()
     end
     ac.ccDellayToCall(self,0.5,call)
+    --显示技能图标
+    self.gameHUD:updateSkill(self.levelSkill[sIndex])
 end
 
 
@@ -467,7 +471,7 @@ function ShapeController:stageClear()
         --        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
-        self.gameView:stopREC()
+        self.gameHUD:stopREC()
     end
     --过关清理场景
     local function cleanCallback()
@@ -597,7 +601,7 @@ function ShapeController:gameOver()
         --        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
-        self.gameView:stopREC()
+        self.gameHUD:stopREC()
     end
 
     self:disCountdown()
@@ -615,7 +619,7 @@ function ShapeController:gameClean()
         --        audio.stopSound(self.tickTime)
         self.tickTime = nil
         self:removeTimer("PLAY_TICK_EFFFECT")
-        self.gameView:stopREC()
+        self.gameHUD:stopREC()
     end
 
     self:disCountdown()
@@ -623,6 +627,7 @@ function ShapeController:gameClean()
 
     ac.stopTarget(self)
     ac.stopTarget(self.gameView)
+    ac.stopTarget(self.gameHUD)
 end
 
 

@@ -5,19 +5,19 @@ TravelPageView.RESOURCE_FILENAME = "travel.travel_page.lua"
 TravelPageView.LOCALE_LANG_LABEL = {
     YourRank             = _("YourRank"),
     HighScore            = _("HighScore"),
+    GHighScore            = _("AllHighScore"),
+--    Position            = _("Position"),
     random               = _("Random"),
-    score                = "12",
-    rank                 = "123456",
+--    score                = "12",
+--    rank                 = "123456",
 }
 
 function TravelPageView:onCreate()
     self:get():move(0,0)
     self:localLanguage()
-    self.YourRank:setString(_("YourRank").." : ")
-    self.HighScore:setString(_("HighScore").." : ")
-    
-    self.mode = GAME_ENDLESS_MODE.endless
-    self:setEndless()
+    self.HighScore:setString(_("HighScore").." : 12")
+    self.GHighScore:setString(_("AllHighScore").." : 123")
+    self.YourRank:setString(_("YourRank").." : ".."12".."(".._("Position").."10%)")
 end
 
 function TravelPageView:getMode()
@@ -26,8 +26,16 @@ end
 
 function TravelPageView:onPage(page)
     self.page = page+2
---    self["avatar_"..self.page]:setSpriteFrame(string.format("avatar-%d-on.png",self.page))
+    self.avatar:setSpriteFrame(string.format("avatar-%d.png",self.page))
    
+    self.mode =  helper.getSloterData(Sloters_.last_mode..(self.page-2)) or GAME_ENDLESS_MODE.random
+
+    if self.mode == GAME_ENDLESS_MODE.random then
+        self:setRandom()
+    elseif self.mode == GAME_ENDLESS_MODE.endless then
+        self:setEndless()
+    end
+    
    return self
 end
 
@@ -50,15 +58,18 @@ end
 
 function TravelPageView:setEndless()
     self.mode = GAME_ENDLESS_MODE.endless 
-    self.switch2:setSpriteFrame("icon-select-travel-n.png")
-    self.switch1:setSpriteFrame("icon-select-travel-h.png")
-    self.random:setString(_("Endless"))
+    self.btn_trans:loadTextureNormal("btn-select-travel-off.png",1)
+    self.btn_trans:loadTexturePressed("btn-select-travel-off.png",1)
+    self.random:setString(_("Random")..":".._("Off"))
+    
+    helper.saveSloterData(Sloters_.last_mode..(self.page-2),self.mode) 
 end
 function TravelPageView:setRandom()
     self.mode = GAME_ENDLESS_MODE.random 
-    self.switch2:setSpriteFrame("icon-select-travel-h.png")
-    self.switch1:setSpriteFrame("icon-select-travel-n.png")
-    self.random:setString(_("Random"))
+    self.btn_trans:loadTextureNormal("btn-select-travel-on.png",1)
+    self.btn_trans:loadTexturePressed("btn-select-travel-on.png",1)
+    self.random:setString(_("Random")..":".._("On"))
+    helper.saveSloterData(Sloters_.last_mode..(self.page-2),self.mode) 
 end
 
 return TravelPageView

@@ -6,83 +6,83 @@
       <ObjectData Name="Node" Tag="37" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
-          <AbstractNodeData Name="panel" ActionTag="1454741705" Tag="38" IconVisible="False" RightMargin="-165.0000" TopMargin="-165.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-            <Size X="165.0000" Y="165.0000" />
+          <AbstractNodeData Name="panel" ActionTag="1454741705" Tag="38" IconVisible="False" RightMargin="-160.0000" TopMargin="-160.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="160.0000" Y="160.0000" />
             <Children>
-              <AbstractNodeData Name="btn_select" ActionTag="411028676" CallBackType="Touch" CallBackName="onTouch" Tag="141" IconVisible="False" LeftMargin="2.9614" RightMargin="27.0386" TopMargin="2.1488" BottomMargin="86.8512" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="105" Scale9Height="54" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="135.0000" Y="76.0000" />
+              <AbstractNodeData Name="btn_select" ActionTag="411028676" CallBackType="Touch" CallBackName="onTouch" Tag="141" IconVisible="False" LeftMargin="-1.0000" RightMargin="18.0000" TopMargin="0.1031" BottomMargin="16.8969" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="10" Scale9Height="18" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="143.0000" Y="143.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="70.4614" Y="124.8512" />
+                <Position X="70.5000" Y="88.3969" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4270" Y="0.7567" />
-                <PreSize X="0.8182" Y="0.4606" />
+                <PrePosition X="0.4406" Y="0.5525" />
+                <PreSize X="0.8938" Y="0.8938" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="PlistSubImage" Path="sp-select-level-board-1.png" Plist="Resource/atlas/ui-select.plist" />
-                <PressedFileData Type="PlistSubImage" Path="sp-select-level-board-1.png" Plist="Resource/atlas/ui-select.plist" />
-                <NormalFileData Type="PlistSubImage" Path="sp-select-level-board-1.png" Plist="Resource/atlas/ui-select.plist" />
+                <DisabledFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
+                <PressedFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
+                <NormalFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="star1" ActionTag="-159125961" Tag="42" IconVisible="False" LeftMargin="38.0140" RightMargin="103.9860" TopMargin="82.9647" BottomMargin="59.0353" ctype="SpriteObjectData">
-                <Size X="23.0000" Y="23.0000" />
+              <AbstractNodeData Name="star1" ActionTag="-159125961" Tag="42" IconVisible="False" LeftMargin="47.9656" RightMargin="97.0344" TopMargin="92.1332" BottomMargin="52.8668" ctype="SpriteObjectData">
+                <Size X="15.0000" Y="15.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="49.5140" Y="70.5353" />
+                <Position X="55.4656" Y="60.3668" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3001" Y="0.4275" />
-                <PreSize X="0.1394" Y="0.1394" />
+                <PrePosition X="0.3467" Y="0.3773" />
+                <PreSize X="0.0938" Y="0.0938" />
                 <FileData Type="PlistSubImage" Path="icon-select-star.png" Plist="Resource/atlas/ui-select.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="star2" ActionTag="-2138515551" Tag="43" IconVisible="False" LeftMargin="72.3858" RightMargin="69.6142" TopMargin="82.9647" BottomMargin="59.0353" ctype="SpriteObjectData">
-                <Size X="23.0000" Y="23.0000" />
+              <AbstractNodeData Name="star2" ActionTag="-2138515551" Tag="43" IconVisible="False" LeftMargin="64.4826" RightMargin="80.5174" TopMargin="92.1332" BottomMargin="52.8668" ctype="SpriteObjectData">
+                <Size X="15.0000" Y="15.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="83.8858" Y="70.5353" />
+                <Position X="71.9826" Y="60.3668" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5084" Y="0.4275" />
-                <PreSize X="0.1394" Y="0.1394" />
+                <PrePosition X="0.4499" Y="0.3773" />
+                <PreSize X="0.0938" Y="0.0938" />
                 <FileData Type="PlistSubImage" Path="icon-select-star.png" Plist="Resource/atlas/ui-select.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="star3" ActionTag="2021252228" Tag="41" IconVisible="False" LeftMargin="106.7578" RightMargin="35.2422" TopMargin="82.9647" BottomMargin="59.0353" ctype="SpriteObjectData">
-                <Size X="23.0000" Y="23.0000" />
+              <AbstractNodeData Name="star3" ActionTag="2021252228" Tag="41" IconVisible="False" LeftMargin="80.9991" RightMargin="64.0009" TopMargin="92.1332" BottomMargin="52.8668" ctype="SpriteObjectData">
+                <Size X="15.0000" Y="15.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="118.2578" Y="70.5353" />
+                <Position X="88.4991" Y="60.3668" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7167" Y="0.4275" />
-                <PreSize X="0.1394" Y="0.1394" />
+                <PrePosition X="0.5531" Y="0.3773" />
+                <PreSize X="0.0938" Y="0.0938" />
                 <FileData Type="PlistSubImage" Path="icon-select-star.png" Plist="Resource/atlas/ui-select.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="level" ActionTag="-409127332" Tag="44" IconVisible="False" LeftMargin="34.4169" RightMargin="68.5831" TopMargin="18.3284" BottomMargin="104.6716" FontSize="36" LabelText="3-1" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="62.0000" Y="42.0000" />
+              <AbstractNodeData Name="level" ActionTag="-409127332" Tag="44" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="38.4527" RightMargin="61.5473" TopMargin="41.6739" BottomMargin="76.3261" FontSize="36" LabelText="3-1" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="60.0000" Y="42.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="65.4169" Y="125.6716" />
+                <Position X="68.4527" Y="97.3261" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="244" G="241" B="240" />
-                <PrePosition X="0.3965" Y="0.7616" />
-                <PreSize X="0.3758" Y="0.2545" />
+                <PrePosition X="0.4278" Y="0.6083" />
+                <PreSize X="0.3750" Y="0.2625" />
                 <FontResource Type="Normal" Path="Resource/fonts/OverlapExt.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lock" ActionTag="-1375090317" VisibleForFrame="False" Tag="8" IconVisible="False" LeftMargin="50.5000" RightMargin="73.5000" TopMargin="16.5000" BottomMargin="101.5000" ctype="SpriteObjectData">
-                <Size X="41.0000" Y="47.0000" />
+              <AbstractNodeData Name="lock" ActionTag="-1375090317" VisibleForFrame="False" Tag="8" IconVisible="False" LeftMargin="57.2648" RightMargin="69.7352" TopMargin="43.4479" BottomMargin="78.5521" ctype="SpriteObjectData">
+                <Size X="33.0000" Y="38.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="71.0000" Y="125.0000" />
+                <Position X="73.7648" Y="97.5521" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4303" Y="0.7576" />
-                <PreSize X="0.2485" Y="0.2848" />
+                <PrePosition X="0.4610" Y="0.6097" />
+                <PreSize X="0.2062" Y="0.2375" />
                 <FileData Type="PlistSubImage" Path="sp-select-level-lock.png" Plist="Resource/atlas/ui-select.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="82.5000" Y="82.5000" />
+            <Position X="80.0000" Y="80.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />

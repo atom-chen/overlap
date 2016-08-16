@@ -86,6 +86,18 @@ function GameResultView:showTravelResult(score,time,combo,mode,endless)
 
     local record =  helper.getSloterData("record"..mode) or 0
     self.Result_high1:setString(_("Result_combo").."  "..record)
+    
+    
+    --动画
+    local aniTarget = {}
+    aniTarget[1] = self.rpanel1
+    aniTarget[2] = self.rpanel2
+    aniTarget[3] = self.rpanel3
+    aniTarget[4] = self.rpanel4
+    local showdt = self:moveSeqAni(aniTarget)
+    self:showButtonPanel(showdt+1,false)
+    
+    gameUtils.scaleShow(self.avatar,showdt+0.5)
 
     --解锁收集
     local newclt =   CollectionManager:starEndlessCollect(mode-2,score)
@@ -144,21 +156,9 @@ function GameResultView:showResult(stars,score,time,combo)
     aniTarget[6] = self.Panel_8
     aniTarget[7] = self.Panel_9
     
-    local movedt = 0.1
-    for key, target in pairs(aniTarget) do
-        target:hide()
-        local tx,ty = target:getPosition()
-        target:setPositionX(-300)
-        local function call()
-            target:show()
-        end
-        ac.execute(target,ac.ccSeq(
-            ac.ccDelay((key-1)*movedt),ac.ccCall(call),ac.ccEasing(ac.ccMoveTo(0.1,cc.p(tx,ty),5))
-        ))
-    end
+    local showdt = self:moveSeqAni(aniTarget)
     
     --收集星级面板
-    local showdt = #aniTarget*movedt
     self.panel_star:setOpacity(0)
     ac.execute(self.panel_star,ac.ccSeq(ac.ccDelay(showdt),ac.ccFadeTo(0.12,255)))
     
@@ -191,15 +191,49 @@ function GameResultView:showResult(stars,score,time,combo)
         nextlv =   LevelManager:getStageInfo(self.curlevel + 1)
     end
 
+    --显示按钮面板
+    local showNext = (self.curlevel%9~=0 and nextlv and nextlv[4])
+    self:showButtonPanel(1+showdt,showNext)
+end
+
+
+----------------------
+--显示按钮面板动画
+--
+function GameResultView:showButtonPanel(showdt,showNext)
     --按钮的显示动画
-    gameUtils.scaleShow(self.btn_retry,1+showdt)
-    gameUtils.scaleShow(self.btn_list,1+showdt)
-    if self.curlevel%9~=0 and nextlv and nextlv[4]  then
-        gameUtils.scaleShow(self.btn_next,1+showdt)
+    gameUtils.scaleShow(self.btn_retry,showdt)
+    gameUtils.scaleShow(self.btn_list,showdt)
+    if showNext  then
+        gameUtils.scaleShow(self.btn_next,showdt)
     else
         self.btn_next:hide()
     end
+    gameUtils.fadeShow(self.panelAds,showdt)
+end
 
+----------------------
+--顺序进场动画
+--
+function GameResultView:moveSeqAni(aniTarget)
+    --按钮的显示动画
+
+    local movedt = 0.1
+    for key, target in pairs(aniTarget) do
+        target:hide()
+        local tx,ty = target:getPosition()
+        target:setPositionX(-300)
+        local function call()
+            target:show()
+        end
+        ac.execute(target,ac.ccSeq(
+            ac.ccDelay((key-1)*movedt),ac.ccCall(call),ac.ccEasing(ac.ccMoveTo(0.1,cc.p(tx,ty),5))
+        ))
+    end
+
+    local showdt = (#aniTarget-1)*movedt
+    
+    return showdt
 end
 
 
@@ -245,6 +279,12 @@ function GameResultView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_noads"  then
         local function btnCallback(  node,eventType  )
+            
+        end
+        return btnCallback
+    elseif node:getName()=="panelAds"  then
+        local function btnCallback(  node,eventType  )
+            AppViews:fadeTo(Layers_.result,"app.views.home.HomeAdsView")
         end
         return btnCallback
     end

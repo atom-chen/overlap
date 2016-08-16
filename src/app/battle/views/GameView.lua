@@ -7,6 +7,10 @@
 local GameView = class("GameView", cc.load("mvc").ViewBase)
 GameView.RESOURCE_FILENAME = "game.olap_game.lua"
 
+GameView.LOCALE_LANG_LABEL = {
+    Touch           = _("Touch"),
+}
+
 
 local ShapeSprite = import(".ShapeSprite")
 
@@ -15,12 +19,12 @@ ShapeSprite.START_ANI = {
     ORDER = 2,
 }
 
-ShapeSprite.WRONG_STOP_TIME = 2
+ShapeSprite.WRONG_STOP_TIME = 1.5
+
 ShapeSprite.SHAPE_MOVE_TO_TIME = 0.2
 ShapeSprite.SHAPE_FADE_OUT_TIME = 0.15
 ShapeSprite.LAST_AUTO_RESTOR_DELAYTIEM = 0.6
 ShapeSprite.TIME_TO_NEXT_STAGE = 0.4
-
 
 ShapeSprite.TAG_LIGHT_LAYER  = 121
 ShapeSprite.TAG_SHAPE_LAYER  = 123
@@ -38,6 +42,8 @@ GameView.OPT_ITEM[8] = {4,4}
 
 
 function GameView:onCreate()
+    self:localLanguage()
+
     local gridPos = self.grid:convertToWorldSpace(cc.p(0,0))
     ARCHIVE_HEIGHT = (gridPos.y+GRID_BORDER)/display.height
 
@@ -46,6 +52,11 @@ function GameView:onCreate()
 
     self.optbackgrid:setContentSize(display.size)
     self.optgrid:setContentSize(display.size)
+
+    self.bar1 = helper.progressTimer(self.sb1,cc.p(0,0))
+    self.bar2 = helper.progressTimer(self.sb2,cc.p(1,1))
+    
+    self.Touch:hide()
 end
 
 
@@ -87,6 +98,9 @@ function GameView:setOption()
                 y = 178 + (k-1)*155
             end
 
+            local optmask = display.newSprite("#sp-game-opt-back-white.png")
+                :move(x,y)
+                :addTo(self.optbackgrid)
             local opt = display.newSprite("#sp-game-opt-back.png")
                 :move(x,y)
                 :addTo(self.optbackgrid)
@@ -120,10 +134,6 @@ function GameView:getPositionByIndex(index)
 end
 
 
-
-function GameView:onClick(event)
-end
-
 -----------
 --生成一个关卡
 --
@@ -138,6 +148,13 @@ function GameView:creatStage(skill)
     self:createOptions(models,opts,skill)
 
     self.effect = 1
+    self:reset3DModel()
+end
+
+function GameView:reset3DModel()
+    self.on3dMode = false
+    self.bar1:setPercentage(0)
+    self.bar2:setPercentage(0)
 end
 
 -----------
@@ -173,9 +190,9 @@ function GameView:createAchieve(models,ani,skill)
     end
     self.grid:rotate(0)
     if skill[SKILL_TYPE.ROTATY_RIGHT] then
-        self.grid:rotate(90)
-    elseif skill[SKILL_TYPE.ROTATY_LEFT] then
         self.grid:rotate(-90)
+    elseif skill[SKILL_TYPE.ROTATY_LEFT] then
+        self.grid:rotate(90)
     end
 
     local lyShape = display.newNode()
@@ -257,7 +274,7 @@ function GameView:createAchieve(models,ani,skill)
     end
 
 
---    self:show3DModel()
+    --    self:show3DModel()
 end
 
 -----------
@@ -267,7 +284,7 @@ end
 function GameView:createOptions(models,orders,skill)
     --选项
     self.opts = {}
-
+    self.orders = orders
     local colorSeq   --颜色序列
     if   skill[SKILL_TYPE.SELECT_WORD] or  skill[SKILL_TYPE.SELECT_COLOR] then
         colorSeq = math.randsub(#models,#models)
@@ -310,12 +327,20 @@ function GameView:onOption(index)
                 local function call()
                     AppViews:getView(Layers_.gameController):lastStageEnd()
                 end
-                ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE,call)
+                local t = ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE
+                if self.on3dMode then
+                    t = t+0.5
+                end
+                ac.ccDellayToCall(self,t,call)
             else
                 local function call()
                     AppViews:getView(Layers_.gameController):stageClear()
                 end
-                ac.ccDellayToCall(self,ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE,call)
+                local t = ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE
+                if self.on3dMode then
+                	t = t+0.5
+                end
+                ac.ccDellayToCall(self,t,call)
             end
         end
     end
@@ -441,7 +466,13 @@ function GameView:goShapeGo(index,wrongSelect)
             self.effect = 1
             audio.playSound(GAME_EFFECT[11])
         end
-
+        local function call3d()
+            self:_3dgo(self.opts[index],self.orders[index],5)
+        end
+        local function call3dback()
+            self:_3dgo(self.opts[index],self.orders[index],5,true)
+        end
+        
         --停止点击事件响应
         AppViews:getView(Layers_.gameController):disTouch()
 
@@ -449,15 +480,32 @@ function GameView:goShapeGo(index,wrongSelect)
         local easein = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,self.oPos), 1)
         local easeout = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,cc.p(x,y)), 1)
         self.opts[index]:valid()
-        self.opts[index]:runAction(cc.Sequence:create(
-            cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
-            ,cc.CallFunc:create(effectCall)
-            ,cc.DelayTime:create(0.1)
-            ,cc.CallFunc:create(call1)
-            ,cc.DelayTime:create(ShapeSprite.WRONG_STOP_TIME)
-            ,cc.Spawn:create(easeout,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,OPT_GRID_SCALE))
-            ,cc.CallFunc:create(call2)
-        ))
+        
+        if self.on3dMode then
+            self.opts[index]:runAction(cc.Sequence:create(
+                cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
+                ,cc.CallFunc:create(effectCall)
+                ,cc.DelayTime:create(0.1)
+                ,ac.ccCall(call3d),ac.ccDelay(0.45)
+                ,cc.CallFunc:create(call1)
+                ,cc.DelayTime:create(ShapeSprite.WRONG_STOP_TIME)
+                ,ac.ccCall(call3dback),ac.ccDelay(0.45)
+                ,cc.Spawn:create(easeout,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,OPT_GRID_SCALE))
+                ,cc.CallFunc:create(call2)
+            ))
+        else
+            self.opts[index]:runAction(cc.Sequence:create(
+                cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
+                ,cc.CallFunc:create(effectCall)
+                ,cc.DelayTime:create(0.1)
+                ,cc.CallFunc:create(call1)
+                ,cc.DelayTime:create(ShapeSprite.WRONG_STOP_TIME)
+                ,cc.Spawn:create(easeout,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,OPT_GRID_SCALE))
+                ,cc.CallFunc:create(call2)
+            ))
+        end
+        
+        ac.execute(self.Touch,cc.Blink:create(3,3))
     else
         --正确的选择
         self:playTouchEffect()
@@ -467,16 +515,28 @@ function GameView:goShapeGo(index,wrongSelect)
             shape:setCompleted()
             self.opts[index]:shapeFadeOut(ShapeSprite.SHAPE_FADE_OUT_TIME)
         end
+        local function call3d()
+            self:_3dgo(self.opts[index],self.orders[index],5)
+        end
 
         --根据技能不同做校验
         self.opts[index]:valid()
+
+        if self.on3dMode then
+            local easein = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,self.oPos), 1)
+            self.opts[index]:runAction(cc.Sequence:create(
+                cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
+                ,ac.ccCall(call3d),ac.ccDelay(0.45)
+                ,cc.CallFunc:create(call),cc.DelayTime:create(ShapeSprite.SHAPE_FADE_OUT_TIME)
+            ))
+        else
+            local easein = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,self.oPos), 1)
+            self.opts[index]:runAction(cc.Sequence:create(
+                cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
+                ,cc.CallFunc:create(call),cc.DelayTime:create(ShapeSprite.SHAPE_FADE_OUT_TIME)
+            ))
+        end
         shape:valid()
-        local easein = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,self.oPos), 1)
-        self.opts[index]:runAction(cc.Sequence:create(
-            cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
-            ,cc.CallFunc:create(call),cc.DelayTime:create(ShapeSprite.SHAPE_FADE_OUT_TIME)
-        --            ,cc.RemoveSelf:create()
-        ))
     end
 
 end
@@ -487,41 +547,41 @@ function GameView:playTouchEffect()
 end
 
 function GameView:startREC()
-    self.icon_red:stopActionByTag(111)
-    local action = cc.RepeatForever:create(ac.ccSeq(ac.ccFadeTo(0.5,0),ac.ccFadeTo(0.5,255)))
-    action:setTag(111)
-    ac.execute(self.icon_red,action)
+--    self.icon_red:stopActionByTag(111)
+--    local action = cc.RepeatForever:create(ac.ccSeq(ac.ccFadeTo(0.5,0),ac.ccFadeTo(0.5,255)))
+--    action:setTag(111)
+--    ac.execute(self.icon_red,action)
 end
 function GameView:stopREC()
-    self.icon_red:stopActionByTag(111)
-    self.icon_red:setOpacity(255)
+--    self.icon_red:stopActionByTag(111)
+--    self.icon_red:setOpacity(255)
 end
 
+
+function GameView:_3dgo(shape,key,rad,back)
+    rad = rad or 1
+    local scaleTo = cc.ScaleTo:create(2/rad,0.5,0.5)
+    local moveTo = cc.MoveBy:create(0.5/rad,cc.p(-50*(key-1)+200,0))
+    local cam = cc.OrbitCamera:create(1/rad, 1, 0,30,0, 0, 0)
+    
+    if back then
+        local scaleTo = cc.ScaleTo:create(2/rad,1,1)
+        local cam = cc.OrbitCamera:create(1/rad, 1, 0,0,0, 0, 0)
+        ac.execute(shape,scaleTo)
+        ac.execute(shape,moveTo:reverse())
+        ac.execute(shape,cam)
+    else
+        ac.execute(shape,scaleTo)
+        ac.execute(shape,moveTo)
+        ac.execute(shape,cam)
+    end
+end
 
 
 function GameView:show3DModel()
-    
-
     for key, shape in pairs(self.shapes) do
-        local skewTo = cc.SkewTo:create(2, 30, 0)
-        local scaleTo = cc.ScaleTo:create(2,0.5,0.5)
-        local moveTo = cc.MoveBy:create(2,cc.p(0,50*(key-1)))
-        local scaleTo1 = cc.ScaleTo:create(2,0.5,0.3)
---        ac.execute(shape,skewTo)
---        ac.execute(shape,scaleTo)
---        ac.execute(shape,ac.ccSeq(scaleTo1,moveTo))
-        
-        local moveTo = cc.MoveBy:create(0.5,cc.p(-50*(key-1)+200,0))
-        local cam = cc.OrbitCamera:create(1, 1, 0,30,0, 0, 0)
-        
-        ac.execute(shape,scaleTo)
-        ac.execute(shape,moveTo)
-        ac.execute(shape,ac.ccSeq(cam))
+        self:_3dgo(shape,key)
     end
-
-
-    self.angel = 30
-
 end
 
 
@@ -529,7 +589,7 @@ function GameView:onClick( path,node,funcName)
     if node:getName()=="btn_b" and funcName =="onClick" then
         local function btnCallback(node,eventType)
             self.angel = self.angel -5
-            
+
             for key, shape in pairs(self.shapes) do
                 local cam = cc.OrbitCamera:create(1, 1, 0, self.angel,0, 0, 0)
                 ac.execute(shape,ac.ccSeq(cam))
@@ -546,8 +606,54 @@ function GameView:onClick( path,node,funcName)
             end
         end
         return btnCallback
-    end     
+    elseif node:getName()=="btn_touch" then
+        local function btnCallback(node,eventType)
+            if eventType == ccui.TouchEventType.began then
+                if not self.on3dMode then
+                    local _3dtime = 1.5
+                    local act1 = cc.ProgressTo:create(_3dtime,100)
+                    local act2 = cc.ProgressTo:create(_3dtime,100)
+                    self.bar1:runAction(act1)
+                    self.bar2:runAction(act2)
+
+                    local function onComplete()
+                        self:start3Discovery()
+                    end
+                    local action = ac.ccSeq(ac.ccDelay(_3dtime),ac.ccCall(onComplete))
+                    action:setTag(125)
+                    ac.execute(self,action)
+                    
+                    --3dtouch
+                    local function call()
+                        self:start3Discovery()
+                    end
+                    gamer:start3Dtouch(call)
+                end
+            elseif eventType == ccui.TouchEventType.moved then
+            elseif eventType == ccui.TouchEventType.ended then
+                if  not self.on3dMode then
+                    local act1 = cc.ProgressTo:create(0.1,0)
+                    local act2 = cc.ProgressTo:create(0.1,0)
+                    self.bar1:stopAllActions()
+                    self.bar2:stopAllActions()
+                    self.bar1:runAction(act1)
+                    self.bar2:runAction(act2)
+
+                    self:stopActionByTag(125)
+                end
+                gamer:end3Dtouch()
+            elseif eventType == ccui.TouchEventType.canceled then
+            end
+        end
+        return btnCallback
+    end
 end
 
+function GameView:start3Discovery()
+    if not self.on3dMode then
+        self.on3dMode = true
+        self:show3DModel()
+    end
+end
 
 return GameView

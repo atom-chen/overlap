@@ -23,10 +23,10 @@ function HomeMoreView:onClick( path,node,funcName)
         end
 
         return btnCallback
-    elseif node:getName()=="btn_maryx"  then
+    elseif node:getName()=="btn_mary"  then
         local function btnCallback(node,eventType)
             if device.platform == device.PLATFORM.IOS then
-                device.openURL("itms-apps://itunes.com/apps/donopo")
+                device.openURL(string.format(DNP_APP.storeUrl.ios,"998444324"))
             elseif device.platform == device.PLATFORM.ANDROID then
 --                device.openURL(DNP_APP.url.allGames)
             end
@@ -36,7 +36,7 @@ function HomeMoreView:onClick( path,node,funcName)
     elseif node:getName()=="btn_ice"  then
         local function btnCallback(node,eventType)
             if device.platform == device.PLATFORM.IOS then
-                device.openURL("itms-apps://itunes.com/apps/donopo")
+                device.openURL(string.format(DNP_APP.storeUrl.ios,"550436098"))
             elseif device.platform == device.PLATFORM.ANDROID then
             --                device.openURL(DNP_APP.url.allGames)
             end

@@ -31,6 +31,13 @@ function gameUtils.scaleShow(target,dt)
     ))
 end
 
+function gameUtils.fadeShow(target,dt)
+    target:setOpacity(0)
+    ac.execute(target,ac.ccSeq(
+        ac.ccDelay(dt),ac.ccFadeTo(0.2,255)
+    ))
+end
+
 -------------------------
 ----进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
 ----

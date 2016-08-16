@@ -89,8 +89,6 @@ function GamePrepareView:initLevelData(level)
 
     local lvdata = Level.data[level]
 
-
-
     self.levelSkill = formatSkill(lvdata[3])
     self.levelStar1 = lvdata[4]
     self.levelStar2 = lvdata[5]
@@ -126,7 +124,10 @@ function GamePrepareView:prepare(_page,_level)
             self["icon_skill_"..v]:setSkill(skType)
             sc = sc + 1
             --显示技能简结
-            self:showSkillExplain(skType)
+            if not helper.getSloterData("showskill"..skType) then
+                self:showSkillExplain(skType)
+                helper.saveSloterData("showskill"..skType,1)
+            end
         else
             self["icon_skill_"..v]:hide()
         end

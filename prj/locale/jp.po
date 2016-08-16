@@ -1,23 +1,60 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
-"POT-Creation-Date: 2016-07-28 16:30+0800\n"
-"PO-Revision-Date: 2016-07-28 17:52+0800\n"
+"POT-Creation-Date: 2016-08-10 "
+"19:27+0800\n"
+"PO-Revision-Date: 2016-08-11 "
+"18:26+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; "
+"charset=UTF-8\n"
+"Content-Transfer-Encoding: "
+"8bit\n"
 "X-Generator: Poedit 1.7.6\n"
 "X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; "
+"plural=0;\n"
 "X-Poedit-KeywordsList: _\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: ../../src\n"
+"X-Poedit-SourceCharset: "
+"UTF-8\n"
+"X-Poedit-SearchPath-0: ../../"
+"src\n"
+
+#: ../../src/app/battle/views/GameView.lua:11
+msgid "Touch"
+msgstr "長押しを提示"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_1"
+msgstr "ステージ()獲得"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_2"
+msgstr "シーン()無限モデル獲得"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_3"
+msgstr "()つの星を集める "
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_4"
+msgstr ""
+"シーン()20個の星を獲得して"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_5"
+msgstr ""
+"シーン()無限モデル獲得()分"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_6"
+msgstr " 評価ゲーム獲得 "
 
 #: ../../src/app/data/Level.lua:8
-#: ../../src/app/data/Level.lua:103
+#: ../../src/app/data/Level.lua:259
 #: ../../src/app/views/game/GamePrepareView.lua:7
 #: ../../src/app/views/game/GamePrepareView.lua:8
 #: ../../src/app/views/game/GamePrepareView.lua:9
@@ -25,488 +62,656 @@ msgstr ""
 #: ../../src/app/views/game/GameResultView.lua:6
 #: ../../src/app/views/game/GameResultView.lua:7
 msgid "NorScore"
-msgstr "スコア （）"
+msgstr "スコア()"
 
 #: ../../src/app/data/Level.lua:9
-#: ../../src/app/data/Level.lua:105
+#: ../../src/app/data/Level.lua:261
 msgid "UniScore"
-msgstr "パーフェクトスコア（）"
+msgstr "パーフェクトスコア()"
 
 #: ../../src/app/data/Level.lua:10
-#: ../../src/app/data/Level.lua:95
+#: ../../src/app/data/Level.lua:251
 msgid "TimeNorScore"
-msgstr "（）秒で、スコア（）"
+msgstr "()秒で、スコア()"
 
 #: ../../src/app/data/Level.lua:11
-#: ../../src/app/data/Level.lua:97
+#: ../../src/app/data/Level.lua:253
 msgid "TimeUniScore"
-msgstr "（）秒で、パーフェクトスコア（）"
+msgstr ""
+"()秒で、パーフェクトスコア()"
 
 #: ../../src/app/views/common/CommonDialogView.lua:5
+#: ../../src/app/views/game/CollectionDialog.lua:9
+#: ../../src/app/views/game/CollectionDialog.lua:10
+#: ../../src/app/views/home/ConfigLangView.lua:6
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:9
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:10
 msgid "OK"
 msgstr "OK"
 
-#: ../../src/app/views/game/CollectionDialog.lua:9
+#: ../../src/app/views/game/CollectionDialog.lua:14
 msgid "Collect_1"
 msgstr ""
-"ミニチュア倉庫を植えます;2015年8月、スペース植えレタスで宇宙飛行"
-"士の最初の味"
-
-#: ../../src/app/views/game/CollectionDialog.lua:10
-msgid "Collect_2"
-msgstr "ホバーボード;自動レーシングナイキブランドの靴の使用と一致"
-
-#: ../../src/app/views/game/CollectionDialog.lua:11
-msgid "Collect_3"
-msgstr ""
-"宇宙トランスレータ;「ごめんなさい、私はあなたが言っていることを"
-"聞いていませんでした。」"
-
-#: ../../src/app/views/game/CollectionDialog.lua:12
-msgid "Collect_4"
-msgstr "ブラスターブラスター;私は一種の予感します"
-
-#: ../../src/app/views/game/CollectionDialog.lua:13
-msgid "Collect_5"
-msgstr "R2-B2;[ビープ音、ビープ音、ビープ音 ]"
-
-#: ../../src/app/views/game/CollectionDialog.lua:14
-msgid "Collect_6"
-msgstr ""
-"三ロガー;[あなたの健康状態の評価、あなたの人生だけでなく、"
-"30 ... 29..28.27によると.. ]"
+"ミニチュア倉庫を植えます;2015"
+"年8月、スペース植えレタスで宇"
+"宙飛行士の最初の味"
 
 #: ../../src/app/views/game/CollectionDialog.lua:15
-msgid "Collect_7"
-msgstr "特異トラッカー;特定のパラレルワールドを追跡"
+msgid "Collect_2"
+msgstr ""
+"ホバーボード;自動レーシングナ"
+"イキブランドの靴の使用と一致"
 
 #: ../../src/app/views/game/CollectionDialog.lua:16
-msgid "Collect_8"
+msgid "Collect_3"
 msgstr ""
-"量子コンベア;必ず何ハエが入って来ていないことを確認するために使"
-"用する前に"
+"宇宙トランスレータ;「ごめんな"
+"さい、私はあなたが言っているこ"
+"とを聞いていませんでした。」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:17
-msgid "Collect_9"
-msgstr "スリープ冷凍倉庫;次の世紀を参照してください！"
+msgid "Collect_4"
+msgstr ""
+"ブラスターブラスター;私は一種"
+"の予感します"
 
 #: ../../src/app/views/game/CollectionDialog.lua:18
-msgid "Collect_10"
-msgstr "ライトセーバー;フォースがあなたと一緒にすることができます"
+msgid "Collect_5"
+msgstr ""
+"R2-B2;[ビープ音、ビープ音、"
+"ビープ音 ]"
+
+#: ../../src/app/views/game/CollectionDialog.lua:19
+msgid "Collect_6"
+msgstr ""
+"三ロガー;[あなたの健康状態の評"
+"価、あなたの人生だけでなく、"
+"30 ... 29..28.27によると.. ]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:20
-msgid "Collect_11"
+msgid "Collect_7"
 msgstr ""
-"クリプトナイト;あなたが終了後に体調不良を感じた場合、探偵コミッ"
-"クまでご連絡ください"
+"特異トラッカー;特定のパラレル"
+"ワールドを追跡"
 
 #: ../../src/app/views/game/CollectionDialog.lua:21
+msgid "Collect_8"
+msgstr ""
+"量子コンベア;必ず何ハエが入っ"
+"て来ていないことを確認するため"
+"に使用する前に"
+
+#: ../../src/app/views/game/CollectionDialog.lua:22
+msgid "Collect_9"
+msgstr ""
+"スリープ冷凍倉庫;次の世紀を参"
+"照してください！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:23
+msgid "Collect_10"
+msgstr ""
+"ライトセーバー;フォースがあな"
+"たと一緒にすることができます"
+
+#: ../../src/app/views/game/CollectionDialog.lua:25
+msgid "Collect_11"
+msgstr ""
+"クリプトナイト;あなたが終了後"
+"に体調不良を感じた場合、探偵コ"
+"ミックまでご連絡ください"
+
+#: ../../src/app/views/game/CollectionDialog.lua:26
 msgid "Collect_12"
 msgstr "時計じかけのオレンジ;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:22
-msgid "Collect_13"
-msgstr "フィフス・エレメント;愛は時空を超え唯一のものです"
-
-#: ../../src/app/views/game/CollectionDialog.lua:23
-msgid "Collect_14"
-msgstr "特異プッシャー;別のパラレルワールドに至るまで"
-
-#: ../../src/app/views/game/CollectionDialog.lua:24
-msgid "Collect_15"
-msgstr "銀河ヒッチハイクガイド;パニックしないでください"
-
-#: ../../src/app/views/game/CollectionDialog.lua:25
-msgid "Collect_16"
-msgstr "ポテト;その後、変なにおいが、きれいではありません"
-
-#: ../../src/app/views/game/CollectionDialog.lua:26
-msgid "Collect_17"
-msgstr "アーク炉;歯暖かい心を持っている托尼史塔克"
-
 #: ../../src/app/views/game/CollectionDialog.lua:27
-msgid "Collect_18"
-msgstr "黒手袋;時折手袋をはめた手と制御のうち"
+msgid "Collect_13"
+msgstr ""
+"フィフス・エレメント;愛は時空"
+"を超え唯一のものです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:28
+msgid "Collect_14"
+msgstr ""
+"特異プッシャー;別のパラレル"
+"ワールドに至るまで"
+
+#: ../../src/app/views/game/CollectionDialog.lua:29
+msgid "Collect_15"
+msgstr ""
+"銀河ヒッチハイクガイド;パニッ"
+"クしないでください"
+
+#: ../../src/app/views/game/CollectionDialog.lua:30
+msgid "Collect_16"
+msgstr ""
+"ポテト;その後、変なにおいが、"
+"きれいではありません"
+
+#: ../../src/app/views/game/CollectionDialog.lua:31
+msgid "Collect_17"
+msgstr ""
+"アーク炉;歯暖かい心を持ってい"
+"る托尼史塔克"
+
+#: ../../src/app/views/game/CollectionDialog.lua:32
+msgid "Collect_18"
+msgstr ""
+"黒手袋;時折手袋をはめた手と制"
+"御のうち"
+
+#: ../../src/app/views/game/CollectionDialog.lua:33
 msgid "Collect_19"
 msgstr "レーザー兵器;天敵は曇り"
 
-#: ../../src/app/views/game/CollectionDialog.lua:29
+#: ../../src/app/views/game/CollectionDialog.lua:34
 msgid "Collect_20"
 msgstr ""
-"ガトリングガンタレット;1860年代以来、それは非常に風を引っ張って"
-"きました"
-
-#: ../../src/app/views/game/CollectionDialog.lua:31
-msgid "Collect_21"
-msgstr "宇宙服;危険を覚悟で飲んで！"
-
-#: ../../src/app/views/game/CollectionDialog.lua:32
-msgid "Collect_22"
-msgstr "42;人生、宇宙、すべての答え"
-
-#: ../../src/app/views/game/CollectionDialog.lua:33
-msgid "Collect_23"
-msgstr "ミサイルタレット;最も厄介なタンクドライバ"
-
-#: ../../src/app/views/game/CollectionDialog.lua:34
-msgid "Collect_24"
-msgstr ""
-"遮蔽装置;注意：無敵の目に見えないを意味するものではありません。"
-
-#: ../../src/app/views/game/CollectionDialog.lua:35
-msgid "Collect_25"
-msgstr "ダイクロイック箔;事前に「平地」をお読みください"
+"ガトリングガンタレット;1860年"
+"代以来、それは非常に風を引っ"
+"張ってきました"
 
 #: ../../src/app/views/game/CollectionDialog.lua:36
-msgid "Collect_26"
+msgid "Collect_21"
 msgstr ""
-"ストームトルーパーのヘルメット;「オンリーインペリアルコマンドー"
-"はとても正確である可能性があります。」"
+"宇宙服;危険を覚悟で飲んで！"
 
 #: ../../src/app/views/game/CollectionDialog.lua:37
-msgid "Collect_27"
-msgstr "Jetpackの;フライングは、人類最古の夢であります"
+msgid "Collect_22"
+msgstr ""
+"42;人生、宇宙、すべての答え"
 
 #: ../../src/app/views/game/CollectionDialog.lua:38
-msgid "Collect_28"
-msgstr "ローバー;律速段階20、または飛んやすいです"
+msgid "Collect_23"
+msgstr ""
+"ミサイルタレット;最も厄介なタ"
+"ンクドライバ"
 
 #: ../../src/app/views/game/CollectionDialog.lua:39
-msgid "Collect_29"
-msgstr "健忘スティック;[え？何を私の手で、トライをクリックして ]"
+msgid "Collect_24"
+msgstr ""
+"遮蔽装置;注意：無敵の目に見え"
+"ないを意味するものではありませ"
+"ん。"
 
 #: ../../src/app/views/game/CollectionDialog.lua:40
-msgid "Collect_30"
+msgid "Collect_25"
 msgstr ""
-"知能ロボットガーティー;ロボットは、カラーテキストを使用したいで"
-"す"
+"ダイクロイック箔;事前に「平"
+"地」をお読みください"
+
+#: ../../src/app/views/game/CollectionDialog.lua:41
+msgid "Collect_26"
+msgstr ""
+"ストームトルーパーのヘルメッ"
+"ト;「オンリーインペリアルコマ"
+"ンドーはとても正確である可能性"
+"があります。」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:42
-msgid "Collect_31"
-msgstr "レッド丸薬;初日、過剰摂取することはできません"
+msgid "Collect_27"
+msgstr ""
+"Jetpackの;フライングは、人類最"
+"古の夢であります"
 
 #: ../../src/app/views/game/CollectionDialog.lua:43
-msgid "Collect_32"
-msgstr "骨;スタウト骨、物事をノックするのに使用することができます"
+msgid "Collect_28"
+msgstr ""
+"ローバー;律速段階20、または飛"
+"んやすいです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:44
-msgid "Collect_33"
+msgid "Collect_29"
 msgstr ""
-"HAL9000;「私はそれを行うことはできませんが怖い。、デビッドごめん"
-"なさい。」"
+"健忘スティック;[え？何を私の手"
+"で、トライをクリックして ]"
 
 #: ../../src/app/views/game/CollectionDialog.lua:45
-msgid "Collect_34"
+msgid "Collect_30"
 msgstr ""
-"パワードスーツの鎧;[...あなたは...先発のメカ手であると信じていな"
-"いかもしれない正直に言うと ]"
-
-#: ../../src/app/views/game/CollectionDialog.lua:46
-msgid "Collect_35"
-msgstr "U Disk;Uディスクは、豊富な知識を保存します"
+"知能ロボットガーティー;ロボッ"
+"トは、カラーテキストを使用した"
+"いです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:47
+msgid "Collect_31"
+msgstr ""
+"レッド丸薬;初日、過剰摂取する"
+"ことはできません"
+
+#: ../../src/app/views/game/CollectionDialog.lua:48
+msgid "Collect_32"
+msgstr ""
+"骨;スタウト骨、物事をノックす"
+"るのに使用することができます"
+
+#: ../../src/app/views/game/CollectionDialog.lua:49
+msgid "Collect_33"
+msgstr ""
+"HAL9000;「私はそれを行うことは"
+"できませんが怖い。、デビッドご"
+"めんなさい。」"
+
+#: ../../src/app/views/game/CollectionDialog.lua:50
+msgid "Collect_34"
+msgstr ""
+"パワードスーツの鎧;[...あなた"
+"は...先発のメカ手であると信じ"
+"ていないかもしれない正直に言う"
+"と ]"
+
+#: ../../src/app/views/game/CollectionDialog.lua:51
+msgid "Collect_35"
+msgstr ""
+"U Disk;Uディスクは、豊富な知識"
+"を保存します"
+
+#: ../../src/app/views/game/CollectionDialog.lua:52
 msgid "Collect_36"
 msgstr "ブラックストーン;..."
 
-#: ../../src/app/views/game/CollectionDialog.lua:48
-msgid "Collect_37"
-msgstr "SNOY Walkman TPS-L2;3残りの宇宙全体"
-
-#: ../../src/app/views/game/CollectionDialog.lua:49
-msgid "Collect_38"
-msgstr ""
-"Marvin;「私はあなたがこの数字を好きではないであろう、生存のあな"
-"たのチャンスを数えるようになってきています。」"
-
-#: ../../src/app/views/game/CollectionDialog.lua:50
-msgid "Collect_39"
-msgstr ""
-"電気羊;ときは、外国人の不眠症エイリアン羊の数はそれだろうか？"
-
-#: ../../src/app/views/game/CollectionDialog.lua:51
-msgid "Collect_40"
-msgstr "宇宙ロボットSCV;私を遮断する何かがあります！"
-
 #: ../../src/app/views/game/CollectionDialog.lua:53
-msgid "Collect_41"
-msgstr "生息地;サスペンション睡眠で禁止！"
+msgid "Collect_37"
+msgstr ""
+"SNOY Walkman TPS-L2;3残りの宇"
+"宙全体"
 
 #: ../../src/app/views/game/CollectionDialog.lua:54
-msgid "Collect_42"
-msgstr "テープ;素晴らしいミックスVOL.1"
+msgid "Collect_38"
+msgstr ""
+"Marvin;「私はあなたがこの数字"
+"を好きではないであろう、生存の"
+"あなたのチャンスを数えるように"
+"なってきています。」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:55
-msgid "Collect_43"
-msgstr "ドロップ;絶対零度、絶対にスムーズ（tt5774642）"
+msgid "Collect_39"
+msgstr ""
+"電気羊;ときは、外国人の不眠症"
+"エイリアン羊の数はそれだろう"
+"か？"
 
 #: ../../src/app/views/game/CollectionDialog.lua:56
-msgid "Collect_44"
+msgid "Collect_40"
 msgstr ""
-"VRゲーム;あなたは宇宙船の「地球シミュレーションでの生活」をプレ"
-"イすることができます"
-
-#: ../../src/app/views/game/CollectionDialog.lua:57
-msgid "Collect_45"
-msgstr ""
-"インタラクティブフィクション;「クラッシュサイトのピークがいくつ"
-"かより私に近いようです。どうやって私がすべきだと思いますか？」"
+"宇宙ロボットSCV;私を遮断する何"
+"かがあります！"
 
 #: ../../src/app/views/game/CollectionDialog.lua:58
-msgid "Collect_46"
-msgstr "天気戦闘ロボット;注意フレンドリーファイア"
+msgid "Collect_41"
+msgstr ""
+"生息地;サスペンション睡眠で禁"
+"止！"
 
 #: ../../src/app/views/game/CollectionDialog.lua:59
+msgid "Collect_42"
+msgstr ""
+"テープ;素晴らしいミックスVOL.1"
+
+#: ../../src/app/views/game/CollectionDialog.lua:60
+msgid "Collect_43"
+msgstr ""
+"ドロップ;絶対零度、絶対にス"
+"ムーズ（tt5774642）"
+
+#: ../../src/app/views/game/CollectionDialog.lua:61
+msgid "Collect_44"
+msgstr ""
+"VRゲーム;あなたは宇宙船の「地"
+"球シミュレーションでの生活」を"
+"プレイすることができます"
+
+#: ../../src/app/views/game/CollectionDialog.lua:62
+msgid "Collect_45"
+msgstr ""
+"インタラクティブフィクション;"
+"「クラッシュサイトのピークがい"
+"くつかより私に近いようです。ど"
+"うやって私がすべきだと思います"
+"か？」"
+
+#: ../../src/app/views/game/CollectionDialog.lua:63
+msgid "Collect_46"
+msgstr ""
+"天気戦闘ロボット;注意フレンド"
+"リーファイア"
+
+#: ../../src/app/views/game/CollectionDialog.lua:64
 msgid "Collect_47"
 msgstr "万能接着剤;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:60
+#: ../../src/app/views/game/CollectionDialog.lua:65
 msgid "Collect_48"
-msgstr "反物質エンジン;E = MC ^ 2"
+msgstr ""
+"反物質エンジン;E = MC ^ 2"
 
-#: ../../src/app/views/game/CollectionDialog.lua:61
+#: ../../src/app/views/game/CollectionDialog.lua:66
 msgid "Collect_49"
 msgstr "アンテナ;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:62
-msgid "Collect_50"
-msgstr "ジャイロ;長いジャイロを回すことができます"
-
-#: ../../src/app/views/game/CollectionDialog.lua:64
-msgid "Collect_51"
-msgstr "ドーピング;「ああ！それはこの感じです！」"
-
-#: ../../src/app/views/game/CollectionDialog.lua:65
-msgid "Collect_52"
-msgstr "医療倉庫;死者を入れないでください"
-
-#: ../../src/app/views/game/CollectionDialog.lua:66
-msgid "Collect_53"
-msgstr ""
-"宇宙レンチ;2014年11月、国際宇宙ステーションの宇宙飛行士は、最初"
-"の「スペースツール」を作成するために、3D印刷技術を使用 - レンチ"
-
 #: ../../src/app/views/game/CollectionDialog.lua:67
-msgid "Collect_54"
+msgid "Collect_50"
 msgstr ""
-"ガンズ;運動エネルギー兵器の一種、爆発物をインストールする必要は"
-"ありません"
-
-#: ../../src/app/views/game/CollectionDialog.lua:68
-msgid "Collect_55"
-msgstr "ナノ材料の鎧;ナノナノウォン槍シールドを、会ったとき"
+"ジャイロ;長いジャイロを回すこ"
+"とができます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:69
-msgid "Collect_56"
-msgstr "宇宙魚雷;ただ、大きな遅いミサイル"
+msgid "Collect_51"
+msgstr ""
+"ドーピング;「ああ！それはこの"
+"感じです！」"
 
 #: ../../src/app/views/game/CollectionDialog.lua:70
-msgid "Collect_57"
+msgid "Collect_52"
 msgstr ""
-"智機械;あなたは意識的なマシンを作成する場合、それはもはや人間の"
-"歴史が、神の歴史ないであろう"
+"医療倉庫;死者を入れないでくだ"
+"さい"
 
 #: ../../src/app/views/game/CollectionDialog.lua:71
-msgid "Collect_58"
+msgid "Collect_53"
 msgstr ""
-"ワープエンジン;部分空間に亀裂が発生することがあり頻繁に使用"
+"宇宙レンチ;2014年11月、国際宇"
+"宙ステーションの宇宙飛行士は、"
+"最初の「スペースツール」を作成"
+"するために、3D印刷技術を使用 "
+"- レンチ"
 
 #: ../../src/app/views/game/CollectionDialog.lua:72
-msgid "Collect_59"
-msgstr "原子力発電エンジン;核を防ぐために、注意して使用"
+msgid "Collect_54"
+msgstr ""
+"ガンズ;運動エネルギー兵器の一"
+"種、爆発物をインストールする必"
+"要はありません"
 
 #: ../../src/app/views/game/CollectionDialog.lua:73
+msgid "Collect_55"
+msgstr ""
+"ナノ材料の鎧;ナノナノウォン槍"
+"シールドを、会ったとき"
+
+#: ../../src/app/views/game/CollectionDialog.lua:74
+msgid "Collect_56"
+msgstr ""
+"宇宙魚雷;ただ、大きな遅いミサ"
+"イル"
+
+#: ../../src/app/views/game/CollectionDialog.lua:75
+msgid "Collect_57"
+msgstr ""
+"智機械;あなたは意識的なマシン"
+"を作成する場合、それはもはや人"
+"間の歴史が、神の歴史ないであろ"
+"う"
+
+#: ../../src/app/views/game/CollectionDialog.lua:76
+msgid "Collect_58"
+msgstr ""
+"ワープエンジン;部分空間に亀裂"
+"が発生することがあり頻繁に使用"
+
+#: ../../src/app/views/game/CollectionDialog.lua:77
+msgid "Collect_59"
+msgstr ""
+"原子力発電エンジン;核を防ぐた"
+"めに、注意して使用"
+
+#: ../../src/app/views/game/CollectionDialog.lua:78
 msgid "Collect_60"
 msgstr "核融合炉;ミニ日"
 
-#: ../../src/app/views/game/CollectionDialog.lua:75
+#: ../../src/app/views/game/CollectionDialog.lua:80
 msgid "Collect_61"
 msgstr "クローバー;物理学の剣！"
 
-#: ../../src/app/views/game/CollectionDialog.lua:76
+#: ../../src/app/views/game/CollectionDialog.lua:81
 msgid "Collect_62"
-msgstr "原子力電池;いいえ放射線ません！"
+msgstr ""
+"原子力電池;いいえ放射線ませ"
+"ん！"
 
-#: ../../src/app/views/game/CollectionDialog.lua:77
+#: ../../src/app/views/game/CollectionDialog.lua:82
 msgid "Collect_63"
-msgstr "恐竜の卵;本当にそれは恐竜の卵の石ではありません"
+msgstr ""
+"恐竜の卵;本当にそれは恐竜の卵"
+"の石ではありません"
 
-#: ../../src/app/views/game/CollectionDialog.lua:78
+#: ../../src/app/views/game/CollectionDialog.lua:83
 msgid "Collect_64"
-msgstr "UCAV;また、あなたが宅配便を得るのを助けることができます"
+msgstr ""
+"UCAV;また、あなたが宅配便を得"
+"るのを助けることができます"
 
-#: ../../src/app/views/game/CollectionDialog.lua:79
+#: ../../src/app/views/game/CollectionDialog.lua:84
 msgid "Collect_65"
-msgstr "Shuren種子;「私はル​​ートです」"
+msgstr ""
+"Shuren種子;「私はル​​ートです」"
 
-#: ../../src/app/views/game/CollectionDialog.lua:80
+#: ../../src/app/views/game/CollectionDialog.lua:85
 msgid "Collect_66"
 msgstr "懐中電灯;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:81
-msgid "Collect_67"
-msgstr "アークトランスミッタ;水中では使用しないでください"
-
-#: ../../src/app/views/game/CollectionDialog.lua:82
-msgid "Collect_68"
-msgstr "ソーラーパネル;ひまわりはずっと前にこの技術を発明しました"
-
-#: ../../src/app/views/game/CollectionDialog.lua:83
-msgid "Collect_69"
-msgstr "懐中電灯;武器として緊急の場合"
-
-#: ../../src/app/views/game/CollectionDialog.lua:84
-msgid "Collect_70"
-msgstr ""
-"ワームホールジェネレータ;欠点は、あなたが旅の風景を見ることがで"
-"きないということです"
-
 #: ../../src/app/views/game/CollectionDialog.lua:86
-msgid "Collect_71"
+msgid "Collect_67"
 msgstr ""
-"ライフ検出器;生物学的およびあなたが見つけることができる友達があ"
-"なたを食べるかもしれません"
+"アークトランスミッタ;水中では"
+"使用しないでください"
 
 #: ../../src/app/views/game/CollectionDialog.lua:87
-msgid "Collect_72"
-msgstr "水素ヘリウムコレクタ;エネルギー融合反応を提供するために、"
+msgid "Collect_68"
+msgstr ""
+"ソーラーパネル;ひまわりはずっ"
+"と前にこの技術を発明しました"
 
 #: ../../src/app/views/game/CollectionDialog.lua:88
-msgid "Collect_73"
+msgid "Collect_69"
 msgstr ""
-"物質・アナライザ;それを放棄し、その後食べるの種類を見つけること"
-"ができませんでした外来植物の100種類を分析！"
+"懐中電灯;武器として緊急の場合"
 
 #: ../../src/app/views/game/CollectionDialog.lua:89
+msgid "Collect_70"
+msgstr ""
+"ワームホールジェネレータ;欠点"
+"は、あなたが旅の風景を見ること"
+"ができないということです"
+
+#: ../../src/app/views/game/CollectionDialog.lua:91
+msgid "Collect_71"
+msgstr ""
+"ライフ検出器;生物学的およびあ"
+"なたが見つけることができる友達"
+"があなたを食べるかもしれません"
+
+#: ../../src/app/views/game/CollectionDialog.lua:92
+msgid "Collect_72"
+msgstr ""
+"水素ヘリウムコレクタ;エネル"
+"ギー融合反応を提供するために、"
+
+#: ../../src/app/views/game/CollectionDialog.lua:93
+msgid "Collect_73"
+msgstr ""
+"物質・アナライザ;それを放棄"
+"し、その後食べるの種類を見つけ"
+"ることができませんでした外来植"
+"物の100種類を分析！"
+
+#: ../../src/app/views/game/CollectionDialog.lua:94
 msgid "Collect_74"
 msgstr ""
-"自動ナビゲーションシステム;あなたはこのシステムについてより良い"
-"祈りをスリープ状態に冷凍室​​に入る前に間違って行くことができません"
+"自動ナビゲーションシステム;あ"
+"なたはこのシステムについてより"
+"良い祈りをスリープ状態に冷凍室​​"
+"に入る前に間違って行くことがで"
+"きません"
 
-#: ../../src/app/views/game/CollectionDialog.lua:90
+#: ../../src/app/views/game/CollectionDialog.lua:95
 msgid "Collect_75"
 msgstr "消火器;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:91
+#: ../../src/app/views/game/CollectionDialog.lua:96
 msgid "Collect_76"
-msgstr "重力銃;無生物のプルアップまたは跳ね返っすることができます"
-
-#: ../../src/app/views/game/CollectionDialog.lua:92
-msgid "Collect_77"
 msgstr ""
-"エネルギーシールド;欠点は、電源が役に立たないときということです"
-
-#: ../../src/app/views/game/CollectionDialog.lua:93
-msgid "Collect_78"
-msgstr "液体ロケットエンジン;これは、月面に人間を助けます"
-
-#: ../../src/app/views/game/CollectionDialog.lua:94
-msgid "Collect_79"
-msgstr "ナノ自動車補修材;ある日、彼らは世界を征服します"
-
-#: ../../src/app/views/game/CollectionDialog.lua:95
-msgid "Collect_80"
-msgstr ""
-"イオンスラスター;実際にはそれはあなたの手の圧力のための紙のスラ"
-"ストピースのみに相当します"
+"重力銃;無生物のプルアップまた"
+"は跳ね返っすることができます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:97
-msgid "Collect_81"
+msgid "Collect_77"
 msgstr ""
-"水系;前に飲むことをあまりにも多くを考える必要はありませんいいえ"
+"エネルギーシールド;欠点は、電"
+"源が役に立たないときということ"
+"です"
 
 #: ../../src/app/views/game/CollectionDialog.lua:98
-msgid "Collect_82"
-msgstr "性鋼の鎧;鋼の鎧よりも硬いです"
+msgid "Collect_78"
+msgstr ""
+"液体ロケットエンジン;これは、"
+"月面に人間を助けます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:99
-msgid "Collect_83"
+msgid "Collect_79"
 msgstr ""
-"光の粒子の槍; エネルギーを発射するような重い武器は大きな害を引き"
-"起こし、集束イオンビーム。"
+"ナノ自動車補修材;ある日、彼ら"
+"は世界を征服します"
 
 #: ../../src/app/views/game/CollectionDialog.lua:100
-msgid "Collect_84"
-msgstr "知恵ダイバータ;コギトエルゴ和"
-
-#: ../../src/app/views/game/CollectionDialog.lua:101
-msgid "Collect_85"
-msgstr "フィールドジェネレータを逆に;逆さまに"
+msgid "Collect_80"
+msgstr ""
+"イオンスラスター;実際にはそれ"
+"はあなたの手の圧力のための紙の"
+"スラストピースのみに相当します"
 
 #: ../../src/app/views/game/CollectionDialog.lua:102
-msgid "Collect_86"
+msgid "Collect_81"
 msgstr ""
-"品質ジェネレータ;旅行は、超光速のコンポーネントでなければなりま"
-"せん"
+"水系;前に飲むことをあまりにも"
+"多くを考える必要はありませんい"
+"いえ"
 
 #: ../../src/app/views/game/CollectionDialog.lua:103
-msgid "Collect_87"
-msgstr "5次元プロペラ;ワームホール部分空間の電力設備を介して、"
+msgid "Collect_82"
+msgstr ""
+"性鋼の鎧;鋼の鎧よりも硬いです"
 
 #: ../../src/app/views/game/CollectionDialog.lua:104
-msgid "Collect_88"
-msgstr "雰囲気ジェネレータ;世界はより良くするために、"
+msgid "Collect_83"
+msgstr ""
+"光の粒子の槍; エネルギーを発射"
+"するような重い武器は大きな害を"
+"引き起こし、集束イオンビーム。"
 
 #: ../../src/app/views/game/CollectionDialog.lua:105
-msgid "Collect_89"
+msgid "Collect_84"
 msgstr ""
-"金剛般若経;すべてのフェーズはすべて偽である場合。非相対で見られ"
-"る場合は、如来を見ます"
+"知恵ダイバータ;コギトエルゴ和"
 
 #: ../../src/app/views/game/CollectionDialog.lua:106
-msgid "Collect_90"
+msgid "Collect_85"
 msgstr ""
-"ミニチュア酸素タンク;パーム大、あなたが一日中使用することができ"
-"ます"
+"フィールドジェネレータを逆に;"
+"逆さまに"
+
+#: ../../src/app/views/game/CollectionDialog.lua:107
+msgid "Collect_86"
+msgstr ""
+"品質ジェネレータ;旅行は、超光"
+"速のコンポーネントでなければな"
+"りません"
 
 #: ../../src/app/views/game/CollectionDialog.lua:108
-msgid "Collect_91"
+msgid "Collect_87"
 msgstr ""
-"バイオニック合金タクティカルアーマー;より速く、より高い、より強"
-"いです！"
+"5次元プロペラ;ワームホール部分"
+"空間の電力設備を介して、"
 
 #: ../../src/app/views/game/CollectionDialog.lua:109
-msgid "Collect_92"
+msgid "Collect_88"
 msgstr ""
-"ギャラクシーデータベース;基本的な音：地球上のデータベースは、以"
-"下のように記述されています"
+"雰囲気ジェネレータ;世界はより"
+"良くするために、"
 
 #: ../../src/app/views/game/CollectionDialog.lua:110
-msgid "Collect_93"
-msgstr "アンチブラックホールコロイド;腕ブラックホール？まさか！"
+msgid "Collect_89"
+msgstr ""
+"金剛般若経;すべてのフェーズは"
+"すべて偽である場合。非相対で見"
+"られる場合は、如来を見ます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:111
-msgid "Collect_94"
-msgstr "組換えDNA機;同じ量子コンベアと注意事項"
-
-#: ../../src/app/views/game/CollectionDialog.lua:112
-msgid "Collect_95"
-msgstr "金属抽出手段;宇宙ゴミから金属資源や惑星を収集"
+msgid "Collect_90"
+msgstr ""
+"ミニチュア酸素タンク;パーム"
+"大、あなたが一日中使用すること"
+"ができます"
 
 #: ../../src/app/views/game/CollectionDialog.lua:113
-msgid "Collect_96"
-msgstr "クイック返信ガム;あなたはしわを削除することはできません"
+msgid "Collect_91"
+msgstr ""
+"バイオニック合金タクティカル"
+"アーマー;より速く、より高い、"
+"より強いです！"
 
 #: ../../src/app/views/game/CollectionDialog.lua:114
-msgid "Collect_97"
+msgid "Collect_92"
 msgstr ""
-"惑星ロケータ;追加のリソースをログに記録するために適した惑星を見"
-"つけます"
+"ギャラクシーデータベース;基本"
+"的な音：地球上のデータベース"
+"は、以下のように記述されていま"
+"す"
 
 #: ../../src/app/views/game/CollectionDialog.lua:115
-msgid "Collect_98"
-msgstr "ミニフィットネス倉庫;空間における骨粗しょう症の予防"
+msgid "Collect_93"
+msgstr ""
+"アンチブラックホールコロイド;"
+"腕ブラックホール？まさか！"
 
 #: ../../src/app/views/game/CollectionDialog.lua:116
-msgid "Collect_99"
+msgid "Collect_94"
 msgstr ""
-"重力発電機;減量の期間では、あなたはそれを好きではありません"
+"組換えDNA機;同じ量子コンベアと"
+"注意事項"
 
 #: ../../src/app/views/game/CollectionDialog.lua:117
+msgid "Collect_95"
+msgstr ""
+"金属抽出手段;宇宙ゴミから金属"
+"資源や惑星を収集"
+
+#: ../../src/app/views/game/CollectionDialog.lua:118
+msgid "Collect_96"
+msgstr ""
+"クイック返信ガム;あなたはしわ"
+"を削除することはできません"
+
+#: ../../src/app/views/game/CollectionDialog.lua:119
+msgid "Collect_97"
+msgstr ""
+"惑星ロケータ;追加のリソースを"
+"ログに記録するために適した惑星"
+"を見つけます"
+
+#: ../../src/app/views/game/CollectionDialog.lua:120
+msgid "Collect_98"
+msgstr ""
+"ミニフィットネス倉庫;空間にお"
+"ける骨粗しょう症の予防"
+
+#: ../../src/app/views/game/CollectionDialog.lua:121
+msgid "Collect_99"
+msgstr ""
+"重力発電機;減量の期間では、あ"
+"なたはそれを好きではありません"
+
+#: ../../src/app/views/game/CollectionDialog.lua:122
 msgid "Collect_100"
-msgstr "宇宙船コンソール;何の事には触れないでください"
+msgstr ""
+"宇宙船コンソール;何の事には触"
+"れないでください"
+
+#: ../../src/app/views/game/CollectionDialog.lua:132
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:19
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:20
+msgid "Collect_"
+msgstr ""
 
 #: ../../src/app/views/game/GamePauseView.lua:7
 #: ../../src/app/views/game/GameResultView.lua:8
@@ -516,7 +721,7 @@ msgstr "リトライ"
 #: ../../src/app/views/game/GamePauseView.lua:8
 #: ../../src/app/views/game/GameResultView.lua:9
 msgid "List"
-msgstr ""
+msgstr "戻る "
 
 #: ../../src/app/views/game/GamePauseView.lua:9
 #: ../../src/app/views/game/GamePauseView.lua:21
@@ -535,62 +740,59 @@ msgstr "音"
 msgid "Continue"
 msgstr "持続する"
 
-#: ../../src/app/views/game/GamePauseView.lua:11
-#: ../../src/app/views/game/GamePauseView.lua:82
-#: ../../src/app/views/game/GameResultView.lua:11
-#: ../../src/app/views/game/GameResultView.lua:15
-#: ../../src/app/views/game/GameResultView.lua:84
-#: ../../src/app/views/game/GameResultView.lua:98
-msgid "Result_time"
-msgstr "時間"
-
-#: ../../src/app/views/game/GamePauseView.lua:12
-#: ../../src/app/views/game/GamePauseView.lua:83
-#: ../../src/app/views/game/GameResultView.lua:12
-#: ../../src/app/views/game/GameResultView.lua:16
-#: ../../src/app/views/game/GameResultView.lua:85
-#: ../../src/app/views/game/GameResultView.lua:88
-#: ../../src/app/views/game/GameResultView.lua:99
-msgid "Result_combo"
-msgstr "満点"
-
-#: ../../src/app/views/game/GamePauseView.lua:13
-#: ../../src/app/views/game/GamePauseView.lua:81
-#: ../../src/app/views/game/GameResultView.lua:13
-#: ../../src/app/views/game/GameResultView.lua:17
-#: ../../src/app/views/game/GameResultView.lua:83
-#: ../../src/app/views/game/GameResultView.lua:97
-msgid "Result_score"
-msgstr "スコア"
-
 #: ../../src/app/views/game/GamePauseView.lua:21
 #: ../../src/app/views/game/GamePauseView.lua:71
 #: ../../src/app/views/home/HomeConfigView.lua:18
 #: ../../src/app/views/home/HomeConfigView.lua:24
 #: ../../src/app/views/home/HomeConfigView.lua:91
+#: ../../src/app/views/travel/TravelPageView.lua:63
 msgid "Off"
-msgstr ""
+msgstr "off"
 
 #: ../../src/app/views/game/GamePauseView.lua:23
 #: ../../src/app/views/game/GamePauseView.lua:66
 #: ../../src/app/views/home/HomeConfigView.lua:20
 #: ../../src/app/views/home/HomeConfigView.lua:26
 #: ../../src/app/views/home/HomeConfigView.lua:86
+#: ../../src/app/views/travel/TravelPageView.lua:71
 msgid "On"
-msgstr ""
+msgstr "on"
 
 #: ../../src/app/views/game/GamePrepareView.lua:10
+#: ../../src/app/views/home/OverlapHomeView.lua:6
 #: ../../src/app/views/travel/OverlapTravelView.lua:9
 msgid "Start"
 msgstr "遊びます"
 
 #: ../../src/app/views/game/GameResultView.lua:10
 msgid "Next"
-msgstr ""
+msgstr "次の関"
+
+#: ../../src/app/views/game/GameResultView.lua:11
+#: ../../src/app/views/game/GameResultView.lua:15
+#: ../../src/app/views/game/GameResultView.lua:84
+#: ../../src/app/views/game/GameResultView.lua:122
+msgid "Result_time"
+msgstr "時間"
+
+#: ../../src/app/views/game/GameResultView.lua:12
+#: ../../src/app/views/game/GameResultView.lua:16
+#: ../../src/app/views/game/GameResultView.lua:85
+#: ../../src/app/views/game/GameResultView.lua:88
+#: ../../src/app/views/game/GameResultView.lua:123
+msgid "Result_combo"
+msgstr "満点"
+
+#: ../../src/app/views/game/GameResultView.lua:13
+#: ../../src/app/views/game/GameResultView.lua:17
+#: ../../src/app/views/game/GameResultView.lua:83
+#: ../../src/app/views/game/GameResultView.lua:121
+msgid "Result_score"
+msgstr "スコア"
 
 #: ../../src/app/views/game/GameResultView.lua:18
 msgid "Result_high"
-msgstr ""
+msgstr "一番高い点数"
 
 #: ../../src/app/views/game/SkillIcon.lua:15
 #: ../../src/app/views/game/SkillInfoView.lua:37
@@ -641,8 +843,10 @@ msgstr "左回転"
 #: ../../src/app/views/home/HomeAdsView.lua:7
 msgid "AdsInfo"
 msgstr ""
-"あなたの寄付はゲーム内広告を削除します。トップ10のドナーは、私た"
-"ちの次のゲーム内の文字に名前を付けることができます。"
+"あなたの寄付はゲーム内広告を削"
+"除します。トップ10のドナーは、"
+"私たちの次のゲーム内の文字に名"
+"前を付けることができます。"
 
 #: ../../src/app/views/home/HomeConfigView.lua:7
 msgid "Language"
@@ -663,61 +867,65 @@ msgid "Credits"
 msgstr "クレジット"
 
 #: ../../src/app/views/home/HomeConfigView.lua:11
-#: ../../src/app/views/home/OverlapHomeView.lua:9
+#: ../../src/app/views/home/OverlapHomeView.lua:8
 msgid "Donation"
 msgstr "寄付"
 
 #: ../../src/app/views/home/HomeMoreView.lua:6
 msgid "moreIce"
-msgstr "氷床を守るために完璧な曲線を描きます。"
+msgstr ""
+"氷床を守るために完璧な曲線を描"
+"きます。"
 
 #: ../../src/app/views/home/HomeMoreView.lua:7
 msgid "moreMary"
-msgstr "王室をテーマにしたオリジナルのナンバーパズルゲーム。"
-
-#: ../../src/app/views/home/OverlapHomeView.lua:6
-msgid "Config"
-msgstr "設定"
+msgstr ""
+"王室をテーマにしたオリジナルの"
+"ナンバーパズルゲーム。"
 
 #: ../../src/app/views/home/OverlapHomeView.lua:7
 msgid "Conllection"
 msgstr "コレクション"
 
-#: ../../src/app/views/home/OverlapHomeView.lua:8
-msgid "Rank"
-msgstr "ランク"
-
 #: ../../src/app/views/select/OverlapSelectView.lua:10
 msgid "trval"
 msgstr "エンドレストリップ"
 
-#: ../../src/app/views/travel/OverlapTravelView.lua:10
-#: ../../src/app/views/travel/OverlapTravelView.lua:124
-msgid "You"
-msgstr "君は"
-
-#: ../../src/app/views/travel/OverlapTravelView.lua:11
-msgid "Max"
-msgstr "最高"
-
-#: ../../src/app/views/travel/TravelPageView.lua:6
-#: ../../src/app/views/travel/TravelPageView.lua:16
-msgid "YourRank"
-msgstr "あなたのランク"
-
 #: ../../src/app/views/travel/TravelPageView.lua:7
-#: ../../src/app/views/travel/TravelPageView.lua:17
 msgid "HighScore"
 msgstr "高得点"
 
 #: ../../src/app/views/travel/TravelPageView.lua:8
-#: ../../src/app/views/travel/TravelPageView.lua:61
+#: ../../src/app/views/travel/TravelPageView.lua:19
+msgid "AllHighScore"
+msgstr "世界記録"
+
+#: ../../src/app/views/travel/TravelPageView.lua:9
+#: ../../src/app/views/travel/TravelPageView.lua:20
+msgid "Position"
+msgstr "前"
+
+#: ../../src/app/views/travel/TravelPageView.lua:10
+#: ../../src/app/views/travel/TravelPageView.lua:63
+#: ../../src/app/views/travel/TravelPageView.lua:71
 msgid "Random"
 msgstr "ランダム障害"
 
-#: ../../src/app/views/travel/TravelPageView.lua:55
-msgid "Endless"
-msgstr ""
+#: ../../src/app/views/travel/TravelPageView.lua:18
+msgid "YourRank"
+msgstr "あなたのランク"
+
+#~ msgid "Config"
+#~ msgstr "設定"
+
+#~ msgid "Rank"
+#~ msgstr "ランク"
+
+#~ msgid "You"
+#~ msgstr "君は"
+
+#~ msgid "Max"
+#~ msgstr "最高"
 
 #~ msgid "Home"
 #~ msgstr "ホーム"

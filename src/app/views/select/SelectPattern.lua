@@ -59,14 +59,31 @@ function SelectPattern:updatePattern(level)
         self.lock:show()
         self.open = false
     end
-
+    
+    local cnt = 0   --星星个数
     for s=1, 3 do
         if infos[s]~= 0 then
             self["star"..s]:show()
+            cnt = cnt + 1
         else
             self["star"..s]:hide()
         end
     end
+    if cnt == 3 then
+    	self.level:setColor(cc.c3b(120,120,120))
+        self["star1"]:setColor(cc.c3b(112,112,112))
+        self["star2"]:setColor(cc.c3b(112,112,112))
+        self["star3"]:setColor(cc.c3b(112,112,112))
+        self.btn_select:loadTextureNormal("dialog-back-white.png",1)
+        self.btn_select:loadTexturePressed("dialog-back-white.png",1)
+        self.btn_select:loadTextureDisabled("dialog-back-white.png",1)
+    else
+        self.level:setColor(cc.c3b(241,241,241))
+        self["star1"]:setColor(cc.c3b(255,255,255))
+        self["star2"]:setColor(cc.c3b(255,255,255))
+        self["star3"]:setColor(cc.c3b(255,255,255))
+    end
+    
 end
 
 

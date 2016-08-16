@@ -2,6 +2,9 @@
 local ConfigLangView = class("ConfigLangView", cc.load("mvc").ViewBase)
 
 ConfigLangView.RESOURCE_FILENAME = "home.home_lang"
+ConfigLangView.LOCALE_LANG_LABEL = {
+    OK         = _("OK"),
+}
 
 local LangCellView = import("views.home.LangCellView")
 LangCellView.CELL_HEIGHT = 150
@@ -19,6 +22,8 @@ LangCellView.LANGUAGE  = {
 ConfigLangView.SCROLL_VIEW_HEIGHT = 450
 
 function ConfigLangView:onCreate()
+    self:localLanguage()
+    
     for v=1, 7 do
         local y = math.floor((v-1)/3)
         local x = (v-1)-y*3

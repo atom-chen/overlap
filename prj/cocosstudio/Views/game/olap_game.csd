@@ -76,43 +76,8 @@
       <ObjectData Name="Layer" Tag="197" ctype="GameLayerObjectData">
         <Size X="750.0000" Y="1334.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_3" ActionTag="-1151027271" Tag="201" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="25.0000" RightMargin="25.0000" TopMargin="115.9883" BottomMargin="472.0117" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_3" ActionTag="-1151027271" Alpha="0" Tag="201" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="25.0000" RightMargin="25.0000" TopMargin="115.9883" BottomMargin="472.0117" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="700.0000" Y="746.0000" />
-            <Children>
-              <AbstractNodeData Name="Sprite_6" ActionTag="-1354017044" Tag="206" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="60.0000" RightMargin="575.0000" TopMargin="60.0000" BottomMargin="621.0000" ctype="SpriteObjectData">
-                <Size X="65.0000" Y="65.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="92.5000" Y="653.5000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1321" Y="0.8760" />
-                <PreSize X="0.0929" Y="0.0871" />
-                <FileData Type="PlistSubImage" Path="sp-achieve-game-90.png" Plist="Resource/atlas/ui-game.plist" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Sprite_6_0" ActionTag="495757419" Tag="207" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="575.0000" RightMargin="60.0000" TopMargin="621.0000" BottomMargin="60.0000" FlipX="True" FlipY="True" ctype="SpriteObjectData">
-                <Size X="65.0000" Y="65.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="607.5000" Y="92.5000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8679" Y="0.1240" />
-                <PreSize X="0.0929" Y="0.0871" />
-                <FileData Type="PlistSubImage" Path="sp-achieve-game-90.png" Plist="Resource/atlas/ui-game.plist" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="icon_red" ActionTag="344769189" Tag="186" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="625.0000" RightMargin="50.0000" TopMargin="50.0000" BottomMargin="671.0000" ctype="SpriteObjectData">
-                <Size X="25.0000" Y="25.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="637.5000" Y="683.5000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9107" Y="0.9162" />
-                <PreSize X="0.0357" Y="0.0335" />
-                <FileData Type="PlistSubImage" Path="main-icon-red.png" Plist="Resource/atlas/ui-home.plist" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-            </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="375.0000" Y="845.0117" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -137,7 +102,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Sprite_1" ActionTag="-2028143789" Tag="40" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="BottomEdge" LeftMargin="-125.5000" RightMargin="-125.5000" TopMargin="819.0000" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Sprite_1" ActionTag="-2028143789" Alpha="0" Tag="40" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="BottomEdge" LeftMargin="-125.5000" RightMargin="-125.5000" TopMargin="819.0000" ctype="SpriteObjectData">
             <Size X="1001.0000" Y="515.0000" />
             <AnchorPoint ScaleX="0.5000" />
             <Position X="375.0000" />
@@ -174,61 +139,93 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_b" ActionTag="-2121828975" CallBackType="Click" CallBackName="onClick" Tag="65" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="108.3412" RightMargin="507.6588" TopMargin="611.1237" BottomMargin="635.8763" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="104" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="134.0000" Y="87.0000" />
+          <AbstractNodeData Name="Panel_6" ActionTag="1836069206" Tag="32" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="375.0000" RightMargin="175.0000" TopMargin="681.5083" BottomMargin="452.4917" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="200.0000" Y="200.0000" />
             <Children>
-              <AbstractNodeData Name="Sprite_1" ActionTag="1691490600" Tag="66" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="49.5000" RightMargin="49.5000" TopMargin="26.0000" BottomMargin="26.0000" ctype="SpriteObjectData">
-                <Size X="35.0000" Y="35.0000" />
+              <AbstractNodeData Name="LO_Touch_1" ActionTag="-755369606" VisibleForFrame="False" Tag="33" IconVisible="False" LeftMargin="-125.5000" RightMargin="74.5000" TopMargin="179.0000" BottomMargin="-21.0000" FontSize="36" LabelText="touch discovery" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="251.0000" Y="42.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="67.0000" Y="43.5000" />
+                <Position />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="0.2612" Y="0.4023" />
-                <FileData Type="PlistSubImage" Path="label-btn-common-back.png" Plist="Resource/atlas/ui-common.plist" />
-                <BlendFunc Src="1" Dst="771" />
+                <CColor A="255" R="72" G="76" B="63" />
+                <PrePosition />
+                <PreSize X="1.2550" Y="0.2100" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="LO_Touch_2" ActionTag="-1488326850" Tag="34" IconVisible="False" LeftMargin="-87.0000" RightMargin="113.0000" TopMargin="179.0000" BottomMargin="-21.0000" FontSize="36" LabelText="touch discovery" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="174.0000" Y="42.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="72" G="76" B="63" />
+                <PrePosition />
+                <PreSize X="0.8700" Y="0.2100" />
+                <FontResource Type="Normal" Path="Resource/fonts/Overlap.ttf" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
             </Children>
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="175.3412" Y="679.3763" />
+            <AnchorPoint />
+            <Position X="375.0000" Y="452.4917" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2338" Y="0.5093" />
-            <PreSize X="0.1787" Y="0.0652" />
-            <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <PressedFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-134-87-n.png" Plist="Resource/atlas/ui-common.plist" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
+            <PrePosition X="0.5000" Y="0.3392" />
+            <PreSize X="0.2667" Y="0.1499" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_c" ActionTag="297822112" CallBackType="Click" CallBackName="onClick" Tag="67" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="525.8813" RightMargin="90.1187" TopMargin="615.7637" BottomMargin="631.2363" TouchEnable="True" FlipX="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="104" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="134.0000" Y="87.0000" />
+          <AbstractNodeData Name="Sprite_8" ActionTag="24135491" Tag="86" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="138.5000" RightMargin="138.5000" TopMargin="775.4761" BottomMargin="496.5239" ctype="SpriteObjectData">
+            <Size X="473.0000" Y="62.0000" />
             <Children>
-              <AbstractNodeData Name="Sprite_1" ActionTag="450300373" Tag="68" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="49.5000" RightMargin="49.5000" TopMargin="26.0000" BottomMargin="26.0000" ctype="SpriteObjectData">
-                <Size X="35.0000" Y="35.0000" />
+              <AbstractNodeData Name="sb1" ActionTag="-2077434854" Tag="36" IconVisible="False" LeftMargin="236.4900" RightMargin="-0.4900" ctype="SpriteObjectData">
+                <Size X="237.0000" Y="62.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="67.0000" Y="43.5000" />
+                <Position X="354.9900" Y="31.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.7505" Y="0.5000" />
+                <PreSize X="0.5011" Y="1.0000" />
+                <FileData Type="PlistSubImage" Path="game-touch-half-1.png" Plist="Resource/atlas/ui-game.plist" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="sb2" ActionTag="239572367" Tag="37" IconVisible="False" LeftMargin="-0.2500" RightMargin="236.2500" ctype="SpriteObjectData">
+                <Size X="237.0000" Y="62.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="118.2500" Y="31.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.2500" Y="0.5000" />
+                <PreSize X="0.5011" Y="1.0000" />
+                <FileData Type="PlistSubImage" Path="game-touch-half-2.png" Plist="Resource/atlas/ui-game.plist" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="btn_touch" ActionTag="-441909187" CallBackType="Touch" CallBackName="onTouch" UserData="sb" Tag="35" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="206.5000" RightMargin="206.5000" TopMargin="0.5000" BottomMargin="0.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="11" BottomEage="11" Scale9OriginX="30" Scale9OriginY="11" Scale9Width="1" Scale9Height="39" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="60.0000" Y="61.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="236.5000" Y="31.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="0.2612" Y="0.4023" />
-                <FileData Type="PlistSubImage" Path="label-btn-common-back.png" Plist="Resource/atlas/ui-common.plist" />
-                <BlendFunc Src="1" Dst="771" />
+                <PreSize X="0.1268" Y="0.9839" />
+                <TextColor A="255" R="65" G="65" B="70" />
+                <DisabledFileData Type="PlistSubImage" Path="game-touch-on.png" Plist="Resource/atlas/ui-game.plist" />
+                <PressedFileData Type="PlistSubImage" Path="game-touch-on.png" Plist="Resource/atlas/ui-game.plist" />
+                <NormalFileData Type="PlistSubImage" Path="game-touch-on.png" Plist="Resource/atlas/ui-game.plist" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="592.8813" Y="674.7363" />
+            <Position X="375.0000" Y="527.5239" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7905" Y="0.5058" />
-            <PreSize X="0.1787" Y="0.0652" />
-            <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <PressedFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-134-87-n.png" Plist="Resource/atlas/ui-common.plist" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
+            <PrePosition X="0.5000" Y="0.3954" />
+            <PreSize X="0.6307" Y="0.0465" />
+            <FileData Type="PlistSubImage" Path="game-touch-empty.png" Plist="Resource/atlas/ui-game.plist" />
+            <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
-"POT-Creation-Date: 2016-07-28 16:30+0800\n"
-"PO-Revision-Date: 2016-07-29 13:53+0800\n"
+"POT-Creation-Date: 2016-08-10 19:20+0800\n"
+"PO-Revision-Date: 2016-08-10 19:22+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: en_US\n"
@@ -16,7 +16,35 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../src\n"
 
-#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:103
+#: ../../src/app/battle/views/GameView.lua:11
+msgid "Touch"
+msgstr "Hold to get hints"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_1"
+msgstr "Get in level ()"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_2"
+msgstr "Get in Endless Trip (scene () )"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_3"
+msgstr "Collect () symbols"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_4"
+msgstr "Collect 20 symbols in scene ()"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_5"
+msgstr "In Endless Trip (scene () ) score ()"
+
+#: ../../src/app/data/Collection.lua:3
+msgid "COLT_6"
+msgstr "Please rate our game, thank you!"
+
+#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:259
 #: ../../src/app/views/game/GamePrepareView.lua:7
 #: ../../src/app/views/game/GamePrepareView.lua:8
 #: ../../src/app/views/game/GamePrepareView.lua:9
@@ -26,421 +54,469 @@ msgstr ""
 msgid "NorScore"
 msgstr "Score ()"
 
-#: ../../src/app/data/Level.lua:9 ../../src/app/data/Level.lua:105
+#: ../../src/app/data/Level.lua:9 ../../src/app/data/Level.lua:261
 msgid "UniScore"
 msgstr "Perfect Score ()"
 
-#: ../../src/app/data/Level.lua:10 ../../src/app/data/Level.lua:95
+#: ../../src/app/data/Level.lua:10 ../../src/app/data/Level.lua:251
 msgid "TimeNorScore"
 msgstr "In () seconds , Score ()"
 
-#: ../../src/app/data/Level.lua:11 ../../src/app/data/Level.lua:97
+#: ../../src/app/data/Level.lua:11 ../../src/app/data/Level.lua:253
 msgid "TimeUniScore"
 msgstr "In () seconds , Perfect Score ()"
 
 #: ../../src/app/views/common/CommonDialogView.lua:5
+#: ../../src/app/views/game/CollectionDialog.lua:9
+#: ../../src/app/views/game/CollectionDialog.lua:10
+#: ../../src/app/views/home/ConfigLangView.lua:6
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:9
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:10
 msgid "OK"
 msgstr "OK"
 
-#: ../../src/app/views/game/CollectionDialog.lua:9
+#: ../../src/app/views/game/CollectionDialog.lua:14
 msgid "Collect_1"
-msgstr "Miniature planting barn ;In August 2015, astronauts first tasted the lettuce grown in space"
+msgstr ""
+"Miniature planting barn ;In August 2015, astronauts first tasted the lettuce "
+"grown in space"
 
-#: ../../src/app/views/game/CollectionDialog.lua:10
+#: ../../src/app/views/game/CollectionDialog.lua:15
 msgid "Collect_2"
 msgstr "Hoverboard;Use together with Nike's self-lacing shoes"
 
-#: ../../src/app/views/game/CollectionDialog.lua:11
+#: ../../src/app/views/game/CollectionDialog.lua:16
 msgid "Collect_3"
 msgstr "Universal translator;[sorry, I didn't hear that very clearly]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:12
+#: ../../src/app/views/game/CollectionDialog.lua:17
 msgid "Collect_4"
 msgstr "Blaster;I have a bad feeling about this."
 
-#: ../../src/app/views/game/CollectionDialog.lua:13
+#: ../../src/app/views/game/CollectionDialog.lua:18
 msgid "Collect_5"
 msgstr "R2-B2;[Beep, beep,beep]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:14
+#: ../../src/app/views/game/CollectionDialog.lua:19
 msgid "Collect_6"
-msgstr "Tricorder; [According to the assessment of your health, your life expectancy is 30... 29..28.27.]"
+msgstr ""
+"Tricorder; [According to the assessment of your health, your life expectancy "
+"is 30... 29..28.27.]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:15
+#: ../../src/app/views/game/CollectionDialog.lua:20
 msgid "Collect_7"
 msgstr "Singularity tracker ;Tracking a particular parallel universe "
 
-#: ../../src/app/views/game/CollectionDialog.lua:16
+#: ../../src/app/views/game/CollectionDialog.lua:21
 msgid "Collect_8"
 msgstr "Transporter;Make sure that no flies come in before you use it"
 
-#: ../../src/app/views/game/CollectionDialog.lua:17
+#: ../../src/app/views/game/CollectionDialog.lua:22
 msgid "Collect_9"
 msgstr "Cryosleep chamber;See you next century！"
 
-#: ../../src/app/views/game/CollectionDialog.lua:18
+#: ../../src/app/views/game/CollectionDialog.lua:23
 msgid "Collect_10"
 msgstr "Lightsaber;May the force be with you."
 
-#: ../../src/app/views/game/CollectionDialog.lua:20
+#: ../../src/app/views/game/CollectionDialog.lua:25
 msgid "Collect_11"
-msgstr "Kryptonite;Please contact Comics Detective if you feel unwell after near"
+msgstr ""
+"Kryptonite;Please contact Comics Detective if you feel unwell after near"
 
-#: ../../src/app/views/game/CollectionDialog.lua:21
+#: ../../src/app/views/game/CollectionDialog.lua:26
 msgid "Collect_12"
 msgstr "A Clockwork Orange;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:22
+#: ../../src/app/views/game/CollectionDialog.lua:27
 msgid "Collect_13"
 msgstr "The Fifth Element;Love is the one thing that transcends time and space"
 
-#: ../../src/app/views/game/CollectionDialog.lua:23
+#: ../../src/app/views/game/CollectionDialog.lua:28
 msgid "Collect_14"
 msgstr "Singularity propeller ;Go to another parallel universe "
 
-#: ../../src/app/views/game/CollectionDialog.lua:24
+#: ../../src/app/views/game/CollectionDialog.lua:29
 msgid "Collect_15"
 msgstr "The Hitchhiker's Guide to the Galaxy;Don't panic"
 
-#: ../../src/app/views/game/CollectionDialog.lua:25
+#: ../../src/app/views/game/CollectionDialog.lua:30
 msgid "Collect_16"
 msgstr "potato;It smells strange if you don't clean it"
 
-#: ../../src/app/views/game/CollectionDialog.lua:26
+#: ../../src/app/views/game/CollectionDialog.lua:31
 msgid "Collect_17"
 msgstr "arc reactor;proof that Tony Stark has a heart"
 
-#: ../../src/app/views/game/CollectionDialog.lua:27
+#: ../../src/app/views/game/CollectionDialog.lua:32
 msgid "Collect_18"
 msgstr "Black gloves;Gloved hand occasionally out of control"
 
-#: ../../src/app/views/game/CollectionDialog.lua:28
+#: ../../src/app/views/game/CollectionDialog.lua:33
 msgid "Collect_19"
 msgstr "Laser weapon ;It's natural enemy is haze ."
 
-#: ../../src/app/views/game/CollectionDialog.lua:29
+#: ../../src/app/views/game/CollectionDialog.lua:34
 msgid "Collect_20"
 msgstr "Gatling tower;Awesome since 1860s"
 
-#: ../../src/app/views/game/CollectionDialog.lua:31
+#: ../../src/app/views/game/CollectionDialog.lua:36
 msgid "Collect_21"
 msgstr "Spacesuit;Don't smoke, or take the consequences"
 
-#: ../../src/app/views/game/CollectionDialog.lua:32
+#: ../../src/app/views/game/CollectionDialog.lua:37
 msgid "Collect_22"
 msgstr "42;The Answer to Life, the Universe and Everything"
 
-#: ../../src/app/views/game/CollectionDialog.lua:33
+#: ../../src/app/views/game/CollectionDialog.lua:38
 msgid "Collect_23"
 msgstr "Missile tower ;Tank driver's most annoying thing "
 
-#: ../../src/app/views/game/CollectionDialog.lua:34
+#: ../../src/app/views/game/CollectionDialog.lua:39
 msgid "Collect_24"
 msgstr "Cloaking device;remenber: invisible is not invincible"
 
-#: ../../src/app/views/game/CollectionDialog.lua:35
+#: ../../src/app/views/game/CollectionDialog.lua:40
 msgid "Collect_25"
 msgstr "Two-dimensional foil;Read Flatland in advance "
 
-#: ../../src/app/views/game/CollectionDialog.lua:36
+#: ../../src/app/views/game/CollectionDialog.lua:41
 msgid "Collect_26"
-msgstr "Stormtrooper helmet;[Only Imperial Stormtroopers could be so accurate!]"
+msgstr ""
+"Stormtrooper helmet;[Only Imperial Stormtroopers could be so accurate!]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:37
+#: ../../src/app/views/game/CollectionDialog.lua:42
 msgid "Collect_27"
 msgstr "jetpack;Flying is one of the most ancient dreams of mankind"
 
-#: ../../src/app/views/game/CollectionDialog.lua:38
+#: ../../src/app/views/game/CollectionDialog.lua:43
 msgid "Collect_28"
 msgstr "Lunar rover;Speed limit 20 mph, or easy to fly away"
 
-#: ../../src/app/views/game/CollectionDialog.lua:39
+#: ../../src/app/views/game/CollectionDialog.lua:44
 msgid "Collect_29"
 msgstr "Neuralyzer;[Huh? What is my hand, let me try this button]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:40
+#: ../../src/app/views/game/CollectionDialog.lua:45
 msgid "Collect_30"
 msgstr "Gerty AI;A robot like to use emoji"
 
-#: ../../src/app/views/game/CollectionDialog.lua:42
+#: ../../src/app/views/game/CollectionDialog.lua:47
 msgid "Collect_31"
 msgstr "Red pill;One pill a day, don't overdose."
 
-#: ../../src/app/views/game/CollectionDialog.lua:43
+#: ../../src/app/views/game/CollectionDialog.lua:48
 msgid "Collect_32"
 msgstr "Bone;A hard bone, can be used to knock things"
 
-#: ../../src/app/views/game/CollectionDialog.lua:44
+#: ../../src/app/views/game/CollectionDialog.lua:49
 msgid "Collect_33"
 msgstr "HAL9000;I'm sorry, Dave. I'm afraid I can't do that"
 
-#: ../../src/app/views/game/CollectionDialog.lua:45
+#: ../../src/app/views/game/CollectionDialog.lua:50
 msgid "Collect_34"
-msgstr "Powered exoskeleton;[To be honest you may not believe ...the machine hit you, not me]"
+msgstr ""
+"Powered exoskeleton;[To be honest you may not believe ...the machine hit "
+"you, not me]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:46
+#: ../../src/app/views/game/CollectionDialog.lua:51
 msgid "Collect_35"
 msgstr "U Disk;An U disk, storing a wealth of knowledge"
 
-#: ../../src/app/views/game/CollectionDialog.lua:47
+#: ../../src/app/views/game/CollectionDialog.lua:52
 msgid "Collect_36"
 msgstr "Monolith;..."
 
-#: ../../src/app/views/game/CollectionDialog.lua:48
+#: ../../src/app/views/game/CollectionDialog.lua:53
 msgid "Collect_37"
 msgstr "SNOY Walkman TPS-L2;Only three left in the whole universe"
 
-#: ../../src/app/views/game/CollectionDialog.lua:49
+#: ../../src/app/views/game/CollectionDialog.lua:54
 msgid "Collect_38"
-msgstr "Marvin;[I've calculated your chance of survival, but I don't think you'll like it.]"
+msgstr ""
+"Marvin;[I've calculated your chance of survival, but I don't think you'll "
+"like it.]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:50
+#: ../../src/app/views/game/CollectionDialog.lua:55
 msgid "Collect_39"
 msgstr "Electric Sheep;Do aliens counting sheep when insomnia?"
 
-#: ../../src/app/views/game/CollectionDialog.lua:51
+#: ../../src/app/views/game/CollectionDialog.lua:56
 msgid "Collect_40"
 msgstr "SCV;There's something in the way"
 
-#: ../../src/app/views/game/CollectionDialog.lua:53
+#: ../../src/app/views/game/CollectionDialog.lua:58
 msgid "Collect_41"
 msgstr "Habitat;Don't sleep in suspension!"
 
-#: ../../src/app/views/game/CollectionDialog.lua:54
+#: ../../src/app/views/game/CollectionDialog.lua:59
 msgid "Collect_42"
 msgstr "Cassette;Awesome Mix vol.1"
 
-#: ../../src/app/views/game/CollectionDialog.lua:55
+#: ../../src/app/views/game/CollectionDialog.lua:60
 msgid "Collect_43"
 msgstr "Waterdrop;Absolute zero, absolutely smooth(tt5774642)"
 
-#: ../../src/app/views/game/CollectionDialog.lua:56
+#: ../../src/app/views/game/CollectionDialog.lua:61
 msgid "Collect_44"
 msgstr "VR Playstation;You can play 'life on earth' in the spaceship"
 
-#: ../../src/app/views/game/CollectionDialog.lua:57
+#: ../../src/app/views/game/CollectionDialog.lua:62
 msgid "Collect_45"
-msgstr "Interactive fiction;[It seems that the crash site is more close to me than the mountain. What do you think I should do?]"
+msgstr ""
+"Interactive fiction;[It seems that the crash site is more close to me than "
+"the mountain. What do you think I should do?]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:58
+#: ../../src/app/views/game/CollectionDialog.lua:63
 msgid "Collect_46"
 msgstr "All-weather combat robot ;Beware of friendly fire"
 
-#: ../../src/app/views/game/CollectionDialog.lua:59
+#: ../../src/app/views/game/CollectionDialog.lua:64
 msgid "Collect_47"
 msgstr "All-purpose adhesive;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:60
+#: ../../src/app/views/game/CollectionDialog.lua:65
 msgid "Collect_48"
 msgstr "Antimatter engine ;E=mc^2"
 
-#: ../../src/app/views/game/CollectionDialog.lua:61
+#: ../../src/app/views/game/CollectionDialog.lua:66
 msgid "Collect_49"
 msgstr "Antenna;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:62
+#: ../../src/app/views/game/CollectionDialog.lua:67
 msgid "Collect_50"
 msgstr "Top; A top that can spin for a long time"
 
-#: ../../src/app/views/game/CollectionDialog.lua:64
+#: ../../src/app/views/game/CollectionDialog.lua:69
 msgid "Collect_51"
 msgstr "stimulant;[Ahh...That's the stuff!]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:65
+#: ../../src/app/views/game/CollectionDialog.lua:70
 msgid "Collect_52"
 msgstr "Medical chamber;Please do not put in the dead "
 
-#: ../../src/app/views/game/CollectionDialog.lua:66
+#: ../../src/app/views/game/CollectionDialog.lua:71
 msgid "Collect_53"
-msgstr "Space Wrench;In November 2014, astronauts aboard the international space station used 3D printing technology to create the first 'space tool' -- a wrench."
+msgstr ""
+"Space Wrench;In November 2014, astronauts aboard the international space "
+"station used 3D printing technology to create the first 'space tool' -- a "
+"wrench."
 
-#: ../../src/app/views/game/CollectionDialog.lua:67
+#: ../../src/app/views/game/CollectionDialog.lua:72
 msgid "Collect_54"
 msgstr "Railgun;A kinetic weapon that does not require explosives"
 
-#: ../../src/app/views/game/CollectionDialog.lua:68
+#: ../../src/app/views/game/CollectionDialog.lua:73
 msgid "Collect_55"
 msgstr "Nanocomposite amor;When nano spear encounter nano shield, who can win "
 
-#: ../../src/app/views/game/CollectionDialog.lua:69
+#: ../../src/app/views/game/CollectionDialog.lua:74
 msgid "Collect_56"
 msgstr "Space Torpedoes; It's just a bigger and slower missile. "
 
-#: ../../src/app/views/game/CollectionDialog.lua:70
+#: ../../src/app/views/game/CollectionDialog.lua:75
 msgid "Collect_57"
-msgstr "Ex Machina;If you've created a conscious machine, it's not the history of man. It's the history of gods"
+msgstr ""
+"Ex Machina;If you've created a conscious machine, it's not the history of "
+"man. It's the history of gods"
 
-#: ../../src/app/views/game/CollectionDialog.lua:71
+#: ../../src/app/views/game/CollectionDialog.lua:76
 msgid "Collect_58"
 msgstr "Warp drive;Frequent use may cause cracks in the subspace"
 
-#: ../../src/app/views/game/CollectionDialog.lua:72
+#: ../../src/app/views/game/CollectionDialog.lua:77
 msgid "Collect_59"
 msgstr "Nuclear powered engine ;Be careful, don't turn it ino a nuclear bomb"
 
-#: ../../src/app/views/game/CollectionDialog.lua:73
+#: ../../src/app/views/game/CollectionDialog.lua:78
 msgid "Collect_60"
 msgstr "Fusion reactor;A mini sun"
 
-#: ../../src/app/views/game/CollectionDialog.lua:75
+#: ../../src/app/views/game/CollectionDialog.lua:80
 msgid "Collect_61"
 msgstr "Crowbar;Physics holy sword!"
 
-#: ../../src/app/views/game/CollectionDialog.lua:76
+#: ../../src/app/views/game/CollectionDialog.lua:81
 msgid "Collect_62"
 msgstr "Nuclear battery;No radiation!"
 
-#: ../../src/app/views/game/CollectionDialog.lua:77
+#: ../../src/app/views/game/CollectionDialog.lua:82
 msgid "Collect_63"
 msgstr "Dinosaur egg ;It's really a dinosaur egg, not a stone"
 
-#: ../../src/app/views/game/CollectionDialog.lua:78
+#: ../../src/app/views/game/CollectionDialog.lua:83
 msgid "Collect_64"
 msgstr "UCAV; Can also help you take delivery "
 
-#: ../../src/app/views/game/CollectionDialog.lua:79
+#: ../../src/app/views/game/CollectionDialog.lua:84
 msgid "Collect_65"
 msgstr "Baby Groot seed ;[i am root]"
 
-#: ../../src/app/views/game/CollectionDialog.lua:80
+#: ../../src/app/views/game/CollectionDialog.lua:85
 msgid "Collect_66"
 msgstr "Flashlight;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:81
+#: ../../src/app/views/game/CollectionDialog.lua:86
 msgid "Collect_67"
 msgstr "Arc Emitters;Do not use in water "
 
-#: ../../src/app/views/game/CollectionDialog.lua:82
+#: ../../src/app/views/game/CollectionDialog.lua:87
 msgid "Collect_68"
 msgstr "Solar panel;Sunflower invented the technology long ago. "
 
-#: ../../src/app/views/game/CollectionDialog.lua:83
+#: ../../src/app/views/game/CollectionDialog.lua:88
 msgid "Collect_69"
 msgstr "Welding gun ;It can be used as a weapon in case of emergency"
 
-#: ../../src/app/views/game/CollectionDialog.lua:84
+#: ../../src/app/views/game/CollectionDialog.lua:89
 msgid "Collect_70"
-msgstr "Wormhole Generator ;The disadvantage is that you miss the scenery in the journey"
+msgstr ""
+"Wormhole Generator ;The disadvantage is that you miss the scenery in the "
+"journey"
 
-#: ../../src/app/views/game/CollectionDialog.lua:86
+#: ../../src/app/views/game/CollectionDialog.lua:91
 msgid "Collect_71"
 msgstr "Life detector ;The creature you found may be your friend or eat you up"
 
-#: ../../src/app/views/game/CollectionDialog.lua:87
+#: ../../src/app/views/game/CollectionDialog.lua:92
 msgid "Collect_72"
 msgstr "Hydrogen helium collector ;To provide energy for the fusion reaction "
 
-#: ../../src/app/views/game/CollectionDialog.lua:88
+#: ../../src/app/views/game/CollectionDialog.lua:93
 msgid "Collect_73"
-msgstr "Matter Analyzer;Give it up, you can't find anything edible even if  analysis 100 more kinds of alien plants "
+msgstr ""
+"Matter Analyzer;Give it up, you can't find anything edible even if  analysis "
+"100 more kinds of alien plants "
 
-#: ../../src/app/views/game/CollectionDialog.lua:89
+#: ../../src/app/views/game/CollectionDialog.lua:94
 msgid "Collect_74"
-msgstr "Automatic navigation system ;Before get into the cryosleep chamber, you'd better pray for this system won't go wrong"
+msgstr ""
+"Automatic navigation system ;Before get into the cryosleep chamber, you'd "
+"better pray for this system won't go wrong"
 
-#: ../../src/app/views/game/CollectionDialog.lua:90
+#: ../../src/app/views/game/CollectionDialog.lua:95
 msgid "Collect_75"
 msgstr "Extinguisher;"
 
-#: ../../src/app/views/game/CollectionDialog.lua:91
+#: ../../src/app/views/game/CollectionDialog.lua:96
 msgid "Collect_76"
 msgstr "Gravity Gun;Inanimate objects can be pulled up or ricocheted"
 
-#: ../../src/app/views/game/CollectionDialog.lua:92
+#: ../../src/app/views/game/CollectionDialog.lua:97
 msgid "Collect_77"
-msgstr "Energy Shield;The disadvantage is that there is no use when power outages "
+msgstr ""
+"Energy Shield;The disadvantage is that there is no use when power outages "
 
-#: ../../src/app/views/game/CollectionDialog.lua:93
+#: ../../src/app/views/game/CollectionDialog.lua:98
 msgid "Collect_78"
 msgstr "Liquid Propellant Rocket Engine;It helps human landing on the moon"
 
-#: ../../src/app/views/game/CollectionDialog.lua:94
+#: ../../src/app/views/game/CollectionDialog.lua:99
 msgid "Collect_79"
 msgstr "Nano automatic repairing material ;One day they will conquer the world"
 
-#: ../../src/app/views/game/CollectionDialog.lua:95
+#: ../../src/app/views/game/CollectionDialog.lua:100
 msgid "Collect_80"
-msgstr "Ion thruster;In fact, its thrust is equivalent to a piece of paper on your hand pressure "
+msgstr ""
+"Ion thruster;In fact, its thrust is equivalent to a piece of paper on your "
+"hand pressure "
 
-#: ../../src/app/views/game/CollectionDialog.lua:97
+#: ../../src/app/views/game/CollectionDialog.lua:102
 msgid "Collect_81"
 msgstr "Water Recycling Systems;No need to think too much before you drink"
 
-#: ../../src/app/views/game/CollectionDialog.lua:98
+#: ../../src/app/views/game/CollectionDialog.lua:103
 msgid "Collect_82"
 msgstr "Durasteel armor;Harder than steel armor"
 
-#: ../../src/app/views/game/CollectionDialog.lua:99
+#: ../../src/app/views/game/CollectionDialog.lua:104
 msgid "Collect_83"
-msgstr "Particle Lances;These heavy energy weapons fire focused particle beams that cause massive damage. "
+msgstr ""
+"Particle Lances;These heavy energy weapons fire focused particle beams that "
+"cause massive damage. "
 
-#: ../../src/app/views/game/CollectionDialog.lua:100
+#: ../../src/app/views/game/CollectionDialog.lua:105
 msgid "Collect_84"
 msgstr "Intelligent transfer device ;I think, therefore I am"
 
-#: ../../src/app/views/game/CollectionDialog.lua:101
+#: ../../src/app/views/game/CollectionDialog.lua:106
 msgid "Collect_85"
 msgstr "Reverse force field generator ;Upside down "
 
-#: ../../src/app/views/game/CollectionDialog.lua:102
+#: ../../src/app/views/game/CollectionDialog.lua:107
 msgid "Collect_86"
 msgstr "Mass generator ;Essential component for faster-than-light travel"
 
-#: ../../src/app/views/game/CollectionDialog.lua:103
+#: ../../src/app/views/game/CollectionDialog.lua:108
 msgid "Collect_87"
-msgstr "Five-dimensional propeller; Power equipment through the wormhole sub space "
+msgstr ""
+"Five-dimensional propeller; Power equipment through the wormhole sub space "
 
-#: ../../src/app/views/game/CollectionDialog.lua:104
+#: ../../src/app/views/game/CollectionDialog.lua:109
 msgid "Collect_88"
 msgstr "Atmosphere generator;Make the world a better place"
 
-#: ../../src/app/views/game/CollectionDialog.lua:105
+#: ../../src/app/views/game/CollectionDialog.lua:110
 msgid "Collect_89"
-msgstr "Diamond Sutra;All with marks is empty and false. If you can see all marks as no marks, then you see the Tathagata"
+msgstr ""
+"Diamond Sutra;All with marks is empty and false. If you can see all marks as "
+"no marks, then you see the Tathagata"
 
-#: ../../src/app/views/game/CollectionDialog.lua:106
+#: ../../src/app/views/game/CollectionDialog.lua:111
 msgid "Collect_90"
 msgstr "mini Oxygen tank ;Only hand size, can be used throughout the day "
 
-#: ../../src/app/views/game/CollectionDialog.lua:108
+#: ../../src/app/views/game/CollectionDialog.lua:113
 msgid "Collect_91"
 msgstr "Bionic tactical armor alloy ;Faster，Higher，Stronger！"
 
-#: ../../src/app/views/game/CollectionDialog.lua:109
+#: ../../src/app/views/game/CollectionDialog.lua:114
 msgid "Collect_92"
-msgstr "Galaxy database;The description of the earth in the database : Mostly Harmless"
+msgstr ""
+"Galaxy database;The description of the earth in the database : Mostly "
+"Harmless"
 
-#: ../../src/app/views/game/CollectionDialog.lua:110
+#: ../../src/app/views/game/CollectionDialog.lua:115
 msgid "Collect_93"
 msgstr "Anti black hole gel;Black hole weapon?No way!"
 
-#: ../../src/app/views/game/CollectionDialog.lua:111
+#: ../../src/app/views/game/CollectionDialog.lua:116
 msgid "Collect_94"
-msgstr "DNA recombination machine;Matters needing attention: same as Transporter"
+msgstr ""
+"DNA recombination machine;Matters needing attention: same as Transporter"
 
-#: ../../src/app/views/game/CollectionDialog.lua:112
+#: ../../src/app/views/game/CollectionDialog.lua:117
 msgid "Collect_95"
-msgstr "Metal extracting device ;Extracting metal resources from space junk and planet"
+msgstr ""
+"Metal extracting device ;Extracting metal resources from space junk and "
+"planet"
 
-#: ../../src/app/views/game/CollectionDialog.lua:113
+#: ../../src/app/views/game/CollectionDialog.lua:118
 msgid "Collect_96"
 msgstr "Quick recovery glue ;Can not remove wrinkles"
 
-#: ../../src/app/views/game/CollectionDialog.lua:114
+#: ../../src/app/views/game/CollectionDialog.lua:119
 msgid "Collect_97"
-msgstr "Planetery Sensor;Locate suitable planet in order to get additional resources"
+msgstr ""
+"Planetery Sensor;Locate suitable planet in order to get additional resources"
 
-#: ../../src/app/views/game/CollectionDialog.lua:115
+#: ../../src/app/views/game/CollectionDialog.lua:120
 msgid "Collect_98"
 msgstr "Mini gym ;Prevention of osteoporosis in space "
 
-#: ../../src/app/views/game/CollectionDialog.lua:116
+#: ../../src/app/views/game/CollectionDialog.lua:121
 msgid "Collect_99"
 msgstr "Gravity generator ;You won't like it when slimming"
 
-#: ../../src/app/views/game/CollectionDialog.lua:117
+#: ../../src/app/views/game/CollectionDialog.lua:122
 msgid "Collect_100"
 msgstr "Spaceship console;Please, don't touch anything"
+
+#: ../../src/app/views/game/CollectionDialog.lua:132
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:19
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:20
+msgid "Collect_"
+msgstr ""
 
 #: ../../src/app/views/game/GamePauseView.lua:7
 #: ../../src/app/views/game/GameResultView.lua:8
@@ -450,7 +526,7 @@ msgstr "Retry"
 #: ../../src/app/views/game/GamePauseView.lua:8
 #: ../../src/app/views/game/GameResultView.lua:9
 msgid "List"
-msgstr ""
+msgstr "Back"
 
 #: ../../src/app/views/game/GamePauseView.lua:9
 #: ../../src/app/views/game/GamePauseView.lua:21
@@ -469,39 +545,12 @@ msgstr "Sound"
 msgid "Continue"
 msgstr "Continue"
 
-#: ../../src/app/views/game/GamePauseView.lua:11
-#: ../../src/app/views/game/GamePauseView.lua:82
-#: ../../src/app/views/game/GameResultView.lua:11
-#: ../../src/app/views/game/GameResultView.lua:15
-#: ../../src/app/views/game/GameResultView.lua:84
-#: ../../src/app/views/game/GameResultView.lua:98
-msgid "Result_time"
-msgstr "Time"
-
-#: ../../src/app/views/game/GamePauseView.lua:12
-#: ../../src/app/views/game/GamePauseView.lua:83
-#: ../../src/app/views/game/GameResultView.lua:12
-#: ../../src/app/views/game/GameResultView.lua:16
-#: ../../src/app/views/game/GameResultView.lua:85
-#: ../../src/app/views/game/GameResultView.lua:88
-#: ../../src/app/views/game/GameResultView.lua:99
-msgid "Result_combo"
-msgstr "Perfect Score"
-
-#: ../../src/app/views/game/GamePauseView.lua:13
-#: ../../src/app/views/game/GamePauseView.lua:81
-#: ../../src/app/views/game/GameResultView.lua:13
-#: ../../src/app/views/game/GameResultView.lua:17
-#: ../../src/app/views/game/GameResultView.lua:83
-#: ../../src/app/views/game/GameResultView.lua:97
-msgid "Result_score"
-msgstr "Score"
-
 #: ../../src/app/views/game/GamePauseView.lua:21
 #: ../../src/app/views/game/GamePauseView.lua:71
 #: ../../src/app/views/home/HomeConfigView.lua:18
 #: ../../src/app/views/home/HomeConfigView.lua:24
 #: ../../src/app/views/home/HomeConfigView.lua:91
+#: ../../src/app/views/travel/TravelPageView.lua:63
 msgid "Off"
 msgstr "off"
 
@@ -510,21 +559,45 @@ msgstr "off"
 #: ../../src/app/views/home/HomeConfigView.lua:20
 #: ../../src/app/views/home/HomeConfigView.lua:26
 #: ../../src/app/views/home/HomeConfigView.lua:86
+#: ../../src/app/views/travel/TravelPageView.lua:71
 msgid "On"
 msgstr "on"
 
 #: ../../src/app/views/game/GamePrepareView.lua:10
+#: ../../src/app/views/home/OverlapHomeView.lua:6
 #: ../../src/app/views/travel/OverlapTravelView.lua:9
 msgid "Start"
 msgstr "Play"
 
 #: ../../src/app/views/game/GameResultView.lua:10
 msgid "Next"
-msgstr ""
+msgstr "Next"
+
+#: ../../src/app/views/game/GameResultView.lua:11
+#: ../../src/app/views/game/GameResultView.lua:15
+#: ../../src/app/views/game/GameResultView.lua:84
+#: ../../src/app/views/game/GameResultView.lua:122
+msgid "Result_time"
+msgstr "Time"
+
+#: ../../src/app/views/game/GameResultView.lua:12
+#: ../../src/app/views/game/GameResultView.lua:16
+#: ../../src/app/views/game/GameResultView.lua:85
+#: ../../src/app/views/game/GameResultView.lua:88
+#: ../../src/app/views/game/GameResultView.lua:123
+msgid "Result_combo"
+msgstr "Perfect Score"
+
+#: ../../src/app/views/game/GameResultView.lua:13
+#: ../../src/app/views/game/GameResultView.lua:17
+#: ../../src/app/views/game/GameResultView.lua:83
+#: ../../src/app/views/game/GameResultView.lua:121
+msgid "Result_score"
+msgstr "Score"
 
 #: ../../src/app/views/game/GameResultView.lua:18
 msgid "Result_high"
-msgstr ""
+msgstr "High Score"
 
 #: ../../src/app/views/game/SkillIcon.lua:15
 #: ../../src/app/views/game/SkillInfoView.lua:37
@@ -574,7 +647,9 @@ msgstr "Left Rotation"
 
 #: ../../src/app/views/home/HomeAdsView.lua:7
 msgid "AdsInfo"
-msgstr "Your donation will remove Ads in game. Top 10 donors can name the characters in our next game."
+msgstr ""
+"Your donation will remove Ads in game. Top 10 donors can name the characters "
+"in our next game."
 
 #: ../../src/app/views/home/HomeConfigView.lua:7
 msgid "Language"
@@ -595,7 +670,7 @@ msgid "Credits"
 msgstr "Credit"
 
 #: ../../src/app/views/home/HomeConfigView.lua:11
-#: ../../src/app/views/home/OverlapHomeView.lua:9
+#: ../../src/app/views/home/OverlapHomeView.lua:8
 msgid "Donation"
 msgstr "Donation"
 
@@ -607,49 +682,49 @@ msgstr "Draw a perfect curve to defend ice sheet."
 msgid "moreMary"
 msgstr "An original number puzzle game with royal theme."
 
-#: ../../src/app/views/home/OverlapHomeView.lua:6
-msgid "Config"
-msgstr "Settings"
-
 #: ../../src/app/views/home/OverlapHomeView.lua:7
 msgid "Conllection"
 msgstr "Collection"
-
-#: ../../src/app/views/home/OverlapHomeView.lua:8
-msgid "Rank"
-msgstr "Rank"
 
 #: ../../src/app/views/select/OverlapSelectView.lua:10
 msgid "trval"
 msgstr "Endless Trip"
 
-#: ../../src/app/views/travel/OverlapTravelView.lua:10
-#: ../../src/app/views/travel/OverlapTravelView.lua:124
-msgid "You"
-msgstr "You"
-
-#: ../../src/app/views/travel/OverlapTravelView.lua:11
-msgid "Max"
-msgstr "Highest"
-
-#: ../../src/app/views/travel/TravelPageView.lua:6
-#: ../../src/app/views/travel/TravelPageView.lua:16
-msgid "YourRank"
-msgstr "Your Rank"
-
 #: ../../src/app/views/travel/TravelPageView.lua:7
-#: ../../src/app/views/travel/TravelPageView.lua:17
 msgid "HighScore"
 msgstr "High Score"
 
 #: ../../src/app/views/travel/TravelPageView.lua:8
-#: ../../src/app/views/travel/TravelPageView.lua:61
+#: ../../src/app/views/travel/TravelPageView.lua:19
+msgid "AllHighScore"
+msgstr "World Record"
+
+#: ../../src/app/views/travel/TravelPageView.lua:9
+#: ../../src/app/views/travel/TravelPageView.lua:20
+msgid "Position"
+msgstr "Top"
+
+#: ../../src/app/views/travel/TravelPageView.lua:10
+#: ../../src/app/views/travel/TravelPageView.lua:63
+#: ../../src/app/views/travel/TravelPageView.lua:71
 msgid "Random"
 msgstr "Random Obstacles"
 
-#: ../../src/app/views/travel/TravelPageView.lua:55
-msgid "Endless"
-msgstr ""
+#: ../../src/app/views/travel/TravelPageView.lua:18
+msgid "YourRank"
+msgstr "Your Rank"
+
+#~ msgid "Config"
+#~ msgstr "Settings"
+
+#~ msgid "Rank"
+#~ msgstr "Rank"
+
+#~ msgid "You"
+#~ msgstr "You"
+
+#~ msgid "Max"
+#~ msgstr "Highest"
 
 #~ msgid "Home"
 #~ msgstr "Home"

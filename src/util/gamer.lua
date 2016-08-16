@@ -8,7 +8,6 @@ end
 function gamer:init()
     if device.platform == device.PLATFORM.ANDROID then
     elseif device.platform == device.PLATFORM.IOS then
-        print("gamer.init")
         local function call()
             print("store init")
         end
@@ -224,6 +223,41 @@ function gamer:updateICloud(rid,rname,rkeys,rvalues)
     if device.platform == device.PLATFORM.ANDROID then
     elseif device.platform == device.PLATFORM.IOS then
         luaoc.callStaticMethod("ICloudManager","updateRecord",{id = rid,name = rname,keys = rkeys,values = rvalues})
+    end
+end
+
+---------------------------
+-- 保存到相册
+--
+--@function [parent=#gamer] saveToPhone
+function gamer:saveToPhone(fileName)
+    if device.platform == device.PLATFORM.ANDROID then
+        local ok, ret require("luaj").callStaticMethod("org/cocos2dx/util/Gamer","tapSaveImageToIphone",{fileName},"(Ljava/lang/String;)V")
+    elseif device.platform == device.PLATFORM.IOS then
+        luaoc.callStaticMethod("GameCenter","tapSaveImageToIphone",{filename = fileName })
+    end
+end
+
+
+---------------------------
+-- 3dtouch启动，按下区域可以相应3dtouch则在按下的时候调用该方法，
+--
+--@function [parent=#gamer] start3Dtouch
+function gamer:start3Dtouch(callback)
+    if device.platform == device.PLATFORM.ANDROID then
+    elseif device.platform == device.PLATFORM.IOS then
+        luaoc.callStaticMethod("Touch3DManager","startTouch",{callback = callback})
+    end
+end
+
+---------------------------
+-- 3dtouch结束
+--
+--@function [parent=#gamer] end3Dtouch
+function gamer:end3Dtouch()
+    if device.platform == device.PLATFORM.ANDROID then
+    elseif device.platform == device.PLATFORM.IOS then
+        luaoc.callStaticMethod("Touch3DManager","endTouch")
     end
 end
 

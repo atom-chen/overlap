@@ -5,6 +5,14 @@ HomeAdsView.RESOURCE_FILENAME = "home.home_noads"
 
 HomeAdsView.LOCALE_LANG_LABEL = {
     adsinfo        = _("AdsInfo"),
+    Donation1        = _("￥1"),
+    Donation2        = _("￥6"),
+    Donation3        = _("￥12"),
+    Donation4        = _("￥30"),
+    Donation5        = _("￥100"),
+    Donation6        = _("￥300"),
+    Donation7        = _("￥600"),
+    Donation8        = _("￥1000"),
 }
 function HomeAdsView:onCreate()
     self:localLanguage()

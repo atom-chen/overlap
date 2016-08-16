@@ -6,23 +6,72 @@
       <ObjectData Name="Layer" ctype="GameLayerObjectData">
         <Size X="750.0000" Y="1334.0000" />
         <Children>
-          <AbstractNodeData Name="panel" ActionTag="-1086202212" CallBackType="Click" CallBackName="onClick" Tag="2" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.4996" RightMargin="-125.5004" TopMargin="-2.2477" BottomMargin="2.2477" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="panel" ActionTag="-1086202212" CallBackType="Click" CallBackName="onClick" Tag="2" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.5000" RightMargin="-125.5000" TopMargin="-2.2678" BottomMargin="2.2678" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1001.0000" Y="1334.0000" />
             <Children>
-              <AbstractNodeData Name="Sprite_1" ActionTag="1581705591" Tag="3" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="234.5000" RightMargin="234.5000" TopMargin="100.0000" BottomMargin="421.0000" ctype="SpriteObjectData">
+              <AbstractNodeData Name="Sprite_1" ActionTag="1581705591" Tag="3" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="116.5000" RightMargin="116.5000" TopMargin="100.0000" BottomMargin="919.0000" ctype="SpriteObjectData">
                 <Size X="768.0000" Y="315.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="500.5000" Y="827.5000" />
+                <Position X="500.5000" Y="1076.5000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.6203" />
-                <PreSize X="0.5315" Y="0.6094" />
+                <PrePosition X="0.5000" Y="0.8070" />
+                <PreSize X="0.7672" Y="0.2361" />
                 <FileData Type="PlistSubImage" Path="st-5.png" Plist="Resource/atlas/ui-select.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
+              <AbstractNodeData Name="sk_icon" ActionTag="844864650" Tag="132" IconVisible="False" LeftMargin="326.0646" RightMargin="605.9354" TopMargin="1043.7788" BottomMargin="221.2212" ctype="SpriteObjectData">
+                <Size X="70.0000" Y="70.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="360.5646" Y="255.7212" />
+                <Scale ScaleX="0.9000" ScaleY="0.9000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.3602" Y="0.1917" />
+                <PreSize X="0.0689" Y="0.0517" />
+                <FileData Type="PlistSubImage" Path="icon-common-skill-5.png" Plist="Resource/atlas/ui-common.plist" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Panel_2" ActionTag="1797250476" Tag="129" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="556.5717" RightMargin="444.4283" TopMargin="1085.1628" BottomMargin="248.8372" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                <Size X="0.0000" Y="0.0000" />
+                <Children>
+                  <AbstractNodeData Name="LO_SkInfo_2" ActionTag="-1948844361" Tag="130" IconVisible="False" LeftMargin="-130.1240" RightMargin="-269.8760" TopMargin="-30.5942" BottomMargin="-69.4058" IsCustomSize="True" FontSize="36" LabelText="start" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="400.0000" Y="100.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="69.8760" Y="-19.4058" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="118" G="115" B="113" />
+                    <PrePosition />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FontResource Type="Normal" Path="Resource/fonts/OverlapExt.ttf" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="LO_SkInfo_1" ActionTag="-2022690693" VisibleForFrame="False" Tag="131" IconVisible="False" LeftMargin="-126.2409" RightMargin="-273.7591" TopMargin="-29.2963" BottomMargin="-70.7037" IsCustomSize="True" FontSize="36" LabelText="开始游戏" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="400.0000" Y="100.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="73.7591" Y="-20.7037" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="118" G="115" B="113" />
+                    <PrePosition />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint />
+                <Position X="556.5717" Y="248.8372" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5560" Y="0.1865" />
+                <PreSize X="0.0000" Y="0.0000" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
+              </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="375.0004" Y="669.2477" />
+            <Position X="375.0000" Y="669.2678" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5017" />

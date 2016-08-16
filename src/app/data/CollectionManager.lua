@@ -9,7 +9,9 @@ local Collection = import("app.data.Collection")
 function CollectionManager:ctor()
 
     for v=1, 100 do
-        Collection.data[v] = {"apple",""}
+        if not Collection.data[v] then
+            Collection.data[v] = Collection.data[1]
+        end
     end
     self:initCollection()
 end
@@ -187,7 +189,7 @@ function CollectionManager:starRandEndlessCollect(scene,score)
         end
     elseif scene == 6 then
         if score >=10 then
-            local clts = {57,59,14,7}
+            local clts = {57,59,14,7,84}
             local clot = clts[math.random(1,#clts)]
             self:unlockCollect(clot)
             return clot
@@ -200,6 +202,24 @@ function CollectionManager:shareToCollect()
 end
 function CollectionManager:rateToCollect()
     return self:unlockCollect(13)
+end
+
+--获取解锁条件
+function CollectionManager:howUnlock(id)
+    local unlock = Collection.data[id]
+    if unlock[1] == 1 then
+      return  string.format(helper.fromatLO(_("COLT_1")),unlock[2])
+    elseif unlock[1] == 2 then
+        return string.format(helper.fromatLO(_("COLT_2")),unlock[2])
+    elseif unlock[1] == 3 then
+        return  string.format(helper.fromatLO(_("COLT_3")),unlock[2])
+    elseif unlock[1] == 4 then
+        return string.format(helper.fromatLO(_("COLT_4")),unlock[2],unlock[3])
+    elseif unlock[1] == 5 then
+        return string.format(helper.fromatLO(_("COLT_5")),unlock[2],unlock[3])
+    elseif unlock[1] == 5 then
+        return string.format(_("COLT_6"))
+    end
 end
 
 return CollectionManager

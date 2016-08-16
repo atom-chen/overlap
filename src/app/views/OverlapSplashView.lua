@@ -18,7 +18,6 @@ end
 function OverlapSplashView:onFrameEvent(frame)
     local eventName = frame:getEvent()
     if  eventName == "exitEvent" then
-        gameUtils.splashMask(0.2)
         local function call()
             AppViews:getView(Layers_.mainScene):onGame()
         end

@@ -24,14 +24,14 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="lbl_lang" ActionTag="1305322792" Tag="21" IconVisible="False" LeftMargin="33.0910" RightMargin="48.9090" TopMargin="106.1977" BottomMargin="10.8023" FontSize="24" LabelText="china" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="58.0000" Y="28.0000" />
+              <AbstractNodeData Name="lbl_lang" ActionTag="1305322792" Tag="21" IconVisible="False" LeftMargin="-10.0833" RightMargin="0.0833" TopMargin="93.3077" BottomMargin="17.6923" IsCustomSize="True" FontSize="36" LabelText="china" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="150.0000" Y="34.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="62.0910" Y="24.8023" />
+                <Position X="64.9167" Y="34.6923" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="15" G="22" B="22" />
-                <PrePosition X="0.4435" Y="0.1711" />
-                <PreSize X="0.4143" Y="0.1931" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.4637" Y="0.2393" />
+                <PreSize X="1.0714" Y="0.2345" />
                 <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />

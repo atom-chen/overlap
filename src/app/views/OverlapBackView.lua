@@ -49,6 +49,8 @@ function OverlapBackView:setScene(seceneIndex)
 end
 
 function OverlapBackView:createScene(index)
+    display.loadSpriteFrames("Resource/atlas/planet.plist","Resource/atlas/planet.png")
+    
     local  seceneIndex = OverlapBackView.SCENE_INDEX[index+1] - 1
 
     local planetid = seceneIndex+1

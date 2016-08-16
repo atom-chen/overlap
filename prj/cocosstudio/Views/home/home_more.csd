@@ -25,18 +25,18 @@
               <AbstractNodeData Name="Panel_2" ActionTag="678850286" Tag="102" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="68.6250" RightMargin="51.3750" TopMargin="133.2340" BottomMargin="730.7660" ClipAble="False" BackColorAlpha="12" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="630.0000" Y="470.0000" />
                 <Children>
-                  <AbstractNodeData Name="btn_ice" ActionTag="-656403989" CallBackType="Click" CallBackName="onClick" Tag="100" IconVisible="False" LeftMargin="76.2549" RightMargin="74.7451" TopMargin="20.6213" BottomMargin="20.3787" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="455" Scale9Height="413" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="479.0000" Y="429.0000" />
+                  <AbstractNodeData Name="btn_mary" ActionTag="-656403989" CallBackType="Click" CallBackName="onClick" Tag="100" IconVisible="False" LeftMargin="77.2549" RightMargin="75.7451" TopMargin="21.6213" BottomMargin="21.3787" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="10" Scale9Height="18" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="477.0000" Y="427.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="315.7549" Y="234.8787" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5012" Y="0.4997" />
-                    <PreSize X="0.7603" Y="0.9128" />
+                    <PreSize X="0.7571" Y="0.9085" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="PlistSubImage" Path="sp-more-game-mask.png" Plist="Resource/atlas/ui-home.plist" />
-                    <PressedFileData Type="PlistSubImage" Path="sp-more-game-mask.png" Plist="Resource/atlas/ui-home.plist" />
-                    <NormalFileData Type="PlistSubImage" Path="sp-more-game-mask.png" Plist="Resource/atlas/ui-home.plist" />
+                    <DisabledFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
+                    <PressedFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
+                    <NormalFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -105,18 +105,18 @@
               <AbstractNodeData Name="Panel_2_0" ActionTag="-767653197" Tag="103" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="BottomEdge" LeftMargin="70.4250" RightMargin="49.5750" TopMargin="650.9467" BottomMargin="213.0533" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="630.0000" Y="470.0000" />
                 <Children>
-                  <AbstractNodeData Name="btn_maryx" ActionTag="-2009014297" CallBackType="Click" CallBackName="onClick" Tag="105" IconVisible="False" LeftMargin="76.2549" RightMargin="74.7451" TopMargin="20.6213" BottomMargin="20.3787" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="455" Scale9Height="413" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="479.0000" Y="429.0000" />
+                  <AbstractNodeData Name="btn_ice" ActionTag="-2009014297" CallBackType="Click" CallBackName="onClick" Tag="105" IconVisible="False" LeftMargin="77.2549" RightMargin="75.7451" TopMargin="21.6213" BottomMargin="21.3787" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="10" Scale9Height="18" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="477.0000" Y="427.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="315.7549" Y="234.8787" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5012" Y="0.4997" />
-                    <PreSize X="0.7603" Y="0.9128" />
+                    <PreSize X="0.7571" Y="0.9085" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="PlistSubImage" Path="sp-more-game-mask.png" Plist="Resource/atlas/ui-home.plist" />
-                    <PressedFileData Type="PlistSubImage" Path="sp-more-game-mask.png" Plist="Resource/atlas/ui-home.plist" />
-                    <NormalFileData Type="PlistSubImage" Path="sp-more-game-mask.png" Plist="Resource/atlas/ui-home.plist" />
+                    <DisabledFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
+                    <PressedFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
+                    <NormalFileData Type="PlistSubImage" Path="dialog-back-black.png" Plist="Resource/atlas/ui-common.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -194,31 +194,18 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_back" ActionTag="-973600592" CallBackType="Click" CallBackName="onClick" Tag="139" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="14.5000" RightMargin="601.5000" TopMargin="1201.0000" BottomMargin="46.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="104" Scale9Height="65" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="134.0000" Y="87.0000" />
-            <Children>
-              <AbstractNodeData Name="Sprite_1" ActionTag="1873640841" Tag="140" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="49.5000" RightMargin="49.5000" TopMargin="26.0000" BottomMargin="26.0000" ctype="SpriteObjectData">
-                <Size X="35.0000" Y="35.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="67.0000" Y="43.5000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="0.2612" Y="0.4023" />
-                <FileData Type="PlistSubImage" Path="label-btn-common-back.png" Plist="Resource/atlas/ui-common.plist" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-            </Children>
+          <AbstractNodeData Name="btn_back" ActionTag="-973600592" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="139" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="17.0000" RightMargin="604.0000" TopMargin="1204.0000" BottomMargin="48.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="99" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="129.0000" Y="82.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="81.5000" Y="89.5000" />
+            <Position X="81.5000" Y="89.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1087" Y="0.0671" />
-            <PreSize X="0.1787" Y="0.0652" />
+            <PrePosition X="0.1087" Y="0.0667" />
+            <PreSize X="0.1720" Y="0.0615" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <PressedFileData Type="PlistSubImage" Path="btn-129-79-h.png" Plist="Resource/atlas/ui-common.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-134-87-n.png" Plist="Resource/atlas/ui-common.plist" />
+            <DisabledFileData Type="PlistSubImage" Path="btn-common-back.png" Plist="Resource/atlas/ui-common.plist" />
+            <PressedFileData Type="PlistSubImage" Path="btn-common-back.png" Plist="Resource/atlas/ui-common.plist" />
+            <NormalFileData Type="PlistSubImage" Path="btn-common-back.png" Plist="Resource/atlas/ui-common.plist" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

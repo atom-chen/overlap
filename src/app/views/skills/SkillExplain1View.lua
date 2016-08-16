@@ -2,8 +2,12 @@
 local SkillExplain1View = class("SkillExplain1View", cc.load("mvc").ViewBase)
 
 SkillExplain1View.RESOURCE_FILENAME = "select.skills.skill_type_1.lua"
+SkillExplain1View.LOCALE_LANG_LABEL = {
+    SkInfo             = _("SkInfo_1"),
+}
 
 function SkillExplain1View:onCreate()
+    self:localLanguage()
 end
 
 function SkillExplain1View:onClick( path,node,funcName)

@@ -44,15 +44,12 @@ function HomeConfigView:onClick( path,node,funcName)
         local function btnCallback(node,eventType)
             AppViews:fadeTo(self,"app.views.home.ConfigLangView")
 --            print(store.canMakePurchases())
---           
 --            local function call(result)
 --            print("load")
 --                dump(result)
---                store.purchase("overlap.noads")
+----                store.purchase("overlap.noads")
 --            end
---            
 --            store.loadProducts({"overlap.noads"}, call)
-            
         end
        
         return btnCallback

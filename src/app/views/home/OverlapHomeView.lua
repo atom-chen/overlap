@@ -3,32 +3,31 @@ local OverlapHomeView = class("OverlapHomeView", cc.load("mvc").ViewBase)
 
 OverlapHomeView.RESOURCE_FILENAME = "home.olap_home"
 OverlapHomeView.LOCALE_LANG_LABEL = {
-    Config           = _("Config"),
+    Start           = _("Start"),
     Conllection      = _("Conllection"),
-    Rank             = _("Rank"),
     Donation         = _("Donation"),
 }
 function OverlapHomeView:onCreate()
     self:localLanguage()
-    ac.execute(self.icon_red,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.8,0),ac.ccFadeTo(0.8,255))))
-    ac.execute(self.lbl_touch,ac.ccForever(ac.ccSeq(ac.ccFadeTo(2,0),ac.ccFadeTo(2,255),ac.ccDelay(0.3))))
+--    ac.execute(self.icon_red,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.8,0),ac.ccFadeTo(0.8,255))))
+--    ac.execute(self.lbl_touch,ac.ccForever(ac.ccSeq(ac.ccFadeTo(2,0),ac.ccFadeTo(2,255),ac.ccDelay(0.3))))
 
     self.showtext = {}
     self.count = 0
 --    self:createOverText()
 
-    self:updateStars()
-    self:updateCollects()
+--    self:updateStars()
+--    self:updateCollects()
 end
 
 function OverlapHomeView:updateStars()
-    local stars =  LevelManager:getSceneStar()
-    self.gotstars:setString(stars .. "/".. 9*GAME_SCENE_COUNT*3)
+--    local stars =  LevelManager:getSceneStar()
+--    self.gotstars:setString(stars .. "/".. 9*GAME_SCENE_COUNT*3)
 end
 
 function OverlapHomeView:updateCollects()
-    local collect,allcolt =  CollectionManager:getCollectionCount()
-    self.gotcolts:setString(collect .. "/".. allcolt)
+--    local collect,allcolt =  CollectionManager:getCollectionCount()
+--    self.gotcolts:setString(collect .. "/".. allcolt)
 end
 
 
@@ -63,11 +62,12 @@ function OverlapHomeView:createOverText()
     Text_3:setString([[]])
     Text_3:setLayoutComponentEnabled(true)
     Text_3:setName("Text_3")
+    Text_3:setOpacity(150)
     Text_3:setTag(108)
     Text_3:setCascadeColorEnabled(true)
     Text_3:setCascadeOpacityEnabled(true)
     Text_3:setAnchorPoint(0.0000, 0.5000)
-    Text_3:setPosition(30, 28.9936)
+    Text_3:setPosition(60, 28.9936)
     Panel_5:addChild(Text_3)
 
     --Create typewriter_light_6
@@ -77,7 +77,7 @@ function OverlapHomeView:createOverText()
     typewriter_light_6:setTag(110)
     typewriter_light_6:setCascadeColorEnabled(true)
     typewriter_light_6:setCascadeOpacityEnabled(true)
-    typewriter_light_6:setPosition(47.5089, 29.3419)
+    typewriter_light_6:setPosition(87.5089, 29.3419)
     typewriter_light_6:setBlendFunc({src = 1, dst = 771})
     Panel_5:addChild(typewriter_light_6)
 
@@ -93,7 +93,7 @@ function OverlapHomeView:createOverText()
         local str = string.utf8str(word, 1, i)
         Text_3:setString(str)
         local s = Text_3:getContentSize()
-        typewriter_light_6:setPositionX(s.width + 50)
+        typewriter_light_6:setPositionX(s.width + 70)
         if i == totalLen then
             ac.stopTarget(typewriter_light_6)
             typewriter_light_6:hide()
@@ -110,7 +110,7 @@ end
 function OverlapHomeView:updateTypewriter()
     for k, label in pairs(self.showtext) do
         label.ct = label.ct + 1
-        if label.ct == 2 then
+        if label.ct == 4 then
             local function onComplete()
                 table.remove(self.showtext,k)
             end
@@ -129,7 +129,7 @@ end
 
 
 function OverlapHomeView:onClick( path,node,funcName)
-    if node:getName()=="btn_overlap" and funcName =="onClick" then
+    if node:getName()=="btn_start" and funcName =="onClick" then
         local function btnCallback(node,eventType)
             AppViews:fadeTo(Layers_.home,Layers_.select)
         end
@@ -140,6 +140,29 @@ function OverlapHomeView:onClick( path,node,funcName)
             AppViews:fadeTo(Layers_.home,"app.views.home.HomeMoreView")
         end
 
+        return btnCallback
+    elseif node:getName()=="btn_eye" and funcName =="onClick" then
+        --显示拍照按钮
+        local function btnCallback(node,eventType)
+            self:runAnimation("photo")
+        end
+        return btnCallback
+    elseif node:getName()=="btn_photo" and funcName =="onClick" then
+        --显示
+        local function btnCallback(node,eventType)
+            local  saveFile
+            --拍照
+            local function afterScreen(succeed, outputFile)
+                if succeed then
+                    self:runAnimation("start")
+                    AppViews:splashMask(0.5)
+                    gamer:saveToPhone(outputFile)
+                end
+            end
+            saveFile = "overlap-game"..math.random(1,10000)..math.random(1,10000)..".png"
+            self.panelPhoto:hide()
+            cc.utils:captureScreen(afterScreen,saveFile)
+        end
         return btnCallback
     elseif node:getName()=="btn_noads" and funcName =="onClick" then
         local function btnCallback(node,eventType)
@@ -163,6 +186,11 @@ function OverlapHomeView:onClick( path,node,funcName)
 
 end
 
+
+function OverlapHomeView:show()
+    self:setVisible(true)
+    self:runAnimation("start")
+end
 
 
 return OverlapHomeView

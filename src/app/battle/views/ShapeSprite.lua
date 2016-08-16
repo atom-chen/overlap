@@ -161,38 +161,43 @@ function ShapeSprite:ctor(model_,type,skill)
 
         if self.skill[SKILL_TYPE.ONLEY_COLOR] then
             --只有颜色的选项
-            self.maskback = display.newSprite("#opt-skill-back-white.png")
+--            self.maskback = display.newSprite("#opt-skill-back-white.png")
+--                :move(GRID_BORDER,GRID_BORDER)
+--                :addTo(self)
+--            self.maskback:setScale(1/OPT_GRID_SCALE)
+
+            self.maskback = display.newSprite(string.format("#star-color-%d.png",color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
             self.maskback:setScale(1/OPT_GRID_SCALE)
-
-            display.newSprite(string.format("#star-color-%d.png",color))
-                :move(69,20)
-                :addTo(self.maskback)
         elseif self.skill[SKILL_TYPE.ONLEY_SHAPE] then
             color = 9
         elseif self.skill[SKILL_TYPE.SELECT_WORD] then
-            self.maskback = display.newSprite("#opt-skill-back.png")
+--            self.maskback = display.newSprite("#opt-skill-back.png")
+--                :move(GRID_BORDER,GRID_BORDER)
+--                :addTo(self)
+--            self.maskback:setScale(1/OPT_GRID_SCALE)
+
+            local lang = locale.defaultLang()
+            self.maskback = display.newSprite(string.format("#word-%s-%d.png",lang,color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
             self.maskback:setScale(1/OPT_GRID_SCALE)
-
-            local lang = locale.defaultLang()
-            self.text = display.newSprite(string.format("#word-%s-%d.png",lang,color))
-                :move(69,20)
-                :addTo(self.maskback)
+--                :addTo(self.maskback)
 
         elseif self.skill[SKILL_TYPE.SELECT_COLOR] then
-            self.maskback = display.newSprite("#opt-skill-back.png")
+--            self.maskback = display.newSprite("#opt-skill-back.png")
+--                :move(GRID_BORDER,GRID_BORDER)
+--                :addTo(self)
+--            self.maskback:setScale(1/OPT_GRID_SCALE)
+
+            local lang = locale.defaultLang()
+            self.maskback = display.newSprite(string.format("#word-%s-%d.png",lang,color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
             self.maskback:setScale(1/OPT_GRID_SCALE)
-
-            local lang = locale.defaultLang()
-            self.text = display.newSprite(string.format("#word-%s-%d.png",lang,color))
-                :move(69,20)
-                :addTo(self.maskback)
-            self.text:setColor(ShapeSprite.SHAPE_COLOR[color])
+--                :addTo(self.maskback)
+            self.maskback:setColor(ShapeSprite.SHAPE_COLOR[color])
         end
         if type == ShapeSprite.SHAPE_MODE.SHAPE then
             local filename = string.format("#d-%d.png",spId)
@@ -315,9 +320,9 @@ function ShapeSprite:valid()
         local color = self.model:getColor()
         self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
     elseif self.skill[SKILL_TYPE.ROTATY_RIGHT] then
-        ac.execute(self,cc.RotateTo:create(0.06,90))
-    elseif self.skill[SKILL_TYPE.ROTATY_LEFT] then
         ac.execute(self,cc.RotateTo:create(0.06,-90))
+    elseif self.skill[SKILL_TYPE.ROTATY_LEFT] then
+        ac.execute(self,cc.RotateTo:create(0.06,90))
     elseif self.skill[SKILL_TYPE.HIDEN] then
         self.shape:show()
         self.shadow:show()
@@ -325,6 +330,8 @@ function ShapeSprite:valid()
         local color = self.model:getColor()
         self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
     end
+    
+    
 end
 
 ----------------------
@@ -340,7 +347,7 @@ function ShapeSprite:restore()
     elseif self.skill[SKILL_TYPE.ROTATY_LEFT] then
         ac.execute(self,cc.RotateTo:create(0.06,0))
         --    elseif self.skill[SKILL_TYPE.HIDEN] then
-        --        self.shape:show()
+     --        self.shape:show()
     elseif self.skill[SKILL_TYPE.ROTATY_RIGHT] then
         ac.execute(self,cc.RotateTo:create(0.06,0))
     end
@@ -363,13 +370,13 @@ end
 
 
 function ShapeSprite:setTextColor(color)
-    self.text:setColor(ShapeSprite.SHAPE_COLOR[color])
+    self.maskback:setColor(ShapeSprite.SHAPE_COLOR[color])
 end
 
 
 function ShapeSprite:setTextName(color)
     local lang = locale.defaultLang()
-    self.text:setSpriteFrame(string.format("word-%s-%d.png",lang,color))
+    self.maskback:setSpriteFrame(string.format("word-%s-%d.png",lang,color))
 end
 
 -------------------------------

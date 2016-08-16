@@ -57,11 +57,11 @@ function OverlapSelectView:onClick( path,node,funcName)
                 self.curPage = self.curPage + 1
                 self:gotoPage(self.curPage)
             end
-            if self.curPage == GAME_SCENE_COUNT-1 then
-                self.btn_right:hide()
-            else
-                self.btn_right:show()
-            end
+--            if self.curPage == GAME_SCENE_COUNT-1 then
+--                self.btn_right:hide()
+--            else
+--                self.btn_right:show()
+--            end
         end
         return btnCallback
     elseif node:getName()=="btn_left" and funcName =="onClick" then
@@ -70,13 +70,11 @@ function OverlapSelectView:onClick( path,node,funcName)
                 self.curPage = self.curPage - 1
                 self:gotoPage(self.curPage)
             end
-            if self.curPage == 0 then
-            	self.btn_left:hide()
-            else
-                self.btn_left:show()
-            end
-            print(self.curPage)
-            
+--            if self.curPage == 0 then
+--            	self.btn_left:hide()
+--            else
+--                self.btn_left:show()
+--            end
         end
         return btnCallback
     elseif node:getName()=="btn_travel" and funcName =="onClick" then
@@ -114,8 +112,9 @@ function OverlapSelectView:createPages()
             :addTo(layout)
         self.pageView:addPage(layout)
     end
-    
-    self:setPage(0)
+    local lastpage = helper.getSloterData(Sloters_.last_page) or 0
+    self.pageView:setCurrentPageIndex(lastpage)
+    self:setPage(lastpage)
 end
 
 ----------------------------
@@ -127,8 +126,8 @@ function OverlapSelectView:setPage(page)
     ac.execute(self.pc,ac.ccMoveTo(0.05,cc.p(self['p'..(page+1)]:getPosition())))
     AppViews:getView(Layers_.ground):setScene(page)
     
-    local stars =  LevelManager:getSceneStar(page)
-    self.starcount:setString(stars.." / 24")
+--    local stars =  LevelManager:getSceneStar(page)
+--    self.starcount:setString(stars.." / 24")
     
     if self.curPage == GAME_SCENE_COUNT-1 then
     	self.btn_right:hide()
@@ -140,11 +139,14 @@ function OverlapSelectView:setPage(page)
     else
         self.btn_left:show()
     end
+    
+    
+    helper.saveSloterData(Sloters_.last_page,page)
 end
 
 function OverlapSelectView:updateStars()
-    local stars =  LevelManager:getSceneStar(self.curPage)
-    self.starcount:setString(stars.." / 24")
+--    local stars =  LevelManager:getSceneStar(self.curPage)
+--    self.starcount:setString(stars.." / 24")
 end
 
 ----------------------------
@@ -152,6 +154,8 @@ end
 --@function [parent=#src.app.views.play.select.OverlapSelectView] gotoPage
 --
 function OverlapSelectView:gotoPage(page)
+    self.btn_left:hide()
+    self.btn_right:hide()
     self.pageView:scrollToPage(page)
 end
 

@@ -363,4 +363,48 @@ function helper.seqAniGet(label,toNum,added)
     label:runAction(cc.Sequence:create(cc.Repeat:create(cc.Sequence:create(cc.ScaleBy:create(0.05,1.2),cc.CallFunc:create(addcoin),cc.ScaleBy:create(0.05,1/1.2)),t),cc.CallFunc:create(compolet)))
 end
 
+
+---------------------------
+--精灵转换进度水平条
+--@function [parent=#helper] progressTimer
+--@param Sprite#Sprite sprite 站位精灵
+--@param Point#Point point [位置]
+--@return ProgressTimer#ProgressTimer ProgressTimer句柄
+function helper.progressTimer(sprite,point)
+    local x,y = sprite:getPosition()
+    local progress = cc.ProgressTimer:create(sprite)
+
+    progress:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+    if point then
+        progress:setMidpoint(point)
+    else
+        progress:setMidpoint(cc.p(1, 1))
+    end
+
+    progress:setBarChangeRate(cc.p(1, 0))
+    progress:setPercentage(0)
+    progress:setAnchorPoint(cc.p(0.5,0.5))
+    progress:setPosition(x,y)
+    sprite:getParent():addChild(progress)
+    sprite:getParent():removeChild(sprite)
+
+    return progress
+end
+
+---------------------------
+--执行粒子动画
+--@function [parent=#helper] createParticle
+function helper.createParticle(filename,pos)
+    local emitter = cc.ParticleSystemQuad:create(filename)
+    emitter:setBlendAdditive(false)
+    emitter:setAutoRemoveOnFinish(true)
+    if pos then
+        emitter:setPosition(pos)
+    else
+        emitter:setPosition(cc.p(0,0))
+    end
+    return emitter
+end
+
+
 return helper

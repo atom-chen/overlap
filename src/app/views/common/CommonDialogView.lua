@@ -3,6 +3,7 @@ local CommonDialogView = class("CommonDialogView", cc.load("mvc").ViewBase)
 
 CommonDialogView.LOCALE_LANG_LABEL = {
     OK             = _("OK"),
+    Text             = _("UNLOCK_ENDLESS"),
 }
 
 CommonDialogView.RESOURCE_FILENAME = "common.common_dialog"
@@ -21,8 +22,8 @@ function CommonDialogView:onCreate()
 end
 
 
-function CommonDialogView:addContent(content)
-    self.content:add(content)
+function CommonDialogView:showContent(content)
+    self.Text:setString(content)
 end
 
 

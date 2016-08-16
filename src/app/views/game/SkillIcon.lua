@@ -16,7 +16,14 @@ function SkillIcon:setSkill(skill)
     self.skill = skill
 end
 
+function SkillIcon:fadeIn()
+    self.btn_skill:setOpacity(0)
+    ac.execute(self.btn_skill,ac.ccFadeTo(0.4,255))
+end
 
+function SkillIcon:fadeOut()
+    ac.execute(self.btn_skill,ac.ccFadeTo(0.4,0))
+end
 
 
 function SkillIcon:onClick( path,node,funcName)

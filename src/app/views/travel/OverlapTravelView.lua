@@ -7,20 +7,20 @@
 local OverlapTrvalView = class("OverlapTrvalView", cc.load("mvc").ViewBase)
 OverlapTrvalView.LOCALE_LANG_LABEL = {
     Start          = _("Start"),
-    You            = _("You"),
-    Max            = _("Max"),
 }
 --$$$$$$$$$$$$$$$$ CONFIG $$$$$$$$$$$$$$$$$$$$$
 OverlapTrvalView.RESOURCE_FILENAME = "travel.olap_travel.lua"
 
 local TravelPageView = import(".TravelPageView")
-
+local Level          = import("app.data.Level")
 --$$$$$$$$$$$$$$$$ ViewBase $$$$$$$$$$$$$$$$$$$$$
 function OverlapTrvalView:onCreate()
     self:localLanguage()
     self:createPages()
-    self.curPage = 0
-    self:setPage(0)
+    
+    local lastpage = helper.getSloterData(Sloters_.last_page_travel) or 0
+    self.pageView:setCurrentPageIndex(lastpage)
+    self:setPage(lastpage)
     
 end
 
@@ -58,12 +58,21 @@ function OverlapTrvalView:onClick( path,node,funcName)
         end
         return btnCallback
      elseif node:getName()=="btn_start" and funcName =="onClick" then
+        --无尽模式开始按钮
         local function btnCallback(node,eventType)
---            gameUtils.transRight(self,Layers_.select)
             local page = self.curPage+1
             local mode = self.pageLayer[page]:getMode()
-            local level = 1000+page*10+mode
-            self:startGame(level)
+            
+            local unlockClt =  Level.openMode[page]
+           if  CollectionManager:isCollectioned(unlockClt) then
+                --模式没有开启
+                local level = 1000+page*10+mode
+                self:startGame(level)
+           else
+                --开始游戏
+                local clot = AppViews:addViewByName("app.views.common.CommonDialogView")
+                clot:showContent(string.format(helper.fromatLO(_("UNLOCK_ENDLESS")),unlockClt))
+           end
         end
         return btnCallback
     end
@@ -105,11 +114,11 @@ end
 --@function [parent=#src.app.views.play.select.OverlapTrvalView] setDimension
 --
 function OverlapTrvalView:setPage(page)
-    print(self.curPage+3)
-    self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d.png",self.curPage+3))
+--    print(self.curPage+3)
+--    self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d.png",self.curPage+3))
     self.curPage = page
-    print(self.curPage+3)
-    self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d-on.png",page+3))
+--    print(self.curPage+3)
+--    self["avatar_"..(self.curPage+3)]:setSpriteFrame(string.format("avatar-%d-on.png",page+3))
     
     if self.curPage == GAME_SCENE_COUNT-1 then
         self.btn_right:hide()
@@ -121,12 +130,12 @@ function OverlapTrvalView:setPage(page)
     else
         self.btn_left:show()
     end
-    
-    local record =  helper.getSloterData("record"..(page+3)) or 0
-    self.You:setString( _("You").." : "..record)
-    
-    local x = (90+455)*0.2 -90
-    self.youpanel:setPositionX(x)
+    helper.saveSloterData(Sloters_.last_page_travel,page) 
+--    local record =  helper.getSloterData("record"..(page+3)) or 0
+--    self.You:setString( _("You").." : "..record)
+--    
+--    local x = (90+455)*0.2 -90
+--    self.youpanel:setPositionX(x)
     
 end
 
@@ -135,6 +144,8 @@ end
 --@function [parent=#src.app.views.play.select.OverlapTrvalView] gotoPage
 --
 function OverlapTrvalView:gotoPage(page)
+  self.btn_right:hide()
+        self.btn_right:show()
     self.pageView:scrollToPage(page)
 end
 

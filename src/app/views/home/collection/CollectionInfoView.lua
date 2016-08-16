@@ -16,10 +16,21 @@ end
 
 
 function CollectionDialog:showInfo(id)
-   local infos =   helper.split(_("Collect_"..id),";")
-    print(_("Collect_"..id))
+    local infos =   helper.split(_("Collect_"..id),";")
     self.Name:setString(infos[1])
     self.info:setString(infos[2])
+
+    self.collect:setSpriteFrame(string.format("collection-%d.png",id))
+end
+function CollectionDialog:showLock(id)
+    local infos =   helper.split(_("Collect_"..id),";")
+    self.Name:setString(infos[1])
+    
+    local uncock = CollectionManager:howUnlock(id)
+    self.info:setString(uncock)
+
+    self.collect:hide()
+    self.lock:show()
 end
 
 

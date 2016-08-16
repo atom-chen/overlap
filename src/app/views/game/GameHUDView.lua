@@ -51,6 +51,7 @@ function GameHUDView:updateSkill(skills)
     for v=1, 3 do
         if keys[v] then
             self["icon_skill_"..v]:show()
+            self["icon_skill_"..v]:fadeIn()
             self["icon_skill_"..v]:move(GameHUDView.SKILL_ICON_POS[#keys][v].x-32,0)
             self["icon_skill_"..v]:setSkill(keys[v])
         else
@@ -61,12 +62,13 @@ end
 
 function GameHUDView:hideSkill()
     for v=1, 3 do
-        self["icon_skill_"..v]:hide()
+        self["icon_skill_"..v]:fadeOut()
+--        self["icon_skill_"..v]:hide()
     end
 end
 
 function GameHUDView:updateTime(time)
-    self.countdown:setString(time)
+    self.countdown:setString(time.."\"")
 end
 
 
@@ -75,29 +77,29 @@ function GameHUDView:getTime(time,delayTime)
     local tcolor
     if delayTime >0 then
         delayt = "+"..delayTime
-        tcolor = {r = 161, g = 68, b = 68}
+        tcolor = {r = 240, g = 85, b = 64}
     else
         delayt = delayTime
         tcolor = {r = 65, g = 135, b = 110}
     end
 
-
     local score = ccui.Text:create()
     score:setFontName("Resource/fonts/Overlap.ttf")
-    score:setFontSize(72)
+    score:setFontSize(100)
     score:setString(delayt)
     score:setTextColor(tcolor)
+    score:enableOutline({r = 255, g = 255, b = 255, a = 255}, 3)
+    score:setLayoutComponentEnabled(true)
     score:setPosition(display.width/2, display.height-509)
     self:addChild(score)
     
     ac.execute(score,ac.ccSeq(ac.ccDelay(0.5),ac.ccEasing(ac.ccMoveTo(0.5,cc.p(display.width/2-295,display.height-40)),21),ac.ccRemoveSelf()))
 
-    self.countdown:setString(time)
+    self:updateTime(time)
 end
 
 
 function GameHUDView:updateScore(score)
---    self.score:setString(score)
     helper.seqAniGet(self.score,score,1)
 end
 
@@ -105,13 +107,13 @@ end
 function GameHUDView:showPerfect(serial)
     local ttfConfig = {}
     ttfConfig.fontFilePath="Resource/fonts/Overlap.ttf"
-    ttfConfig.fontSize =  62
+    ttfConfig.fontSize = 72
 
     local label1 = cc.Label:createWithTTF(ttfConfig,"PERFECT * "..serial, cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
     label1:setTextColor(cc.c3b(241,81,81))
+    label1:enableOutline({r = 255, g = 255, b = 255, a = 255}, 3)
     self:addChild(label1)
     label1:setPosition( cc.p(display.width/2, 425) )
---    label1:setPosition( cc.p(display.width/2, display.height-509) )
     label1:setAnchorPoint( cc.p(0.5, 0.5))
     ac.execute(label1,ac.ccSeq(ac.ccFadeTo(0.2,255),ac.ccDelay(1),ac.ccFadeTo(0.3,0),ac.ccRemoveSelf()))
 end
@@ -129,6 +131,18 @@ function GameHUDView:onClick( path,node,funcName)
     end
 end
 
+function GameHUDView:startREC()
+    self.slider:stopActionByTag(111)
+    self.slider:setSpriteFrame("top-splider-2.png")
+    local action = cc.RepeatForever:create(ac.ccSeq(ac.ccFadeTo(0.5,0),ac.ccFadeTo(0.5,255)))
+    action:setTag(111)
+    ac.execute(self.slider,action)
+end
+function GameHUDView:stopREC()
+    self.slider:stopActionByTag(111)
+    self.slider:setOpacity(255)
+    self.slider:setSpriteFrame("top-splider-1.png")
+end
 
 
 
