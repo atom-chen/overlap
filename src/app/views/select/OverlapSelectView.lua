@@ -159,6 +159,13 @@ function OverlapSelectView:gotoPage(page)
     self.pageView:scrollToPage(page)
 end
 
+function OverlapSelectView:nextScene()
+    if self.curPage + 1<= GAME_SCENE_COUNT - 1 then
+        self.curPage = self.curPage + 1
+        self:gotoPage(self.curPage)
+    end
+end
+
 
 
 

@@ -18,15 +18,19 @@ function MainScene:onCreate()
     display.loadSpriteFrames("Resource/atlas/shape-shadow.plist","Resource/atlas/shape-shadow.png")
     display.loadSpriteFrames("Resource/atlas/planet.plist","Resource/atlas/planet.png")
     display.loadSpriteFrames("Resource/atlas/collct.plist","Resource/atlas/collct.png")
-    
+
     if helper.getSloterData(Sloters_.sound_off) then
         audio.setSoundsVolume(0)
     else
         audio.setSoundsVolume(1)
         audio.playMusic(GAME_BGM)
     end
-    
+
     self:onSplash()
+
+    if device.platform == device.PLATFORM.IOS then
+        self:initIosPurchase()
+    end
 end
 
 function MainScene:onClick( path,node,funcName)
@@ -40,7 +44,7 @@ end
 
 function MainScene:onSplash()
     self.ground = OverlapBackView:create(self:getApp(),Layers_.ground)
---        :hide()
+        --        :hide()
         :addTo(self)
     self.gameController =  ShapeController:create(self:getApp(),Layers_.gameController)
         :hide()
@@ -68,42 +72,61 @@ function MainScene:onSplash()
     self.configView =  HomeConfigView:create(self:getApp(),Layers_.config)
         :hide()
         :addTo(self)
-        
+
     self.splash = OverlapSplashView:create()
         :addTo(self)
 end
 
 function MainScene:onGame()
---    self.ground:show()
+    --    self.ground:show()
     self.mainView:show()
     self.mainView:createOverText()
     self.splash:removeSelf()
     self.splash = nil
-    
---    gamer:inserICloud("overlapId4","overlap4","name;addredd","yuhang;beijing")
---    gamer:updateICloud("overlapId4","overlap4","name;addredd","yuhang1;beijing1")
-    
---    local function callback(values)
---    print(values)
---    end
---    gamer:selectICloud("overlapId4","overlap4","name;addredd",callback)
---    
---   local icloud =  dnp.ICloud:sharedICloud()
---    
---    icloud:insertRecord("overlapId2","overlap2",{"name","addredd"},{"yuhang","beijing"})
---    local function after(result,values)
---        dump(values)
---    end
---    
---    icloud:addEventListener(after)
-    
---    icloud:selectRecord("overlapId1","overlap1",{"name","addredd"})
+
+    self:test()
 end
 
 
 function MainScene:gameStart(level)
     self.gameController:gameStart(level)
     self.gameController:show()
+end
+
+function MainScene:initIosPurchase()
+    local function call(transaction)
+        dump(transaction)
+        if transaction.transaction.state == "purchased" then
+            print("buy success")
+            store.finishTransaction(transaction.transaction)
+        end
+
+    end
+    store.init(call)
+end
+
+
+function MainScene:test()
+
+
+--    gamer:inserICloud("overlapId4","overlap4","name;addredd","yuhang;beijing")
+--    gamer:updateICloud("overlapId4","overlap4","name;addredd","yuhang1;beijing1")
+
+--    local function callback(values)
+--    print(values)
+--    end
+--    gamer:selectICloud("overlapId4","overlap4","name;addredd",callback)
+--
+--   local icloud =  dnp.ICloud:sharedICloud()
+--
+--    icloud:insertRecord("overlapId2","overlap2",{"name","addredd"},{"yuhang","beijing"})
+--    local function after(result,values)
+--        dump(values)
+--    end
+--
+--    icloud:addEventListener(after)
+
+--    icloud:selectRecord("overlapId1","overlap1",{"name","addredd"})
 end
 
 

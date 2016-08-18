@@ -590,9 +590,9 @@ function ShapeController:gameOver()
             stars[1] = self.levelStar1.hasGet
             stars[2] = self.levelStar2.hasGet
             stars[3] = self.levelStar3.hasGet
-            AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.round(self.gameTime),self.maxPerfect)
+            AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.ceil(self.gameTime),self.maxPerfect)
         else
-            AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.round(self.gameTime),self.maxPerfect,self.gamemode,self.endemode)
+            AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.ceil(self.gameTime),self.maxPerfect,self.gamemode,self.endemode)
         end
     end
     ac.ccDellayToCall(self,0.2,call)

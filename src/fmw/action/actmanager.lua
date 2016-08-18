@@ -10,6 +10,18 @@ function actmanager:ctor()
     self.callbacks = {}
 end
 
+---------------------------
+--通过动作Id获取动作脚本
+--@function [parent=#ActionManager] getAction
+--@param self
+--@param integer#integer aid 动作编码
+--@return Action#Action 动作脚本
+function actmanager:getAction(aid)
+    local action = require(self.actions[aid]).new()
+    action.aid = aid
+    return action
+end
+
 
 ---------------------------
 --从网络过来的动作包，执行动作的初始化
@@ -29,13 +41,12 @@ function actmanager:prepareAction(aid, idx, msg, len, body)
 end
 
 
-
 ---------------------------
 --通过动作Id直接执行动作脚本
 --@function [parent=#ActionManager] excuteAction
 --@param self
 --@param integer#integer aid 动作编码
-function actmanager:excuteAction(aid,content,callback,nomask)
+function actmanager:excuteAction(aid,content,callback)
     self.callbacks[aid] = nil
 
     local message = self:getAction(aid)

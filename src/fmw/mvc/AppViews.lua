@@ -163,6 +163,27 @@ function AppViews:splashMask(time)
 end
 
 
+function AppViews:touchMask(time)
+    local mask = display.newLayer()
+        :addTo(self.scene,10000,10001)
+        
+    local ontouch =  function(event)
+        if event.name == "began" then
+            --需要返回true
+            return true
+        elseif event.name == "moved" then
+        elseif event.name == "ended" then
+        end
+    end
+    mask:onTouch(ontouch, false, true)
+
+    local function onComplete()
+        mask:removeSelf()
+    end
+    ac.execute(mask,ac.ccSeq(ac.ccDelay(time),ac.ccCall(onComplete)))
+end
+
+
 -----------------------
 --进场动画，提前加载的界面传入名字，没有名字的会根据名字新建
 --

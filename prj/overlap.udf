@@ -28,5 +28,17 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="Views/home/home_noads.csd" />
+          <FilePathData Path="Views/select/select_page.csd" />
+          <FilePathData Path="Views/select/select_level.csd" />
+          <FilePathData Path="Views/game/olap_game.csd" />
+          <FilePathData Path="Views/game/game_hud.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Views/game/olap_game.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

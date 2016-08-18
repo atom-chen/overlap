@@ -5,18 +5,25 @@ HomeAdsView.RESOURCE_FILENAME = "home.home_noads"
 
 HomeAdsView.LOCALE_LANG_LABEL = {
     adsinfo        = _("AdsInfo"),
-    Donation1        = _("￥1"),
-    Donation2        = _("￥6"),
-    Donation3        = _("￥12"),
-    Donation4        = _("￥30"),
-    Donation5        = _("￥100"),
-    Donation6        = _("￥300"),
-    Donation7        = _("￥600"),
-    Donation8        = _("￥1000"),
+    Donation1        = _("$1"),
+    Donation2        = _("$6"),
+    Donation3        = _("$12"),
+    Donation4        = _("$30"),
+    Donation5        = _("$100"),
+    Donation6        = _("$300"),
+    Donation7        = _("$600"),
+    Donation8        = _("$1000"),
 }
 function HomeAdsView:onCreate()
     self:localLanguage()
     self.edit_name:setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    if device.platform == device.PLATFORM.IOS then
+        local function locadProductCall(result)
+            dump(result)
+            --        store.purchase("overlap.noads")
+        end
+        store.loadProducts(DNP_GAME.iap.ios, locadProductCall)
+    end
 end
 
 function HomeAdsView:touch(event)

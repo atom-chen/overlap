@@ -180,7 +180,7 @@
           <AbstractNodeData Name="Sprite_8" ActionTag="24135491" Tag="86" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="138.5000" RightMargin="138.5000" TopMargin="775.4761" BottomMargin="496.5239" ctype="SpriteObjectData">
             <Size X="473.0000" Y="62.0000" />
             <Children>
-              <AbstractNodeData Name="sb1" ActionTag="-2077434854" Tag="36" IconVisible="False" LeftMargin="236.4900" RightMargin="-0.4900" ctype="SpriteObjectData">
+              <AbstractNodeData Name="sb1" ActionTag="-2077434854" VisibleForFrame="False" Tag="36" IconVisible="False" LeftMargin="236.4900" RightMargin="-0.4900" ctype="SpriteObjectData">
                 <Size X="237.0000" Y="62.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="354.9900" Y="31.0000" />
@@ -191,7 +191,7 @@
                 <FileData Type="PlistSubImage" Path="game-touch-half-1.png" Plist="Resource/atlas/ui-game.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="sb2" ActionTag="239572367" Tag="37" IconVisible="False" LeftMargin="-0.2500" RightMargin="236.2500" ctype="SpriteObjectData">
+              <AbstractNodeData Name="sb2" ActionTag="239572367" VisibleForFrame="False" Tag="37" IconVisible="False" LeftMargin="-0.2500" RightMargin="236.2500" ctype="SpriteObjectData">
                 <Size X="237.0000" Y="62.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="118.2500" Y="31.0000" />
@@ -202,7 +202,7 @@
                 <FileData Type="PlistSubImage" Path="game-touch-half-2.png" Plist="Resource/atlas/ui-game.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_touch" ActionTag="-441909187" CallBackType="Touch" CallBackName="onTouch" UserData="sb" Tag="35" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="206.5000" RightMargin="206.5000" TopMargin="0.5000" BottomMargin="0.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="11" BottomEage="11" Scale9OriginX="30" Scale9OriginY="11" Scale9Width="1" Scale9Height="39" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btn_touch" ActionTag="-441909187" CallBackType="Touch" CallBackName="onTouch" Tag="35" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="206.5000" RightMargin="206.5000" TopMargin="0.5000" BottomMargin="0.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="11" BottomEage="11" Scale9OriginX="30" Scale9OriginY="11" Scale9Width="1" Scale9Height="39" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="60.0000" Y="61.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="236.5000" Y="31.0000" />

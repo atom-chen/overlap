@@ -36,6 +36,7 @@ app = require("util.app").new()
 filter = require("util.filter")
 shader = require("util.shader")
 store = require("util.Store")
+http = require("util.http").new()
 
 locale = require("util.locale")
 _ = assert(require("util.locale").loadDefault())

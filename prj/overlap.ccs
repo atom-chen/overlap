@@ -104,6 +104,35 @@
               <PlistImageFile Name="light-8.png" Key="light-8.png" />
               <PlistImageFile Name="light-9.png" Key="light-9.png" />
             </PlistImageFolder>
+            <PlistImageFolder Image="planet.png" PListFile="planet.plist" Name=".planet_PList.Dir">
+              <PlistImageFile Name="collection-100.png" Key="collection-100.png" />
+              <PlistImageFile Name="collection-101.png" Key="collection-101.png" />
+              <PlistImageFile Name="collection-81.png" Key="collection-81.png" />
+              <PlistImageFile Name="collection-82.png" Key="collection-82.png" />
+              <PlistImageFile Name="collection-83.png" Key="collection-83.png" />
+              <PlistImageFile Name="collection-84.png" Key="collection-84.png" />
+              <PlistImageFile Name="collection-85.png" Key="collection-85.png" />
+              <PlistImageFile Name="collection-86.png" Key="collection-86.png" />
+              <PlistImageFile Name="collection-87.png" Key="collection-87.png" />
+              <PlistImageFile Name="collection-88.png" Key="collection-88.png" />
+              <PlistImageFile Name="collection-89.png" Key="collection-89.png" />
+              <PlistImageFile Name="collection-90.png" Key="collection-90.png" />
+              <PlistImageFile Name="collection-91.png" Key="collection-91.png" />
+              <PlistImageFile Name="collection-92.png" Key="collection-92.png" />
+              <PlistImageFile Name="collection-93.png" Key="collection-93.png" />
+              <PlistImageFile Name="collection-94.png" Key="collection-94.png" />
+              <PlistImageFile Name="collection-95.png" Key="collection-95.png" />
+              <PlistImageFile Name="collection-96.png" Key="collection-96.png" />
+              <PlistImageFile Name="collection-97.png" Key="collection-97.png" />
+              <PlistImageFile Name="collection-98.png" Key="collection-98.png" />
+              <PlistImageFile Name="collection-99.png" Key="collection-99.png" />
+              <PlistImageFile Name="fullplanet-1.png" Key="fullplanet-1.png" />
+              <PlistImageFile Name="fullplanet-2.png" Key="fullplanet-2.png" />
+              <PlistImageFile Name="fullplanet-3.png" Key="fullplanet-3.png" />
+              <PlistImageFile Name="fullplanet-4.png" Key="fullplanet-4.png" />
+              <PlistImageFile Name="fullplanet-5.png" Key="fullplanet-5.png" />
+              <PlistImageFile Name="fullplanet-6.png" Key="fullplanet-6.png" />
+            </PlistImageFolder>
             <PlistImageFolder Image="shape-border.png" PListFile="shape-border.plist" Name=".shape-border_PList.Dir">
               <PlistImageFile Name="l-1.png" Key="l-1.png" />
               <PlistImageFile Name="l-2.png" Key="l-2.png" />
@@ -151,7 +180,6 @@
               <PlistImageFile Name="btn-game-pause.png" Key="btn-game-pause.png" />
               <PlistImageFile Name="game-bottom.png" Key="game-bottom.png" />
               <PlistImageFile Name="game-touch-empty.png" Key="game-touch-empty.png" />
-              <PlistImageFile Name="game-touch-full.png" Key="game-touch-full.png" />
               <PlistImageFile Name="game-touch-half-1.png" Key="game-touch-half-1.png" />
               <PlistImageFile Name="game-touch-half-2.png" Key="game-touch-half-2.png" />
               <PlistImageFile Name="game-touch-on.png" Key="game-touch-on.png" />

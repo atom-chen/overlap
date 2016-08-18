@@ -248,7 +248,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel_1" Visible="False" ActionTag="1379170462" Tag="162" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="275.0000" RightMargin="275.0000" TopMargin="1132.2019" BottomMargin="1.7981" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1" Visible="False" ActionTag="1379170462" Alpha="193" Tag="162" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="275.0000" RightMargin="275.0000" TopMargin="1132.2019" BottomMargin="1.7981" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="200.0000" Y="200.0000" />
             <Children>
               <AbstractNodeData Name="LO_TIP_2" ActionTag="-1746445820" Tag="161" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-192.5000" RightMargin="-192.5000" TopMargin="121.3760" BottomMargin="36.6240" FontSize="36" LabelText="TAP THE SHAPES IN SEQUENCE, FROM BOTTOM TO TOP" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

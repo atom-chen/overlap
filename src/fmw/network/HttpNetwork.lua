@@ -93,7 +93,7 @@ function Network:connect(url)
             end
             local aid = ba:readShort()
             local idx = ba:readInt()
-            local msg = ba:readShort()
+            local msg = ba:readInt()
             local len = ba:readShort()
             lenBuf = lenBuf - PACKAGE_HEAD_LEN
             local body = nil

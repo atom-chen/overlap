@@ -6,7 +6,6 @@ function MyApp:onCreate()
 
     if helper.isPhone() then
         print("#######################")
-        print(device:getDeviceUid())
         analytic:init(""..device:getDeviceUid(), DNP_APP.version ,DNP_EVENT.flurry)
         gamer:init()
     end

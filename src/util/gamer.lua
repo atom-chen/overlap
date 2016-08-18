@@ -8,11 +8,6 @@ end
 function gamer:init()
     if device.platform == device.PLATFORM.ANDROID then
     elseif device.platform == device.PLATFORM.IOS then
-        local function call()
-            print("store init")
-        end
-        store.init(call)
-
         luaoc.callStaticMethod("WXShare","regist",{id = DNP_SHARE.wxAppId})
         luaoc.callStaticMethod("GameCenter","init",DNP_GAME.ios)
         if DNP_AD.target.gdt then

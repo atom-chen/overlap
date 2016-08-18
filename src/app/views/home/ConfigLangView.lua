@@ -6,7 +6,7 @@ ConfigLangView.LOCALE_LANG_LABEL = {
     OK         = _("OK"),
 }
 
-local LangCellView = import("views.home.LangCellView")
+local LangCellView = import(".LangCellView")
 LangCellView.CELL_HEIGHT = 150
 LangCellView.CELL_WIDTH  = 195
 LangCellView.LANGUAGE  = {

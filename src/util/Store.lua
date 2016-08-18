@@ -122,6 +122,7 @@ function Store.restore()
 end
 
 function Store.finishTransaction(transaction)
+    print("HHHHHHHHHHHHHHHHH买完了吗")
     if not checkCCStore() then return false end
 
     if not cc.storeProvider then

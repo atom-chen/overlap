@@ -21,6 +21,14 @@ function LevelManager:initStageData()
         end
         --第一关默认开
         lvInfo[1][4] = true
+        lvInfo[2][4] = true
+        lvInfo[3][4] = true
+        lvInfo[4][4] = true
+        lvInfo[5][4] = true
+        lvInfo[6][4] = true
+        lvInfo[7][4] = true
+        lvInfo[8][4] = true
+        lvInfo[9][4] = true
         helper.saveSloterData(Sloters_.level_info,lvInfo)
     end
 end

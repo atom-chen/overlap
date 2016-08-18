@@ -192,15 +192,16 @@ function GameResultView:showResult(stars,score,time,combo)
     end
 
     --显示按钮面板
-    local showNext = (self.curlevel%9~=0 and nextlv and nextlv[4])
-    self:showButtonPanel(1+showdt,showNext)
+    local showNext = ( nextlv and nextlv[4])
+    local nextScene = self.curlevel%9 == 0 
+    self:showButtonPanel(1+showdt,showNext,nextScene)
 end
 
 
 ----------------------
 --显示按钮面板动画
 --
-function GameResultView:showButtonPanel(showdt,showNext)
+function GameResultView:showButtonPanel(showdt,showNext,nextScne)
     --按钮的显示动画
     gameUtils.scaleShow(self.btn_retry,showdt)
     gameUtils.scaleShow(self.btn_list,showdt)
@@ -210,6 +211,10 @@ function GameResultView:showButtonPanel(showdt,showNext)
         self.btn_next:hide()
     end
     gameUtils.fadeShow(self.panelAds,showdt)
+    
+    if nextScne then
+    	AppViews:getView(Layers_.select):nextScene()
+    end
 end
 
 ----------------------

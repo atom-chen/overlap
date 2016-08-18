@@ -155,6 +155,9 @@ function GameView:reset3DModel()
     self.on3dMode = false
     self.bar1:setPercentage(0)
     self.bar2:setPercentage(0)
+   
+    self.btn_touch:setContentSize({width = 60, height = 60}) 
+    self.dcount = 60
 end
 
 -----------
@@ -610,19 +613,20 @@ function GameView:onClick( path,node,funcName)
         local function btnCallback(node,eventType)
             if eventType == ccui.TouchEventType.began then
                 if not self.on3dMode then
-                    local _3dtime = 1.5
-                    local act1 = cc.ProgressTo:create(_3dtime,100)
-                    local act2 = cc.ProgressTo:create(_3dtime,100)
-                    self.bar1:runAction(act1)
-                    self.bar2:runAction(act2)
-
-                    local function onComplete()
-                        self:start3Discovery()
-                    end
-                    local action = ac.ccSeq(ac.ccDelay(_3dtime),ac.ccCall(onComplete))
-                    action:setTag(125)
-                    ac.execute(self,action)
-                    
+--                    local _3dtime = 1.5
+--                    local act1 = cc.ProgressTo:create(_3dtime,100)
+--                    local act2 = cc.ProgressTo:create(_3dtime,100)
+--                    self.bar1:runAction(act1)
+--                    self.bar2:runAction(act2)
+--
+--                    local function onComplete()
+--                        self:start3Discovery()
+--                    end
+--                    local action = ac.ccSeq(ac.ccDelay(_3dtime),ac.ccCall(onComplete))
+--                    action:setTag(125)
+--                    ac.execute(self,action)
+                      self:enUpdate()
+                      self.touching = true
                     --3dtouch
                     local function call()
                         self:start3Discovery()
@@ -632,14 +636,15 @@ function GameView:onClick( path,node,funcName)
             elseif eventType == ccui.TouchEventType.moved then
             elseif eventType == ccui.TouchEventType.ended then
                 if  not self.on3dMode then
-                    local act1 = cc.ProgressTo:create(0.1,0)
-                    local act2 = cc.ProgressTo:create(0.1,0)
-                    self.bar1:stopAllActions()
-                    self.bar2:stopAllActions()
-                    self.bar1:runAction(act1)
-                    self.bar2:runAction(act2)
-
-                    self:stopActionByTag(125)
+--                    local act1 = cc.ProgressTo:create(0.1,0)
+--                    local act2 = cc.ProgressTo:create(0.1,0)
+--                    self.bar1:stopAllActions()
+--                    self.bar2:stopAllActions()
+--                    self.bar1:runAction(act1)
+--                    self.bar2:runAction(act2)
+--
+--                    self:stopActionByTag(125)
+                    self.touching = false
                 end
                 gamer:end3Dtouch()
             elseif eventType == ccui.TouchEventType.canceled then
@@ -654,6 +659,32 @@ function GameView:start3Discovery()
         self.on3dMode = true
         self:show3DModel()
     end
+end
+
+
+function GameView:update()
+    if self.touching then
+        --按住状态
+        if self.dcount<=473 then
+            self.dcount = self.dcount + 5
+            self.btn_touch:setContentSize({width = self.dcount, height = 60}) 
+        else
+            self:start3Discovery()
+            self:disUpdate()
+        end
+    else
+        --松开状态
+        if self.dcount >=60 then
+            self.dcount = self.dcount - 20
+            if self.dcount < 60 then
+                self.dcount = 60
+            end
+            self.btn_touch:setContentSize({width = self.dcount, height = 60}) 
+        else
+            self:disUpdate()
+        end
+    end
+   
 end
 
 return GameView
