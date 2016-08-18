@@ -19,8 +19,27 @@ function HomeAdsView:onCreate()
     self.edit_name:setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER)
     if device.platform == device.PLATFORM.IOS then
         local function locadProductCall(result)
-            dump(result)
-            --        store.purchase("overlap.noads")
+            for key, var in pairs(result["products"]) do
+                if var.productIdentifier == DNP_GAME.iap.ios[1] then
+               	    self["Donation1"]:setString(var.price)
+                elseif var.productIdentifier == DNP_GAME.iap.ios[2] then
+               	    self["Donation2"]:setString(var.price)
+                elseif var.productIdentifier == DNP_GAME.iap.ios[3] then
+               	    self["Donation3"]:setString(var.price)
+                elseif var.productIdentifier == DNP_GAME.iap.ios[4] then
+               	    self["Donation4"]:setString(var.price)
+                elseif var.productIdentifier == DNP_GAME.iap.ios[5] then
+               	    self["Donation5"]:setString(var.price)
+                elseif var.productIdentifier == DNP_GAME.iap.ios[6] then
+               	    self["Donation6"]:setString(var.price)
+                elseif var.productIdentifier == DNP_GAME.iap.ios[7] then
+               	    self["Donation7"]:setString(var.price)
+                elseif var.productIdentifier == DNP_GAME.iap.ios[8] then
+               	    self["Donation8"]:setString(var.price)
+               end
+               
+                self["btn_dnt_"..key]:setBright(true)
+           end
         end
         store.loadProducts(DNP_GAME.iap.ios, locadProductCall)
     end
@@ -42,6 +61,47 @@ function HomeAdsView:onClick( path,node,funcName)
         local function btnCallback(node,eventType)
         end
 
+        return btnCallback
+    elseif node:getName()=="btn_dnt_1"  then
+        local function btnCallback(node,eventType)
+            print(DNP_GAME.iap.ios[1])
+            store.purchase(DNP_GAME.iap.ios[1])
+        end
+        return btnCallback
+    elseif node:getName()=="btn_dnt_2"  then
+        local function btnCallback(node,eventType)
+            store.purchase(DNP_GAME.iap.ios[2])
+        end
+        return btnCallback
+    elseif node:getName()=="btn_dnt_3"  then
+        local function btnCallback(node,eventType)
+            store.purchase(DNP_GAME.iap.ios[3])
+        end
+        return btnCallback
+    elseif node:getName()=="btn_dnt_4"  then
+        local function btnCallback(node,eventType)
+            store.purchase(DNP_GAME.iap.ios[4])
+        end
+        return btnCallback
+    elseif node:getName()=="btn_dnt_5"  then
+        local function btnCallback(node,eventType)
+            store.purchase(DNP_GAME.iap.ios[5])
+        end
+        return btnCallback
+    elseif node:getName()=="btn_dnt_6"  then
+        local function btnCallback(node,eventType)
+            store.purchase(DNP_GAME.iap.ios[6])
+        end
+        return btnCallback
+    elseif node:getName()=="btn_dnt_7"  then
+        local function btnCallback(node,eventType)
+            store.purchase(DNP_GAME.iap.ios[7])
+        end
+        return btnCallback
+    elseif node:getName()=="btn_dnt_8"  then
+        local function btnCallback(node,eventType)
+            store.purchase(DNP_GAME.iap.ios[8])
+        end
         return btnCallback
     end
 end

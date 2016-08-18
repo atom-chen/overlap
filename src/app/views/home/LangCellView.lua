@@ -16,8 +16,7 @@ function LangCellView:onClick( path,node,funcName)
     if node:getName()=="btn_lang"  then
         local function btnCallback(node,eventType)
             locale.saveDefault(self.lang)
-            os.exit(1)
-            require("main")
+            require 'main'
         end
 
         return btnCallback

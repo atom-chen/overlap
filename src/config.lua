@@ -33,7 +33,7 @@ DNP_GAME = {
     },
     
      iap = {
-        ios = {"Overlap_600","Overlap_600","Overlap_600","Overlap_600","Overlap_600","Overlap_600","Overlap_600","Overlap_600"}
+        ios = {"Overlap_600","Overlap_1200","Overlap_1800","Overlap_3000","Overlap_6800","Overlap_12800","Overlap_32800","Overlap_99800"}
         }
 }
 
