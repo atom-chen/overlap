@@ -35,12 +35,16 @@ helper = require("util.helper"):new()
 app = require("util.app").new()
 filter = require("util.filter")
 shader = require("util.shader")
-store = require("util.Store")
+store = require("util.store")
+scheduler = require("util.scheduler").new()
 http = require("util.http").new()
+strings = require("util.strings")
+
 
 locale = require("util.locale")
 _ = assert(require("util.locale").loadDefault())
 
 
 analytic = require("util.analytic")
+require("util.debugs")
 

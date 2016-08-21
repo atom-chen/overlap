@@ -6,6 +6,7 @@ local OverlapBackView = import(".OverlapBackView")
 local ShapeController = import("app.battle.controllers.ShapeController")
 local OverlapHomeView = import(".home.OverlapHomeView")
 local OverlapSelectView = import(".select.OverlapSelectView")
+local OverlapTrvalView = import(".travel.OverlapTravelView")
 local GamePrepareView = import(".game.GamePrepareView")
 local GameResultView = import(".game.GameResultView")
 local GamePauseView = import(".game.GamePauseView")
@@ -52,6 +53,9 @@ function MainScene:onSplash()
     self.selectView = OverlapSelectView:create(self:getApp(),Layers_.select)
         :hide()
         :addTo(self)
+    self.travelView = OverlapTrvalView:create(self:getApp(),Layers_.travel)
+        :hide()
+        :addTo(self)
 
     self.prepareView = GamePrepareView:create(self:getApp(),Layers_.prepare)
         :hide()
@@ -83,8 +87,30 @@ function MainScene:onGame()
     self.mainView:createOverText()
     self.splash:removeSelf()
     self.splash = nil
-
-    self:test()
+    
+--        local rank = {
+--        appId = DNP_APP.id.dnp,
+--        rankId = DNP_RANK.rank_lv2,
+--        key = device:getDeviceUid(),
+--        score = 9999999,
+--    }     
+--    ActionExecutor:execute(msgdef.RankCommit,rank)
+--    
+--    local rank = {
+--        appId = DNP_APP.id.dnp,
+--        rankId = DNP_RANK.rank_lv1,
+--        key = device:getDeviceUid(),
+--    }     
+--    --    ActionExecutor:execute(msgdef.RankPlayerInfo,rank)
+--    ActionExecutor:execute(msgdef.RankAllInfo,rank)
+--    
+--    
+--    local rank = {
+--        appId = DNP_APP.id.dnp,
+--        rankId = DNP_RANK.rank_lv1,
+--        key = device:getDeviceUid(),
+--    }     
+--    ActionExecutor:execute(msgdef.RankPlayerInfo,rank)
 end
 
 
@@ -93,11 +119,29 @@ function MainScene:gameStart(level)
     self.gameController:show()
 end
 
+----------------------
+--初始化AppStore购买认证
+--
 function MainScene:initIosPurchase()
     local function call(transaction)
-        dump(transaction)
         if transaction.transaction.state == "purchased" then
-            print("buy success")
+            local productKey = nil
+            for k, v in ipairs(DNP_GAME.iap.ios) do
+                if  transaction.transaction.productIdentifier == v then
+            		productKey = k
+            		break
+            	end
+            end
+            local product = {
+                appId = DNP_APP.id.dnp,
+                productId = 1,
+                productId = productKey,
+                itemId = 0,
+                deviceId = device:getDeviceUid(),
+                payChannel = DNP_GAME.payChannel.appstore,
+                receiptData = crypto.encodeBase64(transaction.transaction.receipt)
+            }
+            ActionExecutor:execute(msgdef.PayValidate,product)
             store.finishTransaction(transaction.transaction)
         end
 

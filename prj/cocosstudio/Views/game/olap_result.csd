@@ -19,7 +19,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="panelAds" ActionTag="-1318606632" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="119" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="246.2628" RightMargin="204.7372" TopMargin="1126.1705" BottomMargin="111.8294" TouchEnable="True" FontSize="14" Scale9Enable="True" Scale9Width="1" Scale9Height="1" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="panelAds" ActionTag="-1318606632" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="119" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="TopEdge" LeftMargin="246.2750" RightMargin="204.7250" TopMargin="1126.1705" BottomMargin="111.8295" TouchEnable="True" FontSize="14" Scale9Enable="True" Scale9Width="1" Scale9Height="1" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="299.0000" Y="96.0000" />
             <Children>
               <AbstractNodeData Name="Sprite_1" ActionTag="239620324" Tag="120" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="126.5000" RightMargin="126.5000" TopMargin="23.5000" BottomMargin="27.5000" ctype="SpriteObjectData">
@@ -73,7 +73,7 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="395.7628" Y="159.8294" />
+            <Position X="395.7750" Y="159.8295" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5277" Y="0.1198" />
@@ -197,7 +197,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="levelPanel" Visible="False" ActionTag="104443384" Tag="205" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="levelPanel" ActionTag="104443384" Tag="205" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="750.0000" Y="1334.0000" />
             <Children>
               <AbstractNodeData Name="Image_1" ActionTag="-1954618466" Tag="115" IconVisible="False" LeftMargin="120.4167" RightMargin="117.5833" TopMargin="283.0493" BottomMargin="430.9506" LeftEage="13" RightEage="13" TopEage="13" BottomEage="13" Scale9OriginX="13" Scale9OriginY="13" Scale9Width="14" Scale9Height="14" ctype="ImageViewObjectData">
@@ -423,25 +423,25 @@
               <AbstractNodeData Name="Panel_9" ActionTag="-1854566864" Tag="120" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="241.7937" RightMargin="208.2063" TopMargin="785.8688" BottomMargin="498.1312" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="300.0000" Y="50.0000" />
                 <Children>
-                  <AbstractNodeData Name="getstar3" ActionTag="-527592179" Tag="121" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="6.5000" BottomMargin="8.5000" ctype="SpriteObjectData">
-                    <Size X="35.0000" Y="35.0000" />
+                  <AbstractNodeData Name="getstar3" ActionTag="-527592179" Tag="121" IconVisible="False" LeftMargin="9.5000" RightMargin="259.5000" TopMargin="8.5000" BottomMargin="10.5000" ctype="SpriteObjectData">
+                    <Size X="31.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="25.0000" Y="26.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.0833" Y="0.5200" />
-                    <PreSize X="0.1167" Y="0.7000" />
+                    <PreSize X="0.1033" Y="0.6200" />
                     <FileData Type="PlistSubImage" Path="sp-result-star.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="getcol3" ActionTag="-455950646" VisibleForFrame="False" Tag="122" IconVisible="False" LeftMargin="-33.8744" RightMargin="297.8744" TopMargin="6.0000" BottomMargin="8.0000" ctype="SpriteObjectData">
-                    <Size X="36.0000" Y="36.0000" />
+                  <AbstractNodeData Name="getcol3" ActionTag="-455950646" VisibleForFrame="False" Tag="122" IconVisible="False" LeftMargin="-32.7182" RightMargin="299.7182" TopMargin="7.5000" BottomMargin="9.5000" ctype="SpriteObjectData">
+                    <Size X="33.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.3854" ScaleY="0.5000" />
                     <Position X="-20.0000" Y="26.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="-0.0667" Y="0.5200" />
-                    <PreSize X="0.1200" Y="0.7200" />
+                    <PreSize X="0.1100" Y="0.6600" />
                     <FileData Type="PlistSubImage" Path="sp-result-collection.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -499,25 +499,25 @@
               <AbstractNodeData Name="Panel_8" ActionTag="1301793071" Tag="126" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="241.7937" RightMargin="208.2063" TopMargin="732.2120" BottomMargin="551.7880" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="300.0000" Y="50.0000" />
                 <Children>
-                  <AbstractNodeData Name="getstar2" ActionTag="903041762" Tag="127" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="8.2463" BottomMargin="6.7537" ctype="SpriteObjectData">
-                    <Size X="35.0000" Y="35.0000" />
+                  <AbstractNodeData Name="getstar2" ActionTag="903041762" Tag="127" IconVisible="False" LeftMargin="9.5000" RightMargin="259.5000" TopMargin="10.2463" BottomMargin="8.7537" ctype="SpriteObjectData">
+                    <Size X="31.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="25.0000" Y="24.2537" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.0833" Y="0.4851" />
-                    <PreSize X="0.1167" Y="0.7000" />
+                    <PreSize X="0.1033" Y="0.6200" />
                     <FileData Type="PlistSubImage" Path="sp-result-star.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="getcol2" ActionTag="1073367266" VisibleForFrame="False" Tag="128" IconVisible="False" LeftMargin="-33.8744" RightMargin="297.8744" TopMargin="6.0000" BottomMargin="8.0000" ctype="SpriteObjectData">
-                    <Size X="36.0000" Y="36.0000" />
+                  <AbstractNodeData Name="getcol2" ActionTag="1073367266" VisibleForFrame="False" Tag="128" IconVisible="False" LeftMargin="-32.7182" RightMargin="299.7182" TopMargin="7.5000" BottomMargin="9.5000" ctype="SpriteObjectData">
+                    <Size X="33.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.3854" ScaleY="0.5000" />
                     <Position X="-20.0000" Y="26.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="-0.0667" Y="0.5200" />
-                    <PreSize X="0.1200" Y="0.7200" />
+                    <PreSize X="0.1100" Y="0.6600" />
                     <FileData Type="PlistSubImage" Path="sp-result-collection.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -575,25 +575,25 @@
               <AbstractNodeData Name="Panel_7" ActionTag="-844005861" Tag="132" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="241.7937" RightMargin="208.2063" TopMargin="678.5554" BottomMargin="605.4446" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="300.0000" Y="50.0000" />
                 <Children>
-                  <AbstractNodeData Name="getstar1" ActionTag="1900270962" Tag="133" IconVisible="False" LeftMargin="7.5000" RightMargin="257.5000" TopMargin="6.5000" BottomMargin="8.5000" ctype="SpriteObjectData">
-                    <Size X="35.0000" Y="35.0000" />
+                  <AbstractNodeData Name="getstar1" ActionTag="1900270962" Tag="133" IconVisible="False" LeftMargin="9.5000" RightMargin="259.5000" TopMargin="8.5000" BottomMargin="10.5000" ctype="SpriteObjectData">
+                    <Size X="31.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="25.0000" Y="26.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.0833" Y="0.5200" />
-                    <PreSize X="0.1167" Y="0.7000" />
+                    <PreSize X="0.1033" Y="0.6200" />
                     <FileData Type="PlistSubImage" Path="sp-result-star.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="getcol1" ActionTag="649868642" VisibleForFrame="False" Tag="134" IconVisible="False" LeftMargin="-33.8744" RightMargin="297.8744" TopMargin="6.0000" BottomMargin="8.0000" ctype="SpriteObjectData">
-                    <Size X="36.0000" Y="36.0000" />
+                  <AbstractNodeData Name="getcol1" ActionTag="649868642" VisibleForFrame="False" Tag="134" IconVisible="False" LeftMargin="-32.7182" RightMargin="299.7182" TopMargin="7.5000" BottomMargin="9.5000" ctype="SpriteObjectData">
+                    <Size X="33.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.3854" ScaleY="0.5000" />
                     <Position X="-20.0000" Y="26.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="-0.0667" Y="0.5200" />
-                    <PreSize X="0.1200" Y="0.7200" />
+                    <PreSize X="0.1100" Y="0.6600" />
                     <FileData Type="PlistSubImage" Path="sp-result-collection.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -648,39 +648,39 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="panel_star" ActionTag="1819576460" Tag="178" IconVisible="False" LeftMargin="215.3322" RightMargin="234.6678" TopMargin="271.4182" BottomMargin="862.5818" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="panel_star" ActionTag="1819576460" VisibleForFrame="False" Tag="178" IconVisible="False" LeftMargin="215.3322" RightMargin="234.6678" TopMargin="271.4182" BottomMargin="862.5818" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="300.0000" Y="200.0000" />
                 <Children>
-                  <AbstractNodeData Name="gotstar1" ActionTag="-2098788517" Tag="179" IconVisible="False" LeftMargin="73.5000" RightMargin="191.5000" TopMargin="145.5000" BottomMargin="19.5000" ctype="SpriteObjectData">
-                    <Size X="35.0000" Y="35.0000" />
+                  <AbstractNodeData Name="gotstar1" ActionTag="-2098788517" Tag="179" IconVisible="False" LeftMargin="75.5000" RightMargin="193.5000" TopMargin="147.5000" BottomMargin="21.5000" ctype="SpriteObjectData">
+                    <Size X="31.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="91.0000" Y="37.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3033" Y="0.1850" />
-                    <PreSize X="0.1167" Y="0.1750" />
+                    <PreSize X="0.1033" Y="0.1550" />
                     <FileData Type="PlistSubImage" Path="sp-result-star-h.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="gotstar2" ActionTag="2121470205" Tag="180" IconVisible="False" LeftMargin="135.5000" RightMargin="129.5000" TopMargin="145.5000" BottomMargin="19.5000" ctype="SpriteObjectData">
-                    <Size X="35.0000" Y="35.0000" />
+                  <AbstractNodeData Name="gotstar2" ActionTag="2121470205" Tag="180" IconVisible="False" LeftMargin="137.5000" RightMargin="131.5000" TopMargin="147.5000" BottomMargin="21.5000" ctype="SpriteObjectData">
+                    <Size X="31.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="153.0000" Y="37.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5100" Y="0.1850" />
-                    <PreSize X="0.1167" Y="0.1750" />
+                    <PreSize X="0.1033" Y="0.1550" />
                     <FileData Type="PlistSubImage" Path="sp-result-star-h.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="gotstar3" ActionTag="1445586227" Tag="181" IconVisible="False" LeftMargin="197.5000" RightMargin="67.5000" TopMargin="145.5000" BottomMargin="19.5000" ctype="SpriteObjectData">
-                    <Size X="35.0000" Y="35.0000" />
+                  <AbstractNodeData Name="gotstar3" ActionTag="1445586227" Tag="181" IconVisible="False" LeftMargin="199.5000" RightMargin="69.5000" TopMargin="147.5000" BottomMargin="21.5000" ctype="SpriteObjectData">
+                    <Size X="31.0000" Y="31.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="215.0000" Y="37.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.7167" Y="0.1850" />
-                    <PreSize X="0.1167" Y="0.1750" />
+                    <PreSize X="0.1033" Y="0.1550" />
                     <FileData Type="PlistSubImage" Path="sp-result-star-h.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -719,7 +719,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="randPanel" ActionTag="-1720010787" Tag="260" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="0.0002" RightMargin="-0.0002" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="randPanel" Visible="False" ActionTag="-1720010787" Tag="260" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="750.0000" Y="1334.0000" />
             <Children>
               <AbstractNodeData Name="Image_2" ActionTag="457647541" Tag="116" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="113.3500" RightMargin="128.6500" TopMargin="334.8750" BottomMargin="482.1250" Scale9Enable="True" LeftEage="13" RightEage="13" TopEage="13" BottomEage="13" Scale9OriginX="13" Scale9OriginY="13" Scale9Width="14" Scale9Height="14" ctype="ImageViewObjectData">
@@ -912,7 +912,7 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="375.0002" Y="667.0000" />
+            <Position X="375.0000" Y="667.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />

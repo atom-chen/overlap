@@ -3,10 +3,17 @@
 --动作执行类
 --
 --@type Action
-local Action = class("Action",require("fmw.network.Message").new())
+local Action = class("Action",require("fmw.action.Message").new())
+
+ACTION_HTTP = 1
+ACTION_TCP = 2
+ACTION_WEBSOCK = 3
+ACTION_UDP = 4
 
 function Action:ctor()
     self.super:ctor()
+    self.mpack = require 'cmsgpack'
+    self.method = ACTION_HTTP
 end
 
 ---------------------------
@@ -26,12 +33,22 @@ end
 --@param number#number index 绑定消息
 --@param number#number msg 绑定消息
 --@param mixed#mixed body 绑定消息
-function Action:setMessage(aid, idx, msg, len, body)
+function Action:setMessage(aid, idx, msg, typ, len, body)
     self.aid = aid
     self.idx = idx	
-    self.msg = msg	
+    self.msg = msg
+    self.typ = typ
     self.len = len
     self.body = body	
+end
+
+---------------------------
+--动作回调的方式
+--@function [parent=#Action] unpack
+--@param self
+--@return mixed#mixed 解包
+function Action:unpack()
+    return self.mpack.unpack(self.body)
 end
 
 

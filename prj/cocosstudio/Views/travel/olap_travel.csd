@@ -19,7 +19,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="pageView" ActionTag="539819249" CallBackType="Event" CallBackName="onEvent" Tag="35" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.5000" RightMargin="-125.5000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="0" ctype="PageViewObjectData">
+          <AbstractNodeData Name="pageView" ActionTag="959690844" Tag="163" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.5000" RightMargin="-125.5000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
             <Size X="1001.0000" Y="1334.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="375.0000" Y="667.0000" />
@@ -27,40 +27,10 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="1.3347" Y="1.0000" />
-            <SingleColor A="255" R="150" G="150" B="100" />
-            <FirstColor A="255" R="150" G="150" B="100" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="btn_right" ActionTag="-1956149916" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="84" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="695.0000" RightMargin="17.0000" TopMargin="633.5000" BottomMargin="633.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="8" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="38.0000" Y="67.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="714.0000" Y="667.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.9520" Y="0.5000" />
-            <PreSize X="0.0507" Y="0.0502" />
-            <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="PlistSubImage" Path="btn-select-scene-right-n.png" Plist="Resource/atlas/ui-select.plist" />
-            <PressedFileData Type="PlistSubImage" Path="btn-select-scene-right-n.png" Plist="Resource/atlas/ui-select.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-select-scene-right-n.png" Plist="Resource/atlas/ui-select.plist" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="btn_left" ActionTag="-322442153" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="85" IconVisible="False" HorizontalEdge="LeftEdge" LeftMargin="17.0000" RightMargin="695.0000" TopMargin="633.5000" BottomMargin="633.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="8" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="38.0000" Y="67.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="36.0000" Y="667.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0480" Y="0.5000" />
-            <PreSize X="0.0507" Y="0.0502" />
-            <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="PlistSubImage" Path="btn-select-scene-left-n.png" Plist="Resource/atlas/ui-select.plist" />
-            <PressedFileData Type="PlistSubImage" Path="btn-select-scene-left-n.png" Plist="Resource/atlas/ui-select.plist" />
-            <NormalFileData Type="PlistSubImage" Path="btn-select-scene-left-n.png" Plist="Resource/atlas/ui-select.plist" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
           <AbstractNodeData Name="btn_back" ActionTag="679049220" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="86" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="BottomEdge" LeftMargin="17.0000" RightMargin="604.0000" TopMargin="1204.0000" BottomMargin="48.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="99" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="129.0000" Y="82.0000" />

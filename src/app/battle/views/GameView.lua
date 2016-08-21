@@ -40,6 +40,9 @@ GameView.OPT_ITEM[7] = {4,3}
 GameView.OPT_ITEM[8] = {4,4}
 
 
+GameView.TOUCHTIME = {7,6,5,3.5,2.5,2}
+
+
 
 function GameView:onCreate()
     self:localLanguage()
@@ -71,6 +74,13 @@ end
 function GameView:setMode(mode)
     self.counts_ = mode
     self:setOption()
+    
+    self.touchdt_ = GameView.TOUCHTIME[mode-2]
+    
+    display.loadSpriteFrames("Resource/atlas/shape-entity.plist","Resource/atlas/shape-entity.png")
+    display.loadSpriteFrames("Resource/atlas/shape-border.plist","Resource/atlas/shape-border.png")
+    display.loadSpriteFrames("Resource/atlas/shape-shadow.plist","Resource/atlas/shape-shadow.png")
+    display.loadSpriteFrames("Resource/atlas/ui-game.plist","Resource/atlas/ui-game.png")
 end
 
 
@@ -666,7 +676,7 @@ function GameView:update()
     if self.touching then
         --按住状态
         if self.dcount<=473 then
-            self.dcount = self.dcount + 5
+            self.dcount = self.dcount + self.touchdt_
             self.btn_touch:setContentSize({width = self.dcount, height = 60}) 
         else
             self:start3Discovery()

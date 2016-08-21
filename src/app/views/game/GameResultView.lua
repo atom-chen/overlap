@@ -252,6 +252,8 @@ function GameResultView:onClick( path,node,funcName)
             local backTo = Layers_.prepare
             if parentView:getName() == Layers_.travel then
                 backTo = Layers_.gameController
+                --更新一下当前排名
+                AppViews:getView(Layers_.travel):updatePageRank()
             end
 
             AppViews:fadeBack(backTo)

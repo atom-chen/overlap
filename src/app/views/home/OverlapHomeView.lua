@@ -170,6 +170,12 @@ function OverlapHomeView:onClick( path,node,funcName)
         end
 
         return btnCallback
+    elseif node:getName()=="btn_back" and funcName =="onClick" then
+        local function btnCallback(node,eventType)
+            self:runAnimation("start")
+        end
+
+        return btnCallback
     elseif node:getName()=="btn_collection" and funcName =="onClick" then
         local function btnCallback(node,eventType)
             AppViews:fadeTo(Layers_.home,"app.views.home.collection.HomeCollectionView",{name = Layers_.collectionView})

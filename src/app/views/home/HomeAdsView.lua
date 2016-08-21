@@ -20,22 +20,25 @@ function HomeAdsView:onCreate()
     if device.platform == device.PLATFORM.IOS then
         local function locadProductCall(result)
             for key, var in pairs(result["products"]) do
+                local priceLocale = helper.split(var.priceLocale,"=")[2]
+                
+                local price =var.price .." ".. priceLocale 
                 if var.productIdentifier == DNP_GAME.iap.ios[1] then
-               	    self["Donation1"]:setString(var.price)
+               	    self["Donation1"]:setString(price)
                 elseif var.productIdentifier == DNP_GAME.iap.ios[2] then
-               	    self["Donation2"]:setString(var.price)
+               	    self["Donation2"]:setString(price)
                 elseif var.productIdentifier == DNP_GAME.iap.ios[3] then
-               	    self["Donation3"]:setString(var.price)
+               	    self["Donation3"]:setString(price)
                 elseif var.productIdentifier == DNP_GAME.iap.ios[4] then
-               	    self["Donation4"]:setString(var.price)
+               	    self["Donation4"]:setString(price)
                 elseif var.productIdentifier == DNP_GAME.iap.ios[5] then
-               	    self["Donation5"]:setString(var.price)
+               	    self["Donation5"]:setString(price)
                 elseif var.productIdentifier == DNP_GAME.iap.ios[6] then
-               	    self["Donation6"]:setString(var.price)
+               	    self["Donation6"]:setString(price)
                 elseif var.productIdentifier == DNP_GAME.iap.ios[7] then
-               	    self["Donation7"]:setString(var.price)
+               	    self["Donation7"]:setString(price)
                 elseif var.productIdentifier == DNP_GAME.iap.ios[8] then
-               	    self["Donation8"]:setString(var.price)
+               	    self["Donation8"]:setString(price)
                end
                
                 self["btn_dnt_"..key]:setBright(true)

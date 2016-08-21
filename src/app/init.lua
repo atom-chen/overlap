@@ -26,11 +26,11 @@ THE SOFTWARE.
 msgdef = require("app.msgdef")
 perpare = require("app.prepare")
 
-Network = require("fmw.network.HttpNetwork").new()
+ActionExecutor = require("fmw.action.ActionExecutor"):new()
+ActionExecutor:setHttpServer("http://192.168.0.33:8000")
 
-Network:connect("http://192.168.0.33:8000")
-ActionManager = require("fmw.action.actmanager").new()
 perpare.actions()
+perpare.tables()
 
 require("app.data.GameConst")
 gameUtils     = require("app.gameUtils")

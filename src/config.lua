@@ -4,11 +4,11 @@ DEBUG = 2
 
 --######## 应用区域 #######--
 DNP_APP = {
-    appName = "OverLap", 
+    appName = "OverLap",
     version = 1.1,
-    
+
     id = {
-        dnp = 10000004,                 -- DONOPO应用内部编号
+        dnp = 1005,                 -- DONOPO应用内部编号
         ios = "1087226557",              -- AppStore编码
         android = "com.donopo.helloKitty",   -- GooglePlay编码
     },
@@ -17,24 +17,67 @@ DNP_APP = {
         ios     = "itms-apps://itunes.apple.com/app/id%s",                -- iOS 商店地址
         android = "https://play.google.com/store/apps/details?id=%s",     -- Android商店地址
     },
-    
+
     slotKey = "D*N@P#L0NGL1FE",         -- 存档加密
     confuseKey = 10240806,              -- 内存混淆
     gcInterval = 10,                    -- 垃圾回收频度(秒)
     gcBlock = 5000,                     -- 垃圾回收颗粒度(单元)
+    netkey = "ik9HzYoR&ovs2%tE",        -- 网络通讯加密
+}
+
+DNP_PRODUCT = {
+    Overlap_600 = 1,
+    Overlap_1200 = 2,
+    Overlap_1800 = 3,
+    Overlap_3000 = 4,
+    Overlap_6800 = 5,
+    Overlap_12800 = 6,
+    Overlap_32800 = 7,
+    Overlap_99800 = 8,
+}
+
+DNP_CHANNEL = {
+    appStore = 1,
+    googlePlay = 2,
+}
+
+DNP_SERVER = {
+    httpServer = "http://127.0.0.1:8000",
+    websocketServer = "http://127.0.0.1:8000",
+}
+
+DNP_RANK = {
+    rank_lv1 = 101,
+    rank_lv2 = 102,
+    rank_lv3 = 103,
+    rank_lv4 = 104,
+    rank_lv5 = 105,
+    rank_lv6 = 106,
+    
+    rank_obs_lv1 = 111,
+    rank_obs_lv2 = 112,
+    rank_obs_lv3 = 113,
+    rank_obs_lv4 = 114,
+    rank_obs_lv5 = 115,
+    rank_obs_lv6 = 116,
 }
 
 DNP_GAME = {
---    default_scene = "PlaneScene",
+    --    default_scene = "PlaneScene",
     ios = {
-        leaderboards="Classic;Challenge",
-        achievements= "White Queen;Mary X;Merida;Merida;Sophie;Elsa;Athena;Black Queen;Kamilah;Amphitrite;Nefertiti;Cinderella;Aphrodite;Rapunzel;Kareena;Pocahontas;Belle;Snow;Anna;Grimhilde;Ygritte;Cersei;Bulma;Sansa;Audrey;Marilyn;Scarlett;Wu Zetian;Liv;Halle;Nicole;Zooey;elizabeth I;Mary I;Sonja (Norway);Anne-Marie (Greece);Mary (Denmark);Rania (Jordan);Galadriel;Cleopatra VII;Sirikit (Thailand);Silvia (Sweden);Marie (France);Caroline (Naples);Amalia  (Greece);Isabella I;Catherine (Russia);Louise (Belgium);Eugenie  (French);Joséphine (French);Anna (Russia);Augusta (German);Esther (Persia);Farah (Iran);Louise (Prussia);Frederica (Greece);Paola (Belgium);Victoria;Elizabeth II;Maxima (Netherland);Cixi",
+        leaderboards="MaryXHighScore;MaryXHighRankClassic;MaryXHighRankChallenge",
+        achievements= "White Queen;Mary X",
         separate = ";",
     },
-    
-     iap = {
+    iap = {
         ios = {"Overlap_600","Overlap_1200","Overlap_1800","Overlap_3000","Overlap_6800","Overlap_12800","Overlap_32800","Overlap_99800"}
-        }
+    },
+
+    payChannel = {
+        weixin = 2,
+        zhifubao = 3,
+        appstore = 1,
+    }
 }
 
 --######## 广告区域 #######--
@@ -42,13 +85,14 @@ DNP_AD = {
     platform = {unity="unity",vungle = "vungle", unity = "unity"},
     target = {
         vungle = "vungle",
-        gdt = "gdt",
-        unity = "unity",
+--        gdt = "gdt",
+--        unity = "unity",
     },
 
     vungle = {
-        android = "com.donopo.helloKitty", --kt
-        ios = "56e633b62e4d11793d00000a", --kt
+        --        android = "com.donopo.helloKitty", --ol
+        ios = "57b6d20eb199bf167f00000c", --ol
+--        ios = "56e633b62e4d11793d00000a", --kt
     },
 
     unity = {

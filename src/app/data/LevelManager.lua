@@ -21,15 +21,20 @@ function LevelManager:initStageData()
         end
         --第一关默认开
         lvInfo[1][4] = true
-        lvInfo[2][4] = true
-        lvInfo[3][4] = true
-        lvInfo[4][4] = true
-        lvInfo[5][4] = true
-        lvInfo[6][4] = true
-        lvInfo[7][4] = true
-        lvInfo[8][4] = true
-        lvInfo[9][4] = true
         helper.saveSloterData(Sloters_.level_info,lvInfo)
+    end
+    
+    local rankInfo =  helper.getSloterData(Sloters_.rankInfo)
+    if not rankInfo then
+        rankInfo = {}
+        for shapes=1, 6 do
+            for obs=1, 2 do
+                local randId =  gameUtils.getRankId(obs,shapes+2)
+                local record =  helper.getSloterData("record"..obs..(shapes+2)) or 0
+                rankInfo["rank"..randId] = {score=record,rank = 99999,highest = 99999,allRank = 99999}
+            end
+        end
+        helper.saveSloterData(Sloters_.rankInfo,rankInfo)
     end
 end
 

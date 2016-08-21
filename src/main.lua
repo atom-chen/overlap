@@ -1,5 +1,3 @@
-print("hhhhhhhhhhhhhhhhhhhhhh")
-
 if not DNP_DEBUG then
     sopackeage = {}
     for k, v in pairs(package.loaded) do
@@ -21,6 +19,7 @@ if DNP_DEBUG  then
     timer:killAll()
     cleanPackage()
 end
+
 
 cc.FileUtils:getInstance():setPopupNotify(false)
 cc.FileUtils:getInstance():addSearchPath("src/")

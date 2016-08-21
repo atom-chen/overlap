@@ -10,13 +10,13 @@ local LangCellView = import(".LangCellView")
 LangCellView.CELL_HEIGHT = 150
 LangCellView.CELL_WIDTH  = 195
 LangCellView.LANGUAGE  = {
-    {"cn", "CHINESE"},
-    {"jp","JAPANESE"},
-    {"en", "ENGLISH"},
-    {"fr", "FRENCH"},
-    {"gr", "GERMAN"},
-    {"sp", "SPANISH"},
-    {"pt", "PORTUGUESE"},
+    {"cn", "中文"},
+    {"jp","日本語"},
+    {"en", "English"},
+    {"fr", "français"},
+    {"gr", "Deutsch"},
+    {"sp", "español"},
+    {"pt", "português"},
 }
 
 ConfigLangView.SCROLL_VIEW_HEIGHT = 450

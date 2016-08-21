@@ -36,8 +36,8 @@ function Store.setReceiptVerifyMode(mode, isSandbox)
 
     if type(mode) ~= "number"
         or (mode ~= cc.CCStoreReceiptVerifyModeNone
-            and mode ~= cc.CCStoreReceiptVerifyModeDevice
-            and mode ~= cc.CCStoreReceiptVerifyModeServer) then
+        and mode ~= cc.CCStoreReceiptVerifyModeDevice
+        and mode ~= cc.CCStoreReceiptVerifyModeServer) then
         printError("Store.setReceiptVerifyMode() - invalid mode")
         return false
     end
@@ -122,7 +122,6 @@ function Store.restore()
 end
 
 function Store.finishTransaction(transaction)
-    print("HHHHHHHHHHHHHHHHH买完了吗")
     if not checkCCStore() then return false end
 
     if not cc.storeProvider then

@@ -54,11 +54,11 @@ function http:send(type, url, data, callback)
     local xhr = cc.XMLHttpRequest:new() --new 一个http request 实例
     self.callback = callback    --设置需要执行的函数
 
-    local newData = self:dataParse(data)
+--    local newData = self:dataParse(data)
 --    print(newData)
-    if nil == newData then
-        return 
-    end
+--    if nil == newData then
+--        return 
+--    end
 
     -- response回调函数
     local function responseCallback()
@@ -79,13 +79,14 @@ function http:send(type, url, data, callback)
         xhr:open(http.method.POST, url)
 --        xhr:registerScriptHandler(responseCallback)
         
-        xhr:send(newData)
+        xhr:send(data)
     elseif http.method.GET == type then
-        xhr:open(http.method.GET, url.."?"..newData)
+        xhr:open(http.method.GET, url.."?"..data)
         xhr:send()
     else
         printInfo("ERROR : type only can be \"Post\" or \"GET\"")
     end
+    
 end
 
 

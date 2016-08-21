@@ -42,7 +42,8 @@ end
 function HomeCollectionView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
-            AppViews:fadeBackAndClose(Layers_.collectionView)
+--            AppViews:fadeBackAndClose(Layers_.collectionView)
+            AppViews:fadeBackAndClose(self)
         end
         return btnCallback
     end

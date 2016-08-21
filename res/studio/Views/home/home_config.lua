@@ -106,7 +106,7 @@ btn_sound:setName("btn_sound")
 btn_sound:setTag(66)
 btn_sound:setCascadeColorEnabled(true)
 btn_sound:setCascadeOpacityEnabled(true)
-btn_sound:setPosition(375.0000, 1112.5000)
+btn_sound:setPosition(375.4774, 1018.4060)
 btn_sound.UserData = {}
 btn_sound.UserData[1] = [==========[sb]==========]
 if callBackProvider~=nil then
@@ -114,16 +114,16 @@ if callBackProvider~=nil then
 end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_sound)
 layout:setPositionPercentXEnabled(true)
-layout:setPositionPercentX(0.5000)
-layout:setPositionPercentY(0.8340)
+layout:setPositionPercentX(0.5006)
+layout:setPositionPercentY(0.7634)
 layout:setPercentWidth(0.3987)
 layout:setPercentHeight(0.0720)
 layout:setSize({width = 299.0000, height = 96.0000})
 layout:setVerticalEdge(2)
-layout:setLeftMargin(225.5000)
-layout:setRightMargin(225.5000)
-layout:setTopMargin(173.4998)
-layout:setBottomMargin(1064.5000)
+layout:setLeftMargin(225.9774)
+layout:setRightMargin(225.0226)
+layout:setTopMargin(267.5945)
+layout:setBottomMargin(970.4055)
 Panel_1:addChild(btn_sound)
 
 --Create Panel_2
@@ -208,7 +208,7 @@ btn_lang:setName("btn_lang")
 btn_lang:setTag(67)
 btn_lang:setCascadeColorEnabled(true)
 btn_lang:setCascadeOpacityEnabled(true)
-btn_lang:setPosition(375.0000, 952.7002)
+btn_lang:setPosition(375.4774, 843.6554)
 btn_lang.UserData = {}
 btn_lang.UserData[1] = [==========[sb]==========]
 if callBackProvider~=nil then
@@ -216,15 +216,15 @@ if callBackProvider~=nil then
 end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_lang)
 layout:setPositionPercentXEnabled(true)
-layout:setPositionPercentX(0.5000)
-layout:setPositionPercentY(0.7142)
+layout:setPositionPercentX(0.5006)
+layout:setPositionPercentY(0.6324)
 layout:setPercentWidth(0.3987)
 layout:setPercentHeight(0.0720)
 layout:setSize({width = 299.0000, height = 96.0000})
-layout:setLeftMargin(225.5000)
-layout:setRightMargin(225.5000)
-layout:setTopMargin(333.2998)
-layout:setBottomMargin(904.7002)
+layout:setLeftMargin(225.9774)
+layout:setRightMargin(225.0226)
+layout:setTopMargin(442.3446)
+layout:setBottomMargin(795.6554)
 Panel_1:addChild(btn_lang)
 
 --Create Panel_2_0
@@ -309,6 +309,7 @@ btn_icloud:setName("btn_icloud")
 btn_icloud:setTag(68)
 btn_icloud:setCascadeColorEnabled(true)
 btn_icloud:setCascadeOpacityEnabled(true)
+btn_icloud:setVisible(false)
 btn_icloud:setPosition(375.0000, 792.9000)
 btn_icloud.UserData = {}
 btn_icloud.UserData[1] = [==========[sb]==========]
@@ -406,22 +407,22 @@ btn_rate:setName("btn_rate")
 btn_rate:setTag(69)
 btn_rate:setCascadeColorEnabled(true)
 btn_rate:setCascadeOpacityEnabled(true)
-btn_rate:setPosition(375.0000, 633.1000)
+btn_rate:setPosition(375.4774, 668.9055)
 btn_rate.UserData = {}
 btn_rate.UserData[1] = [==========[sb]==========]
 if callBackProvider~=nil then
       btn_rate:addClickEventListener(callBackProvider("home_config.lua", btn_rate, "onClick"))
 end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_rate)
-layout:setPositionPercentX(0.5000)
-layout:setPositionPercentY(0.4746)
+layout:setPositionPercentX(0.5006)
+layout:setPositionPercentY(0.5014)
 layout:setPercentWidth(0.3987)
 layout:setPercentHeight(0.0720)
 layout:setSize({width = 299.0000, height = 96.0000})
-layout:setLeftMargin(225.5000)
-layout:setRightMargin(225.5000)
-layout:setTopMargin(652.9000)
-layout:setBottomMargin(585.1000)
+layout:setLeftMargin(225.9774)
+layout:setRightMargin(225.0226)
+layout:setTopMargin(617.0945)
+layout:setBottomMargin(620.9055)
 Panel_1:addChild(btn_rate)
 
 --Create Panel_2_0_0_0
@@ -506,22 +507,22 @@ btn_credit:setName("btn_credit")
 btn_credit:setTag(70)
 btn_credit:setCascadeColorEnabled(true)
 btn_credit:setCascadeOpacityEnabled(true)
-btn_credit:setPosition(375.0000, 473.3000)
+btn_credit:setPosition(375.4774, 494.1537)
 btn_credit.UserData = {}
 btn_credit.UserData[1] = [==========[sb]==========]
 if callBackProvider~=nil then
       btn_credit:addClickEventListener(callBackProvider("home_config.lua", btn_credit, "onClick"))
 end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_credit)
-layout:setPositionPercentX(0.5000)
-layout:setPositionPercentY(0.3548)
+layout:setPositionPercentX(0.5006)
+layout:setPositionPercentY(0.3704)
 layout:setPercentWidth(0.3987)
 layout:setPercentHeight(0.0720)
 layout:setSize({width = 299.0000, height = 96.0000})
-layout:setLeftMargin(225.5000)
-layout:setRightMargin(225.5000)
-layout:setTopMargin(812.7000)
-layout:setBottomMargin(425.3000)
+layout:setLeftMargin(225.9774)
+layout:setRightMargin(225.0226)
+layout:setTopMargin(791.8463)
+layout:setBottomMargin(446.1537)
 Panel_1:addChild(btn_credit)
 
 --Create Panel_2_0_0_0_0
@@ -606,7 +607,7 @@ btn_donation:setName("btn_donation")
 btn_donation:setTag(71)
 btn_donation:setCascadeColorEnabled(true)
 btn_donation:setCascadeOpacityEnabled(true)
-btn_donation:setPosition(375.0000, 313.5000)
+btn_donation:setPosition(375.4774, 319.4026)
 btn_donation.UserData = {}
 btn_donation.UserData[1] = [==========[sb]==========]
 if callBackProvider~=nil then
@@ -614,16 +615,16 @@ if callBackProvider~=nil then
 end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_donation)
 layout:setPositionPercentXEnabled(true)
-layout:setPositionPercentX(0.5000)
-layout:setPositionPercentY(0.2350)
+layout:setPositionPercentX(0.5006)
+layout:setPositionPercentY(0.2394)
 layout:setPercentWidth(0.3987)
 layout:setPercentHeight(0.0720)
 layout:setSize({width = 299.0000, height = 96.0000})
 layout:setVerticalEdge(1)
-layout:setLeftMargin(225.5000)
-layout:setRightMargin(225.5000)
-layout:setTopMargin(972.5000)
-layout:setBottomMargin(265.5000)
+layout:setLeftMargin(225.9774)
+layout:setRightMargin(225.0226)
+layout:setTopMargin(966.5974)
+layout:setBottomMargin(271.4026)
 Panel_1:addChild(btn_donation)
 
 --Create Panel_2_0_0_0_0_0

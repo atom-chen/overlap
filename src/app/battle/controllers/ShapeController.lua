@@ -172,7 +172,7 @@ function ShapeController:touch(event)
                     --减时间
                     if  self.wrongSelect ~= 0 then
                         self:updateTime(-1,true)
---                        self:updateTime(-self.wrongSelect,true)
+                        --                        self:updateTime(-self.wrongSelect,true)
                         --                        self.gameHUD:reduceTime( self.wrongSelect)
                     end
                     self.wrongSelect  = self.wrongSelect +1
@@ -204,10 +204,10 @@ function ShapeController:update(dt)
             if self.gameTime <= ShapeController.TIME_TO_WARING and  not self.tickTime then
                 --时间警告
                 self.tickTime = 1
---                self.tickTime = audio.playSound(GAME_EFFECT[10])
+                --                self.tickTime = audio.playSound(GAME_EFFECT[10])
                 local function playcall()
                     self.tickTime = 1
---                    self.tickTime = audio.playSound(GAME_EFFECT[10])
+                    --                    self.tickTime = audio.playSound(GAME_EFFECT[10])
                 end
 
                 self:addTimer("PLAY_TICK_EFFFECT",10,10000,playcall)
@@ -288,14 +288,14 @@ function ShapeController:initLevelData(level)
     if lvdata[3] then
         self.levelSkill = formatSkill(lvdata[3])
         if level>1000 then
-            self.endemode = GAME_ENDLESS_MODE.endless
+            self.obsmode = GAME_ENDLESS_MODE.endless
         else
-            self.endemode = nil
+            self.obsmode = nil
         end
     else
         local sks = self:initRandSkill(self.levelCount-2)
         self.levelSkill = formatSkill(sks)
-        self.endemode = GAME_ENDLESS_MODE.random
+        self.obsmode = GAME_ENDLESS_MODE.random
     end
     self.levelStar1 = lvdata[4]
     self.levelStar1.hasGet = false
@@ -314,6 +314,10 @@ end
 --
 --@function [parent=#ShapeController] gameStart
 function ShapeController:gameStart(level)
+    --统计游戏局数
+    local played =   helper.getSloterData(Sloters_.game_layed) or 0
+    helper.saveSloterData(Sloters_.game_layed,played+1)
+
     LevelManager:setLevel(level)
 
     self:initLevelData(level)
@@ -358,8 +362,8 @@ function ShapeController:createStage()
     self.combo        = 0         --连续对的块数，音乐
 
     local sIndex
-    print( self.endemode )
-    if  self.endemode == GAME_ENDLESS_MODE.random and self:getScore()<=4 then
+    print( self.obsmode )
+    if  self.obsmode == GAME_ENDLESS_MODE.random and self:getScore()<=4 then
         local isKill= true
         while isKill do
             sIndex = math.random(1,#self.levelSkill)
@@ -368,7 +372,7 @@ function ShapeController:createStage()
                 isKill= false
             end
         end
-     else
+    else
         sIndex = math.random(1,#self.levelSkill)
     end
     self.gameView:creatStage(self.levelSkill[sIndex])
@@ -512,10 +516,12 @@ end
 
 
 function ShapeController:updateRecord()
-    local record =  helper.getSloterData("record"..self.endemode..self.gamemode) or 0
+    local record =  helper.getSloterData("record"..self.obsmode..self.gamemode) or 0
     local score = self:getScore()
     if score >record then
-        helper.saveSloterData("record"..self.endemode..self.gamemode,score)
+        helper.saveSloterData("record"..self.obsmode..self.gamemode,score)
+        local rankId =  gameUtils.getRankId(self.obsmode,self.gamemode)
+        gameUtils.updatePlayerScoreData(rankId,score)
     end
 end
 
@@ -592,7 +598,8 @@ function ShapeController:gameOver()
             stars[3] = self.levelStar3.hasGet
             AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.ceil(self.gameTime),self.maxPerfect)
         else
-            AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.ceil(self.gameTime),self.maxPerfect,self.gamemode,self.endemode)
+            self:submibScore()
+            AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.ceil(self.gameTime),self.maxPerfect,self.gamemode,self.obsmode)
         end
     end
     ac.ccDellayToCall(self,0.2,call)
@@ -606,6 +613,25 @@ function ShapeController:gameOver()
 
     self:disCountdown()
     self:disTouch()
+
+
+    --   local played =  helper.getSloterData(Sloters_.game_layed) or 0
+    --    if played >= 3 then
+    --    local function callback()
+    --        	helper.getSloterData(Sloters_.game_layed,0)
+    --    end
+    --    gamer:playVungleAd(callback)
+    --   end
+
+
+    local function vungleCall(result)
+        if result == "ready" then
+            local function callback()
+            end
+            gamer:playVungleAd(callback)
+        end
+    end
+    gamer:isVungleReady(vungleCall)
 end
 
 ----------------
@@ -686,6 +712,27 @@ function ShapeController:gameResume()
     self:enCountdown()
     actionManager:resumeTargets(actionTargets)
     actionTargets = nil
+end
+
+
+function ShapeController:submitScore()
+    --提交排行榜
+    if self.obsmode == GAME_ENDLESS_MODE.endless then
+        --提交苹果排行榜
+        local function callback()
+        end
+        gamer:submitScore(self:getScore(),self.gamemode-3,callback)
+    end
+
+    local myRankId = gameUtils.getRankId(self.obsmode,self.gamemode)
+    local score_ = self:getScore()
+    local rank = {
+        appId = DNP_APP.id.dnp,
+        rankId = myRankId,
+        key = device:getDeviceUid(),
+        score = score_,
+    }
+    ActionExecutor:execute(msgdef.RankCommit,rank)
 end
 
 

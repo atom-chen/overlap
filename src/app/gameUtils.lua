@@ -292,6 +292,80 @@ function gameUtils.fadeBackAndClose(curName,args)
 end
 
 
+function gameUtils.updateAllRankData(rankData)
+
+    local rankInfo =  helper.getSloterData(Sloters_.rankInfo)
+
+    local randkinfo =  rankInfo["rank"..rankData.rankId]
+    randkinfo.highest = rankData.score
+    randkinfo.allRank = rankData.value
+    helper.saveSloterData(Sloters_.rankInfo,rankInfo)
+
+    gameUtils.updateRanklabel(rankData.rankId,randkinfo)
+end
+
+function gameUtils.updatePlayerRankData(rankData)
+    local rankInfo =  helper.getSloterData(Sloters_.rankInfo)
+
+    local randkinfo =  rankInfo["rank"..rankData.rankId]
+    randkinfo.rank = rankData.rank
+    helper.saveSloterData(Sloters_.rankInfo,rankInfo)
+    
+    gameUtils.updateRanklabel(rankData.rankId,randkinfo)
+end
+
+function gameUtils.updatePlayerScoreData(rankId,score)
+    local rankInfo =  helper.getSloterData(Sloters_.rankInfo)
+
+    local randkinfo =  rankInfo["rank"..rankId]
+    randkinfo.score = score
+    helper.saveSloterData(Sloters_.rankInfo,rankInfo)
+end
+
+
+function gameUtils.updateRanklabel(rankId,data)
+    if AppViews:getView(Layers_.travel) then
+        AppViews:getView(Layers_.travel):updateRankeLabel(rankId,data)
+    end
+end
+
+
+function gameUtils.getRankId(obsMode,shapeMode)
+    local myRankId
+    if obsMode == GAME_ENDLESS_MODE.endless then
+        if shapeMode == 3 then
+            myRankId = DNP_RANK.rank_lv1
+        elseif shapeMode == 4 then
+            myRankId = DNP_RANK.rank_lv2
+        elseif shapeMode == 5 then
+            myRankId = DNP_RANK.rank_lv3
+        elseif shapeMode == 6 then
+            myRankId = DNP_RANK.rank_lv4
+        elseif shapeMode == 7 then
+            myRankId = DNP_RANK.rank_lv5
+        elseif shapeMode == 8 then
+            myRankId = DNP_RANK.rank_lv6
+        end
+    elseif obsMode == GAME_ENDLESS_MODE.random then
+        if shapeMode == 3 then
+            myRankId = DNP_RANK.rank_obs_lv1
+        elseif shapeMode == 4 then
+            myRankId = DNP_RANK.rank_obs_lv2
+        elseif shapeMode == 5 then
+            myRankId = DNP_RANK.rank_obs_lv3
+        elseif shapeMode == 6 then
+            myRankId = DNP_RANK.rank_obs_lv4
+        elseif shapeMode == 7 then
+            myRankId = DNP_RANK.rank_obs_lv5
+        elseif shapeMode == 8 then
+            myRankId = DNP_RANK.rank_obs_lv6
+        end
+    end
+
+    return myRankId
+end
+
+
 
 return gameUtils
 

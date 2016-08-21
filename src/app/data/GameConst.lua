@@ -7,6 +7,7 @@ Sloters_ = {
     last_page = "last_page,",
     last_page_travel = "last_page_travel,",
     last_travel = "last_travel,",
+    rankInfo = "rankInfo,",
     
     unlock_new = "unlock_new",
     new_record = "new_record",
@@ -17,6 +18,7 @@ Sloters_ = {
     level_info    = "level_info",    --关卡信息
     collections   = "collections",   --收集
     collections_show   = "collections_show",   --收集
+    game_layed   = "game_layed",   --游戏次数
 }
 
 Layers_ = {
