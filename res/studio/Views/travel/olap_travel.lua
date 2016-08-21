@@ -235,6 +235,44 @@ layout:setTopMargin(-21.0000)
 layout:setBottomMargin(-21.0000)
 Panel_2:addChild(LO_Start_1)
 
+--Create btn_rank
+local btn_rank = ccui.Button:create()
+btn_rank:ignoreContentAdaptWithSize(false)
+cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
+btn_rank:loadTextureNormal("btn-rank.png",1)
+cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
+btn_rank:loadTexturePressed("btn-rank.png",1)
+cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
+btn_rank:loadTextureDisabled("btn-rank.png",1)
+btn_rank:setTitleFontSize(14)
+btn_rank:setTitleColor({r = 65, g = 65, b = 70})
+btn_rank:setScale9Enabled(true)
+btn_rank:setCapInsets({x = 15, y = 11, width = 40, height = 54})
+btn_rank:setLayoutComponentEnabled(true)
+btn_rank:setName("btn_rank")
+btn_rank:setTag(164)
+btn_rank:setCascadeColorEnabled(true)
+btn_rank:setCascadeOpacityEnabled(true)
+btn_rank:setPosition(660.9221, 86.6330)
+btn_rank.UserData = {}
+btn_rank.UserData[1] = [==========[sb]==========]
+if callBackProvider~=nil then
+      btn_rank:addClickEventListener(callBackProvider("olap_travel.lua", btn_rank, "onClick"))
+end
+layout = ccui.LayoutComponent:bindLayoutComponent(btn_rank)
+layout:setPositionPercentX(0.8812)
+layout:setPositionPercentY(0.0649)
+layout:setPercentWidth(0.0933)
+layout:setPercentHeight(0.0570)
+layout:setSize({width = 70.0000, height = 76.0000})
+layout:setHorizontalEdge(1)
+layout:setVerticalEdge(1)
+layout:setLeftMargin(625.9221)
+layout:setRightMargin(54.0779)
+layout:setTopMargin(1209.3670)
+layout:setBottomMargin(48.6330)
+Layer:addChild(btn_rank)
+
 --Create Animation
 result['animation'] = ccs.ActionTimeline:create()
   

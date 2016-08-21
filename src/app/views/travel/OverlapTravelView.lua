@@ -65,6 +65,12 @@ function OverlapTrvalView:onClick( path,node,funcName)
             self:startGame(level)
         end
         return btnCallback
+    elseif node:getName()=="btn_rank" and funcName =="onClick" then
+        --无尽模式开始按钮
+        local function btnCallback(node,eventType)
+            gamer:showLeaderboards(0)
+        end
+        return btnCallback
     end
 
 end
