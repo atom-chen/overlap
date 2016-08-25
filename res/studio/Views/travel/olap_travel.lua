@@ -149,22 +149,24 @@ btn_start:setName("btn_start")
 btn_start:setTag(254)
 btn_start:setCascadeColorEnabled(true)
 btn_start:setCascadeOpacityEnabled(true)
-btn_start:setPosition(370.3395, 286.9953)
+btn_start:setPosition(375.0000, 248.0000)
 btn_start.UserData = {}
 btn_start.UserData[1] = [==========[sb]==========]
 if callBackProvider~=nil then
       btn_start:addClickEventListener(callBackProvider("olap_travel.lua", btn_start, "onClick"))
 end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_start)
-layout:setPositionPercentX(0.4938)
-layout:setPositionPercentY(0.2151)
+layout:setPositionPercentX(0.5000)
+layout:setPositionPercentY(0.1859)
 layout:setPercentWidth(0.3987)
 layout:setPercentHeight(0.0720)
 layout:setSize({width = 299.0000, height = 96.0000})
-layout:setLeftMargin(220.8395)
-layout:setRightMargin(230.1605)
-layout:setTopMargin(999.0047)
-layout:setBottomMargin(238.9953)
+layout:setHorizontalEdge(1)
+layout:setVerticalEdge(1)
+layout:setLeftMargin(225.5000)
+layout:setRightMargin(225.5000)
+layout:setTopMargin(1038.0000)
+layout:setBottomMargin(200.0000)
 Layer:addChild(btn_start)
 
 --Create Panel_2

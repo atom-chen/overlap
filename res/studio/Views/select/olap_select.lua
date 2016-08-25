@@ -229,7 +229,7 @@ btn_travel:setName("btn_travel")
 btn_travel:setTag(64)
 btn_travel:setCascadeColorEnabled(true)
 btn_travel:setCascadeOpacityEnabled(true)
-btn_travel:setPosition(375.0000, 245.0000)
+btn_travel:setPosition(375.0000, 248.0000)
 btn_travel.UserData = {}
 btn_travel.UserData[1] = [==========[sb]==========]
 if callBackProvider~=nil then
@@ -238,14 +238,15 @@ end
 layout = ccui.LayoutComponent:bindLayoutComponent(btn_travel)
 layout:setPositionPercentXEnabled(true)
 layout:setPositionPercentX(0.5000)
-layout:setPositionPercentY(0.1837)
+layout:setPositionPercentY(0.1859)
 layout:setPercentWidth(0.3987)
 layout:setPercentHeight(0.0720)
 layout:setSize({width = 299.0000, height = 96.0000})
+layout:setVerticalEdge(1)
 layout:setLeftMargin(225.5000)
 layout:setRightMargin(225.5000)
-layout:setTopMargin(1041.0000)
-layout:setBottomMargin(197.0000)
+layout:setTopMargin(1038.0000)
+layout:setBottomMargin(200.0000)
 Layer:addChild(btn_travel)
 
 --Create Panel_2

@@ -83,10 +83,15 @@ function CollectionManager:unlockCollect(id)
     end
 end
 
+
+---------------------------
+--场景收集解锁物品
+--
 function CollectionManager:starCollect(scene)
     local star = LevelManager:getSceneStar(scene)
     local allstar = LevelManager:getSceneStar()
-    if star >=20 then
+    
+    if star >= 10 then
         local cid
         if scene == 1  then
             cid = 78

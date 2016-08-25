@@ -79,6 +79,9 @@ function MainScene:onSplash()
 
     self.splash = OverlapSplashView:create()
         :addTo(self)
+
+
+    self:test()
 end
 
 function MainScene:onGame()
@@ -87,30 +90,30 @@ function MainScene:onGame()
     self.mainView:createOverText()
     self.splash:removeSelf()
     self.splash = nil
-    
---        local rank = {
---        appId = DNP_APP.id.dnp,
---        rankId = DNP_RANK.rank_lv2,
---        key = device:getDeviceUid(),
---        score = 9999999,
---    }     
---    ActionExecutor:execute(msgdef.RankCommit,rank)
---    
---    local rank = {
---        appId = DNP_APP.id.dnp,
---        rankId = DNP_RANK.rank_lv1,
---        key = device:getDeviceUid(),
---    }     
---    --    ActionExecutor:execute(msgdef.RankPlayerInfo,rank)
---    ActionExecutor:execute(msgdef.RankAllInfo,rank)
---    
---    
---    local rank = {
---        appId = DNP_APP.id.dnp,
---        rankId = DNP_RANK.rank_lv1,
---        key = device:getDeviceUid(),
---    }     
---    ActionExecutor:execute(msgdef.RankPlayerInfo,rank)
+
+    --        local rank = {
+    --        appId = DNP_APP.id.dnp,
+    --        rankId = DNP_RANK.rank_lv2,
+    --        key = device:getDeviceUid(),
+    --        score = 13,
+    --    }
+    --    ActionExecutor:execute(msgdef.RankCommit,rank)
+    --
+    --    local rank = {
+    --        appId = DNP_APP.id.dnp,
+    --        rankId = DNP_RANK.rank_lv1,
+    --        key = device:getDeviceUid(),
+    --    }
+    --    --    ActionExecutor:execute(msgdef.RankPlayerInfo,rank)
+    --    ActionExecutor:execute(msgdef.RankAllInfo,rank)
+    --
+    --
+    --    local rank = {
+    --        appId = DNP_APP.id.dnp,
+    --        rankId = DNP_RANK.rank_lv1,
+    --        key = device:getDeviceUid(),
+    --    }
+    --    ActionExecutor:execute(msgdef.RankPlayerInfo,rank)
 end
 
 
@@ -128,9 +131,9 @@ function MainScene:initIosPurchase()
             local productKey = nil
             for k, v in ipairs(DNP_GAME.iap.ios) do
                 if  transaction.transaction.productIdentifier == v then
-            		productKey = k
-            		break
-            	end
+                    productKey = k
+                    break
+                end
             end
             local product = {
                 appId = DNP_APP.id.dnp,
@@ -153,24 +156,25 @@ end
 function MainScene:test()
 
 
---    gamer:inserICloud("overlapId4","overlap4","name;addredd","yuhang;beijing")
---    gamer:updateICloud("overlapId4","overlap4","name;addredd","yuhang1;beijing1")
+    --    gamer:inserICloud("overlapId4","overlap4","name;addredd","yuhang;beijing")
+    --    gamer:updateICloud("overlapId4","overlap4","name;addredd","yuhang1;beijing1")
 
---    local function callback(values)
---    print(values)
---    end
---    gamer:selectICloud("overlapId4","overlap4","name;addredd",callback)
---
---   local icloud =  dnp.ICloud:sharedICloud()
---
---    icloud:insertRecord("overlapId2","overlap2",{"name","addredd"},{"yuhang","beijing"})
---    local function after(result,values)
---        dump(values)
---    end
---
---    icloud:addEventListener(after)
+    --    local function callback(values)
+    --    print(values)
+    --    end
+    --    gamer:selectICloud("overlapId4","overlap4","name;addredd",callback)
+    --
+    --   local icloud =  dnp.ICloud:sharedICloud()
+    --
+    --    icloud:insertRecord("overlapId2","overlap2",{"name","addredd"},{"yuhang","beijing"})
+    --    local function after(result,values)
+    --        dump(values)
+    --    end
+    --
+    --    icloud:addEventListener(after)
 
---    icloud:selectRecord("overlapId1","overlap1",{"name","addredd"})
+    --    icloud:selectRecord("overlapId1","overlap1",{"name","addredd"})
+
 end
 
 

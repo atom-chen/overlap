@@ -31,11 +31,13 @@ end
 function GamePrepareView:onClick( path,node,funcName)
     if node:getName()=="btn_back" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             self:backToSelect()
         end
         return btnCallback
     elseif node:getName()=="btn_start" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             self:startGame()
         end
         return btnCallback
@@ -123,15 +125,18 @@ function GamePrepareView:prepare(_page,_level)
             self["icon_skill_"..v]:show()
             self["icon_skill_"..v]:setSkill(skType)
             sc = sc + 1
-            --显示技能简结
-            if not helper.getSloterData("showskill"..skType) then
-                self:showSkillExplain(skType)
-                helper.saveSloterData("showskill"..skType,1)
-            end
         else
             self["icon_skill_"..v]:hide()
         end
     end
+    
+--    --显示技能简结
+--    local skteach = Level.skTeach[self.gameLevel]
+--    if skteach then
+--        for _, teachs in pairs(skteach) do
+--            self:showSkillExplain(teachs)
+--        end
+--    end
 
     if sc == 1 then
         self["icon_skill_1"]:setPositionX(150-35)

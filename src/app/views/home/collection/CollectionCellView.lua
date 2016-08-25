@@ -40,12 +40,13 @@ function CollectionCellView:setCellUnHighlight(event)
 end
 
 function CollectionCellView:onCellTouched(event)
+    audio.playSound(GAME_EFFECT[13])
     if self.has then
-      local colect =   AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
+        local colect =   AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
         colect:showInfo(self.id)
     else
         local colect =   AppViews:fadeTo(Layers_.collectionView,"app.views.home.collection.CollectionInfoView")
-        colect:showLock(self.id)
+        colect:showLock(tonumber(self.id))
     end
 end
 

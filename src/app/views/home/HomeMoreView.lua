@@ -19,12 +19,14 @@ end
 function HomeMoreView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeBackAndClose(self)
         end
 
         return btnCallback
     elseif node:getName()=="btn_mary"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if device.platform == device.PLATFORM.IOS then
                 device.openURL(string.format(DNP_APP.storeUrl.ios,"998444324"))
             elseif device.platform == device.PLATFORM.ANDROID then
@@ -35,6 +37,7 @@ function HomeMoreView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_ice"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if device.platform == device.PLATFORM.IOS then
                 device.openURL(string.format(DNP_APP.storeUrl.ios,"550436098"))
             elseif device.platform == device.PLATFORM.ANDROID then

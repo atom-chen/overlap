@@ -43,6 +43,7 @@ function HomeCollectionView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
 --            AppViews:fadeBackAndClose(Layers_.collectionView)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeBackAndClose(self)
         end
         return btnCallback

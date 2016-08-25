@@ -7,27 +7,25 @@ OverlapHomeView.LOCALE_LANG_LABEL = {
     Conllection      = _("Conllection"),
     Donation         = _("Donation"),
 }
+
+OverlapHomeView.STAR_WORD_BALABA = {
+    [[Detecting Overlap... ]],[[...  ]],[[Risk Rating : Low  ]],[[...  ]],[[Analysising Atmospheric Composition ...  ]],[[Carbon dioxide : 95.97%  ]],[[Argon : 1.93%  ]],[[Nitrogen : 1.89%  ]],[[Oxygen : 0.146%]],
+    [[Carbon monoxide : 0.0557% ]],[[...  ]],[[Searching Artifacts...  ]],[[...  ]],[[...  ]],[[...  ]],[[Searching Organisms  ]],[[...  ]]
+}
+
+local worldIndex = 1
+
 function OverlapHomeView:onCreate()
     self:localLanguage()
---    ac.execute(self.icon_red,ac.ccForever(ac.ccSeq(ac.ccFadeTo(0.8,0),ac.ccFadeTo(0.8,255))))
---    ac.execute(self.lbl_touch,ac.ccForever(ac.ccSeq(ac.ccFadeTo(2,0),ac.ccFadeTo(2,255),ac.ccDelay(0.3))))
 
     self.showtext = {}
     self.count = 0
---    self:createOverText()
-
---    self:updateStars()
---    self:updateCollects()
 end
 
 function OverlapHomeView:updateStars()
---    local stars =  LevelManager:getSceneStar()
---    self.gotstars:setString(stars .. "/".. 9*GAME_SCENE_COUNT*3)
 end
 
 function OverlapHomeView:updateCollects()
---    local collect,allcolt =  CollectionManager:getCollectionCount()
---    self.gotcolts:setString(collect .. "/".. allcolt)
 end
 
 
@@ -84,8 +82,11 @@ function OverlapHomeView:createOverText()
     Panel_5.ct = 0
     table.insert(self.showtext,Panel_5)
 
-
-    local word =   [[connection 123/56 overlap star ]]
+    local word =   OverlapHomeView.STAR_WORD_BALABA[worldIndex]
+    worldIndex = worldIndex + 1
+    if worldIndex > #OverlapHomeView.STAR_WORD_BALABA  then
+    	worldIndex = 1
+    end
     local totalLen = string.utf8len(word)
     local i = 0
     local function showFont()
@@ -131,12 +132,14 @@ end
 function OverlapHomeView:onClick( path,node,funcName)
     if node:getName()=="btn_start" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.home,Layers_.select)
         end
 
         return btnCallback
     elseif node:getName()=="btn_more" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.home,"app.views.home.HomeMoreView")
         end
 
@@ -144,12 +147,14 @@ function OverlapHomeView:onClick( path,node,funcName)
     elseif node:getName()=="btn_eye" and funcName =="onClick" then
         --显示拍照按钮
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             self:runAnimation("photo")
         end
         return btnCallback
     elseif node:getName()=="btn_photo" and funcName =="onClick" then
         --显示
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             local  saveFile
             --拍照
             local function afterScreen(succeed, outputFile)
@@ -166,24 +171,28 @@ function OverlapHomeView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_noads" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.home,"app.views.home.HomeAdsView")
         end
 
         return btnCallback
     elseif node:getName()=="btn_back" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             self:runAnimation("start")
         end
 
         return btnCallback
     elseif node:getName()=="btn_collection" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.home,"app.views.home.collection.HomeCollectionView",{name = Layers_.collectionView})
         end
 
         return btnCallback
     elseif node:getName()=="btn_config" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.home,Layers_.config)
         end
 

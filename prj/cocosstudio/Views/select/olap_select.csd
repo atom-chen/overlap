@@ -77,7 +77,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_travel" ActionTag="-1583040554" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="64" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="225.5000" RightMargin="225.5000" TopMargin="1041.0000" BottomMargin="197.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="269" Scale9Height="74" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btn_travel" ActionTag="-1583040554" CallBackType="Click" CallBackName="onClick" UserData="sb" Tag="64" IconVisible="False" PositionPercentXEnabled="True" VerticalEdge="BottomEdge" LeftMargin="225.5000" RightMargin="225.5000" TopMargin="1038.0000" BottomMargin="200.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="269" Scale9Height="74" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="299.0000" Y="96.0000" />
             <Children>
               <AbstractNodeData Name="Panel_2" ActionTag="-1533496569" Tag="223" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="149.5000" RightMargin="149.5000" TopMargin="48.0000" BottomMargin="48.0000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -121,10 +121,10 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="375.0000" Y="245.0000" />
+            <Position X="375.0000" Y="248.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.1837" />
+            <PrePosition X="0.5000" Y="0.1859" />
             <PreSize X="0.3987" Y="0.0720" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="PlistSubImage" Path="btn-299-96.png" Plist="Resource/atlas/ui-common.plist" />

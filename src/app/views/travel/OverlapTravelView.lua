@@ -28,11 +28,13 @@ end
 function OverlapTrvalView:onClick( path,node,funcName)
     if node:getName()=="btn_back" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeBack(self)
         end
         return btnCallback
     elseif node:getName()=="btn_right" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if self.curPage + 1<= GAME_SCENE_COUNT - 1 then
                 --                self.curPage = self.curPage + 1
                 self:gotoPage(self.curPage+1)
@@ -41,6 +43,7 @@ function OverlapTrvalView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_left" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if self.curPage - 1>=0 then
                 --                self.curPage = self.curPage - 1
                 self:gotoPage(self.curPage-1)
@@ -59,6 +62,7 @@ function OverlapTrvalView:onClick( path,node,funcName)
     elseif node:getName()=="btn_start" and funcName =="onClick" then
         --无尽模式开始按钮
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             local page = self.curPage
             local mode = self.pageLayer:getMode()
             local level = 1000+page*10+mode
@@ -68,6 +72,7 @@ function OverlapTrvalView:onClick( path,node,funcName)
     elseif node:getName()=="btn_rank" and funcName =="onClick" then
         --无尽模式开始按钮
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             gamer:showLeaderboards(0)
         end
         return btnCallback

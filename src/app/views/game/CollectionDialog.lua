@@ -139,6 +139,7 @@ end
 function CollectionInfoView:onClick( path,node,funcName)
     if  node:getName() =="btn_ok" then
         local function btnCallback(  node,eventType  )
+            audio.playSound(GAME_EFFECT[13])
            self:closeSelf()
         end
         return btnCallback

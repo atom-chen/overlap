@@ -309,11 +309,41 @@ function ShapeController:initLevelData(level)
     self.funScore   = Level.timeFunction
 end
 
+
+
+function ShapeController:showSkillExplain(type,callback)
+   local skillView =  AppViews:addViewByName(string.format("app.views.skills.SkillExplain%dView",type))
+    skillView:setCallBack(callback)
+end
+
+
 ----------------
 --游戏开始
 --
 --@function [parent=#ShapeController] gameStart
 function ShapeController:gameStart(level)
+    local  function  onStartCallback()
+        self:onGameStart(level)
+    end
+    
+    --显示技能简结
+    local skteach = Level.skTeach[level]
+    if skteach then
+        for k, teachs in pairs(skteach) do
+            local callb = nil
+            if k == 1 then
+                callb =  onStartCallback
+            end
+            self:showSkillExplain(teachs,callb)
+        end
+        
+        self.gameView.white:show()
+    else
+        self:onGameStart(level)
+    end
+end
+
+function  ShapeController:onGameStart(level)
     --统计游戏局数
     local played =   helper.getSloterData(Sloters_.game_layed) or 0
     helper.saveSloterData(Sloters_.game_layed,played+1)
@@ -323,6 +353,7 @@ function ShapeController:gameStart(level)
     self:initLevelData(level)
 
     --游戏难度
+    self.gameLevel = level
     self.gamemode    = self.levelCount      --块数
     self.score_      = crypto.confuse(0)    --积分
     self.gameTime    =   self.levelTime     --游戏时间
@@ -349,20 +380,36 @@ function ShapeController:gameStart(level)
     self.gameView:runAnimation("show")
 end
 
-
-
 ----------------
 --生成一个stage
 --
 --@function [parent=ShapeController] createShapes
 function ShapeController:createStage()
+    if self.gameLevel == 1 and self:getScore()<=2 then
+        self:createTeachStage()
+    else
+        if self.teachOrder then
+            self:endTeach()
+            local function call()
+                self:createLevelStage()
+            end
+            ac.ccDellayToCall(self,1,call)
+        else
+            self:createLevelStage()
+        end
+    end
+end
+----------------
+--生成一个stage
+--
+--@function [parent=ShapeController] createShapes
+function ShapeController:createLevelStage()
     audio.playSound(GAME_EFFECT[20])
 
     self.wrongSelect  = 0         --选择错误选项次数
     self.combo        = 0         --连续对的块数，音乐
 
     local sIndex
-    print( self.obsmode )
     if  self.obsmode == GAME_ENDLESS_MODE.random and self:getScore()<=4 then
         local isKill= true
         while isKill do
@@ -387,58 +434,62 @@ function ShapeController:createStage()
 end
 
 
-------------------
-----生成一个教学stage
-----
-----@function [parent=ShapeController] createTeachStage
---function ShapeController:createTeachStage()
---    audio.playSound(GAME_EFFECT[20])
+----------------
+--生成一个教学stage
 --
---    self.wrongSelect = 0
---
---    self.hand = display.newSprite("#teach-hand.png")
---        :addTo(self)
---    self.hand:setVisible(false)
-----
-----    self.teachtalk = self.gameHUD.showTips
-----    self.teachtalk:setPosition(display.width/2,150)
-----    self.teachtalk:setColor(cc.c3b(0,240,255))
-----    --  self:addChild(self.teachtalk)
-----    self.teachtalk:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.35,0.14),cc.ScaleTo:create(0.35,0.13))))
-----
---    self.gameHUD:updateScore(self:getScore())
---    --选择个数
---    local anit,order = self.gameView:creatTeachStage()
---    local function call()
---        self:enTouch()
---        self:teachHand()
---    end
---    ac.ccDellayToCall(self,anit,call)
---
---    self.teachOrder = order
---    self.teachStep = 1
---end
---
-------------------
-----显示教学的手
-----
-----@function [parent=ShapeController] teachHand
---function ShapeController:teachHand()
---    if self.teachStep> #self.teachOrder then
---        return
---    end
---    if  self.teachOrder then
---        for k, v in pairs(self.teachOrder) do
---            if v == self.teachStep then
---                self.touchOrder = k
---                local pos = self.gameView:getPositionByIndex(k)
---                self.hand:setPosition(pos.x,pos.y-50)
---            end
---        end
---    end
---    self.hand:setVisible(true)
---end
+--@function [parent=ShapeController] createTeachStage
+function ShapeController:createTeachStage()
+    audio.playSound(GAME_EFFECT[20])
 
+    self.wrongSelect = 0
+
+    self.hand = display.newSprite("#teach-hand.png")
+        :addTo(self)
+    self.hand:setVisible(false)
+
+    self.gameHUD:updateScore(self:getScore())
+    --选择个数
+    local anit,order = self.gameView:creatTeachStage(self.levelSkill[1])
+    local function call()
+        self:enTouch()
+        self:teachHand()
+    end
+    ac.ccDellayToCall(self,anit,call)
+
+    self.teachOrder = order
+    self.teachStep = 1
+end
+
+----------------
+--显示教学的手
+--
+--@function [parent=ShapeController] teachHand
+function ShapeController:teachHand()
+    if self.teachStep> #self.teachOrder then
+        return
+    end
+    if  self.teachOrder then
+        for k, v in pairs(self.teachOrder) do
+            if v == self.teachStep then
+                self.touchOrder = k
+                local pos = self.gameView:getPositionByIndex(k)
+                self.hand:setPosition(pos.x+20,pos.y-90)
+            end
+        end
+    end
+    self.hand:setVisible(true)
+end
+
+
+----------------
+--显示教学的手
+--
+--@function [parent=ShapeController] teachHand
+function ShapeController:endTeach()
+    self.teachOrder = nil
+    self.hand:removeSelf()
+    self.hand = nil
+end
 
 
 ----------------
@@ -598,7 +649,7 @@ function ShapeController:gameOver()
             stars[3] = self.levelStar3.hasGet
             AppViews:getView(Layers_.result):showResult(stars,self:getScore(),math.ceil(self.gameTime),self.maxPerfect)
         else
-            self:submibScore()
+            self:submitScore()
             AppViews:getView(Layers_.result):showTravelResult(self:getScore(),math.ceil(self.gameTime),self.maxPerfect,self.gamemode,self.obsmode)
         end
     end
@@ -614,24 +665,16 @@ function ShapeController:gameOver()
     self:disCountdown()
     self:disTouch()
 
-
-    --   local played =  helper.getSloterData(Sloters_.game_layed) or 0
-    --    if played >= 3 then
-    --    local function callback()
-    --        	helper.getSloterData(Sloters_.game_layed,0)
-    --    end
-    --    gamer:playVungleAd(callback)
-    --   end
-
-
-    local function vungleCall(result)
-        if result == "ready" then
-            local function callback()
+    if  self.gameLevel > 3  then
+        local function vungleCall(result)
+            if result == "ready" then
+                local function callback()
+                end
+                gamer:playVungleAd(callback)
             end
-            gamer:playVungleAd(callback)
         end
+        gamer:isVungleReady(vungleCall)
     end
-    gamer:isVungleReady(vungleCall)
 end
 
 ----------------
@@ -648,12 +691,18 @@ function ShapeController:gameClean()
         self.gameHUD:stopREC()
     end
 
+    if self.teachOrder then
+        self:endTeach()
+    end
+
     self:disCountdown()
     self:disTouch()
 
     ac.stopTarget(self)
     ac.stopTarget(self.gameView)
     ac.stopTarget(self.gameHUD)
+    
+    self.gameHUD:hideSkill()
 end
 
 

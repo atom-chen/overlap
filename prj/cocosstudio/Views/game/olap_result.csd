@@ -91,8 +91,8 @@
               <AbstractNodeData Name="Panel_2" ActionTag="1850696103" Tag="419" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="56.5000" RightMargin="56.5000" TopMargin="38.5000" BottomMargin="38.5000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="LO_Retry_1" Visible="False" ActionTag="1623030381" Tag="420" IconVisible="False" LeftMargin="-36.0000" RightMargin="-36.0000" TopMargin="-21.0000" BottomMargin="-21.0000" FontSize="36" LabelText="重来" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="72.0000" Y="42.0000" />
+                  <AbstractNodeData Name="LO_Retry_1" Visible="False" ActionTag="1623030381" Tag="420" IconVisible="False" LeftMargin="-30.0000" RightMargin="-30.0000" TopMargin="-17.0000" BottomMargin="-17.0000" FontSize="30" LabelText="重来" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="60.0000" Y="34.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -147,8 +147,8 @@
               <AbstractNodeData Name="Panel_2" ActionTag="-1481099704" Tag="423" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="56.5000" RightMargin="56.5000" TopMargin="38.5000" BottomMargin="38.5000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="LO_List_1" Visible="False" ActionTag="846060434" Tag="424" IconVisible="False" LeftMargin="-36.0000" RightMargin="-36.0000" TopMargin="-21.0000" BottomMargin="-21.0000" FontSize="36" LabelText="主页" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="72.0000" Y="42.0000" />
+                  <AbstractNodeData Name="LO_List_1" Visible="False" ActionTag="846060434" Tag="424" IconVisible="False" LeftMargin="-30.0000" RightMargin="-30.0000" TopMargin="-17.0000" BottomMargin="-17.0000" FontSize="30" LabelText="主页" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="60.0000" Y="34.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -200,7 +200,7 @@
           <AbstractNodeData Name="levelPanel" ActionTag="104443384" Tag="205" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="750.0000" Y="1334.0000" />
             <Children>
-              <AbstractNodeData Name="Image_1" ActionTag="-1954618466" Tag="115" IconVisible="False" LeftMargin="120.4167" RightMargin="117.5833" TopMargin="283.0493" BottomMargin="430.9506" LeftEage="13" RightEage="13" TopEage="13" BottomEage="13" Scale9OriginX="13" Scale9OriginY="13" Scale9Width="14" Scale9Height="14" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_1" ActionTag="-1954618466" Tag="115" IconVisible="False" LeftMargin="120.4167" RightMargin="117.5833" TopMargin="283.0493" BottomMargin="430.9506" Scale9Enable="True" LeftEage="13" RightEage="13" TopEage="13" BottomEage="13" Scale9OriginX="13" Scale9OriginY="13" Scale9Width="14" Scale9Height="14" ctype="ImageViewObjectData">
                 <Size X="512.0000" Y="620.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="376.4167" Y="740.9506" />
@@ -297,7 +297,7 @@
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="26" G="26" B="26" />
+                        <CColor A="255" R="118" G="115" B="113" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -358,8 +358,8 @@
                   <AbstractNodeData Name="Panel_2" ActionTag="851414084" Tag="139" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="56.5000" RightMargin="56.5000" TopMargin="38.5000" BottomMargin="38.5000" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <Children>
-                      <AbstractNodeData Name="LO_Next_1" Visible="False" ActionTag="855005807" Tag="140" IconVisible="False" LeftMargin="-36.0000" RightMargin="-36.0000" TopMargin="-21.0000" BottomMargin="-21.0000" FontSize="36" LabelText="主页" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="72.0000" Y="42.0000" />
+                      <AbstractNodeData Name="LO_Next_1" Visible="False" ActionTag="855005807" Tag="140" IconVisible="False" LeftMargin="-30.0000" RightMargin="-30.0000" TopMargin="-17.0000" BottomMargin="-17.0000" FontSize="30" LabelText="主页" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="60.0000" Y="34.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -684,14 +684,14 @@
                     <FileData Type="PlistSubImage" Path="sp-result-star-h.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="gotcolt" ActionTag="-485861394" Tag="119" IconVisible="False" LeftMargin="252.7689" RightMargin="3.2311" TopMargin="146.3445" BottomMargin="17.6555" ctype="SpriteObjectData">
-                    <Size X="44.0000" Y="36.0000" />
+                  <AbstractNodeData Name="gotcolt" ActionTag="-485861394" Tag="119" IconVisible="False" LeftMargin="258.2689" RightMargin="8.7311" TopMargin="147.8445" BottomMargin="19.1555" ctype="SpriteObjectData">
+                    <Size X="33.0000" Y="33.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="274.7689" Y="35.6555" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.9159" Y="0.1783" />
-                    <PreSize X="0.1467" Y="0.1800" />
+                    <PreSize X="0.1100" Y="0.1650" />
                     <FileData Type="PlistSubImage" Path="sp-result-collection-h.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -719,7 +719,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="randPanel" Visible="False" ActionTag="-1720010787" Tag="260" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="randPanel" ActionTag="-1720010787" Tag="260" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="750.0000" Y="1334.0000" />
             <Children>
               <AbstractNodeData Name="Image_2" ActionTag="457647541" Tag="116" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="113.3500" RightMargin="128.6500" TopMargin="334.8750" BottomMargin="482.1250" Scale9Enable="True" LeftEage="13" RightEage="13" TopEage="13" BottomEage="13" Scale9OriginX="13" Scale9OriginY="13" Scale9Width="14" Scale9Height="14" ctype="ImageViewObjectData">

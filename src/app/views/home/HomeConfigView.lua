@@ -36,12 +36,14 @@ end
 function HomeConfigView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeBack(self)
         end
 
         return btnCallback
     elseif node:getName()=="btn_lang"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(self,"app.views.home.ConfigLangView")
 --            print(store.canMakePurchases())
 --            local function call(result)
@@ -55,28 +57,32 @@ function HomeConfigView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_credit"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.config,"app.views.home.ConfigCreditView")
         end
 
         return btnCallback
     elseif node:getName()=="btn_rate"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if device.platform == device.PLATFORM.IOS then
                 device.openURL(string.format(DNP_APP.storeUrl.ios, DNP_APP.id.ios))
             else
-                gamer:openStore()
+--                gamer:openStore()
             end
         end
 
         return btnCallback
     elseif node:getName()=="btn_donation"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.config,"app.views.home.HomeAdsView")
         end
 
         return btnCallback
     elseif node:getName()=="btn_sound"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if helper.getSloterData(Sloters_.sound_off) then
             	audio.setSoundsVolume(1)
             	audio.playMusic(GAME_BGM)

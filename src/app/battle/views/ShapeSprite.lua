@@ -161,10 +161,10 @@ function ShapeSprite:ctor(model_,type,skill)
 
         if self.skill[SKILL_TYPE.ONLEY_COLOR] then
             --只有颜色的选项
---            self.maskback = display.newSprite("#opt-skill-back-white.png")
---                :move(GRID_BORDER,GRID_BORDER)
---                :addTo(self)
---            self.maskback:setScale(1/OPT_GRID_SCALE)
+            --            self.maskback = display.newSprite("#opt-skill-back-white.png")
+            --                :move(GRID_BORDER,GRID_BORDER)
+            --                :addTo(self)
+            --            self.maskback:setScale(1/OPT_GRID_SCALE)
 
             self.maskback = display.newSprite(string.format("#star-color-%d.png",color))
                 :move(GRID_BORDER,GRID_BORDER)
@@ -173,30 +173,30 @@ function ShapeSprite:ctor(model_,type,skill)
         elseif self.skill[SKILL_TYPE.ONLEY_SHAPE] then
             color = 9
         elseif self.skill[SKILL_TYPE.SELECT_WORD] then
---            self.maskback = display.newSprite("#opt-skill-back.png")
---                :move(GRID_BORDER,GRID_BORDER)
---                :addTo(self)
---            self.maskback:setScale(1/OPT_GRID_SCALE)
+            --            self.maskback = display.newSprite("#opt-skill-back.png")
+            --                :move(GRID_BORDER,GRID_BORDER)
+            --                :addTo(self)
+            --            self.maskback:setScale(1/OPT_GRID_SCALE)
 
             local lang = locale.defaultLang()
             self.maskback = display.newSprite(string.format("#word-%s-%d.png",lang,color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
             self.maskback:setScale(1/OPT_GRID_SCALE)
---                :addTo(self.maskback)
+            --                :addTo(self.maskback)
 
         elseif self.skill[SKILL_TYPE.SELECT_COLOR] then
---            self.maskback = display.newSprite("#opt-skill-back.png")
---                :move(GRID_BORDER,GRID_BORDER)
---                :addTo(self)
---            self.maskback:setScale(1/OPT_GRID_SCALE)
+            --            self.maskback = display.newSprite("#opt-skill-back.png")
+            --                :move(GRID_BORDER,GRID_BORDER)
+            --                :addTo(self)
+            --            self.maskback:setScale(1/OPT_GRID_SCALE)
 
             local lang = locale.defaultLang()
             self.maskback = display.newSprite(string.format("#word-%s-%d.png",lang,color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
             self.maskback:setScale(1/OPT_GRID_SCALE)
---                :addTo(self.maskback)
+            --                :addTo(self.maskback)
             self.maskback:setColor(ShapeSprite.SHAPE_COLOR[color])
         end
         if type == ShapeSprite.SHAPE_MODE.SHAPE then
@@ -280,9 +280,9 @@ function ShapeSprite:fadeLight(t)
     self.shape:setOpacity(0)
     ac.execute(self.shape,ac.ccFadeTo(0.5,255))
     ac.execute(self.shadow,ac.ccFadeTo(0.5,0))
-    self.light:show()
-    self.light:setOpacity(0)
-    ac.execute(self.light,ac.ccFadeTo(0.5,255))
+    --    self.light:show()
+    --    self.light:setOpacity(0)
+    --    ac.execute(self.light,ac.ccFadeTo(0.5,255))
 end
 
 
@@ -320,7 +320,9 @@ function ShapeSprite:valid()
         local color = self.model:getColor()
         self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
     elseif self.skill[SKILL_TYPE.ROTATY_RIGHT] then
-        ac.execute(self,cc.RotateTo:create(0.06,-90))
+        if  not self._on3d  then
+            ac.execute(self,cc.RotateTo:create(0.06,-90))
+        end
     elseif self.skill[SKILL_TYPE.ROTATY_LEFT] then
         ac.execute(self,cc.RotateTo:create(0.06,90))
     elseif self.skill[SKILL_TYPE.HIDEN] then
@@ -330,8 +332,8 @@ function ShapeSprite:valid()
         local color = self.model:getColor()
         self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
     end
-    
-    
+
+
 end
 
 ----------------------
@@ -347,9 +349,11 @@ function ShapeSprite:restore()
     elseif self.skill[SKILL_TYPE.ROTATY_LEFT] then
         ac.execute(self,cc.RotateTo:create(0.06,0))
         --    elseif self.skill[SKILL_TYPE.HIDEN] then
-     --        self.shape:show()
+        --        self.shape:show()
     elseif self.skill[SKILL_TYPE.ROTATY_RIGHT] then
-        ac.execute(self,cc.RotateTo:create(0.06,0))
+        if  not self._on3d  then
+            ac.execute(self,cc.RotateTo:create(0.06,0))
+        end
     end
 end
 
@@ -385,6 +389,11 @@ end
 function ShapeSprite:setOutColor(color)
     self.shape:setColor(ShapeSprite.SHAPE_COLOR[color])
     self.skill[SKILL_TYPE.SAME] = SKILL_TYPE.SAME
+end
+
+
+function ShapeSprite:set3DModel()
+    self._on3d = true
 end
 
 

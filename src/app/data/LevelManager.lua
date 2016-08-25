@@ -148,7 +148,7 @@ function LevelManager:getSceneStar(scene)
     local start = 1
     if scene then
         count = 9
-        start = scene*9+1
+        start = (scene-1)*9+1
     end
     local stars = 0
     for v = start, count do

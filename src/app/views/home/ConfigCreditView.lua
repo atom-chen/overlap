@@ -15,6 +15,7 @@ end
 function ConfigCreditView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeBackAndClose(self)
         end
 

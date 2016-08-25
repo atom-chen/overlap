@@ -40,7 +40,7 @@ GameView.OPT_ITEM[7] = {4,3}
 GameView.OPT_ITEM[8] = {4,4}
 
 
-GameView.TOUCHTIME = {7,6,5,3.5,2.5,2}
+GameView.TOUCHTIME = {7,6,4,2.5,2,1.5}
 
 
 
@@ -58,8 +58,8 @@ function GameView:onCreate()
 
     self.bar1 = helper.progressTimer(self.sb1,cc.p(0,0))
     self.bar2 = helper.progressTimer(self.sb2,cc.p(1,1))
-    
-    self.Touch:hide()
+
+    self.Touch:setOpacity(0)
 end
 
 
@@ -74,9 +74,9 @@ end
 function GameView:setMode(mode)
     self.counts_ = mode
     self:setOption()
-    
+
     self.touchdt_ = GameView.TOUCHTIME[mode-2]
-    
+
     display.loadSpriteFrames("Resource/atlas/shape-entity.plist","Resource/atlas/shape-entity.png")
     display.loadSpriteFrames("Resource/atlas/shape-border.plist","Resource/atlas/shape-border.png")
     display.loadSpriteFrames("Resource/atlas/shape-shadow.plist","Resource/atlas/shape-shadow.png")
@@ -165,8 +165,8 @@ function GameView:reset3DModel()
     self.on3dMode = false
     self.bar1:setPercentage(0)
     self.bar2:setPercentage(0)
-   
-    self.btn_touch:setContentSize({width = 60, height = 60}) 
+
+    self.btn_touch:setContentSize({width = 0, height = 60})
     self.dcount = 60
 end
 
@@ -174,15 +174,15 @@ end
 --生成一个教学关卡
 --
 --@function [parent=#GameView] creatTeachStage
-function GameView:creatTeachStage()
+function GameView:creatTeachStage(skill)
     --最终图形
     local models = self.model:creatStage()
-    local dt = self:createAchieve(models,ShapeSprite.START_ANI.ORDER)
+    local dt = self:createAchieve(models,ShapeSprite.START_ANI.ORDER,skill)
 
     local models,opts = self.model:createOptions()
     --打乱操作界面
     local function call()
-        self:createOptions(models,opts)
+        self:createOptions(models,opts,skill)
     end
     ac.ccDellayToCall(self,dt,call)
     self.effect = 1
@@ -351,7 +351,7 @@ function GameView:onOption(index)
                 end
                 local t = ShapeSprite.SHAPE_MOVE_TO_TIME+ShapeSprite.TIME_TO_NEXT_STAGE
                 if self.on3dMode then
-                	t = t+0.5
+                    t = t+0.5
                 end
                 ac.ccDellayToCall(self,t,call)
             end
@@ -485,7 +485,7 @@ function GameView:goShapeGo(index,wrongSelect)
         local function call3dback()
             self:_3dgo(self.opts[index],self.orders[index],5,true)
         end
-        
+
         --停止点击事件响应
         AppViews:getView(Layers_.gameController):disTouch()
 
@@ -493,16 +493,16 @@ function GameView:goShapeGo(index,wrongSelect)
         local easein = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,self.oPos), 1)
         local easeout = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,cc.p(x,y)), 1)
         self.opts[index]:valid()
-        
+
         if self.on3dMode then
             self.opts[index]:runAction(cc.Sequence:create(
                 cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
                 ,cc.CallFunc:create(effectCall)
                 ,cc.DelayTime:create(0.1)
-                ,ac.ccCall(call3d),ac.ccDelay(0.45)
+                ,ac.ccCall(call3d),ac.ccDelay(0.38)
                 ,cc.CallFunc:create(call1)
                 ,cc.DelayTime:create(ShapeSprite.WRONG_STOP_TIME)
-                ,ac.ccCall(call3dback),ac.ccDelay(0.45)
+                ,ac.ccCall(call3dback),ac.ccDelay(0.38)
                 ,cc.Spawn:create(easeout,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,OPT_GRID_SCALE))
                 ,cc.CallFunc:create(call2)
             ))
@@ -517,8 +517,13 @@ function GameView:goShapeGo(index,wrongSelect)
                 ,cc.CallFunc:create(call2)
             ))
         end
-        
-        ac.execute(self.Touch,cc.Blink:create(3,3))
+
+        --        ac.execute(self.Touch,cc.Blink:create(3,3))
+
+        ac.execute(self.Touch,cc.Repeat:create(
+            cc.Sequence:create(ac.ccFadeTo(0.25,255),ac.ccFadeTo(0.25,0))
+            ,4))
+
     else
         --正确的选择
         self:playTouchEffect()
@@ -539,7 +544,7 @@ function GameView:goShapeGo(index,wrongSelect)
             local easein = cc.EaseIn:create(cc.MoveTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,self.oPos), 1)
             self.opts[index]:runAction(cc.Sequence:create(
                 cc.Spawn:create(easein,cc.ScaleTo:create(ShapeSprite.SHAPE_MOVE_TO_TIME,ARCHIVE_GRID_SCALE))
-                ,ac.ccCall(call3d),ac.ccDelay(0.45)
+                ,ac.ccCall(call3d),ac.ccDelay(0.38)
                 ,cc.CallFunc:create(call),cc.DelayTime:create(ShapeSprite.SHAPE_FADE_OUT_TIME)
             ))
         else
@@ -573,12 +578,12 @@ end
 
 function GameView:_3dgo(shape,key,rad,back)
     rad = rad or 1
-    local scaleTo = cc.ScaleTo:create(2/rad,0.5,0.5)
+    local scaleTo = cc.ScaleTo:create(1/rad,0.5,0.5)
     local moveTo = cc.MoveBy:create(0.5/rad,cc.p(-50*(key-1)+200,0))
     local cam = cc.OrbitCamera:create(1/rad, 1, 0,30,0, 0, 0)
-    
+
     if back then
-        local scaleTo = cc.ScaleTo:create(2/rad,1,1)
+        local scaleTo = cc.ScaleTo:create(1/rad,1,1)
         local cam = cc.OrbitCamera:create(1/rad, 1, 0,0,0, 0, 0)
         ac.execute(shape,scaleTo)
         ac.execute(shape,moveTo:reverse())
@@ -594,6 +599,11 @@ end
 function GameView:show3DModel()
     for key, shape in pairs(self.shapes) do
         self:_3dgo(shape,key)
+        shape:valid()
+    end
+    self.grid:rotate(0)
+    for key, shape in pairs(self.opts) do
+        shape:set3DModel()
     end
 end
 
@@ -619,24 +629,12 @@ function GameView:onClick( path,node,funcName)
             end
         end
         return btnCallback
-    elseif node:getName()=="btn_touch" then
+    elseif node:getName()=="btn_touch_0" then
         local function btnCallback(node,eventType)
             if eventType == ccui.TouchEventType.began then
                 if not self.on3dMode then
---                    local _3dtime = 1.5
---                    local act1 = cc.ProgressTo:create(_3dtime,100)
---                    local act2 = cc.ProgressTo:create(_3dtime,100)
---                    self.bar1:runAction(act1)
---                    self.bar2:runAction(act2)
---
---                    local function onComplete()
---                        self:start3Discovery()
---                    end
---                    local action = ac.ccSeq(ac.ccDelay(_3dtime),ac.ccCall(onComplete))
---                    action:setTag(125)
---                    ac.execute(self,action)
-                      self:enUpdate()
-                      self.touching = true
+                    self:enUpdate()
+                    self.touching = true
                     --3dtouch
                     local function call()
                         self:start3Discovery()
@@ -646,14 +644,6 @@ function GameView:onClick( path,node,funcName)
             elseif eventType == ccui.TouchEventType.moved then
             elseif eventType == ccui.TouchEventType.ended then
                 if  not self.on3dMode then
---                    local act1 = cc.ProgressTo:create(0.1,0)
---                    local act2 = cc.ProgressTo:create(0.1,0)
---                    self.bar1:stopAllActions()
---                    self.bar2:stopAllActions()
---                    self.bar1:runAction(act1)
---                    self.bar2:runAction(act2)
---
---                    self:stopActionByTag(125)
                     self.touching = false
                 end
                 gamer:end3Dtouch()
@@ -676,25 +666,29 @@ function GameView:update()
     if self.touching then
         --按住状态
         if self.dcount<=473 then
+            if  self.dcount  < 60 then
+                self.dcount  = 60
+            end
+
             self.dcount = self.dcount + self.touchdt_
-            self.btn_touch:setContentSize({width = self.dcount, height = 60}) 
+            self.btn_touch:setContentSize({width = self.dcount, height = 60})
         else
             self:start3Discovery()
             self:disUpdate()
         end
     else
         --松开状态
-        if self.dcount >=60 then
+        if self.dcount >= 0 then
             self.dcount = self.dcount - 20
-            if self.dcount < 60 then
-                self.dcount = 60
+            if self.dcount < 0 then
+                self.dcount =  0
             end
-            self.btn_touch:setContentSize({width = self.dcount, height = 60}) 
+            self.btn_touch:setContentSize({width = self.dcount, height = 60})
         else
             self:disUpdate()
         end
     end
-   
+
 end
 
 return GameView

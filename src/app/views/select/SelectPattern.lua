@@ -16,6 +16,7 @@ function SelectPattern:onClick( path,node,funcName)
     if node:getName()=="btn_select" then
         local function btnCallback(node,eventType)
             if eventType == ccui.TouchEventType.began then
+                audio.playSound(GAME_EFFECT[13])
                 self.btn_select:setScale(0.9)
                 ac.execute(self.btn_select,ac.ccScaleTo(0.15,1),{easing = 1})
             elseif eventType == ccui.TouchEventType.moved then

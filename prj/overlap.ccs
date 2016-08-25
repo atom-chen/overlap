@@ -178,6 +178,7 @@
             </PlistImageFolder>
             <PlistImageFolder Image="ui-game.png" PListFile="ui-game.plist" Name=".ui-game_PList.Dir">
               <PlistImageFile Name="btn-game-pause.png" Key="btn-game-pause.png" />
+              <PlistImageFile Name="btn-rank.png" Key="btn-rank.png" />
               <PlistImageFile Name="game-bottom.png" Key="game-bottom.png" />
               <PlistImageFile Name="game-touch-empty.png" Key="game-touch-empty.png" />
               <PlistImageFile Name="game-touch-half-1.png" Key="game-touch-half-1.png" />
@@ -186,6 +187,8 @@
               <PlistImageFile Name="icon-stars-h.png" Key="icon-stars-h.png" />
               <PlistImageFile Name="opt-skill-back.png" Key="opt-skill-back.png" />
               <PlistImageFile Name="opt-skill-back-white.png" Key="opt-skill-back-white.png" />
+              <PlistImageFile Name="skill-teach-cloud.png" Key="skill-teach-cloud.png" />
+              <PlistImageFile Name="skill-teach-opt-cell.png" Key="skill-teach-opt-cell.png" />
               <PlistImageFile Name="sp-achieve-game-90.png" Key="sp-achieve-game-90.png" />
               <PlistImageFile Name="sp-collection-back.png" Key="sp-collection-back.png" />
               <PlistImageFile Name="sp-collection-lock.png" Key="sp-collection-lock.png" />
@@ -204,6 +207,7 @@
               <PlistImageFile Name="star-color-6.png" Key="star-color-6.png" />
               <PlistImageFile Name="star-color-7.png" Key="star-color-7.png" />
               <PlistImageFile Name="star-color-8.png" Key="star-color-8.png" />
+              <PlistImageFile Name="teach-hand.png" Key="teach-hand.png" />
               <PlistImageFile Name="top-splider-1.png" Key="top-splider-1.png" />
               <PlistImageFile Name="top-splider-2.png" Key="top-splider-2.png" />
               <PlistImageFile Name="word-cn-1.png" Key="word-cn-1.png" />
@@ -266,6 +270,7 @@
             <PlistImageFolder Image="ui-home.png" PListFile="ui-home.plist" Name=".ui-home_PList.Dir">
               <PlistImageFile Name="btn-main-config.png" Key="btn-main-config.png" />
               <PlistImageFile Name="btn-main-eye.png" Key="btn-main-eye.png" />
+              <PlistImageFile Name="btn-main-eye-back.png" Key="btn-main-eye-back.png" />
               <PlistImageFile Name="btn-main-noads.png" Key="btn-main-noads.png" />
               <PlistImageFile Name="btn-main-photo.png" Key="btn-main-photo.png" />
               <PlistImageFile Name="collection-detail-1.png" Key="collection-detail-1.png" />
@@ -299,7 +304,6 @@
               <PlistImageFile Name="sp-donation-mini.png" Key="sp-donation-mini.png" />
               <PlistImageFile Name="sp-more-game-ice.png" Key="sp-more-game-ice.png" />
               <PlistImageFile Name="sp-more-game-maryx.png" Key="sp-more-game-maryx.png" />
-              <PlistImageFile Name="st-10.png" Key="st-10.png" />
               <PlistImageFile Name="typewriter_light.png" Key="typewriter_light.png" />
             </PlistImageFolder>
             <PlistImageFolder Image="ui-select.png" PListFile="ui-select.plist" Name=".ui-select_PList.Dir">
@@ -331,14 +335,6 @@
               <PlistImageFile Name="slider-select-travel.png" Key="slider-select-travel.png" />
               <PlistImageFile Name="sp-prepare-level-board-line.png" Key="sp-prepare-level-board-line.png" />
               <PlistImageFile Name="sp-select-level-lock.png" Key="sp-select-level-lock.png" />
-              <PlistImageFile Name="st-1.png" Key="st-1.png" />
-              <PlistImageFile Name="st-2.png" Key="st-2.png" />
-              <PlistImageFile Name="st-3.png" Key="st-3.png" />
-              <PlistImageFile Name="st-5.png" Key="st-5.png" />
-              <PlistImageFile Name="st-6.png" Key="st-6.png" />
-              <PlistImageFile Name="st-7.png" Key="st-7.png" />
-              <PlistImageFile Name="st-8.png" Key="st-8.png" />
-              <PlistImageFile Name="st-9.png" Key="st-9.png" />
             </PlistImageFolder>
             <Image Name="alpha.png" />
           </Folder>

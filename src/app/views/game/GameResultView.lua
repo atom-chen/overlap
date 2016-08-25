@@ -110,6 +110,12 @@ function GameResultView:showTravelResult(score,time,combo,mode,endless)
             CollectionManager:showCollection(newclt)
         end
     end
+    
+    if endless == GAME_ENDLESS_MODE.random then
+        self.avatar:setSpriteFrame(string.format("avatar-%d-on.png",mode))
+    else
+        self.avatar:setSpriteFrame(string.format("avatar-%d.png",mode))
+    end
 end
 
 
@@ -245,6 +251,7 @@ end
 function GameResultView:onClick( path,node,funcName)
     if node:getName()=="btn_list"  then
         local function btnCallback(  node,eventType  )
+            audio.playSound(GAME_EFFECT[13])
             AppViews:getView(Layers_.gameController):gameClean()
             AppViews:getView(Layers_.gameController):hide()
             --
@@ -262,6 +269,7 @@ function GameResultView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_next"  then
         local function btnCallback(  node,eventType  )
+            audio.playSound(GAME_EFFECT[13])
             AppViews:splashMask(0.4)
             local function callback()
                 AppViews:getView(Layers_.gameController):gameClean()
@@ -278,6 +286,7 @@ function GameResultView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_retry"  then
         local function btnCallback(  node,eventType  )
+            audio.playSound(GAME_EFFECT[13])
             AppViews:getView(Layers_.gameController):gameClean()
             local parentView =  AppViews:getView(Layers_.gameController).fromView
             parentView:startGame()
@@ -286,11 +295,12 @@ function GameResultView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_noads"  then
         local function btnCallback(  node,eventType  )
-            
+            audio.playSound(GAME_EFFECT[13])
         end
         return btnCallback
     elseif node:getName()=="panelAds"  then
         local function btnCallback(  node,eventType  )
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeTo(Layers_.result,"app.views.home.HomeAdsView")
         end
         return btnCallback

@@ -5,29 +5,29 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 _0000_104
-  rotate: true
-  xy: 1394, 785
+  rotate: false
+  xy: 1119, 597
   size: 32, 25
   orig: 32, 25
   offset: 0, 0
   index: -1
 _0001_103
   rotate: false
-  xy: 1421, 842
+  xy: 1018, 307
   size: 36, 32
   orig: 36, 32
   offset: 0, 0
   index: -1
 _0002_102
   rotate: false
-  xy: 1211, 658
+  xy: 1119, 624
   size: 37, 32
   orig: 37, 32
   offset: 0, 0
   index: -1
 _0003_101
-  rotate: true
-  xy: 1018, 358
+  rotate: false
+  xy: 1171, 658
   size: 36, 32
   orig: 36, 32
   offset: 0, 0
@@ -83,7 +83,7 @@ _0012__Group_
   index: -1
 _0013_201
   rotate: false
-  xy: 623, 38
+  xy: 728, 38
   size: 52, 36
   orig: 52, 36
   offset: 0, 0
@@ -97,14 +97,14 @@ _0014_202
   index: -1
 _0015_203
   rotate: false
-  xy: 677, 37
+  xy: 782, 37
   size: 51, 37
   orig: 51, 37
   offset: 0, 0
   index: -1
 _0016_204
-  rotate: false
-  xy: 730, 37
+  rotate: true
+  xy: 1018, 341
   size: 51, 37
   orig: 51, 37
   offset: 0, 0
@@ -118,7 +118,7 @@ _0017__Group_
   index: -1
 _0018_301
   rotate: true
-  xy: 783, 41
+  xy: 667, 2
   size: 33, 38
   orig: 33, 38
   offset: 0, 0
@@ -132,14 +132,14 @@ _0019_302
   index: -1
 _0020_303
   rotate: true
-  xy: 1131, 657
+  xy: 707, 2
   size: 33, 38
   orig: 33, 38
   offset: 0, 0
   index: -1
 _0021_304
   rotate: true
-  xy: 1171, 658
+  xy: 1131, 658
   size: 32, 38
   orig: 32, 38
   offset: 0, 0
@@ -152,15 +152,15 @@ _0022__Group_
   offset: 0, 0
   index: -1
 _0023_401
-  rotate: true
-  xy: 1052, 394
+  rotate: false
+  xy: 1421, 853
   size: 39, 21
   orig: 39, 21
   offset: 0, 0
   index: -1
 _0024_402
   rotate: true
-  xy: 2034, 2008
+  xy: 1528, 1452
   size: 38, 9
   orig: 38, 9
   offset: 0, 0
@@ -264,15 +264,15 @@ _0039__Group_
   offset: 0, 0
   index: -1
 _0040_501
-  rotate: false
-  xy: 1541, 1679
+  rotate: true
+  xy: 1498, 1104
   size: 23, 7
   orig: 23, 7
   offset: 0, 0
   index: -1
 _0041_502
-  rotate: false
-  xy: 499, 17
+  rotate: true
+  xy: 1059, 406
   size: 27, 16
   orig: 27, 16
   offset: 0, 0
@@ -293,14 +293,14 @@ _0043__Group_
   index: -1
 _0044__Group_
   rotate: false
-  xy: 499, 35
+  xy: 991, 394
   size: 66, 39
   orig: 66, 39
   offset: 0, 0
   index: -1
 _0045_Layer-8
   rotate: false
-  xy: 1546, 1688
+  xy: 499, 2
   size: 23, 14
   orig: 23, 14
   offset: 0, 0
@@ -313,22 +313,22 @@ _0046_Layer-9
   offset: 0, 0
   index: -1
 _0047_Layer-10
-  rotate: false
-  xy: 499, 2
+  rotate: true
+  xy: 1513, 1292
   size: 21, 13
   orig: 21, 13
   offset: 0, 0
   index: -1
 _0048_Layer-11
-  rotate: true
-  xy: 1528, 1474
+  rotate: false
+  xy: 1546, 1693
   size: 16, 9
   orig: 16, 9
   offset: 0, 0
   index: -1
 _0049__Path_ + _Path_ + _Path_ + _Ellipse_ + _Ellipse_
   rotate: true
-  xy: 1513, 1298
+  xy: 991, 578
   size: 15, 9
   orig: 15, 9
   offset: 0, 0
@@ -349,28 +349,28 @@ _0051_Layer-12
   index: -1
 _0052_Layer-13
   rotate: false
-  xy: 1421, 817
+  xy: 1018, 282
   size: 23, 23
   orig: 23, 23
   offset: 0, 0
   index: -1
 _0053_Layer-14
   rotate: false
-  xy: 1459, 853
+  xy: 1394, 796
   size: 21, 21
   orig: 21, 21
   offset: 0, 0
   index: -1
 _0054_Layer-15
   rotate: false
-  xy: 823, 59
+  xy: 1119, 580
   size: 15, 15
   orig: 15, 15
   offset: 0, 0
   index: -1
 _0055__Ellipse_ + _Ellipse_ + _Ellipse_ + _Ellipse_ + _Ellipse_
-  rotate: true
-  xy: 935, 189
+  rotate: false
+  xy: 1310, 697
   size: 15, 16
   orig: 15, 16
   offset: 0, 0
@@ -405,14 +405,14 @@ _0059__Group_
   index: -1
 _0060__Path_
   rotate: true
-  xy: 991, 396
+  xy: 667, 37
   size: 37, 59
   orig: 37, 59
   offset: 0, 0
   index: -1
 _0061__Group_
   rotate: true
-  xy: 567, 28
+  xy: 611, 28
   size: 46, 54
   orig: 46, 54
   offset: 0, 0
@@ -429,5 +429,68 @@ _0063__Path_
   xy: 1891, 1818
   size: 81, 141
   orig: 81, 141
+  offset: 0, 0
+  index: -1
+_Group_
+  rotate: false
+  xy: 2029, 1793
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1
+_Group_-1
+  rotate: false
+  xy: 1158, 626
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+_Group_-2
+  rotate: false
+  xy: 1209, 669
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+_Group_-3
+  rotate: false
+  xy: 499, 18
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
+_Group_-4
+  rotate: false
+  xy: 557, 21
+  size: 52, 53
+  orig: 52, 53
+  offset: 0, 0
+  index: -1
+_Group_-5
+  rotate: true
+  xy: 1091, 505
+  size: 23, 19
+  orig: 23, 19
+  offset: 0, 0
+  index: -1
+_Group_-6
+  rotate: false
+  xy: 935, 189
+  size: 18, 15
+  orig: 18, 15
+  offset: 0, 0
+  index: -1
+_Group_-7
+  rotate: false
+  xy: 1421, 832
+  size: 23, 19
+  orig: 23, 19
+  offset: 0, 0
+  index: -1
+_Group_-8
+  rotate: false
+  xy: 1462, 855
+  size: 23, 19
+  orig: 23, 19
   offset: 0, 0
   index: -1

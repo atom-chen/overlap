@@ -29,6 +29,7 @@ end
 function GamePauseView:onClick( path,node,funcName)
     if node:getName()=="btn_list"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:getView(Layers_.gameController):gameResume()
             AppViews:getView(Layers_.gameController):gameClean()
             AppViews:getView(Layers_.gameController):hide()
@@ -46,6 +47,7 @@ function GamePauseView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_retry"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:getView(Layers_.gameController):gameResume()
             AppViews:getView(Layers_.gameController):gameClean()
             local parentView =  AppViews:getView(Layers_.gameController).fromView
@@ -55,11 +57,13 @@ function GamePauseView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_continue"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:getView(Layers_.gameController):gameResume()
         end
         return btnCallback
     elseif node:getName()=="btn_sound"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if helper.getSloterData(Sloters_.sound_off) then
                 audio.setSoundsVolume(1)
                 audio.playMusic(GAME_BGM)

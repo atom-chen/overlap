@@ -19,6 +19,21 @@ Level.timeFunction =  function(score,t0,x,min)
 end
 
 
+Level.skTeach = {}
+
+Level.skTeach[5] = {1}
+Level.skTeach[6] = {2}
+Level.skTeach[7] = {4}
+Level.skTeach[8] = {3}
+Level.skTeach[10] = {5}
+Level.skTeach[13] = {6}
+Level.skTeach[16] = {9}
+Level.skTeach[17] = {10}
+Level.skTeach[20] = {7}
+Level.skTeach[21] = {8}
+
+
+
 Level.data = {}
 --场景 ，块数，障碍，星级1，星级2，星级3，初始时间,时间函数参数
 Level.data [1] = {1,3,{{0}},{3,0,0},{10,0,0,16},{20,0,0},10,{4,4,1.1}}

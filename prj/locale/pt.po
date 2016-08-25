@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
-"POT-Creation-Date: 2016-08-10 19:29+0800\n"
-"PO-Revision-Date: 2016-08-10 19:30+0800\n"
+"POT-Creation-Date: 2016-08-22 13:08+0800\n"
+"PO-Revision-Date: 2016-08-24 12:31+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: pt\n"
@@ -18,33 +18,40 @@ msgstr ""
 
 #: ../../src/app/battle/views/GameView.lua:11
 msgid "Touch"
-msgstr ""
-
-#: ../../src/app/data/Collection.lua:3
-msgid "COLT_1"
 msgstr "Segure para obter dicas"
 
 #: ../../src/app/data/Collection.lua:3
-msgid "COLT_2"
+#: ../../src/app/data/CollectionManager.lua:211
+msgid "COLT_1"
 msgstr "Obter no nível ()"
 
 #: ../../src/app/data/Collection.lua:3
-msgid "COLT_3"
+#: ../../src/app/data/CollectionManager.lua:213
+msgid "COLT_2"
 msgstr "Entre em viagem sem fim (cena ())"
 
 #: ../../src/app/data/Collection.lua:3
-msgid "COLT_4"
+#: ../../src/app/data/CollectionManager.lua:215
+msgid "COLT_3"
 msgstr "Recolha símbolos ()"
 
 #: ../../src/app/data/Collection.lua:3
-msgid "COLT_5"
-msgstr "Coletar 20 símbolos em cena ()"
+#: ../../src/app/data/CollectionManager.lua:217
+msgid "COLT_4"
+msgstr "Coletar 10 símbolos em cena ()"
 
 #: ../../src/app/data/Collection.lua:3
-msgid "COLT_6"
+#: ../../src/app/data/CollectionManager.lua:219
+msgid "COLT_5"
 msgstr "Em viagem sem fim (cena ()) pontuação ()"
 
-#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:259
+#: ../../src/app/data/Collection.lua:3
+#: ../../src/app/data/CollectionManager.lua:221
+#, lua-format
+msgid "COLT_6"
+msgstr "Por favor, classifique o nosso jogo, muito obrigado!"
+
+#: ../../src/app/data/Level.lua:8 ../../src/app/data/Level.lua:261
 #: ../../src/app/views/game/GamePrepareView.lua:7
 #: ../../src/app/views/game/GamePrepareView.lua:8
 #: ../../src/app/views/game/GamePrepareView.lua:9
@@ -54,15 +61,15 @@ msgstr "Em viagem sem fim (cena ()) pontuação ()"
 msgid "NorScore"
 msgstr "Pontuação ()"
 
-#: ../../src/app/data/Level.lua:9 ../../src/app/data/Level.lua:261
+#: ../../src/app/data/Level.lua:9 ../../src/app/data/Level.lua:263
 msgid "UniScore"
 msgstr "Pontuação Perfeito ()"
 
-#: ../../src/app/data/Level.lua:10 ../../src/app/data/Level.lua:251
+#: ../../src/app/data/Level.lua:10 ../../src/app/data/Level.lua:253
 msgid "TimeNorScore"
 msgstr "Em () segundos, Pontuação ()"
 
-#: ../../src/app/data/Level.lua:11 ../../src/app/data/Level.lua:253
+#: ../../src/app/data/Level.lua:11 ../../src/app/data/Level.lua:255
 msgid "TimeUniScore"
 msgstr "Em () segundos, Pontuação ()"
 
@@ -74,6 +81,10 @@ msgstr "Em () segundos, Pontuação ()"
 #: ../../src/app/views/home/collection/CollectionInfoView.lua:10
 msgid "OK"
 msgstr "OK"
+
+#: ../../src/app/views/common/CommonDialogView.lua:6
+msgid "UNLOCK_ENDLESS"
+msgstr "Desbloquear Necessidade: ()"
 
 #: ../../src/app/views/game/CollectionDialog.lua:14
 msgid "Collect_1"
@@ -536,7 +547,7 @@ msgstr "consola Spaceship;Por favor, não toque em nada"
 
 #: ../../src/app/views/game/CollectionDialog.lua:132
 #: ../../src/app/views/home/collection/CollectionInfoView.lua:19
-#: ../../src/app/views/home/collection/CollectionInfoView.lua:20
+#: ../../src/app/views/home/collection/CollectionInfoView.lua:26
 msgid "Collect_"
 msgstr ""
 
@@ -558,8 +569,8 @@ msgstr "Costas"
 #: ../../src/app/views/home/HomeConfigView.lua:6
 #: ../../src/app/views/home/HomeConfigView.lua:18
 #: ../../src/app/views/home/HomeConfigView.lua:20
-#: ../../src/app/views/home/HomeConfigView.lua:86
-#: ../../src/app/views/home/HomeConfigView.lua:91
+#: ../../src/app/views/home/HomeConfigView.lua:83
+#: ../../src/app/views/home/HomeConfigView.lua:88
 msgid "Sound"
 msgstr "Som"
 
@@ -571,8 +582,8 @@ msgstr "Continuar"
 #: ../../src/app/views/game/GamePauseView.lua:71
 #: ../../src/app/views/home/HomeConfigView.lua:18
 #: ../../src/app/views/home/HomeConfigView.lua:24
-#: ../../src/app/views/home/HomeConfigView.lua:91
-#: ../../src/app/views/travel/TravelPageView.lua:63
+#: ../../src/app/views/home/HomeConfigView.lua:88
+#: ../../src/app/views/travel/TravelPageView.lua:148
 msgid "Off"
 msgstr "off"
 
@@ -580,8 +591,8 @@ msgstr "off"
 #: ../../src/app/views/game/GamePauseView.lua:66
 #: ../../src/app/views/home/HomeConfigView.lua:20
 #: ../../src/app/views/home/HomeConfigView.lua:26
-#: ../../src/app/views/home/HomeConfigView.lua:86
-#: ../../src/app/views/travel/TravelPageView.lua:71
+#: ../../src/app/views/home/HomeConfigView.lua:83
+#: ../../src/app/views/travel/TravelPageView.lua:157
 msgid "On"
 msgstr "on"
 
@@ -628,6 +639,14 @@ msgstr ""
 
 #: ../../src/app/views/game/SkillInfoView.lua:5
 #: ../../src/app/views/game/SkillInfoView.lua:9
+#: ../../src/app/views/skills/SkillExplain10View.lua:6
+#: ../../src/app/views/skills/SkillExplain1View.lua:6
+#: ../../src/app/views/skills/SkillExplain2View.lua:6
+#: ../../src/app/views/skills/SkillExplain3View.lua:6
+#: ../../src/app/views/skills/SkillExplain4View.lua:6
+#: ../../src/app/views/skills/SkillExplain5View.lua:6
+#: ../../src/app/views/skills/SkillExplain6View.lua:6
+#: ../../src/app/views/skills/SkillExplain7View.lua:6
 msgid "SkInfo_1"
 msgstr "Só cor"
 
@@ -656,10 +675,12 @@ msgid "SkInfo_7"
 msgstr "Invisível"
 
 #: ../../src/app/views/game/SkillInfoView.lua:16
+#: ../../src/app/views/skills/SkillExplain8View.lua:6
 msgid "SkInfo_8"
 msgstr "Mesma cor"
 
 #: ../../src/app/views/game/SkillInfoView.lua:17
+#: ../../src/app/views/skills/SkillExplain9View.lua:6
 msgid "SkInfo_9"
 msgstr "rotação direita"
 
@@ -670,8 +691,40 @@ msgstr "rotação esquerda"
 #: ../../src/app/views/home/HomeAdsView.lua:7
 msgid "AdsInfo"
 msgstr ""
-"Sua doação irá remover os anúncios em jogo. Os 10 doadores pode nomear os "
-"personagens em nosso próximo jogo."
+"Sua doação irá remover os anúncios em jogo. Irá apoiar o nosso "
+"desenvolvimento futuro jogo. Muito obrigado!"
+
+#: ../../src/app/views/home/HomeAdsView.lua:8
+msgid "$1"
+msgstr ""
+
+#: ../../src/app/views/home/HomeAdsView.lua:9
+msgid "$6"
+msgstr ""
+
+#: ../../src/app/views/home/HomeAdsView.lua:10
+msgid "$12"
+msgstr ""
+
+#: ../../src/app/views/home/HomeAdsView.lua:11
+msgid "$30"
+msgstr ""
+
+#: ../../src/app/views/home/HomeAdsView.lua:12
+msgid "$100"
+msgstr ""
+
+#: ../../src/app/views/home/HomeAdsView.lua:13
+msgid "$300"
+msgstr ""
+
+#: ../../src/app/views/home/HomeAdsView.lua:14
+msgid "$600"
+msgstr ""
+
+#: ../../src/app/views/home/HomeAdsView.lua:15
+msgid "$1000"
+msgstr ""
 
 #: ../../src/app/views/home/HomeConfigView.lua:7
 msgid "Language"
@@ -712,29 +765,30 @@ msgstr "Coleção"
 msgid "trval"
 msgstr "viagem sem fim"
 
+#: ../../src/app/views/travel/TravelPageView.lua:6
+#: ../../src/app/views/travel/TravelPageView.lua:48
+msgid "YourRank"
+msgstr "A sua classificação"
+
 #: ../../src/app/views/travel/TravelPageView.lua:7
+#: ../../src/app/views/travel/TravelPageView.lua:44
 msgid "HighScore"
 msgstr "Pontuação máxima"
 
 #: ../../src/app/views/travel/TravelPageView.lua:8
-#: ../../src/app/views/travel/TravelPageView.lua:19
+#: ../../src/app/views/travel/TravelPageView.lua:45
 msgid "AllHighScore"
 msgstr "Recorde mundial"
 
 #: ../../src/app/views/travel/TravelPageView.lua:9
-#: ../../src/app/views/travel/TravelPageView.lua:20
-msgid "Position"
-msgstr "Topo"
-
-#: ../../src/app/views/travel/TravelPageView.lua:10
-#: ../../src/app/views/travel/TravelPageView.lua:63
-#: ../../src/app/views/travel/TravelPageView.lua:71
+#: ../../src/app/views/travel/TravelPageView.lua:148
+#: ../../src/app/views/travel/TravelPageView.lua:157
 msgid "Random"
 msgstr "Os obstáculos aleatórios"
 
-#: ../../src/app/views/travel/TravelPageView.lua:18
-msgid "YourRank"
-msgstr "A sua classificação"
+#: ../../src/app/views/travel/TravelPageView.lua:48
+msgid "Position"
+msgstr "Topo"
 
 #~ msgid "Config"
 #~ msgstr "Configurações"

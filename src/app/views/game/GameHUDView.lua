@@ -80,12 +80,12 @@ function GameHUDView:getTime(time,delayTime)
         tcolor = {r = 240, g = 85, b = 64}
     else
         delayt = delayTime
-        tcolor = {r = 65, g = 135, b = 110}
+        tcolor = {r = 28, g = 208, b = 108}
     end
 
     local score = ccui.Text:create()
     score:setFontName("Resource/fonts/Overlap.ttf")
-    score:setFontSize(100)
+    score:setFontSize(120)
     score:setString(delayt)
     score:setTextColor(tcolor)
     score:enableOutline({r = 255, g = 255, b = 255, a = 255}, 3)
@@ -93,7 +93,7 @@ function GameHUDView:getTime(time,delayTime)
     score:setPosition(display.width/2, display.height-509)
     self:addChild(score)
     
-    ac.execute(score,ac.ccSeq(ac.ccDelay(0.5),ac.ccEasing(ac.ccMoveTo(0.5,cc.p(display.width/2-295,display.height-40)),21),ac.ccRemoveSelf()))
+    ac.execute(score,ac.ccSeq(ac.ccDelay(0.3),ac.ccEasing(ac.ccMoveTo(0.5,cc.p(display.width/2-295,display.height-40)),21),ac.ccRemoveSelf()))
 
     self:updateTime(time)
 end
@@ -107,22 +107,29 @@ end
 function GameHUDView:showPerfect(serial)
     local ttfConfig = {}
     ttfConfig.fontFilePath="Resource/fonts/Overlap.ttf"
-    ttfConfig.fontSize = 72
+    ttfConfig.fontSize = 100
 
-    local label1 = cc.Label:createWithTTF(ttfConfig,"PERFECT * "..serial, cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
-    label1:setTextColor(cc.c3b(241,81,81))
-    label1:enableOutline({r = 255, g = 255, b = 255, a = 255}, 3)
+    local label1 = cc.Label:createWithTTF(ttfConfig,"Perfet * "..serial, cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
+    label1:setTextColor(cc.c3b(209,7,7))
+    label1:enableOutline({r = 255, g = 255, b = 255, a = 255}, 5)
     self:addChild(label1)
-    label1:setPosition( cc.p(display.width/2, 425) )
+    label1:setPosition(display.width/2, display.height-509)
+--    label1:setPosition( cc.p(display.width/2, 425) )
     label1:setAnchorPoint( cc.p(0.5, 0.5))
-    ac.execute(label1,ac.ccSeq(ac.ccFadeTo(0.2,255),ac.ccDelay(1),ac.ccFadeTo(0.3,0),ac.ccRemoveSelf()))
+--    ac.execute(label1,ac.ccSeq(ac.ccFadeTo(0.2,255),ac.ccDelay(1),ac.ccFadeTo(0.3,0),ac.ccRemoveSelf()))
+    label1:hide()
+    
+    local function call()
+    	label1:show()
+    end
+    ac.execute(label1,ac.ccSeq(ac.ccDelay(0.5),ac.ccCall(call),ac.ccEasing(cc.Spawn:create(ac.ccMoveBy(0.5,cc.p(0,200)),cc.FadeTo:create(0.5,0)),21),ac.ccRemoveSelf()))
 end
-
 
 
 function GameHUDView:onClick( path,node,funcName)
     if  node:getName() =="btn_pause" then
         local function btnCallback(  node,eventType  )
+            audio.playSound(GAME_EFFECT[13])
             AppViews:getView(Layers_.gameController):gamePause()
 
         end
@@ -138,10 +145,24 @@ function GameHUDView:startREC()
     action:setTag(111)
     ac.execute(self.slider,action)
 end
+
+
 function GameHUDView:stopREC()
     self.slider:stopActionByTag(111)
     self.slider:setOpacity(255)
     self.slider:setSpriteFrame("top-splider-1.png")
+end
+
+
+function GameHUDView:highTip()
+    local x = self["Panel_1"]:getPositionX()
+    ac.stopTarget(self["Panel_1"])
+    self["Panel_1"]:runAction(ac.ccMoveTo(0.5,cc.p(x,400)))
+end
+
+function GameHUDView:lowTip()
+    local x = self["Panel_1"]:getPositionX()
+    self["Panel_1"]:runAction(ac.ccMoveTo(0.5,cc.p(x,1.8)))
 end
 
 

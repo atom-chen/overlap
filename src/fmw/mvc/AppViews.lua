@@ -201,7 +201,7 @@ function AppViews:fadeTo(curName,toName,args)
     else
         local layName
         if args and args.name then
-            layName = args.namef
+            layName = args.name
         end
 
         toView =   self:addViewByName(toName,layName)

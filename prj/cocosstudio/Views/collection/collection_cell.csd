@@ -19,18 +19,18 @@
               <AbstractNodeData Name="Sprite_1" ActionTag="-1610728334" Tag="3" IconVisible="False" LeftMargin="0.2241" RightMargin="26.7759" TopMargin="0.1322" BottomMargin="38.8678" ctype="SpriteObjectData">
                 <Size X="165.0000" Y="104.0000" />
                 <Children>
-                  <AbstractNodeData Name="lock" ActionTag="504587780" VisibleForFrame="False" Tag="38" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="51.0000" RightMargin="51.0000" TopMargin="16.5000" BottomMargin="16.5000" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="lock" ActionTag="504587780" Tag="38" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="51.0000" RightMargin="51.0000" TopMargin="16.5000" BottomMargin="16.5000" ctype="SpriteObjectData">
                     <Size X="63.0000" Y="71.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="82.5000" Y="52.0000" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Scale ScaleX="0.5000" ScaleY="0.5000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="0.3818" Y="0.6827" />
                     <FileData Type="PlistSubImage" Path="sp-collection-lock.png" Plist="Resource/atlas/ui-game.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="collect" ActionTag="-613121758" Tag="25" IconVisible="False" LeftMargin="-57.0023" RightMargin="-51.9977" TopMargin="-48.4995" BottomMargin="-54.5005" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="collect" Visible="False" ActionTag="-613121758" Tag="25" IconVisible="False" LeftMargin="-57.0023" RightMargin="-51.9977" TopMargin="-48.4995" BottomMargin="-54.5005" ctype="SpriteObjectData">
                     <Size X="274.0000" Y="207.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="79.9977" Y="48.9995" />

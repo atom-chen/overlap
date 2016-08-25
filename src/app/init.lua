@@ -27,7 +27,8 @@ msgdef = require("app.msgdef")
 perpare = require("app.prepare")
 
 ActionExecutor = require("fmw.action.ActionExecutor"):new()
-ActionExecutor:setHttpServer("http://192.168.0.33:8000")
+ActionExecutor:setHttpServer(DNP_SERVER.httpServer)
+--ActionExecutor:setHttpServer("http://192.168.0.33:8000")
 
 perpare.actions()
 perpare.tables()

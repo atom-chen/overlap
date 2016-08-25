@@ -1,6 +1,6 @@
 
 -- 0 - disable debug info, 1 - less debug info, 2 - verbose debug info
-DEBUG = 2
+DEBUG = 0
 
 --######## 应用区域 #######--
 DNP_APP = {
@@ -42,7 +42,7 @@ DNP_CHANNEL = {
 }
 
 DNP_SERVER = {
-    httpServer = "http://127.0.0.1:8000",
+    httpServer = "http://apo.donopo.com:34568",
     websocketServer = "http://127.0.0.1:8000",
 }
 

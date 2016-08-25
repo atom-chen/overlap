@@ -47,12 +47,14 @@ end
 function OverlapSelectView:onClick( path,node,funcName)
     if node:getName()=="btn_back" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
            AppViews:fadeBack(Layers_.select,Layers_.home)
         end
 
         return btnCallback
     elseif node:getName()=="btn_right" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if self.curPage + 1<= GAME_SCENE_COUNT - 1 then
                 self.curPage = self.curPage + 1
                 self:gotoPage(self.curPage)
@@ -61,6 +63,7 @@ function OverlapSelectView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_left" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if self.curPage - 1>=0 then
                 self.curPage = self.curPage - 1
                 self:gotoPage(self.curPage)
@@ -69,20 +72,22 @@ function OverlapSelectView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_travel" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             --检测无尽模式开启道具是否已经收集
-            AppViews:getView(Layers_.travel):showOnPage(self.curPage + 1)
-            AppViews:fadeTo(Layers_.select,Layers_.travel)
---            local page = self.curPage+1
---            local unlockClt =  Level.openMode[page]
---            if  CollectionManager:isCollectioned(unlockClt) then
---                --开始游戏
---                AppViews:getView(Layers_.travel):showOnPage(self.curPage + 1)
---                AppViews:fadeTo(Layers_.select,Layers_.travel)
---            else
---                --模式没有开启
---                local clot = AppViews:addViewByName("app.views.common.CommonDialogView")
---                clot:showContent(string.format(helper.fromatLO(_("UNLOCK_ENDLESS")),unlockClt))
---            end
+--            AppViews:getView(Layers_.travel):showOnPage(self.curPage + 1)
+--            AppViews:fadeTo(Layers_.select,Layers_.travel)
+            local page = self.curPage+1
+            local unlockClt =  Level.openMode[page]
+            if  CollectionManager:isCollectioned(unlockClt) then
+                --开始游戏
+                AppViews:getView(Layers_.travel):showOnPage(self.curPage + 1)
+                AppViews:fadeTo(Layers_.select,Layers_.travel)
+            else
+                --模式没有开启
+                local clot = AppViews:addViewByName("app.views.common.CommonDialogView")
+                local infos =   helper.split(_("Collect_"..unlockClt),";")
+                clot:showContent(string.format(helper.fromatLO(_("UNLOCK_ENDLESS")),infos[1]))
+            end
         end
         return btnCallback
     elseif node:getName()=="pageView" and funcName =="onEvent" then

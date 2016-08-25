@@ -56,6 +56,7 @@ end
 function HomeAdsView:onClick( path,node,funcName)
     if node:getName()=="btn_back"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             AppViews:fadeBackAndClose(self)
         end
 
@@ -67,42 +68,50 @@ function HomeAdsView:onClick( path,node,funcName)
         return btnCallback
     elseif node:getName()=="btn_dnt_1"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             print(DNP_GAME.iap.ios[1])
             store.purchase(DNP_GAME.iap.ios[1])
         end
         return btnCallback
     elseif node:getName()=="btn_dnt_2"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             store.purchase(DNP_GAME.iap.ios[2])
         end
         return btnCallback
     elseif node:getName()=="btn_dnt_3"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             store.purchase(DNP_GAME.iap.ios[3])
         end
         return btnCallback
     elseif node:getName()=="btn_dnt_4"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             store.purchase(DNP_GAME.iap.ios[4])
         end
         return btnCallback
     elseif node:getName()=="btn_dnt_5"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             store.purchase(DNP_GAME.iap.ios[5])
         end
         return btnCallback
     elseif node:getName()=="btn_dnt_6"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             store.purchase(DNP_GAME.iap.ios[6])
         end
         return btnCallback
     elseif node:getName()=="btn_dnt_7"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             store.purchase(DNP_GAME.iap.ios[7])
         end
         return btnCallback
     elseif node:getName()=="btn_dnt_8"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             store.purchase(DNP_GAME.iap.ios[8])
         end
         return btnCallback

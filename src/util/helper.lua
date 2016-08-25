@@ -332,7 +332,7 @@ function helper.fromatLO(lostr)
         if #temstr == v then
             forstr = forstr .. temstr[v]
         else
-            forstr =forstr .. temstr[v] .. "%d"
+            forstr =forstr .. temstr[v] .. "%s"
         end
 
     end

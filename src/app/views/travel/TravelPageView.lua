@@ -21,7 +21,7 @@ end
 
 function TravelPageView:updateRank(data)
     local ranks
-    if not data then
+--    if not data then
         local rankInfo =  helper.getSloterData(Sloters_.rankInfo)
         if not rankInfo then
             rankInfo = {}
@@ -37,9 +37,9 @@ function TravelPageView:updateRank(data)
 
         local randId =  gameUtils.getRankId(self.mode,self.page)
         ranks = rankInfo["rank"..randId]
-    else
-        ranks = data
-    end
+    --    else
+    --        ranks = data
+    --    end
 
     self.HighScore:setString(_("HighScore").." : "..ranks.score)
     self.GHighScore:setString(_("AllHighScore").." : "..ranks.highest)
@@ -120,12 +120,14 @@ function TravelPageView:onPage(page)
         self:setEndless()
     end
 
+    self:updateRank()
     return self
 end
 
 function TravelPageView:onClick( path,node,funcName)
     if node:getName()=="btn_trans" and funcName =="onClick" then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             if  self.mode == GAME_ENDLESS_MODE.endless then
                 --随机模式
                 self:setRandom()
@@ -147,6 +149,10 @@ function TravelPageView:setEndless()
     self.random:setString(_("Random")..":".._("Off"))
 
     helper.saveSloterData(Sloters_.last_mode..(self.page-2),self.mode)
+    
+    self.avatar:setSpriteFrame(string.format("avatar-%d.png",self.page))
+    
+        self:updateRank()
 end
 
 function TravelPageView:setRandom()
@@ -155,6 +161,10 @@ function TravelPageView:setRandom()
     self.btn_trans:loadTexturePressed("btn-select-travel-on.png",1)
     self.random:setString(_("Random")..":".._("On"))
     helper.saveSloterData(Sloters_.last_mode..(self.page-2),self.mode)
+    
+    self.avatar:setSpriteFrame(string.format("avatar-%d-on.png",self.page))
+    
+    self:updateRank()
 end
 
 

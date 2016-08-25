@@ -132,7 +132,7 @@
       <ObjectData Name="Layer" Tag="57" ctype="GameLayerObjectData">
         <Size X="750.0000" Y="1334.0000" />
         <Children>
-          <AbstractNodeData Name="Panel_1" ActionTag="1326085322" Tag="58" FrameEvent="exitEvent" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.5000" RightMargin="-125.5000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel_1" ActionTag="1326085322" Tag="58" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.5000" RightMargin="-125.5000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1001.0000" Y="1334.0000" />
             <Children>
               <AbstractNodeData Name="Sprite_1" ActionTag="-569048375" Alpha="0" Tag="95" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.5000" RightMargin="1.5000" ctype="SpriteObjectData">
@@ -146,38 +146,38 @@
                 <FileData Type="PlistSubImage" Path="logo-splash.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_2" ActionTag="-282535477" Alpha="0" Tag="96" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_2" ActionTag="-282535477" Tag="96" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1001.0000" Y="1334.0000" />
                 <Children>
-                  <AbstractNodeData Name="Sprite_2" ActionTag="571877480" Tag="97" IconVisible="False" LeftMargin="225.4177" RightMargin="254.5823" TopMargin="454.8785" BottomMargin="755.1215" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="Sprite_2" ActionTag="571877480" Tag="97" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="240.0000" RightMargin="240.0000" TopMargin="454.8785" BottomMargin="755.1215" ctype="SpriteObjectData">
                     <Size X="521.0000" Y="124.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="485.9177" Y="817.1215" />
+                    <Position X="500.5000" Y="817.1215" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4854" Y="0.6125" />
+                    <PrePosition X="0.5000" Y="0.6125" />
                     <PreSize X="0.5205" Y="0.0930" />
                     <FileData Type="PlistSubImage" Path="overlap-game-title.png" Plist="Resource/atlas/ui-home.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Sprite_3" ActionTag="1236003565" Tag="98" IconVisible="False" LeftMargin="346.9178" RightMargin="376.0822" TopMargin="630.3782" BottomMargin="658.6218" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="Sprite_3" ActionTag="1236003565" Tag="98" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="361.5000" RightMargin="361.5000" TopMargin="630.3782" BottomMargin="658.6218" ctype="SpriteObjectData">
                     <Size X="278.0000" Y="45.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="485.9178" Y="681.1218" />
+                    <Position X="500.5000" Y="681.1218" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4854" Y="0.5106" />
+                    <PrePosition X="0.5000" Y="0.5106" />
                     <PreSize X="0.2777" Y="0.0337" />
                     <FileData Type="PlistSubImage" Path="overlap-game-title-1.png" Plist="Resource/atlas/ui-home.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Sprite_4" ActionTag="573777188" Tag="99" IconVisible="False" LeftMargin="434.9178" RightMargin="464.0822" TopMargin="724.3815" BottomMargin="580.6185" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="Sprite_4" ActionTag="573777188" Tag="99" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="449.5000" RightMargin="449.5000" TopMargin="724.3815" BottomMargin="580.6185" ctype="SpriteObjectData">
                     <Size X="102.0000" Y="29.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="485.9178" Y="595.1185" />
+                    <Position X="500.5000" Y="595.1185" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4854" Y="0.4461" />
+                    <PrePosition X="0.5000" Y="0.4461" />
                     <PreSize X="0.1019" Y="0.0217" />
                     <FileData Type="PlistSubImage" Path="overlap-game-title-2.png" Plist="Resource/atlas/ui-home.plist" />
                     <BlendFunc Src="1" Dst="771" />

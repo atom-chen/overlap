@@ -15,6 +15,7 @@ end
 function LangCellView:onClick( path,node,funcName)
     if node:getName()=="btn_lang"  then
         local function btnCallback(node,eventType)
+            audio.playSound(GAME_EFFECT[13])
             locale.saveDefault(self.lang)
 --            require 'main'
            import ("main")
