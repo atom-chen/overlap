@@ -84,8 +84,8 @@ function GameResultView:showTravelResult(score,time,combo,mode,endless)
     self.Result_time1:setString(_("Result_time").."  "..time)
     self.Result_combo1:setString(_("Result_combo").."  "..combo)
 
-    local record =  helper.getSloterData("record"..mode) or 0
-    self.Result_high1:setString(_("Result_combo").."  "..record)
+    local record =  helper.getSloterData("record"..endless..mode) or 0
+    self.Result_high1:setString(_("Result_high").."  "..record)
     
     
     --动画
@@ -93,7 +93,7 @@ function GameResultView:showTravelResult(score,time,combo,mode,endless)
     aniTarget[1] = self.rpanel1
     aniTarget[2] = self.rpanel2
     aniTarget[3] = self.rpanel3
-    aniTarget[4] = self.rpanel4
+--    aniTarget[4] = self.rpanel4
     local showdt = self:moveSeqAni(aniTarget)
     self:showButtonPanel(showdt+1,false)
     

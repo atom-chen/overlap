@@ -9,7 +9,7 @@ DNP_APP = {
 
     id = {
         dnp = 1005,                 -- DONOPO应用内部编号
-        ios = "1087226557",              -- AppStore编码
+        ios = "1007144404",              -- AppStore编码
         android = "com.donopo.helloKitty",   -- GooglePlay编码
     },
 

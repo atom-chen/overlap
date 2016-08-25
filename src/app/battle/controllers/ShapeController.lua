@@ -312,7 +312,7 @@ end
 
 
 function ShapeController:showSkillExplain(type,callback)
-   local skillView =  AppViews:addViewByName(string.format("app.views.skills.SkillExplain%dView",type))
+    local skillView =  AppViews:addViewByName(string.format("app.views.skills.SkillExplain%dView",type))
     skillView:setCallBack(callback)
 end
 
@@ -324,8 +324,8 @@ end
 function ShapeController:gameStart(level)
     local  function  onStartCallback()
         self:onGameStart(level)
+        self.gameHUD:show()
     end
-    
     --显示技能简结
     local skteach = Level.skTeach[level]
     if skteach then
@@ -336,8 +336,8 @@ function ShapeController:gameStart(level)
             end
             self:showSkillExplain(teachs,callb)
         end
-        
         self.gameView.white:show()
+        self.gameHUD:hide()
     else
         self:onGameStart(level)
     end
@@ -349,7 +349,6 @@ function  ShapeController:onGameStart(level)
     helper.saveSloterData(Sloters_.game_layed,played+1)
 
     LevelManager:setLevel(level)
-
     self:initLevelData(level)
 
     --游戏难度
@@ -387,9 +386,11 @@ end
 function ShapeController:createStage()
     if self.gameLevel == 1 and self:getScore()<=2 then
         self:createTeachStage()
+        self.gameHUD:showTip()
     else
         if self.teachOrder then
             self:endTeach()
+            self.gameHUD:hideTip()
             local function call()
                 self:createLevelStage()
             end
@@ -442,7 +443,7 @@ function ShapeController:createTeachStage()
     audio.playSound(GAME_EFFECT[20])
 
     self.wrongSelect = 0
-
+    cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
     self.hand = display.newSprite("#teach-hand.png")
         :addTo(self)
     self.hand:setVisible(false)
@@ -454,7 +455,7 @@ function ShapeController:createTeachStage()
         self:enTouch()
         self:teachHand()
     end
-    ac.ccDellayToCall(self,anit,call)
+    ac.ccDellayToCall(self,anit+0.2,call)
 
     self.teachOrder = order
     self.teachStep = 1
@@ -665,16 +666,20 @@ function ShapeController:gameOver()
     self:disCountdown()
     self:disTouch()
 
-    if  self.gameLevel > 3  then
-        local function vungleCall(result)
-            if result == "ready" then
-                local function callback()
+    local noads = helper.getSloterData(Sloters_.noads)
+    if not noads then
+        if  self.gameLevel > 3  then
+            local function vungleCall(result)
+                if result == "ready" then
+                    local function callback()
+                    end
+                    gamer:playVungleAd(callback)
                 end
-                gamer:playVungleAd(callback)
             end
+            gamer:isVungleReady(vungleCall)
         end
-        gamer:isVungleReady(vungleCall)
     end
+    
 end
 
 ----------------
@@ -701,7 +706,7 @@ function ShapeController:gameClean()
     ac.stopTarget(self)
     ac.stopTarget(self.gameView)
     ac.stopTarget(self.gameHUD)
-    
+
     self.gameHUD:hideSkill()
 end
 

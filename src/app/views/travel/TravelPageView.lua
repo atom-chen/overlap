@@ -21,30 +21,20 @@ end
 
 function TravelPageView:updateRank(data)
     local ranks
---    if not data then
-        local rankInfo =  helper.getSloterData(Sloters_.rankInfo)
-        if not rankInfo then
-            rankInfo = {}
-            for shapes=1, 6 do
-                for obs=1, 2 do
-                    local randId =  gameUtils.getRankId(obs,shapes+2)
-                    local record =  helper.getSloterData("record"..obs..(shapes+2)) or 0
-                    rankInfo["rank"..randId] = {score=record,rank = 99999,highest = 99999,allRank = 99999}
-                end
-            end
-            helper.saveSloterData(Sloters_.rankInfo,rankInfo)
-        end
-
-        local randId =  gameUtils.getRankId(self.mode,self.page)
-        ranks = rankInfo["rank"..randId]
-    --    else
-    --        ranks = data
-    --    end
+    local randId =  gameUtils.getRankId(self.mode,self.page)
+    local rankInfo =  helper.getSloterData(Sloters_.rankInfo)
+    ranks = rankInfo["rank"..randId]
 
     self.HighScore:setString(_("HighScore").." : "..ranks.score)
     self.GHighScore:setString(_("AllHighScore").." : "..ranks.highest)
 
-    local rankPos = string.format("%.1f", ranks.rank/ranks.allRank*100)
+    local posRank = ranks.rank/ranks.allRank*100
+    local rankPos
+    if posRank>90 then
+        rankPos = "90"
+    else
+        rankPos = string.format("%.1f", posRank)
+    end
     self.YourRank:setString(_("YourRank").." : "..ranks.rank.."(".._("Position")..rankPos.."%)")
 end
 
@@ -149,10 +139,10 @@ function TravelPageView:setEndless()
     self.random:setString(_("Random")..":".._("Off"))
 
     helper.saveSloterData(Sloters_.last_mode..(self.page-2),self.mode)
-    
+
     self.avatar:setSpriteFrame(string.format("avatar-%d.png",self.page))
-    
-        self:updateRank()
+
+    self:updateRank()
 end
 
 function TravelPageView:setRandom()
@@ -161,9 +151,9 @@ function TravelPageView:setRandom()
     self.btn_trans:loadTexturePressed("btn-select-travel-on.png",1)
     self.random:setString(_("Random")..":".._("On"))
     helper.saveSloterData(Sloters_.last_mode..(self.page-2),self.mode)
-    
+
     self.avatar:setSpriteFrame(string.format("avatar-%d-on.png",self.page))
-    
+
     self:updateRank()
 end
 

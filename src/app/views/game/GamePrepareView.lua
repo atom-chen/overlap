@@ -69,10 +69,11 @@ function GamePrepareView:backToSelect()
 end
 
 function GamePrepareView:nextLevel()
-    if self.level + 1<=9 then
-        self:prepare(self.page,self.level + 1)
-        return true
+    if self.page == GAME_SCENE_COUNT and self.level + 1<=9 then
+        return
     end
+    self:prepare(self.page,self.level + 1)
+    return true
 end
 
 
@@ -129,14 +130,14 @@ function GamePrepareView:prepare(_page,_level)
             self["icon_skill_"..v]:hide()
         end
     end
-    
---    --显示技能简结
---    local skteach = Level.skTeach[self.gameLevel]
---    if skteach then
---        for _, teachs in pairs(skteach) do
---            self:showSkillExplain(teachs)
---        end
---    end
+
+    --    --显示技能简结
+    --    local skteach = Level.skTeach[self.gameLevel]
+    --    if skteach then
+    --        for _, teachs in pairs(skteach) do
+    --            self:showSkillExplain(teachs)
+    --        end
+    --    end
 
     if sc == 1 then
         self["icon_skill_1"]:setPositionX(150-35)

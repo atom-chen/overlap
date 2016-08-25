@@ -417,19 +417,18 @@ Panel_1:setCascadeColorEnabled(true)
 Panel_1:setCascadeOpacityEnabled(true)
 Panel_1:setVisible(false)
 Panel_1:setAnchorPoint(0.5000, 0.0000)
-Panel_1:setPosition(375.0000, 1.7981)
-Panel_1:setOpacity(0)
+Panel_1:setPosition(387.2804, 458.2837)
 layout = ccui.LayoutComponent:bindLayoutComponent(Panel_1)
 layout:setPositionPercentXEnabled(true)
-layout:setPositionPercentX(0.5000)
-layout:setPositionPercentY(0.0013)
+layout:setPositionPercentX(0.5164)
+layout:setPositionPercentY(0.3435)
 layout:setPercentWidth(0.2667)
 layout:setPercentHeight(0.1499)
 layout:setSize({width = 200.0000, height = 200.0000})
-layout:setLeftMargin(275.0000)
-layout:setRightMargin(275.0000)
-layout:setTopMargin(1132.2020)
-layout:setBottomMargin(1.7981)
+layout:setLeftMargin(287.2804)
+layout:setRightMargin(262.7196)
+layout:setTopMargin(675.7163)
+layout:setBottomMargin(458.2837)
 Layer:addChild(Panel_1)
 
 --Create LO_TIP_2
@@ -490,7 +489,7 @@ Panel_1:addChild(LO_TIP_1)
 --Create Animation
 result['animation'] = ccs.ActionTimeline:create()
   
-result['animation']:setDuration(40)
+result['animation']:setDuration(20)
 result['animation']:setTimeSpeed(1.0000)
 
 --Create PositionTimeline
@@ -578,92 +577,6 @@ AlphaTimeline:addFrame(localFrame)
 
 result['animation']:addTimeline(AlphaTimeline)
 AlphaTimeline:setNode(Panel_2)
-
---Create PositionTimeline
-local PositionTimeline = ccs.Timeline:create()
-
-localFrame = ccs.PositionFrame:create()
-localFrame:setFrameIndex(15)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setX(375.0000)
-localFrame:setY(1.7981)
-PositionTimeline:addFrame(localFrame)
-
-localFrame = ccs.PositionFrame:create()
-localFrame:setFrameIndex(40)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setX(375.0000)
-localFrame:setY(1.7981)
-PositionTimeline:addFrame(localFrame)
-
-result['animation']:addTimeline(PositionTimeline)
-PositionTimeline:setNode(Panel_1)
-
---Create ScaleTimeline
-local ScaleTimeline = ccs.Timeline:create()
-
-localFrame = ccs.ScaleFrame:create()
-localFrame:setFrameIndex(15)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setScaleX(1.0000)
-localFrame:setScaleY(1.0000)
-ScaleTimeline:addFrame(localFrame)
-
-localFrame = ccs.ScaleFrame:create()
-localFrame:setFrameIndex(40)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setScaleX(1.0000)
-localFrame:setScaleY(1.0000)
-ScaleTimeline:addFrame(localFrame)
-
-result['animation']:addTimeline(ScaleTimeline)
-ScaleTimeline:setNode(Panel_1)
-
---Create RotationSkewTimeline
-local RotationSkewTimeline = ccs.Timeline:create()
-
-localFrame = ccs.RotationSkewFrame:create()
-localFrame:setFrameIndex(15)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setSkewX(0.0000)
-localFrame:setSkewY(0.0000)
-RotationSkewTimeline:addFrame(localFrame)
-
-localFrame = ccs.RotationSkewFrame:create()
-localFrame:setFrameIndex(40)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setSkewX(0.0000)
-localFrame:setSkewY(0.0000)
-RotationSkewTimeline:addFrame(localFrame)
-
-result['animation']:addTimeline(RotationSkewTimeline)
-RotationSkewTimeline:setNode(Panel_1)
-
---Create AlphaTimeline
-local AlphaTimeline = ccs.Timeline:create()
-
-localFrame = ccs.AlphaFrame:create()
-localFrame:setFrameIndex(15)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setAlpha(0)
-AlphaTimeline:addFrame(localFrame)
-
-localFrame = ccs.AlphaFrame:create()
-localFrame:setFrameIndex(40)
-localFrame:setTween(true)
-localFrame:setTweenType(0)
-localFrame:setAlpha(255)
-AlphaTimeline:addFrame(localFrame)
-
-result['animation']:addTimeline(AlphaTimeline)
-AlphaTimeline:setNode(Panel_1)
 --Create Animation List
 local show = {name="show", startIndex=0, endIndex=40}
 result['animation']:addAnimationInfo(show)

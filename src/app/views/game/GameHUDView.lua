@@ -27,6 +27,7 @@ function GameHUDView:initHUD()
     self:updateTime(0)
     self:updateScore(0)
     self:hideSkill()
+    self:hideTip()
 end
 
 
@@ -154,15 +155,12 @@ function GameHUDView:stopREC()
 end
 
 
-function GameHUDView:highTip()
-    local x = self["Panel_1"]:getPositionX()
-    ac.stopTarget(self["Panel_1"])
-    self["Panel_1"]:runAction(ac.ccMoveTo(0.5,cc.p(x,400)))
+function GameHUDView:showTip()
+    self["Panel_1"]:show()
 end
 
-function GameHUDView:lowTip()
-    local x = self["Panel_1"]:getPositionX()
-    self["Panel_1"]:runAction(ac.ccMoveTo(0.5,cc.p(x,1.8)))
+function GameHUDView:hideTip()
+    self["Panel_1"]:hide()
 end
 
 

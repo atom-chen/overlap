@@ -32,6 +32,7 @@ function MainScene:onCreate()
     if device.platform == device.PLATFORM.IOS then
         self:initIosPurchase()
     end
+    
 end
 
 function MainScene:onClick( path,node,funcName)
@@ -144,6 +145,11 @@ function MainScene:initIosPurchase()
                 payChannel = DNP_GAME.payChannel.appstore,
                 receiptData = crypto.encodeBase64(transaction.transaction.receipt)
             }
+            
+            local noads = helper.getSloterData(Sloters_.noads)
+            if not noads then
+                helper.saveSloterData(Sloters_.noads,true)
+            end
             ActionExecutor:execute(msgdef.PayValidate,product)
             store.finishTransaction(transaction.transaction)
         end

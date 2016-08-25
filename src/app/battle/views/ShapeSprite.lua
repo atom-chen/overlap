@@ -130,6 +130,7 @@ function ShapeSprite:ctor(model_,type,skill)
     self.skill = skill or {}
 
     if type == ShapeSprite.SHAPE_MODE.SHAPE_BORDER or type == ShapeSprite.SHAPE_MODE.BODER then
+        cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/shape-shadow.plist")
         local filename = string.format("#d-%d.png",spId)
         self.shadow = display.newSprite(filename)
         self.shadow:move(x,y)
@@ -139,6 +140,7 @@ function ShapeSprite:ctor(model_,type,skill)
         end
         self:addChild(self.shadow)
 
+        cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/shape-border.plist")
         local filename = string.format("#l-%d.png",spId)
         self.light = display.newSprite(filename)
         self.light:move(x,y)
@@ -165,7 +167,7 @@ function ShapeSprite:ctor(model_,type,skill)
             --                :move(GRID_BORDER,GRID_BORDER)
             --                :addTo(self)
             --            self.maskback:setScale(1/OPT_GRID_SCALE)
-
+            cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
             self.maskback = display.newSprite(string.format("#star-color-%d.png",color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
@@ -179,6 +181,7 @@ function ShapeSprite:ctor(model_,type,skill)
             --            self.maskback:setScale(1/OPT_GRID_SCALE)
 
             local lang = locale.defaultLang()
+            cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
             self.maskback = display.newSprite(string.format("#word-%s-%d.png",lang,color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
@@ -192,6 +195,7 @@ function ShapeSprite:ctor(model_,type,skill)
             --            self.maskback:setScale(1/OPT_GRID_SCALE)
 
             local lang = locale.defaultLang()
+            cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
             self.maskback = display.newSprite(string.format("#word-%s-%d.png",lang,color))
                 :move(GRID_BORDER,GRID_BORDER)
                 :addTo(self)
@@ -200,6 +204,7 @@ function ShapeSprite:ctor(model_,type,skill)
             self.maskback:setColor(ShapeSprite.SHAPE_COLOR[color])
         end
         if type == ShapeSprite.SHAPE_MODE.SHAPE then
+            cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/shape-shadow.plist")
             local filename = string.format("#d-%d.png",spId)
             self.shadow = display.newSprite(filename)
             self.shadow:move(x,y)
@@ -210,7 +215,8 @@ function ShapeSprite:ctor(model_,type,skill)
             end
             self:addChild(self.shadow)
         end
-
+        
+        cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/shape-entity.plist")
         local filename = string.format("#s-%d.png",spId)
         self.shape = display.newSprite(filename)
             :move(x,y)
@@ -380,6 +386,7 @@ end
 
 function ShapeSprite:setTextName(color)
     local lang = locale.defaultLang()
+    cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
     self.maskback:setSpriteFrame(string.format("word-%s-%d.png",lang,color))
 end
 

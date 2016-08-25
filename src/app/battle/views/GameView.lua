@@ -108,6 +108,7 @@ function GameView:setOption()
                 y = 178 + (k-1)*155
             end
 
+            cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/ui-game.plist")
             local optmask = display.newSprite("#sp-game-opt-back-white.png")
                 :move(x,y)
                 :addTo(self.optbackgrid)
@@ -119,7 +120,7 @@ function GameView:setOption()
             self.position[#self.position+1] = cc.p(x,y)
             opt:setOpacity(0)
 
-            ac.execute(opt,ac.ccSeq(cc.DelayTime:create(oc*0.1),ac.ccFadeTo(0.15,200)))
+            ac.execute(opt,ac.ccSeq(cc.DelayTime:create(oc*0.05),ac.ccFadeTo(0.1,200)))
             oc = oc+1
         end
     end

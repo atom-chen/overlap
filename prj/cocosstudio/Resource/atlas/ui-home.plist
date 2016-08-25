@@ -332,15 +332,15 @@
             <key>logo-splash.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{998,1334}}</string>
+                <string>{{2,2},{1001,1334}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{998,1334}}</string>
+                <string>{{0,0},{1001,1334}}</string>
                 <key>sourceSize</key>
-                <string>{998,1334}</string>
+                <string>{1001,1334}</string>
             </dict>
             <key>main-icon-red.png</key>
             <dict>
@@ -495,7 +495,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:1139c414213b153613da364ad8c66488:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:c1ce56b21994bf37c0b8fca663e0f4b4:1/1$</string>
             <key>textureFileName</key>
             <string>ui-home.png</string>
         </dict>

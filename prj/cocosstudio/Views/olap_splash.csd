@@ -48,7 +48,7 @@
           </IntFrame>
         </Timeline>
         <Timeline ActionTag="-282535477" Property="Position">
-          <PointFrame FrameIndex="0" X="0.0000" Y="0.0000">
+          <PointFrame FrameIndex="0" X="-0.0016" Y="0.0000">
             <EasingData Type="0" />
           </PointFrame>
           <PointFrame FrameIndex="95" X="0.0000" Y="0.0000">
@@ -65,7 +65,7 @@
           </PointFrame>
         </Timeline>
         <Timeline ActionTag="-282535477" Property="Scale">
-          <ScaleFrame FrameIndex="0" X="1.0000" Y="1.0000">
+          <ScaleFrame FrameIndex="0" X="1.0127" Y="1.0000">
             <EasingData Type="0" />
           </ScaleFrame>
           <ScaleFrame FrameIndex="95" X="1.0000" Y="1.0000">
@@ -135,7 +135,7 @@
           <AbstractNodeData Name="Panel_1" ActionTag="1326085322" Tag="58" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-125.5000" RightMargin="-125.5000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1001.0000" Y="1334.0000" />
             <Children>
-              <AbstractNodeData Name="Sprite_1" ActionTag="-569048375" Alpha="0" Tag="95" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.5000" RightMargin="1.5000" ctype="SpriteObjectData">
+              <AbstractNodeData Name="Sprite_1" ActionTag="-569048375" Tag="95" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.5000" RightMargin="1.5000" ctype="SpriteObjectData">
                 <Size X="998.0000" Y="1334.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="500.5000" Y="667.0000" />
@@ -146,7 +146,7 @@
                 <FileData Type="PlistSubImage" Path="logo-splash.png" Plist="Resource/atlas/ui-home.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_2" ActionTag="-282535477" Tag="96" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_2" ActionTag="-282535477" Alpha="0" Tag="96" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" BottomMargin="0.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1001.0000" Y="1334.0000" />
                 <Children>
                   <AbstractNodeData Name="Sprite_2" ActionTag="571877480" Tag="97" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="240.0000" RightMargin="240.0000" TopMargin="454.8785" BottomMargin="755.1215" ctype="SpriteObjectData">
@@ -195,10 +195,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <Position Y="0.0000" />
+                <Scale ScaleX="1.0127" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition />
+                <PrePosition Y="0.0000" />
                 <PreSize X="1.0000" Y="1.0000" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
