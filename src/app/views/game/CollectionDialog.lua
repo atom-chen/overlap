@@ -21,7 +21,7 @@ CollectionInfoView.OTHER = {
     Collect_8             = _("Collect_8"),
     Collect_9             = _("Collect_9"),
     Collect_10             = _("Collect_10"),
-    
+
     Collect_11             = _("Collect_11"),
     Collect_12             = _("Collect_12"),
     Collect_13             = _("Collect_13"),
@@ -32,7 +32,7 @@ CollectionInfoView.OTHER = {
     Collect_18             = _("Collect_18"),
     Collect_19             = _("Collect_19"),
     Collect_20             = _("Collect_20"),
-    
+
     Collect_21             = _("Collect_21"),
     Collect_22             = _("Collect_22"),
     Collect_23             = _("Collect_23"),
@@ -43,7 +43,7 @@ CollectionInfoView.OTHER = {
     Collect_28             = _("Collect_28"),
     Collect_29             = _("Collect_29"),
     Collect_30             = _("Collect_30"),
-    
+
     Collect_31             = _("Collect_31"),
     Collect_32             = _("Collect_32"),
     Collect_33             = _("Collect_33"),
@@ -54,7 +54,7 @@ CollectionInfoView.OTHER = {
     Collect_38             = _("Collect_38"),
     Collect_39             = _("Collect_39"),
     Collect_40             = _("Collect_40"),
-    
+
     Collect_41             = _("Collect_41"),
     Collect_42             = _("Collect_42"),
     Collect_43             = _("Collect_43"),
@@ -65,7 +65,7 @@ CollectionInfoView.OTHER = {
     Collect_48             = _("Collect_48"),
     Collect_49             = _("Collect_49"),
     Collect_50             = _("Collect_50"),
-    
+
     Collect_51             = _("Collect_51"),
     Collect_52             = _("Collect_52"),
     Collect_53             = _("Collect_53"),
@@ -76,7 +76,7 @@ CollectionInfoView.OTHER = {
     Collect_58             = _("Collect_58"),
     Collect_59             = _("Collect_59"),
     Collect_60             = _("Collect_60"),
-    
+
     Collect_61             = _("Collect_61"),
     Collect_62             = _("Collect_62"),
     Collect_63             = _("Collect_63"),
@@ -87,7 +87,7 @@ CollectionInfoView.OTHER = {
     Collect_68             = _("Collect_68"),
     Collect_69             = _("Collect_69"),
     Collect_70             = _("Collect_70"),
-    
+
     Collect_71             = _("Collect_71"),
     Collect_72             = _("Collect_72"),
     Collect_73             = _("Collect_73"),
@@ -98,7 +98,7 @@ CollectionInfoView.OTHER = {
     Collect_78             = _("Collect_78"),
     Collect_79             = _("Collect_79"),
     Collect_80             = _("Collect_80"),
-    
+
     Collect_81             = _("Collect_81"),
     Collect_82             = _("Collect_82"),
     Collect_83             = _("Collect_83"),
@@ -109,7 +109,7 @@ CollectionInfoView.OTHER = {
     Collect_88             = _("Collect_88"),
     Collect_89             = _("Collect_89"),
     Collect_90             = _("Collect_90"),
-    
+
     Collect_91             = _("Collect_91"),
     Collect_92             = _("Collect_92"),
     Collect_93             = _("Collect_93"),
@@ -140,7 +140,19 @@ function CollectionInfoView:onClick( path,node,funcName)
     if  node:getName() =="btn_ok" then
         local function btnCallback(  node,eventType  )
             audio.playSound(GAME_EFFECT[13])
-           self:closeSelf()
+
+            local showed =  helper.getSloterData(Sloters_.collections_show)
+            local coltd =  helper.getSloterData(Sloters_.collections)
+            
+            local count,allcount = CollectionManager:getCollectionCount()
+            for id=1, allcount do
+                if  coltd[id]~=0 and  showed[id] == 0 then
+                    if CollectionManager:showCollection(id) then
+                        break
+                    end
+                end
+            end
+            self:closeSelf()
         end
         return btnCallback
 

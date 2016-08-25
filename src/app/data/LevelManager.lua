@@ -21,6 +21,7 @@ function LevelManager:initStageData()
         end
         --第一关默认开
         lvInfo[1][4] = true
+        lvInfo[10][4] = true
         helper.saveSloterData(Sloters_.level_info,lvInfo)
     end
     
@@ -151,7 +152,7 @@ function LevelManager:getSceneStar(scene)
         start = (scene-1)*9+1
     end
     local stars = 0
-    for v = start, count do
+    for v = start, start+count-1 do
         for s=1, 3 do
             stars = stars + lvInfo[v][s]
         end

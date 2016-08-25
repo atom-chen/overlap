@@ -605,6 +605,10 @@ function GameView:show3DModel()
     for key, shape in pairs(self.opts) do
         shape:set3DModel()
     end
+    
+    if self.cloud then
+        ac.execute(self.cloud,ac.ccFadeTo(0.2,0))
+    end
 end
 
 
