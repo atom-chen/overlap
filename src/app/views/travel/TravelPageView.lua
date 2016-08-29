@@ -28,10 +28,12 @@ function TravelPageView:updateRank(data)
     self.HighScore:setString(_("HighScore").." : "..ranks.score)
     self.GHighScore:setString(_("AllHighScore").." : "..ranks.highest)
 
-    local posRank = ranks.rank/ranks.allRank*100
+    local posRank = 100 - ranks.rank/ranks.allRank*100
     local rankPos
     if posRank>90 then
         rankPos = "90"
+    elseif posRank == 0 then
+        rankPos = "1"
     else
         rankPos = string.format("%.1f", posRank)
     end
@@ -143,6 +145,7 @@ function TravelPageView:setEndless()
     self.avatar:setSpriteFrame(string.format("avatar-%d.png",self.page))
 
     self:updateRank()
+    AppViews:getView(Layers_.travel):setRankButtomVisible(true)
 end
 
 function TravelPageView:setRandom()
@@ -155,6 +158,7 @@ function TravelPageView:setRandom()
     self.avatar:setSpriteFrame(string.format("avatar-%d-on.png",self.page))
 
     self:updateRank()
+    AppViews:getView(Layers_.travel):setRankButtomVisible(false)
 end
 
 

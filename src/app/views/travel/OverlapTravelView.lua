@@ -126,5 +126,9 @@ function OverlapTrvalView:updatePageRank()
     self.pageLayer:updateWorldRank()
 end
 
+function OverlapTrvalView:setRankButtomVisible(visible)
+    self.btn_rank:setVisible(visible)
+end
+
 
 return OverlapTrvalView

@@ -7,7 +7,7 @@ HomeCollectionView.SCROLLVIEW_HEITH = 858
 local CollectionCellView = import(".CollectionCellView")
 local Collection = import("app.data.Collection")
 CollectionCellView.CELL_WIDTH  = 192
-CollectionCellView.CELL_HEIGHT = 143
+CollectionCellView.CELL_HEIGHT = 172
 
 function HomeCollectionView:onCreate()
     local t = CollectionManager:getAllCollection()
@@ -19,7 +19,7 @@ function HomeCollectionView:onCreate()
     end
     
     
-    local  tv=   ccui.TebleView:create(data,cc.size(576,858),{height = 143,width = 192 ,cellView = CollectionCellView })
+    local  tv=   ccui.TebleView:create(data,cc.size(576,858),{height = CollectionCellView.CELL_HEIGHT,width = CollectionCellView.CELL_WIDTH ,cellView = CollectionCellView })
     self.tv:addChild(tv)
 
     local function scrollViewDidScroll(view)

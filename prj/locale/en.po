@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
 "POT-Creation-Date: 2016-08-22 13:00+0800\n"
-"PO-Revision-Date: 2016-08-24 12:26+0800\n"
+"PO-Revision-Date: 2016-08-26 12:36+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: en_US\n"
@@ -38,7 +38,7 @@ msgstr "Collect () symbols"
 #: ../../src/app/data/Collection.lua:3
 #: ../../src/app/data/CollectionManager.lua:217
 msgid "COLT_4"
-msgstr "Collect 10 symbols in scene ()"
+msgstr "Collect 20 symbols in scene ()"
 
 #: ../../src/app/data/Collection.lua:3
 #: ../../src/app/data/CollectionManager.lua:219

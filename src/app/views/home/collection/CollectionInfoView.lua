@@ -19,7 +19,8 @@ function CollectionDialog:showInfo(id)
     local infos =   helper.split(_("Collect_"..id),";")
     self.Name:setString(infos[1])
     self.info:setString(infos[2])
-
+    
+    cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/collct.plist")
     self.collect:setSpriteFrame(string.format("collection-%d.png",id))
 end
 function CollectionDialog:showLock(id)

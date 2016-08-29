@@ -20,6 +20,12 @@ function OverlapHomeView:onCreate()
 
     self.showtext = {}
     self.count = 0
+
+    --隐藏广告按钮
+    local noads = helper.getSloterData(Sloters_.noads)
+    if  noads then
+        self.btn_noads:hide()
+    end
 end
 
 function OverlapHomeView:updateStars()
@@ -85,7 +91,7 @@ function OverlapHomeView:createOverText()
     local word =   OverlapHomeView.STAR_WORD_BALABA[worldIndex]
     worldIndex = worldIndex + 1
     if worldIndex > #OverlapHomeView.STAR_WORD_BALABA  then
-    	worldIndex = 1
+        worldIndex = 1
     end
     local totalLen = string.utf8len(word)
     local i = 0

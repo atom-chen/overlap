@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OverLap\n"
 "POT-Creation-Date: 2016-08-22 13:08+0800\n"
-"PO-Revision-Date: 2016-08-24 12:31+0800\n"
+"PO-Revision-Date: 2016-08-26 12:31+0800\n"
 "Last-Translator: \n"
 "Language-Team: DONOPO\n"
 "Language: pt\n"
@@ -38,7 +38,7 @@ msgstr "Recolha símbolos ()"
 #: ../../src/app/data/Collection.lua:3
 #: ../../src/app/data/CollectionManager.lua:217
 msgid "COLT_4"
-msgstr "Coletar 10 símbolos em cena ()"
+msgstr "Coletar 20 símbolos em cena ()"
 
 #: ../../src/app/data/Collection.lua:3
 #: ../../src/app/data/CollectionManager.lua:219
@@ -554,7 +554,7 @@ msgstr ""
 #: ../../src/app/views/game/GamePauseView.lua:7
 #: ../../src/app/views/game/GameResultView.lua:8
 msgid "Retry"
-msgstr "tentar novamente"
+msgstr "Retry"
 
 #: ../../src/app/views/game/GamePauseView.lua:8
 #: ../../src/app/views/game/GameResultView.lua:9

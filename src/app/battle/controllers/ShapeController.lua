@@ -783,9 +783,10 @@ function ShapeController:submitScore()
     local rank = {
         appId = DNP_APP.id.dnp,
         rankId = myRankId,
-        key = device:getDeviceUid(),
+        key = device:getDeviceUid() or 1,
         score = score_,
     }
+    
     ActionExecutor:execute(msgdef.RankCommit,rank)
 end
 

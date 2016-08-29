@@ -92,7 +92,7 @@
           </ScaleFrame>
         </Timeline>
         <Timeline ActionTag="532135919" Property="Position">
-          <PointFrame FrameIndex="0" X="234.4140" Y="210.1449">
+          <PointFrame FrameIndex="0" X="0.8389" Y="57.7269">
             <EasingData Type="0" />
           </PointFrame>
         </Timeline>
@@ -102,7 +102,7 @@
           </PointFrame>
         </Timeline>
         <Timeline ActionTag="-705945023" Property="AnchorPoint">
-          <ScaleFrame FrameIndex="0" X="0.0000" Y="0.5000">
+          <ScaleFrame FrameIndex="0" X="0.5000" Y="0.5000">
             <EasingData Type="0" />
           </ScaleFrame>
         </Timeline>
@@ -112,12 +112,12 @@
           </PointFrame>
         </Timeline>
         <Timeline ActionTag="10555231" Property="AnchorPoint">
-          <ScaleFrame FrameIndex="0" X="0.0000" Y="0.5000">
+          <ScaleFrame FrameIndex="0" X="0.5000" Y="0.5000">
             <EasingData Type="0" />
           </ScaleFrame>
         </Timeline>
         <Timeline ActionTag="507856692" Property="Position">
-          <PointFrame FrameIndex="0" X="304.9169" Y="199.2484">
+          <PointFrame FrameIndex="0" X="375.0000" Y="145.8033">
             <EasingData Type="0" />
           </PointFrame>
         </Timeline>
@@ -254,23 +254,23 @@
                 <FileData Type="PlistSubImage" Path="teach-hand.png" Plist="Resource/atlas/ui-game.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="sk_icon" ActionTag="532135919" Tag="91" IconVisible="False" LeftMargin="199.4140" RightMargin="480.5860" TopMargin="1088.8551" BottomMargin="175.1449" ctype="SpriteObjectData">
-                <Size X="70.0000" Y="70.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="234.4140" Y="210.1449" />
-                <Scale ScaleX="0.9000" ScaleY="0.9000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3126" Y="0.1575" />
-                <PreSize X="0.0933" Y="0.0525" />
-                <FileData Type="PlistSubImage" Path="icon-common-skill-1.png" Plist="Resource/atlas/ui-common.plist" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="Panel_2" ActionTag="507856692" Tag="88" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="304.9169" RightMargin="445.0831" TopMargin="1134.7516" BottomMargin="199.2484" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_2" ActionTag="507856692" Tag="88" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="375.0000" RightMargin="375.0000" TopMargin="1188.1967" BottomMargin="145.8033" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="LO_SkInfo_2" ActionTag="-705945023" Tag="89" IconVisible="False" RightMargin="-400.0000" TopMargin="-30.5942" BottomMargin="-69.4058" IsCustomSize="True" FontSize="36" LabelText="start" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="sk_icon" ActionTag="532135919" Tag="91" IconVisible="False" LeftMargin="-34.1611" RightMargin="-35.8389" TopMargin="-92.7269" BottomMargin="22.7269" ctype="SpriteObjectData">
+                    <Size X="70.0000" Y="70.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="0.8389" Y="57.7269" />
+                    <Scale ScaleX="0.9000" ScaleY="0.9000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="PlistSubImage" Path="icon-common-skill-1.png" Plist="Resource/atlas/ui-common.plist" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="LO_SkInfo_2" ActionTag="-705945023" Tag="89" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-200.0000" RightMargin="-200.0000" TopMargin="-30.5942" BottomMargin="-69.4058" IsCustomSize="True" FontSize="36" LabelText="start" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="400.0000" Y="100.0000" />
-                    <AnchorPoint ScaleY="0.5000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position Y="-19.4058" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="118" G="115" B="113" />
@@ -280,9 +280,9 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="LO_SkInfo_1" ActionTag="10555231" VisibleForFrame="False" Tag="90" IconVisible="False" RightMargin="-400.0000" TopMargin="-29.2963" BottomMargin="-70.7037" IsCustomSize="True" FontSize="36" LabelText="开始游戏" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="LO_SkInfo_1" ActionTag="10555231" VisibleForFrame="False" Tag="90" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-200.0000" RightMargin="-200.0000" TopMargin="-29.2963" BottomMargin="-70.7037" IsCustomSize="True" FontSize="36" LabelText="开始游戏" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="400.0000" Y="100.0000" />
-                    <AnchorPoint ScaleY="0.5000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position Y="-20.7037" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="118" G="115" B="113" />
@@ -293,10 +293,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="304.9169" Y="199.2484" />
+                <Position X="375.0000" Y="145.8033" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4066" Y="0.1494" />
+                <PrePosition X="0.5000" Y="0.1093" />
                 <PreSize X="0.0000" Y="0.0000" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />

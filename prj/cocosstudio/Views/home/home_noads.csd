@@ -39,7 +39,7 @@
                   <AbstractNodeData Name="Panel_6" ActionTag="-1844152470" Tag="196" IconVisible="False" LeftMargin="2.3206" RightMargin="0.6794" TopMargin="193.5755" BottomMargin="26.4245" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="600.0000" Y="250.0000" />
                     <Children>
-                      <AbstractNodeData Name="LO_adsinfo_2" ActionTag="-1502078444" Tag="89" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2.5000" RightMargin="2.5000" TopMargin="5.9500" BottomMargin="5.9500" IsCustomSize="True" FontSize="20" LabelText="Your donation will be removed within the game all ads&#xA;Your donation will be removed within the game all ads &#xA;Your donation will be removed within the game all ads " HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="LO_adsinfo_2" ActionTag="-1502078444" Tag="89" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2.5000" RightMargin="2.5000" TopMargin="5.9500" BottomMargin="5.9500" IsCustomSize="True" FontSize="30" LabelText="Your donation will be removed within the game all ads&#xA;Your donation will be removed within the game all ads &#xA;Your donation will be removed within the game all ads " HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="595.0000" Y="238.1000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="300.0000" Y="125.0000" />
@@ -51,7 +51,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="LO_adsinfo_1" ActionTag="-360489179" Tag="197" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2.5000" RightMargin="2.5000" TopMargin="5.9500" BottomMargin="5.9500" IsCustomSize="True" FontSize="20" LabelText="Your donation will be removed within the game all ads&#xA;Your donation will be removed within the game all ads &#xA;Your donation will be removed within the game all ads " HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="LO_adsinfo_1" ActionTag="-360489179" Tag="197" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2.5000" RightMargin="2.5000" TopMargin="5.9500" BottomMargin="5.9500" IsCustomSize="True" FontSize="30" LabelText="Your donation will be removed within the game all ads&#xA;Your donation will be removed within the game all ads &#xA;Your donation will be removed within the game all ads " HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="595.0000" Y="238.1000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="300.0000" Y="125.0000" />

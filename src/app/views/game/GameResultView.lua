@@ -213,14 +213,13 @@ function GameResultView:showButtonPanel(showdt,showNext,nextScne)
     gameUtils.scaleShow(self.btn_list,showdt)
     if showNext  then
         gameUtils.scaleShow(self.btn_next,showdt)
+        if nextScne then
+            AppViews:getView(Layers_.select):nextScene()
+        end
     else
         self.btn_next:hide()
     end
     gameUtils.fadeShow(self.panelAds,showdt)
-    
-    if nextScne then
-    	AppViews:getView(Layers_.select):nextScene()
-    end
 end
 
 ----------------------

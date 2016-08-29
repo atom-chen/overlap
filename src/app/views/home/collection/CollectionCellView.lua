@@ -17,12 +17,13 @@ function CollectionCellView:updateCell(data)
     self.id  = data.id
     self.has = (data.has ~= 0)
     if self.has then
-        self.collect:setSpriteFrame(string.format("collection-%d.png",self.id))
-        self.lock:hide()
-        self.collect:show()
+        cc.SpriteFrameCache:getInstance():addSpriteFrames("Resource/atlas/scollct.plist")
+        self.collect:setSpriteFrame(string.format("s-collection-%d.png",self.id))
+        self.back2:hide()
+        self.back1:show()
     else
-        self.lock:show()
-        self.collect:hide()
+        self.back1:hide()
+        self.back2:show()
     end
     
 end

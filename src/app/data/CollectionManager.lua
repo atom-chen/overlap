@@ -91,20 +91,20 @@ function CollectionManager:starCollect(scene)
     local star = LevelManager:getSceneStar(scene)
     local allstar = LevelManager:getSceneStar()
     
-    if star >= 10 then
+    if star >= 20 then
         local cid
         if scene == 1  then
-            cid = 78
+            cid = 41
         elseif scene == 2  then
-            cid = 59
+            cid = 96
         elseif scene == 3  then
-            cid = 80
+            cid = 97
         elseif scene == 4  then
-            cid = 48
+            cid = 74
         elseif scene == 5  then
-            cid = 58
+            cid = 36
         elseif scene == 6  then
-            cid = 70
+            cid = 15
         end
         self:unlockCollect(cid)
     end

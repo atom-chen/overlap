@@ -170,7 +170,7 @@ Panel_2:addChild(Panel_6)
 local LO_adsinfo_2 = ccui.Text:create()
 LO_adsinfo_2:ignoreContentAdaptWithSize(false)
 LO_adsinfo_2:setFontName("Resource/fonts/OverlapExt.ttf")
-LO_adsinfo_2:setFontSize(20)
+LO_adsinfo_2:setFontSize(30)
 LO_adsinfo_2:setString([[Your donation will be removed within the game all ads
 Your donation will be removed within the game all ads 
 Your donation will be removed within the game all ads ]])
@@ -201,7 +201,7 @@ Panel_6:addChild(LO_adsinfo_2)
 local LO_adsinfo_1 = ccui.Text:create()
 LO_adsinfo_1:ignoreContentAdaptWithSize(false)
 LO_adsinfo_1:setFontName("")
-LO_adsinfo_1:setFontSize(20)
+LO_adsinfo_1:setFontSize(30)
 LO_adsinfo_1:setString([[Your donation will be removed within the game all ads
 Your donation will be removed within the game all ads 
 Your donation will be removed within the game all ads ]])

@@ -28,5 +28,22 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="Views/select/skills/skill_type_1.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_10.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_2.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_3.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_4.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_5.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_6.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_7.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_8.csd" />
+          <FilePathData Path="Views/select/skills/skill_type_9.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Views/select/skills/skill_type_1.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>
